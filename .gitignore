@@ -1,0 +1,28 @@
+.env
+__pycache__/
+*.pyc
+*.egg-info/
+internal-code/error.log
+internal-code/result-logs/
+
+.eng/
+.eng
+external/
+
+# papermill outputs
+.papermill/
+
+# agent reasoning traces (large, not part of eval artifacts)
+**/trace.log
+
+# eval-results bloat: cxr-metric raw inputs (regenerable from output.jsonl) and
+# CheXbert/embedding caches (only useful with `cxr-metric score --use-cache`).
+# Shipped result-dirs only need the scored CSVs + jsonls.
+eval-results/*/gt_reports.csv
+eval-results/*/predicted_reports.csv
+eval-results/*/cache_gt_reports.csv
+eval-results/*/cache_predicted_reports.csv
+eval-results/*/gt_embeddings.csv
+eval-results/*/gt_embeddings.pt
+eval-results/*/pred_embeddings.csv
+eval-results/*/pred_embeddings.pt

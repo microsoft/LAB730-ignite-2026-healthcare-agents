@@ -1,0 +1,2549 @@
+study_id,case_id,report,bleu_score,bertscore,semb_score,radgraph_combined,RadCliQ-v0,RadCliQ-v1
+00000116_031.png,0,"Findings: exam: frontal chest radiograph.
+
+findings:
+- median sternotomy wires and left subclavian pacemaker/icd in expected position. external monitoring leads project over the chest.
+- cardiomediastinal silhouette mildly enlarged.
+- patchy bilateral air‑space consolidation, greater in the right mid‑to‑lower lung and left mid‑to‑lower lung/perihilar region.
+- small bilateral pleural effusions suspected. no pneumothorax identified.
+
+impression:
+1) multifocal bilateral air‑space consolidation, greater on the right — most consistent with multifocal pneumonia or aspiration; correlate clinically.
+2) cardiomegaly with possible mild pulmonary interstitial/air‑space edema as an alternative/competing etiology.
+3) small bilateral pleural effusions. left subclavian pacemaker/icd and median sternotomy wires present.
+
+recommend correlation with clinical data and prior radiographs; consider chest ct if further characterization is needed.",0.09002733972535981,0.2815991938114166,0.3842466175556183,0.16363636363636364,3.7530088232742163,1.3992660337019125
+00000133_000.png,1,"Findings: exam: frontal chest radiograph (single view). no prior for comparison.
+
+findings:
+- cardiomediastinal contours within expected limits for technique.
+- lungs without focal air‑space consolidation.
+- no pleural effusion or pneumothorax.
+- small rounded nodular opacity (~6–10 mm) projects in the right mid/lower lung on this frontal view.
+
+impression:
+1. small solitary pulmonary nodule projecting over the right mid/lower lung. characterization limited on single frontal radiograph.
+2. no acute cardiopulmonary disease identified.
+
+recommendation: correlate with prior radiographs. if new or of concern, obtain chest ct for further evaluation per nodule management guidelines. this interpretation is for educational use only and not a clinical diagnosis.",0.13668297332146628,0.37256544828414917,0.3764166831970215,0.36806596701649175,3.202347998060085,1.0023247340947787
+00000284_001.png,2,"Findings: exam: frontal chest radiograph (single view).
+
+findings:
+- retrocardiac rounded air-containing density with an apparent air‑fluid level projecting behind the cardiac silhouette, most consistent with a hiatal hernia.
+- cardiomediastinal silhouette mildly enlarged.
+- aortic arch/tortuosity with probable atherosclerotic calcification.
+- lungs clear of focal lobar consolidation. no pleural effusion or pneumothorax identified on this frontal view.
+
+impression:
+1) imaging appearance consistent with a hiatal (paraesophageal/hiatal) hernia with retrocardiac air‑fluid level.  
+2) mild cardiomegaly. aortic atherosclerotic change.  
+3) no acute alveolar consolidation, pleural effusion, or pneumothorax identified on this single frontal radiograph.
+
+recommendation: correlate with symptoms. consider lateral chest radiograph, dedicated chest ct, or gi contrast study for further characterization if clinically indicated.",0.11792793120310566,0.3236392140388489,0.29667985439300537,0.23601398601398604,3.6954294805721917,1.3268476038487604
+00000385_001.png,3,"Findings: exam: frontal chest radiograph (upright).
+
+comparison: none available.
+
+findings:
+- cardiomediastinal size within expected limits for technique.
+- lungs clear without focal consolidation.
+- no pleural effusion or pneumothorax.
+- rounded air/air‑fluid density in the retrocardiac/left lower mediastinal region, projecting above the left hemidiaphragm — compatible with a hiatal hernia/gastric bubble.
+
+impression:
+1. appearance most consistent with a hiatal hernia (retrocardiac air/air‑fluid level).  
+2. no acute cardiopulmonary process identified (no focal consolidation, effusion, or pneumothorax).
+
+recommendation: correlate with clinical symptoms. consider lateral radiograph, dedicated barium study or chest/upper abdomen ct for definitive evaluation if clinically indicated.",0.13026778945578596,0.36578696966171265,0.42216551303863525,0.255,3.3121311276987098,1.1087969008212253
+00000393_000.png,4,"Findings: exam: frontal chest radiograph (single view).
+
+comparison: none available.
+
+technique: upright frontal.
+
+findings:
+- cardiomediastinal silhouette within normal size limits for technique.
+- lungs clear of focal air‑space consolidation.
+- no pleural effusion identified.
+- no pneumothorax.
+- mild peribronchial/perihilar bronchitic-type bronchovascular markings, greater centrally.
+- no acute osseous abnormality identified on the provided view.
+
+impression:
+1. no acute cardiopulmonary disease identified — no focal consolidation, pleural effusion, or pneumothorax.
+2. mild central peribronchial/bronchitic-type markings, which may reflect chronic or reactive airways change.
+
+recommend correlation with clinical exam and consider pa and lateral or prior radiographs if further evaluation is needed.",0.164992543774673,0.3275851905345917,0.6712868213653564,0.30131964809384165,2.911603131337309,0.8663653180417451
+00000634_000.png,5,"Findings: exam: frontal chest radiograph (single view).
+
+findings: cardiomediastinal silhouette within expected size limits for technique. lungs clear of focal air‑space consolidation. no pleural effusion or pneumothorax identified. small ovoid, air‑containing opacity projects behind the cardiac silhouette/adjacent to the distal esophagus/left hemidiaphragm, and surgical clips/skin markers are noted in the right chest/axilla.
+
+impression:
+1) imaging appearance suspicious for a small hiatal/paraesophageal hernia with retrocardiac air‑containing component.
+2) no acute cardiopulmonary process identified on this single frontal view.
+
+recommendation: correlate clinically and consider lateral chest radiograph, barium study, or ct for confirmation and surgical planning if indicated.",0.08614609845078959,0.30569592118263245,0.310855895280838,0.15725806451612903,3.8253342249970377,1.4404354401971144
+00000683_002.png,6,"Findings: exam: frontal chest radiograph (single view). comparison: none available.
+
+findings: the cardiac silhouette is mildly-to-moderately enlarged. lungs without focal air‑space consolidation. no pleural effusion or pneumothorax identified. multiple small metallic surgical clips/foreign‑body fragments project over the chest walls (greater on the left).
+
+impression:
+1) mild–moderate cardiomegaly.
+2) no acute cardiopulmonary consolidation, pleural effusion, or pneumothorax identified.
+3) multiple superficial metallic clips/foreign bodies overlying the chest.
+
+educational use only — not for clinical use.",0.1526762041381148,0.39168936014175415,0.6404545307159424,0.28596338273757627,2.792029291866614,0.8103322118927886
+00000688_002.png,7,"Findings: exam: frontal upright chest radiograph.
+
+comparison: none available.
+
+findings:
+- cardiomediastinal silhouette within normal size limits for technique.
+- lungs clear of focal lobar air‑space consolidation.
+- mild, diffuse peribronchial and perihilar interstitial markings greater centrally, more on the right.
+- no pleural effusion identified. no pneumothorax.
+
+impression:
+1. no focal lobar consolidation to suggest acute lobar pneumonia on this single frontal view.
+2. mild central peribronchial/perihilar bronchitic-type interstitial markings (chronic or inflammatory/reactive change).
+recommendation: correlate with clinical exam. if there is high clinical concern for occult pneumonia, obtain pa and lateral radiographs or chest ct and/or compare with prior imaging.",0.08559209850218259,0.25754114985466003,0.40808039903640747,0.13668600902643455,3.820428448773167,1.4488319933588738
+00000766_003.png,8,"Findings: exam: frontal chest radiograph.
+
+findings: cardiomediastinal silhouette within normal to mildly enlarged limits. diffuse bilateral reticular and reticulonodular interstitial opacities, greatest in the mid‑to‑lower lungs and along the peripheral/subpleural regions, with associated architectural distortion—appearance most consistent with chronic interstitial/fibrotic change. no focal lobar air‑space consolidation identified. no pneumothorax or large pleural effusion. right-sided subcutaneous port/tunneled catheter projects along the right chest. postsurgical clips/scar at the left base.
+
+impression:
+1. bilateral reticular interstitial opacities and subpleural/basilar architectural distortion—favored to represent chronic pulmonary fibrosis/scar.
+2. no acute focal consolidation, large effusion, or pneumothorax.
+3. right-sided central venous port in expected position; left base surgical clips.
+
+recommendation: correlate with prior chest radiographs and consider chest ct if further characterization or clinical change is required. (educational use only — not for clinical decision making.)",0.10918741254641812,0.24801373481750488,0.6066389679908752,0.16153846153846152,3.4544846282238826,1.2360931556357448
+00000861_002.png,9,"Findings: exam: frontal chest radiograph.
+
+findings: cardiomediastinal silhouette within normal size limits for technique. linear subsegmental opacity at the left greater than right lower lung, greatest along the left basilar/lingular region, compatible with subsegmental atelectasis or scarring. no focal lobar consolidation identified. no pleural effusion or pneumothorax.
+
+impression:
+1. linear subsegmental atelectasis/scar at the left greater than right lower lung (left basilar/lingular predominance).
+2. no acute focal lobar consolidation, pleural effusion, or pneumothorax identified.",0.13238873449220637,0.38496360182762146,0.3393820822238922,0.1568627450980392,3.566954548693827,1.2816919743958182
+00000910_001.png,10,"Findings: findings: cardiomediastinal silhouette within expected size limits for technique. lungs clear of focal lobar air‑space consolidation. mild, chronic-appearing peribronchial/perihilar bronchitic-type markings, slightly greater centrally and on the right. no pleural effusion or pneumothorax identified.
+
+impression:
+1) no focal lobar consolidation to suggest acute lobar pneumonia on this frontal view.
+2) mild central peribronchial/perihilar bronchitic-type interstitial prominence, greater on the right.
+recommend clinical correlation and comparison with prior imaging; consider lateral radiograph or chest ct if clinical concern for occult consolidation persists.
+
+(educational use only — not for clinical decision-making.)",0.06303823872731519,0.2743299901485443,0.2966560423374176,0.1297208538587849,3.973601854511446,1.5406311372792747
+00001373_022.png,11,"Findings: exam: ap chest radiograph.
+
+findings:
+- median sternotomy wires and mediastinal surgical clips. external monitoring/port hardware and leads project over the chest.
+- cardiomediastinal silhouette is enlarged.
+- bilateral, predominantly perihilar and basilar interstitial and patchy air‑space opacities.
+- small bilateral pleural effusions layering at the costophrenic sulci.
+- no pneumothorax identified on this frontal view.
+
+impression:
+1) cardiomegaly.
+2) bilateral interstitial/air‑space opacities and small pleural effusions — most suggestive of pulmonary interstitial/cardiogenic edema.
+3) postoperative median sternotomy changes and external monitoring hardware.",0.09276773134741385,0.3174319267272949,0.2727908790111542,0.13636363636363638,3.8992501889316378,1.4849451946312289
+00001582_019.png,12,"Findings: exam: frontal chest radiograph (upright).
+
+findings:
+- cardiomediastinal silhouette within normal size limits for frontal view.
+- lungs clear of focal lobar air‑space consolidation.
+- no pleural effusion identified; costophrenic angles sharp.
+- mild peribronchial/perihilar bronchitic-type markings centrally.
+- no acute osseous abnormality identified.
+
+impression:
+1. no focal lobar consolidation to suggest acute lobar pneumonia on this frontal radiograph.
+2. mild peribronchial/perihilar bronchitic-type markings — may reflect reactive airways infection or chronic change; correlate clinically.
+3. no pleural effusion or cardiomegaly.
+
+educational use only — not for clinical decision-making.",0.09012387292021218,0.23767738044261932,0.22946304082870483,0.12013888888888888,4.244361090124306,1.679912242877253
+00001951_007.png,13,"Findings: exam: frontal (ap) chest radiograph.
+
+findings:
+- cardiomediastinal silhouette within expected size limits for ap technique.
+- lungs clear of focal air‑space consolidation.
+- no pleural effusion identified. no pneumothorax.
+- multiple external monitoring leads and wires project over the chest.
+- mild perihilar/peribronchial cuffing/scattered peribronchial markings, greater centrally.
+
+impression:
+1. no acute cardiopulmonary consolidation, effusion, or pneumothorax identified.
+2. mild perihilar/peribronchial prominence—can reflect bronchitic/reactive change; correlate clinically.
+3. external monitoring leads project over the chest.",0.15609961117054372,0.34397071599960327,0.4649059474468231,0.23842917251051896,3.3424996555530946,1.122929451362331
+00001989_011.png,14,"Findings: exam: frontal chest radiograph
+
+technique: single frontal radiograph.
+
+findings:
+- cardiomediastinal silhouette mildly enlarged.
+- patchy bilateral interstitial/air‑space markings, greatest centrally and at the bases.
+- blunting of the costophrenic sulci with small layering pleural effusions, greater on the left.
+- no acute focal lobar consolidation identified. no pneumothorax.
+
+impression:
+1. small bilateral pleural effusions, left > right.
+2. mild cardiomegaly with interstitial/vascular congestion versus chronic interstitial change/scar; pattern may reflect mild pulmonary edema.
+3. no focal lobar consolidation or pneumothorax identified.
+
+correlation with clinical history and comparison radiographs recommended.",0.16180376435057922,0.41045331954956055,0.3721463978290558,0.2706766917293233,3.2690014496375923,1.0652963938427111
+00002003_005.png,15,"Findings: exam: frontal upright chest radiograph.
+
+findings: cardiomediastinal silhouette within normal size limits. lungs clear of focal air‑space consolidation. linear pleural-based subsegmental scarring/pleural thickening projecting along the lateral lower lungs, greater on the right. no pleural effusion identified. multiple small surgical/metallic clips overlying the chest consistent with prior surgery. no acute osseous abnormality identified.
+
+impression:
+1. linear pleural-based scarring/pleural thickening in the lateral lower lungs (r > l).  
+2. no acute cardiopulmonary disease identified—no focal consolidation or effusion.  
+3. multiple surgical/metallic clips consistent with prior procedure.",0.11939173323522982,0.3482711911201477,0.4952344000339508,0.20818713450292398,3.294587834159353,1.1233180251269943
+00002381_010.png,16,"Findings: exam: frontal chest radiograph (ap/semiupright).
+
+findings:
+- cardiomediastinal silhouette mildly enlarged.
+- prominent pulmonary vascular congestion with bilateral perihilar and lower‑lung predominant interstitial and patchy air‑space opacities.
+- possible small bilateral pleural effusions with mild blunting at the bases.
+
+impression:
+1. pulmonary interstitial and early/alveolar edema pattern with pulmonary vascular congestion — most consistent with cardiogenic pulmonary edema given cardiomegaly.
+2. possible small bilateral pleural effusions.
+3. correlate with clinical exam, bnp, and prior radiographs; consider follow‑up pa and upright or lateral radiographs after therapy as clinically indicated.
+
+(educational use only; not for clinical decision-making.)",0.16217021756660707,0.3466634452342987,0.27573704719543457,0.2252906976744186,3.713990210350522,1.323024285156487
+00002469_004.png,17,"Findings: exam: frontal chest radiograph.
+
+findings:
+- cardiomediastinal silhouette within normal size limits for technique.
+- lungs clear of focal air‑space consolidation.
+- no pleural effusion identified.
+- no visible pleural line or loculated pleural air to suggest pneumothorax on this frontal view.
+- mild chronic-appearing peribronchial/bronchitic-type markings centrally.
+
+impression:
+1) no acute cardiopulmonary disease identified on this frontal radiograph — specifically, no pneumothorax seen.  
+2) mild chronic-appearing bronchitic/peribronchial markings.  
+
+if there remains clinical concern for pneumothorax despite this negative frontal view, consider expiratory or lateral decubitus radiographs or chest ct for increased sensitivity.",0.05796087030059365,0.29968929290771484,0.21796049177646637,0.07894736842105264,4.121756539650451,1.6402749311693714
+00002510_008.png,18,"Findings: exam: frontal chest radiograph.
+
+comparison: none available.
+
+findings:
+- cardiomediastinal silhouette mildly enlarged.
+- bilateral, predominantly perihilar and basilar patchy interstitial and air‑space opacities, greater on the right.
+- small bilateral pleural effusions vs. dependent atelectasis at the bases.
+- external monitoring leads project over the chest. no pneumothorax identified.
+
+impression:
+1) mild cardiomegaly.
+2) bilateral interstitial and patchy air‑space opacities, greatest centrally and at the bases — pattern most suggestive of pulmonary interstitial/air‑space edema from congestive heart failure but multifocal infection could appear similar. 
+3) small bilateral pleural effusions vs dependent atelectasis. 
+recommend correlation with clinical exam, bnp, and prior radiographs; consider pa and lateral radiographs or chest ct if further characterization is needed.
+
+educational use only — not for clinical care.",0.12549116102763172,0.2434915006160736,0.07035049796104431,0.20928433268858798,4.408533537740918,1.7175893232705481
+00002628_001.png,19,"Findings: exam: frontal chest radiograph (image path: <WORKSPACE>/data/100_datasets_per_class_nih_chest_xray/nih_subset/pleural_thickening/00002628_001.png)
+clinical info: not provided.
+
+findings:
+- cardiomediastinal silhouette within normal size limits for technique.
+- lungs clear of focal air‑space consolidation.
+- no pleural effusion identified.
+- linear pleural-based and subpleural scarring/pleural thickening seen at the bilateral lower lungs, greater on the right.
+
+impression:
+1. mild chronic-appearing pleural thickening/scar at the bilateral lower lobes (r > l).  
+2. no acute cardiopulmonary disease identified (no focal consolidation or effusion).
+
+recommendation: correlate with prior chest radiographs if available to confirm chronicity.
+
+note: educational use only — not for clinical decision making.",0.10887252242388996,0.21729004383087158,0.5311235189437866,0.20299022426682004,3.6223331419003744,1.310317437685258
+00002755_000.png,20,"Findings: exam: chest radiograph, frontal view.
+
+comparison: none available.
+
+findings:
+- cardiomediastinal silhouette within normal size limits for technique.
+- linear and reticular subpleural scarring/scar-like subsegmental atelectasis at the bilateral lower lobes, greater on the left, extending from the perihilar region to the posterior/infrahilar lungs.
+- no focal lobar air‑space consolidation identified.
+- no pleural effusion. no pneumothorax.
+- no acute osseous abnormality identified.
+
+impression:
+1. linear and reticular subpleural scarring at the bilateral lung bases (left > right), most consistent with chronic fibrotic change/scar.  
+2. no acute cardiopulmonary process identified—no focal consolidation to suggest lobar pneumonia, no effusion, no pneumothorax.  
+3. correlate with clinical history and prior chest imaging. if evaluation for interstitial lung disease or progressive fibrosis is clinically indicated, recommend chest radiograph comparison or chest ct for more sensitive assessment.",0.11907963881168969,0.2781447768211365,0.42739832401275635,0.1803921568627451,3.676682968709949,1.341178057801905
+00002856_017.png,21,"Findings: technique: single frontal ap portable chest radiograph.
+
+findings:
+- blunting/meniscus at the costophrenic sulci compatible with small bilateral pleural effusions, greater on the left.
+- subsegmental atelectatic/air‑space opacity/scar at the bilateral bases, greater on the left.
+- cardiomediastinal silhouette mildly enlarged for ap technique.
+- no focal lobar consolidation or pneumothorax identified.
+
+impression:
+1. small bilateral pleural effusions, left greater than right.
+2. bibasilar subsegmental atelectasis/scar, greater on the left.
+3. mild cardiomegaly, which may be exaggerated by ap technique.
+
+consider lateral radiograph or chest ultrasound/ct if further evaluation is needed.",0.12564179781806994,0.41131773591041565,0.4830523431301117,0.3435897435897436,2.9169527659693752,0.8627507567221543
+00003072_016.png,22,"Findings: exam: ap upright chest radiograph
+
+comparison: none available.
+
+findings:
+- right-sided pleural drainage catheter/pigtail projects along the right hemithorax with the tip over the lateral/upper right chest.
+- no acute large pneumothorax identified on this frontal view; lung markings extend to the chest wall bilaterally.
+- patchy bilateral interstitial and air‑space opacities, greatest centrally and at the lung bases (l > r).
+- small bilateral pleural effusions with blunting of the costophrenic sulci, greater on the left.
+- cardiomediastinal silhouette within expected size limits for technique.
+
+impression:
+1. right-sided pleural drainage catheter in expected position. no acute large pneumothorax seen on this ap frontal radiograph.
+2. patchy bilateral interstitial and air‑space opacities, greater at the bases — differential includes pulmonary edema, multifocal infection, or chronic interstitial change.
+3. small bilateral pleural effusions (left > right).
+recommend correlation with clinical exam, prior imaging if available, and a dedicated expiratory or upright decubitus radiograph or chest ct if there remains concern for a small pneumothorax or further characterization is needed.",0.13167179386759187,0.29947182536125183,0.3531416952610016,0.26691086691086696,3.6231113172718357,1.2721042820772366
+00003098_012.png,23,"Findings: exam: frontal chest radiograph.
+
+findings:
+- cardiomediastinal silhouette within normal size limits for technique.
+- lungs clear of focal lobar air‑space consolidation.
+- mild, diffuse reticular/linear interstitial markings, greater at the bilateral lower lungs and perihilar regions.
+- no pleural effusion or pneumothorax identified.
+- no acute osseous abnormality seen.
+
+impression:
+1. mild bilateral reticular/linear interstitial changes, greater at the lung bases — can reflect chronic scarring or early/limited pulmonary fibrosis.
+2. no acute cardiopulmonary consolidation, effusion, or pneumothorax identified.
+
+recommendation: correlate with clinical history and consider correlation with prior chest radiographs or chest ct if evaluation for fibrosis/scar is required.",0.1023240318814496,0.33914628624916077,0.6218571662902832,0.2079100145137881,3.073095746517329,1.0127661606845246
+00003230_009.png,24,"Findings: exam: frontal chest radiograph (single view). clinical history not provided.
+
+findings: cardiomediastinal silhouette within expected size limits for technique. lungs clear of focal lobar air‑space consolidation. linear pleural‑based scarring/pleural thickening seen at the lower lungs, greater on the right. no pleural effusion identified. no pneumothorax. external monitoring/skin artifact projects over the upper abdomen.
+
+impression:
+1) pleural-based linear scarring/pleural thickening at the bilateral bases, greater on the right.  
+2) no acute cardiopulmonary consolidation, effusion, or pneumothorax identified on this frontal view.",0.16796775328675628,0.41305312514305115,0.5137285590171814,0.1827094474153298,3.1401241533473074,1.0297008378728079
+00003450_000.png,25,"Findings: exam: frontal chest radiograph. clinical history: not provided.
+
+findings: subcutaneous anterior chest port with catheter coursing centrally; tip projects in the region of the expected svc. linear pleural-based scarring/pleural thickening at the left base. no focal air‑space consolidation. no pleural effusion or pneumothorax. cardiomediastinal silhouette within expected size limits.
+
+impression:
+1. left basilar pleural thickening/scar.
+2. anterior chest port with catheter; tip projects near the svc.
+3. no acute cardiopulmonary process identified.",0.20412414523193148,0.4288991093635559,0.35226354002952576,0.18988648090815274,3.4093234407523605,1.1552254421278256
+00003741_008.png,26,"Findings: exam: portable ap chest radiograph.
+
+comparison: none available.
+
+findings: cardiomediastinal silhouette mildly enlarged for ap technique. blunting and layering of the right greater than left costophrenic sulci with a right-sided meniscus-shaped opacity, consistent with bilateral pleural effusions (r > l). subsegmental air‑space/atelectatic/confluent scarring at the bilateral lower lungs, greater on the right. no acute large focal lobar consolidation or pneumothorax identified on this single frontal view.
+
+impression:
+1) bilateral pleural effusions, right greater than left, with associated bibasilar subsegmental atelectasis/scar (greater on the right).
+2) mild cardiomegaly (ap technique may exaggerate size).
+3) no pneumothorax identified on this frontal view.
+
+recommend lateral or upright radiographs (or chest ultrasound/ct) if further characterization or quantification of effusion is needed.",0.09534625892455921,0.2537993788719177,0.2634047567844391,0.18333333333333335,4.035561507282411,1.5408423041526447
+00003873_000.png,27,"Findings: technique: ap/pa frontal chest radiograph.
+
+findings:
+- cardiomediastinal silhouette within expected size for technique.
+- patchy air‑space consolidation and increased perihilar/peribronchial markings, greatest in the right mid‑to‑lower lung zone; smaller patchy opacities at the left perihilar/lingular region.
+- no pleural effusion identified. no pneumothorax.
+
+impression:
+1. patchy air‑space consolidation in the right mid and lower lung, and patchy perihilar opacities on the left — findings most suggestive of acute air‑space infection (pneumonia).  
+2. no pleural effusion or pneumothorax identified.
+
+correlation with clinical presentation and, if available, prior radiographs recommended.",0.14012617035555253,0.320004403591156,0.5071688890457153,0.23453996983408745,3.330235953988577,1.1252950463668796
+00003973_006.png,28,"Findings: exam: frontal upright chest radiograph.
+
+findings:
+- cardiomediastinal silhouette is enlarged consistent with cardiomegaly.
+- lungs clear of focal lobar air‑space consolidation.
+- mild, chronic-appearing bilateral peribronchial and interstitial markings, greater centrally and at the bases.
+- no pleural effusion identified. no pneumothorax.
+
+impression:
+1) cardiomegaly.
+2) mild chronic-appearing bilateral interstitial/peribronchial markings, greater centrally and at the bases — may reflect chronic scarring or chronic interstitial change. 
+3) no acute air‑space consolidation, pleural effusion, or pneumothorax identified.
+
+recommendation: correlate with clinical exam and prior radiographs. consider pa and lateral or chest radiograph comparison if available to assess chronicity and better evaluate cardiac size.",0.10639903531978628,0.2890109419822693,0.47028616070747375,0.18342391304347824,3.549762019470358,1.2768009009718047
+00003999_000.png,29,"Findings: exam: ap upright chest radiograph
+
+findings:
+- right-sided central venous catheter courses to the region of the cavo‑atrial junction.
+- patchy air‑space and/or air‑bronchogram opacities in both lungs, greater on the right and in the perihilar and lower zones.
+- small bilateral pleural effusions with blunting of the costophrenic sulci, greater on the right.
+- cardiomediastinal silhouette within expected size for technique.
+- no acute pneumothorax identified.
+
+impression:
+1. bilateral patchy air‑space opacities, greater on the right — suspicious for pulmonary infiltration/airspace consolidation (infectious or aspiration pattern); correlate clinically.
+2. small bilateral pleural effusions, greater on the right.
+3. right-sided central venous catheter with tip projecting near the cavo‑atrial junction.
+recommend clinical correlation and comparison with prior imaging if available; consider chest radiograph follow-up or chest ct if further anatomic detail or complication assessment is required.",0.17695426173989345,0.3070042133331299,0.2759656608104706,0.2907407407407407,3.739482072289392,1.306768662085805
+00004338_011.png,30,"Findings: exam: chest radiograph, ap upright.
+
+findings: external monitoring leads project over the chest. cardiomediastinal silhouette mildly enlarged (may be accentuated by ap technique). patchy dependent/basilar air‑space/linear opacities in both lungs, greater on the left. small bilateral layering pleural effusions with mild blunting of the costophrenic sulci. no pneumothorax identified.
+
+impression:
+1) dependent/bibasilar air‑space opacities, greater on the left — most consistent with subsegmental atelectasis; superimposed consolidation/aspiration or infection cannot be excluded.
+2) small bilateral pleural effusions.
+3) mild cardiomegaly (may be exaggerated by ap technique).
+
+recommend correlation with clinical exam and prior radiographs; consider follow-up pa/upright radiograph or chest ct if concern for focal pneumonia.",0.030289126640769135,0.1892520636320114,0.0008953021606430411,0.06666666666666667,4.860556065478834,2.0538121548555726
+00004490_008.png,31,"Findings: exam: frontal chest radiograph (upright). no prior available for comparison.
+
+findings:
+- cardiomediastinal silhouette within expected size for technique.
+- patchy air‑space and peribronchial opacities in both lungs, greater on the right mid–to–lower lung fields.
+- no focal large lobar consolidation, no pleural effusion identified, no pneumothorax.
+- right-sided central venous catheter/line with tip projecting near the region of the lower svc. additional small surgical clip/foreign body over the left chest wall.
+
+impression:
+1. bilateral patchy air‑space / peribronchial opacities, greater on the right—most suspicious for infectious broncho/bronchopneumonia in the appropriate clinical setting.  
+2. right-sided central venous catheter with tip near the lower svc.  
+3. no pleural effusion or pneumothorax identified.
+
+recommendation: correlate with clinical signs/symptoms and laboratory data. compare with prior chest radiographs if available; consider follow-up chest radiograph or chest ct if clinical concern for progression or complications.
+
+educational use only — not for clinical decision-making.",0.11249483031959838,0.24898940324783325,0.3417060077190399,0.1959887403237157,3.8954845764029926,1.4551322414249426
+00004517_000.png,32,"Findings: exam: frontal chest radiograph (single view).
+
+findings:
+- right/left marker present; a subcutaneous port reservoir with an associated catheter projects over the anterior chest with the catheter coursing medially toward the central veins.
+- there is a solitary, well‑circumscribed rounded pulmonary opacity measuring approximately 1.0–1.5 cm projecting in the mid‑lung zone on the frontal view.
+- mild linear/plate‑like subsegmental scarring or atelectasis at the bases (greater on one side).
+- no acute cardiopulmonary edema identified. no pneumothorax visualized. no large pleural effusion evident.
+
+impression:
+1) solitary rounded pulmonary opacity (~1.0–1.5 cm) projecting in the mid‑lung field — suspicious for a pulmonary nodule. correlate with prior chest radiographs if available.  
+2) right/left anterior subcutaneous port with catheter in expected location.  
+3) mild bibasilar scarring/atelectasis.  
+recommendation: dedicated thin‑section chest ct with iv contrast (if clinically appropriate) for nodule characterization and staging, or comparison with prior ct/chest radiographs if available.
+
+educational use only — not for clinical use.",0.11677484162422844,0.2100430727005005,0.36559930443763733,0.17692307692307693,4.001297060678927,1.5193991091255583
+00004523_000.png,33,"Findings: exam: frontal upright chest radiograph.
+history: not provided.
+
+findings: cardiomediastinal silhouette within expected size for technique. lungs without focal lobar air‑space consolidation. no pleural effusion or pneumothorax identified. mild peribronchial/perihilar reticular scarring and bronchitic-type markings, greater on the right.
+
+impression:
+1. no acute cardiopulmonary disease identified — no focal lobar consolidation, pleural effusion, or pneumothorax.
+2. mild chronic-appearing peribronchial/perihilar scarring/bronchitic change (r > l).
+
+recommend clinical correlation and comparison with prior chest radiographs if available.",0.11825666609764988,0.2901369035243988,0.3340868651866913,0.12777777777777777,3.8984142464193177,1.4797207946911441
+00004623_006.png,34,"Findings: exam: ap chest radiograph — image: <WORKSPACE>/data/100_datasets_per_class_nih_chest_xray/nih_subset/edema/00004623_006.png
+
+findings: external monitoring leads project over the chest. cardiomediastinal silhouette mildly enlarged. diffuse bilateral interstitial and patchy air‑space opacities, greatest centrally and in the lower lungs. mild blunting of the costophrenic sulci suggesting small bilateral pleural effusions.
+
+impression:
+1. bilateral interstitial and patchy alveolar opacities most consistent with pulmonary edema (cardiogenic pattern), central and basilar predominant.
+2. mild cardiomegaly.
+3. small bilateral pleural effusions suspected.
+recommend correlation with clinical status and consideration of pa/lateral radiographs or chest ct if further clarification is needed.",0.21835844927809417,0.2480180412530899,0.36659395694732666,0.3096590909090909,3.746738220832375,1.2904338052848627
+00004832_008.png,35,"Findings: exam: portable ap chest radiograph.
+
+findings:
+- endotracheal tube with tip projecting approximately 3 cm above the carina.
+- enteric tube courses below the diaphragm.
+- median sternotomy wires and external monitoring leads present.
+- cardiomediastinal enlargement.
+- bilateral pleural-based linear subsegmental opacities/scarring, greater on the right, most conspicuous at the lung bases/lateral chest — consistent with pleural thickening/scar.
+- no focal lobar consolidation identified. no large pleural effusion or pneumothorax detected.
+
+impression:
+1) bilateral pleural-based linear opacities/pleural thickening, greater on the right — most consistent with pleural scarring.
+2) cardiomediastinal enlargement.
+3) endotracheal tube appropriately positioned (~3 cm above carina). enteric tube extends below the diaphragm.
+4) no acute large effusion or pneumothorax identified.",0.04855713604861531,0.21884001791477203,0.4546264410018921,0.16993464052287582,3.7704402203859457,1.4250171517114218
+00004893_045.png,36,"Findings: exam: frontal chest radiograph.
+
+findings:
+- cardiomediastinal silhouette borderline normal to mildly enlarged.
+- patchy, bilateral perihilar and lower‑lung predominant air‑space/air‑space‑type and interstitial opacities, greater on the right.
+- no pneumothorax identified. small bilateral pleural effusions are not confidently seen on this frontal view.
+- external monitoring leads/skin markers project over the chest.
+
+impression:
+1. bilateral patchy perihilar and basilar air‑space/air‑space‑type and interstitial opacities, greater on the right — compatible with pulmonary infiltrates (infectious or inflammatory).  
+2. borderline cardiomegaly.  
+3. no acute pneumothorax identified on this frontal view.
+
+recommendation: correlate with clinical findings and consider pa and lateral radiographs or chest ct for better characterization and to assess for small effusions.",0.08052290058374871,0.253335565328598,0.21377919614315033,0.12000000000000001,4.219980447534843,1.669837793167642
+00004924_000.png,37,"Findings: exam: frontal chest radiograph.
+
+findings:
+- cardiomediastinal silhouette within normal size limits for technique.
+- lungs without focal lobar air‑space consolidation or pleural effusion.
+- mild, predominately perihilar and lower‑lung reticular and linear interstitial markings bilaterally, greater on the left.
+- radiopaque circular external marker projects over the left mid‑lung.
+
+impression:
+1. mild chronic‑appearing bilateral interstitial/reticular changes, greatest in the perihilar and lower lungs — most consistent with fibrosis/scar. correlate with prior radiographs and clinical history. 
+2. no acute cardiopulmonary process identified (no focal consolidation, pleural effusion, or pneumothorax). 
+3. external marker overlying the chest.",0.09334276237142712,0.3082801103591919,0.4605393409729004,0.1681818181818182,3.524923302971824,1.2736660503037698
+00004992_015.png,38,"Findings: exam: frontal chest radiograph (single view).
+
+findings:
+- cardiomediastinal silhouette mildly to moderately enlarged.
+- pulmonary vascular congestion with diffuse, bilateral perihilar and lower‑lung predominant interstitial and patchy air‑space opacities.
+- small bilateral pleural effusions suspected with blunting/opacity at the bases.
+
+impression:
+1. cardiomegaly with pulmonary vascular congestion and bilateral perihilar/lower‑lung interstitial and air‑space opacities — most consistent with pulmonary edema, cardiogenic etiology favored.
+2. small bilateral pleural effusions suspected.
+3. correlate with clinical exam, bnp, and prior imaging. consider pa and lateral chest radiographs or chest ct if alternate diagnoses (infection, aspiration, ards) are a concern.
+
+(educational use only — not for clinical decision making.)",0.04832472865417439,0.22385573387145996,0.1894119530916214,0.15420928402832418,4.27701129049619,1.7001463200728508
+00005267_001.png,39,"Findings: exam: frontal chest radiograph (upright).
+
+findings: cardiomediastinal silhouette within expected size limits. lungs clear of focal lobar air‑space consolidation. mild linear subsegmental air‑space opacity/scar at the right infrahilar/medial lower lung zone. no pleural effusion or pneumothorax identified. no acute osseous abnormality.
+
+impression:
+1. mild linear subsegmental atelectasis/scar in the right infrahilar/medial lower lung zone.
+2. no acute cardiopulmonary process identified otherwise (no focal consolidation, effusion, or pneumothorax).
+
+recommend clinical correlation and comparison with prior radiographs if available.",0.13759678177399753,0.31048205494880676,0.3575970530509949,0.19583333333333336,3.6988005861497957,1.338002937641946
+00005646_020.png,40,"Findings: exam: portable ap chest radiograph.
+
+findings: ap technique with limited inspiration. cardiomediastinal silhouette mildly prominent for ap. bilateral coarse reticular and linear interstitial opacities, greatest in the mid‑to‑lower lungs (r > l). no focal lobar air‑space consolidation identified. no pleural effusion or pneumothorax. anterior thoracic spinal fixation hardware projects over the lower mediastinum.
+
+impression:
+1. bilateral mid‑to‑lower lung reticular/linear interstitial opacities, greater on the right — most consistent with chronic interstitial/fibrotic change.
+2. no acute focal consolidation, pleural effusion, or pneumothorax identified.
+3. anterior thoracic spinal fixation hardware in place.
+
+recommendation: correlate clinically; consider pa and lateral radiographs or chest ct if further characterization is needed.",0.12227190816814207,0.3111574947834015,0.3194235563278198,0.2206959706959707,3.7178321252487647,1.3439024433948823
+00005852_004.png,41,"Findings: technique: single frontal chest radiograph, upright.
+
+comparison: none available.
+
+findings:
+- cardiomediastinal silhouette within expected size limits for technique.
+- lungs clear of focal air‑space consolidation.
+- no pleural effusion identified.
+- no pneumothorax.
+- no acute osseous abnormality seen.
+
+impression:
+1. no acute cardiopulmonary disease identified — no focal consolidation, pleural effusion, or pneumothorax.
+2. cardiomediastinal size within expected limits.
+
+recommendation: correlate with clinical exam. consider pa and lateral views or comparison studies if greater sensitivity is required.",0.19008864950406698,0.44362884759902954,0.7085782289505005,0.45238095238095233,2.2703463435343743,0.4495947486991826
+00005991_013.png,42,"Findings: exam: frontal chest radiograph (single frontal view).
+
+findings:
+- left-sided visceral pleural line with absence of lung markings peripheral to the line along the lateral/upper left hemithorax, consistent with a pneumothorax.
+- small volume pneumothorax, greatest at the lateral/apical left chest.
+- no appreciable mediastinal shift.
+- cardiomediastinal silhouette within expected size limits for a single frontal view.
+- mild subsegmental atelectatic/linear scarring at the left mid-lower lung.
+- small radiopaque surgical/foreign object adjacent to the left mid-hemithorax.
+
+impression:
+1) small left-sided pneumothorax without mediastinal shift.  
+2) linear scarring/atelectasis in the left mid-lower lung.  
+3) left-sided radiopaque surgical/foreign object adjacent to the pleura.
+
+recommendation: correlate with clinical status. if concern for progression or if the patient is symptomatic, obtain an upright expiratory or lateral decubitus chest radiograph or ct chest for quantification and consider urgent clinical management as indicated.
+
+this report is for educational purposes only and not for clinical decision-making.",0.06514692541617537,0.2565650939941406,0.3300837278366089,0.21906354515050164,3.8239855786771324,1.425454339157158
+00006008_014.png,43,"Findings: exam: portable ap chest radiograph.
+
+findings:
+- cardiomediastinal silhouette mildly enlarged for technique.
+- bilateral layering pleural effusions, greater on the left, with blunting of the costophrenic sulci.
+- patchy bilateral perihilar and bibasilar air‑space/atelectatic consolidation, more conspicuous at the left base.
+- external monitoring leads and a superficial round device project over the chest. no pneumothorax identified.
+
+impression:
+1. bilateral pleural effusions, left > right.
+2. mild cardiomegaly with pulmonary interstitial/air‑space opacities, which may reflect pulmonary edema/vascular congestion; infection or atelectasis could contribute.
+3. bibasilar consolidation/scar, greater on the left.
+
+recommend correlation with clinical exam and prior imaging; consider upright frontal and lateral radiographs or chest ct for further characterization if clinically indicated. (educational use only — not for clinical decision making.)",0.10405177390868119,0.29825684428215027,0.11988896131515503,0.19983277591973242,4.150607571662512,1.5896699825746572
+00006039_015.png,44,"Findings: exam: ap chest radiograph
+
+findings:
+- external monitoring leads project over the chest.
+- cardiomediastinal silhouette mildly enlarged.
+- patchy bilateral air‑space consolidation and peribronchial/vascular crowding, greater centrally and in the perihilar/lower lung zones (r > l).
+- small bilateral pleural effusions vs. dependent subsegmental atelectasis at the bases.
+- no pneumothorax identified.
+
+impression:
+1. multifocal bilateral air‑space consolidation (greater on the right) — favored infectious/aspiration pneumonia; correlate clinically.
+2. mild cardiomegaly with pulmonary vascular congestion; small bilateral effusions.
+3. no pneumothorax. recommend correlation with clinical exam, prior imaging, and chest ct or follow-up radiograph as indicated.",0.14177097693459723,0.3236919045448303,0.19395343959331512,0.2947605271616843,3.811387933700332,1.3557977986175176
+00006100_001.png,45,"Findings: exam: frontal upright chest radiograph.
+
+findings: cardiomediastinal contours within normal limits for technique. lungs clear bilaterally without focal consolidation, effusion, or pneumothorax. no acute osseous abnormality identified.
+
+impression: no acute cardiopulmonary disease identified.",0.2586986646803848,0.6089028716087341,0.8017325401306152,0.4553571428571428,1.6426412469177412,0.08037962405535624
+00006251_000.png,46,"Findings: exam: frontal chest radiograph (upright).
+
+findings:
+- cardiomediastinal silhouette within expected size for technique.
+- lungs without focal lobar air‑space consolidation.
+- scattered chronic-appearing interstitial/peribronchial markings, greater in the perihilar regions and lung bases.
+- discrete rounded nodular opacity projecting over the right mid‑lung zone, approximately 1 cm in size.
+- no pleural effusion or pneumothorax identified.
+
+impression:
+1. rounded nodular opacity in the right mid‑lung (≈1 cm). recommend comparison with prior chest radiographs if available. if new or indeterminate, cross‑sectional imaging with chest ct is recommended for further characterization.
+2. mild chronic-appearing interstitial and peribronchial/bronchitic-type markings, greater at the bases.
+
+this report is for educational use only and not for clinical decision-making.",0.17841031003501576,0.31995442509651184,0.5838556289672852,0.20357497517378353,3.263260697843477,1.0876498709564437
+00006304_001.png,47,"Findings: exam: ap portable chest radiograph (image: <WORKSPACE>/data/100_datasets_per_class_nih_chest_xray/nih_subset/atelectasis/00006304_001.png).
+
+findings: cardiomediastinal silhouette within expected size for ap technique. external monitoring leads project over the chest. patchy linear and air‑space opacities along the perihilar regions and at the bilateral bases, greater on the right. no dense lobar consolidation identified. no pleural effusion or pneumothorax visualized.
+
+impression:
+1. patchy bibasilar and perihilar air‑space/linear opacities, greater on the right — most consistent with subsegmental atelectasis/scar.
+2. no acute large pleural effusion or pneumothorax identified.
+
+recommend clinical correlation and comparison with prior chest radiographs if available.",0.07536990622635631,0.16228888928890228,0.28820177912712097,0.1535303776683087,4.297634459017335,1.704355719243398
+00006304_009.png,48,"Findings: exam: frontal chest radiograph (single view)
+
+findings:
+- cardiomediastinal silhouette within expected size limits for technique.
+- patchy bilateral air‑space and reticular opacities, greatest centrally and in the lower lungs (r > l).
+- small bilateral layering pleural effusions with blunting at the bases, greater on the right.
+- external monitoring electrode projects over the right chest; a curvilinear catheter/line courses from the lower neck into the right hemithorax.
+
+impression:
+1) bilateral multifocal air‑space/interstitial infiltrates, greatest centrally and at the bases (r > l) — suspicious for infectious or inflammatory process.  
+2) small bilateral pleural effusions, greater on the right.  
+3) right-sided catheter/device projects over the chest; correlate clinically for line type and tip position.",0.12724741273588244,0.3064802587032318,0.2537951171398163,0.20111241217798592,3.8895274385478515,1.4412949180916896
+00006329_007.png,49,"Findings: exam: portable ap chest radiograph.
+
+findings: endotracheal tube projects in the midline with the tip approximately 3 cm above the carina. cardiomediastinal silhouette mildly enlarged. diffuse bilateral reticulonodular and linear interstitial opacities, greater at the lung bases and periphery. no focal lobar consolidation identified. no pneumothorax. small or loculated pleural effusion not identified on this single ap view.
+
+impression:
+1. diffuse bilateral interstitial/reticular opacities with basilar predominance — most consistent with chronic interstitial fibrosis or chronic interstitial lung disease. correlate with clinical history and prior imaging.
+2. endotracheal tube tip ~3 cm above the carina.
+3. mild cardiomegaly.",0.16219334299621546,0.38955768942832947,0.17346283793449402,0.11448863636363636,3.95256821057957,1.4919245484148314
+00006386_006.png,50,"Findings: exam: frontal chest radiograph (ap technique). no prior available for comparison on image.
+
+findings:
+- median sternotomy wires and postoperative mediastinal clips.
+- cardiomediastinal silhouette mildly enlarged.
+- low inspiratory volumes.
+- patchy bilateral air‑space consolidation greatest in the perihilar regions and bilateral lower lobes (left greater than right).
+- small bilateral pleural effusions cannot be excluded given blunting/opacity at the bases.
+- external tubing and leads project over the chest.
+
+impression:
+1) multifocal patchy air‑space consolidation in both lungs, most pronounced in the lower lungs and perihilar regions — most consistent with consolidation/bronchopneumonia or aspiration.  
+2) possible small bilateral pleural effusions.  
+3) mild cardiomegaly and postoperative median sternotomy changes.  
+recommend correlation with clinical exam, prior imaging, and follow-up radiograph or chest ct if clinically indicated.",0.055146576517586456,0.19290989637374878,0.04618820175528526,0.09836065573770492,4.732080113683955,1.9632516709460612
+00006808_011.png,51,"Findings: exam: frontal chest radiograph (ap).
+
+findings: cardiomediastinal silhouette is enlarged. enteric tube courses through the midline with the tip projecting over the expected region of the stomach. a central venous catheter courses to the region of the cavo‑atrial junction. lungs show mild, diffuse interstitial/vascular congestion with patchy bibasilar atelectatic/subsegmental air‑space opacity, greater at the bases. small bilateral pleural effusions suspected. no pneumothorax identified on this frontal view.
+
+impression:
+1. cardiomegaly.
+2. enteric tube in expected gastric region; central venous catheter with tip at/near the cavo‑atrial junction.
+3. mild pulmonary interstitial/vascular congestion with bibasilar atelectatic/air‑space opacity — small bilateral pleural effusions.
+4. no pneumothorax on this view.
+
+clinical correlation recommended for volume status and catheter/ tube function.",0.0966091783079296,0.21743996441364288,0.175199493765831,0.12765957446808512,4.399607572812313,1.7579360474471872
+00006829_007.png,52,"Findings: exam: chest radiograph, frontal view.
+
+findings:
+- cardiomediastinal silhouette within expected size limits for frontal view.
+- focal rounded nodular opacity projecting over the right mid–to–lower lung/hilum region.
+- patchy, predominantly perihilar and lower‑lung interstitial/air‑space opacities bilaterally, greater on the right.
+- no pleural effusion identified. no pneumothorax. no acute osseous abnormality seen.
+
+impression:
+1) rounded nodular opacity in the right mid–lung/hilar region — suspicious for a pulmonary mass; further characterization with dedicated chest ct recommended.
+2) bilateral perihilar and lower‑lung interstitial/air‑space prominence (reactive bronchitic change, scarring, or patchy/atypical infection possible) — correlate with symptoms and prior imaging.
+3) no pleural effusion or pneumothorax.",0.12658867808995466,0.3196311593055725,0.28325536847114563,0.2151679306608884,3.7719504619119357,1.3727764296077032
+00006978_004.png,53,"Findings: exam: frontal chest radiograph, upright.
+
+findings: cardiomediastinal silhouette not enlarged for technique. lungs without focal lobar consolidation. mild, symmetric perihilar and peribronchial interstitial prominence/vascular congestion. no pleural effusion or pneumothorax identified.
+
+impression:
+1. mild central interstitial/vascular congestion — appearance may represent mild pulmonary interstitial edema.
+2. no focal consolidation, pleural effusion, or cardiomegaly.
+
+recommend clinical correlation with symptoms and volume status; consider lateral radiograph or chest ct if further evaluation is needed.",0.12104550653376049,0.39969414472579956,0.3995208740234375,0.2114285714285714,3.315150434322285,1.1296034998564615
+00007016_001.png,54,"Findings: exam: frontal (ap) chest radiograph.
+
+findings:
+- cardiac silhouette enlarged for study technique with increased cardiothoracic ratio.
+- lungs without focal lobar airspace consolidation. mild perihilar/peribronchial interstitial markings bilaterally.
+- no pleural effusion identified. no pneumothorax.
+- enteric tube courses below the diaphragm with tip projecting over the stomach. external monitoring leads project over the chest.
+
+impression:
+1) cardiomegaly.
+2) mild perihilar/peribronchial prominence, greater centrally — can reflect reactive airways or viral/atypical infection; correlate clinically.
+3) enteric tube in expected gastric position. no focal consolidation, effusion, or pneumothorax identified.
+
+educational use only — not for clinical decision-making.",0.0995037190209989,0.3071802854537964,0.37552180886268616,0.22857142857142854,3.5959404351604722,1.2848565976380681
+00007326_000.png,55,"Findings: exam: frontal chest radiograph (upright).
+
+findings: cardiomediastinal silhouette mildly enlarged. lungs clear without focal airspace consolidation. no pleural effusion identified. aortic atherosclerotic calcification along the aortic knob.
+
+impression:
+1. mild cardiomegaly.
+2. no acute cardiopulmonary process identified on this frontal view (no focal consolidation, pleural effusion, or pulmonary edema).
+
+note: assessment limited by single frontal view—pa vs ap projection influences apparent heart size. correlate with prior imaging and clinical data.",0.12741179785940637,0.41483578085899353,0.5306248664855957,0.3073593073593074,2.8760781094166012,0.8547339392233994
+00007352_000.png,56,"Findings: exam: frontal chest radiograph (single view).
+
+findings: right subcutaneous port reservoir with catheter coursing medially; catheter tip projects near the region of the cavo‑atrial junction. cardiomediastinal silhouette within expected size limits for a frontal view. lungs clear of focal lobar air‑space consolidation. no pleural effusion identified. no pneumothorax. mild chronic-appearing peribronchial/interstitial scarring/scar-like subsegmental atelectasis at the perihilar/basilar regions, greater on the right.
+
+impression:
+1. right subcutaneous port with catheter tip near the cavo‑atrial junction.
+2. no acute cardiopulmonary disease identified on this frontal view — no focal consolidation, pleural effusion, or pneumothorax.
+3. mild chronic-appearing interstitial/peribronchial scarring, greater on the right.
+
+limited evaluation due to single frontal view; correlate clinically and with prior imaging if available. (educational use only — not for clinical decision-making.)",0.08799567428998596,0.1679815948009491,0.17999356985092163,0.09855072463768116,4.579593195510277,1.8710619697996453
+00007451_006.png,57,"Findings: exam: frontal chest radiograph.
+
+findings: cardiomediastinal silhouette within expected size limits. linear/plate-like subsegmental atelectatic change/scar at the lower lungs, greater on the right. no focal lobar air‑space consolidation identified. no pleural effusion or pneumothorax detected. no acute osseous abnormality.
+
+impression:
+1. subsegmental/plate-like atelectasis or scarring at the bilateral lower lobes, greater on the right.
+2. no acute focal consolidation, pleural effusion, or pneumothorax.",0.15401890292714973,0.3722851276397705,0.31418323516845703,0.14372557533651759,3.6886395045917544,1.3440478927092723
+00007471_001.png,58,"Findings: exam: portable ap chest radiograph.
+
+history/comparison: none available.
+
+findings:
+- enteric tube courses below the thorax with its radiopaque portion extending into the upper abdomen (tip projects below the diaphragm).
+- cardiomediastinal silhouette mildly enlarged.
+- lungs show diffuse bilateral interstitial/air‑space prominence with patchy perihilar and basilar opacities greater centrally and at the bases.
+- small bilateral pleural effusions with blunting/meniscus at the costophrenic angles.
+- external monitoring leads project over the chest. no pneumothorax identified on this single ap view.
+
+impression:
+1. enteric tube with tip projecting below the diaphragm (appropriate intragastric position by this single view).
+2. mild cardiomegaly.
+3. bilateral interstitial and patchy air‑space opacities, greatest centrally and at the bases — differential includes pulmonary edema versus multifocal infection/aspiration; correlate clinically.
+4. small bilateral pleural effusions.
+5. no pneumothorax identified on this ap view.
+
+recommendation: correlate with clinical status and prior imaging. if exact tube tip location or further evaluation of consolidation/effusion is required, consider chest radiograph with upright pa and lateral views or chest radiograph/ct as clinically indicated.",0.04339494163075087,0.07634540647268295,-0.03707921504974365,0.06451612903225806,5.2843003787683065,2.280657442305958
+00007887_000.png,59,"Findings: exam: frontal chest radiograph (single view).
+
+findings:
+- cardiomediastinal silhouette within normal size for technique.
+- lungs clear of focal air‑space consolidation.
+- mild chronic-appearing peribronchial/linear scarring and increased interstitial markings, greater centrally and in the lower lungs (l>r).
+- no pleural effusion or pneumothorax identified.
+- retrocardiac rounded air-containing opacity projecting behind the cardiac silhouette, suggestive of a small hiatal hernia (possible air‑fluid level).
+
+impression:
+1. no acute cardiopulmonary process identified—no focal consolidation, pleural effusion, or pneumothorax.
+2. mild chronic peribronchial/linear scarring (greater on the left).
+3. retrocardiac air-containing structure consistent with a small hiatal hernia. correlate clinically; consider lateral chest radiograph or ct abdomen/chest if further evaluation is required.",0.1310056158944379,0.30972036719322205,0.4281487464904785,0.22549019607843135,3.517092110991758,1.2321483279930732
+00008004_005.png,60,"Findings: technique: frontal chest radiograph.
+
+findings: right-sided tunneled central venous catheter courses inferiorly with the tip projecting near the region of the lower svc. cardiomediastinal silhouette mildly enlarged. bilateral patchy perihilar and basilar‑predominant air‑space/air‑bronchogram opacities, greater centrally and at the bases. no large pleural effusion identified. no pneumothorax.
+
+impression:
+1. right-sided central venous catheter with tip near the lower svc.
+2. bilateral perihilar and basilar patchy air‑space opacities — differential includes pulmonary edema vs multifocal infection/aspiration; correlate clinically.
+3. mild cardiomegaly. no pneumothorax or large effusion.",0.13570865209011626,0.2663365304470062,0.11864668130874634,0.11948051948051948,4.399293202908472,1.7436572104521217
+00008147_001.png,61,"Findings: exam: frontal chest radiograph.
+
+technique: single frontal view (marker l). likely upright.
+
+findings:
+- focal patchy air‑space opacity in the right mid-to-lower lung, greatest along the right perihilar/mid‑lung region.
+- cardiomediastinal silhouette within expected size limits for technique.
+- no pleural effusion identified. no pneumothorax.
+- a monitoring/tubing projecting over the right chest.
+
+impression:
+1. focal air‑space consolidation in the right mid-to-lower lung—most suspicious for infectious consolidation (pneumonia) or focal atelectasis.  
+2. no pleural effusion or pneumothorax identified.
+
+recommendation: correlate with clinical signs/symptoms and prior radiographs. consider chest radiograph follow-up after treatment or chest ct if clinical concern for complication.",0.1340501843777773,0.313836932182312,0.3796216547489166,0.24396551724137933,3.568426957522175,1.250620122189656
+00008195_000.png,62,"Findings: exam: chest radiograph, frontal view.
+
+findings: cardiomediastinal silhouette within expected size limits. linear pleural-based thickening/scar at the right greater than left lateral/basilar hemithorax, most apparent along the right costophrenic sulcus. mild chronic-appearing scarring/linear subsegmental atelectatic change at both lower lobes (greater on the right). no focal lobar air‑space consolidation and no large pleural effusion or pneumothorax identified.
+
+impression:
+1. pleural thickening/scar at the right greater than left lateral/basilar lungs.
+2. mild chronic-appearing scarring/linear atelectasis at bilateral lower lobes (r > l).
+3. no acute cardiopulmonary consolidation, large effusion, or pneumothorax on this frontal view.
+
+recommendation: correlate with prior radiographs if available. consider pa and lateral views if further evaluation of pleural disease or small effusion is required.",0.062217101683825514,0.2948926091194153,0.37401527166366577,0.16978375219170075,3.70254171148276,1.3798436859400982
+00008468_020.png,63,"Findings: exam: frontal chest radiograph (single view).
+
+comparison: none available.
+
+findings:
+- cardiomediastinal silhouette within expected size for technique.
+- lungs mildly hyperinflated with increased radiolucency and decreased peripheral vascular markings, greater centrally — morphologic appearance most consistent with emphysematous change.
+- no focal lobar consolidation identified to suggest acute airspace disease.
+- no pleural effusion or pneumothorax.
+- external monitoring leads project over the chest.
+
+impression:
+1) findings consistent with emphysematous-type hyperinflation/chronic obstructive change.
+2) no acute cardiopulmonary process identified (no focal consolidation, pleural effusion, or pneumothorax).",0.10340371489689049,0.36608797311782837,0.3937810957431793,0.2118226600985222,3.41383060684705,1.190301134663023
+00008508_004.png,64,"Findings: exam: frontal chest radiograph (upright).
+
+findings: cardiomediastinal silhouette within normal size limits for technique. lungs clear of focal airspace consolidation. no pleural effusion or pneumothorax identified. there is an ovoid air-containing structure with an air‑fluid level projecting posterior to the cardiac silhouette/left lower mediastinum, consistent with a hiatal/paraesophageal herniation of stomach.
+
+impression:
+1. air‑containing retrocardiac opacity with air–fluid level — most consistent with a hiatal (gastroesophageal) hernia.
+2. no acute cardiopulmonary process identified (no focal consolidation, pleural effusion, or pneumothorax).
+
+recommendation: correlate with prior imaging or consider dedicated chest/abdomen imaging (or ct) if clinical concern.",0.16350129439037092,0.3596886098384857,0.4376465380191803,0.29084967320261434,3.268244872738987,1.0588236654947485
+00008566_012.png,65,"Findings: findings:
+- small left apical pneumothorax identified by a thin visceral pleural line with absent peripheral vascular markings laterally.
+- no focal lobar consolidation or pleural effusion identified.
+- cardiomediastinal silhouette within expected size for ap technique.
+- external monitoring leads project over the chest.
+
+impression:
+1. small left apical pneumothorax without mediastinal shift.
+2. no acute cardiopulmonary consolidation or effusion identified.
+recommendation: correlate with symptoms and vital signs. if clinically unstable or if pneumothorax size/progression is a concern, consider urgent decompression or chest ct; otherwise obtain short-interval follow-up radiograph.",0.15212381463453423,0.38217446208000183,0.5230279564857483,0.24621212121212122,3.103422882358301,0.9923513906274654
+00008678_006.png,66,"Findings: exam: frontal chest radiograph (single view).
+
+findings:
+- patchy air‑space consolidation involving the mid to lower left hemithorax, greater centrally and laterally.
+- cardiomediastinal silhouette within expected limits for technique.
+- no visible pleural effusion or pneumothorax on this frontal view.
+- round radiopaque subcutaneous port/vascular access device projects over the upper chest.
+
+impression:
+1. patchy consolidation in the left mid‑to‑lower lung — most consistent with focal pneumonia or aspiration.  
+2. no pleural effusion or pneumothorax identified on this single frontal view.  
+3. subcutaneous chest port projects over the upper chest.
+
+limitations: single frontal view only; consider pa and lateral radiographs or chest ct if further characterization is required.",0.09028238058481557,0.2881157100200653,0.3020155429840088,0.16190476190476188,3.8903782439593497,1.4724656385495887
+00008701_035.png,67,"Findings: exam: frontal chest radiograph (single frontal view).
+
+findings:
+- endotracheal tube with tip approximately 3 cm above the carina.
+- enteric tube coursing below the diaphragm.
+- cardiomediastinal silhouette mildly enlarged.
+- diffuse bilateral, perihilar and basilar-predominant interstitial and air‑space opacities.
+- small bilateral pleural effusions, greater at the bases.
+
+impression:
+1. endotracheal and enteric tubes in expected positions.
+2. cardiomegaly with diffuse bilateral interstitial and air‑space opacities — pattern most suggestive of cardiogenic pulmonary edema. multifocal infection or ards are alternative considerations.
+3. small bilateral pleural effusions.
+
+recommend clinical correlation (volume status, bnp, infection markers) and comparison with prior radiographs if available; consider follow-up radiograph after therapy.",0.09190182776172598,0.217088982462883,-0.0041733249090611935,0.05084745762711864,4.855392241544514,2.0325981716688792
+00008713_002.png,68,"Findings: exam: portable ap chest radiograph.
+
+findings: cardiomediastinal silhouette within expected size for ap technique. lungs clear of focal air‑space consolidation. no pleural effusion identified. no pneumothorax detected. mild chronic-appearing peribronchial/perihilar interstitial markings bilaterally. external monitoring lead projects over the chest.
+
+impression:
+1. no acute cardiopulmonary disease identified—no focal consolidation, pleural effusion, or pneumothorax.
+2. mild chronic peribronchial/perihilar chronic-appearing interstitial markings.
+limitations: single frontal ap portable view may reduce sensitivity for small effusions or pneumothorax.",0.1735264020984512,0.35882696509361267,0.3560393750667572,0.22176079734219267,3.5406607603347133,1.2274572009649118
+00008777_000.png,69,"Findings: exam: frontal upright chest radiograph
+
+technique: ap/pa frontal view.
+
+findings:
+- cardiomediastinal silhouette within expected size limits for technique.
+- lungs without focal lobar consolidation.
+- mild, bilateral basilar subsegmental atelectasis/scar, greater on the right.
+- blunting of the right greater than left costophrenic sulci suggesting small bilateral pleural effusions.
+- rounded opacity projecting over the right paratracheal/upper mediastinal region, approximately a few centimeters in size and best appreciated on the frontal view.
+
+impression:
+1. rounded right paratracheal/upper mediastinal opacity — indeterminate on frontal radiograph; ct chest recommended for characterization.
+2. small bilateral pleural effusions with adjacent subsegmental atelectasis/scarring at the bases (right > left).
+3. no focal lobar consolidation or pneumothorax identified.
+
+this report is for educational purposes only and not for clinical decision-making.",0.13692208201357492,0.30098822712898254,0.34902864694595337,0.29824561403508776,3.5802088884520797,1.2346739425744064
+00009144_000.png,70,"Findings: exam: ap chest radiograph (portable).
+
+findings:
+- cardiomediastinal silhouette mildly enlarged.
+- multiple external monitoring leads project over the chest.
+- bilateral patchy perihilar and bibasilar air‑space/interstitial opacities, greater centrally and at the lung bases.
+- small bilateral pleural effusions with blunting/layering at the costophrenic sulci (right greater than left).
+- no pneumothorax identified.
+
+impression:
+1) small bilateral pleural effusions, right > left.
+2) cardiomegaly with bilateral interstitial/air‑space opacities — pattern may reflect pulmonary interstitial edema/vascular congestion; multifocal consolidation/infection less likely but possible.
+3) external monitoring leads project over the chest.
+
+recommend correlation with clinical exam, bnp, and prior imaging if available.",0.11146646082545907,0.31264108419418335,0.14158377051353455,0.2521541950113379,3.9888241403121336,1.4791909594519532
+00009507_001.png,71,"Findings: exam: frontal chest radiograph (upright).
+
+findings:
+- cardiomediastinal silhouette within normal size limits for technique.
+- lungs clear of focal lobar air‑space consolidation.
+- rounded air-containing retrocardiac opacity with an apparent air‑fluid level projecting behind the cardiac silhouette, most consistent with a hiatal hernia.
+- mild linear/scar-like subsegmental atelectatic change at the bilateral bases.
+- no pleural effusion identified. no pneumothorax.
+
+impression:
+1) retrocardiac air‑containing structure with air‑fluid level — most consistent with a hiatal hernia.  
+2) no acute cardiopulmonary consolidation or pleural effusion.  
+3) mild chronic-appearing subsegmental scarring/atelectasis at the bases.
+
+educational use only — not for clinical decision-making.",0.18817103414850692,0.31363430619239807,0.2596508860588074,0.2219502243982048,3.867408865159838,1.3977119549064307
+00009507_002.png,72,"Findings: exam: frontal chest radiograph. no prior for comparison.
+
+findings: cardiomediastinal silhouette within normal size limits for technique. lungs clear of focal air‑space consolidation. mild chronic-appearing peribronchial and interstitial markings with linear scarring at the bilateral lower lobes (greater on the right). no pleural effusion or pneumothorax. external monitoring leads and left axillary surgical clips noted.
+
+impression:
+1) no acute cardiopulmonary disease identified—no focal consolidation, effusion, or pneumothorax.
+2) mild chronic peribronchial/linear scarring at the bilateral bases, r>l.
+3) external leads and surgical clips project over the chest.
+
+educational use only — not for clinical decision-making.",0.0995037190209989,0.3052777647972107,0.21401354670524597,0.12068965517241381,4.07565953952428,1.5829973606197612
+00009613_000.png,73,"Findings: exam: frontal chest radiograph (single view).
+history: not provided.
+
+findings: cardiomediastinal silhouette within expected size for technique. patchy air‑space consolidation in both mid-to‑lower lungs, greater on the right. small layering/meniscus opacity along the left lateral base suggesting a small pleural effusion. no pneumothorax identified.
+
+impression:
+1. bilateral patchy mid‑to‑lower lung air‑space consolidation, greater on the right — most consistent with multifocal pneumonia or aspiration.
+2. small left pleural effusion suspected.
+
+recommendation: correlate with clinical data. consider pa and lateral radiographs or chest ct for further characterization if clinically indicated. (educational use only — not for clinical decision making.)",0.1633543269050391,0.3794133961200714,0.2800552546977997,0.23800098960910443,3.5879771096553235,1.2488364879926313
+00009788_000.png,74,"Findings: exam: frontal chest radiograph (single view).
+
+findings:
+- cardiomediastinal silhouette within normal size limits for frontal technique.
+- patchy, ill-defined increased air‑space/interstitial opacity in the perihilar and peribronchial regions, greater on the right and extending toward the right middle/lower lung.
+- no pleural effusion identified on this frontal view.
+- no pneumothorax. no acute osseous abnormality seen.
+
+impression:
+1) patchy perihilar/peribronchial air‑space/airway opacities, greater on the right — most suspicious for focal/patchy air‑space infiltration (infiltrate/bronchopneumonia) or bronchitic-type peribronchial cuffing.  
+2) no pleural effusion or pneumothorax identified.
+
+recommendation: correlate with clinical signs/symptoms. consider lateral or pa and lateral radiographs or chest ct and short-interval radiographic follow-up if clinical concern for infection or evolving consolidation.",0.12724741273588244,0.25863394141197205,0.2688648998737335,0.3504347826086957,3.7680270631301163,1.3193521398640888
+00009920_005.png,75,"Findings: exam: frontal chest radiograph (single view).
+
+findings: cardiomediastinal silhouette within expected size for technique. patchy air‑space/bronchovascular opacities at the dependent lung bases, greater on the left. small bilateral pleural effusions with blunting and dependent subsegmental atelectasis/scar at the bases, left greater than right. no acute osseous abnormality identified on this view.
+
+impression:
+1. patchy/segmental air‑space consolidation in the dependent lower lungs, greater on the left — most suspicious for left greater than right lower‑lobe pneumonia.
+2. small bilateral pleural effusions with associated dependent atelectasis.
+3. recommend upright pa and lateral chest radiographs or chest ct if further characterization or complication assessment is needed.
+
+educational use only — not for clinical decision making.",0.16078251886772726,0.33377334475517273,0.33941707015037537,0.2642602495543672,3.570576181554615,1.2324312397874826
+00010007_065.png,76,"Findings: exam: frontal chest radiograph (single view).
+
+findings:
+- median sternotomy wires and surgical clips.
+- cardiomediastinal enlargement.
+- bilateral patchy perihilar and basilar air‑space/air‑bronchogram opacities, greater on the left.
+- linear pleural‑based opacities along the lateral/basilar lungs consistent with pleural thickening/scar, left > right.
+- no large pleural effusion or pneumothorax identified.
+- external monitoring leads project over the chest.
+
+impression:
+1) cardiomegaly and prior median sternotomy.  
+2) bilateral pleural‑based linear opacities compatible with pleural thickening/scarring (greater on the left).  
+3) patchy bibasilar air‑space opacity, greater on the left — favor atelectasis or consolidation.  
+4) no large effusion or pneumothorax identified on this frontal view.
+
+recommendation: correlate clinically and with lateral or prior radiographs/ct if available for better assessment of pleural disease and to distinguish scar from active consolidation.",0.08190423931780381,0.22300775349140167,0.36528658866882324,0.177960927960928,3.93631664335917,1.4970151581415196
+00010007_158.png,77,"Findings: exam: ap frontal chest radiograph.
+
+findings:
+- median sternotomy wires and mediastinal surgical clips noted.
+- cardiomediastinal enlargement.
+- diffuse reticular and linear interstitial/pleuroparenchymal opacities, basilar predominant and greater on the right, with subpleural scarring — appearance most consistent with pulmonary fibrosis/scar.
+- small bilateral pleural effusions, greater on the right, with blunting of the costophrenic regions.
+- multiple external monitoring leads and left-sided central venous catheter with tip projecting near the region of the cavoatrial junction.
+- no focal lobar consolidation or pneumothorax identified on this frontal view.
+
+impression:
+1) basilar-predominant interstitial/reticular opacities and subpleural scarring, right greater than left — most consistent with pulmonary fibrosis.
+2) small bilateral pleural effusions, greater on the right.
+3) cardiomegaly.
+4) postoperative changes of median sternotomy. left-sided central venous catheter in expected region. external monitoring leads project over the chest.
+
+this read is for educational purposes only and not for clinical decision-making.",0.11240580270785866,0.2798551917076111,0.47050556540489197,0.29166666666666663,3.40919528760388,1.1569117265189803
+00010365_004.png,78,"Findings: exam: frontal chest radiograph, upright.
+
+technique: single frontal view. no prior for comparison.
+
+findings:
+- cardiomediastinal silhouette within normal size limits for technique.
+- lungs clear of focal lobar air‑space consolidation.
+- no pleural effusion identified.
+- no pneumothorax.
+- mild peribronchial/perihilar bronchitic-type increased markings greater centrally, greater on the right.
+
+impression:
+1) no acute cardiopulmonary consolidation, pleural effusion, or pneumothorax on this frontal view.
+2) mild central peribronchial/bronchitic-type interstitial markings. correlate clinically for airway/reactive process if indicated.",0.11597140634056134,0.29326963424682617,0.4571118652820587,0.20521446593776282,3.533832613282954,1.2557419227835938
+00010575_001.png,79,"Findings: exam: frontal chest radiograph.
+
+findings:
+- cardiomediastinal silhouette within expected size limits for frontal technique.
+- external monitoring leads project over the chest.
+- a focal rounded pulmonary opacity projects over the right mid‑lung (approximately 8–15 mm by visual estimate).
+- no focal lobar consolidation or pleural effusion identified. no acute osseous abnormality seen.
+
+impression:
+1) solitary rounded pulmonary nodule projecting over the right mid‑lung. recommend comparison with prior chest imaging if available. consider dedicated chest ct for characterization and localization.
+2) no acute cardiopulmonary process identified on this frontal image.",0.11469474471743375,0.3601262867450714,0.33563825488090515,0.2305194805194805,3.5190486744003184,1.2347002237177873
+00010594_009.png,80,"Findings: exam: frontal chest radiograph (single view, upright).
+comparison: none available.
+
+findings:
+- cardiomediastinal silhouette within expected size for technique.
+- lungs clear bilaterally without focal air‑space consolidation.
+- costophrenic angles are sharp; no visible pleural effusion.
+- no pneumothorax or acute osseous abnormality identified.
+
+impression:
+1. no acute cardiopulmonary process identified on this frontal radiograph.
+2. no pleural effusion or focal consolidation seen. 
+if clinical concern for effusion or subtle pathology persists, obtain pa and lateral chest radiographs or chest ct for greater sensitivity.",0.09248709425418192,0.3788270056247711,0.26341313123703003,0.21392190152801357,3.608586340624382,1.2963433152634611
+00010828_006.png,81,"Findings: exam: ap portable chest radiograph (single frontal view).
+
+findings:
+- endotracheal tube present with tip approximately 3 cm above the carina.
+- enteric tube courses below the diaphragm with tip projecting in the expected gastric region.
+- right-sided central venous catheter projects with tip near the region of the cavo‑atrial junction.
+- cardiomediastinal silhouette mildly–moderately enlarged.
+- bilateral perihilar and lower‑lung predominant interstitial and patchy air‑space opacities with pulmonary vascular congestion.
+- small bilateral pleural effusions layering at the bases. no pneumothorax identified.
+
+impression:
+1) cardiomegaly with pulmonary interstitial and alveolar edema pattern, greater centrally and at the bases — findings most consistent with cardiogenic pulmonary edema.
+2) small bilateral pleural effusions.
+3) support devices in expected positions: endotracheal tube (~3 cm above carina), enteric tube in stomach, right ij central venous catheter with tip near cavo‑atrial junction.
+4) no pneumothorax. correlate clinically and with prior imaging if available to assess for superimposed infection or alternative causes.",0.12020601692865228,0.2216920256614685,0.40860724449157715,0.1971527178602243,3.85596990047432,1.4321951283453551
+00010864_006.png,82,"Findings: exam: frontal chest radiograph.
+
+findings:
+- cardiomediastinal silhouette within expected size limits for frontal technique.
+- lungs clear of dense focal lobar air‑space consolidation. mild chronic‑appearing peribronchial and linear scarring/scattered bronchitic-type markings centrally.
+- no pleural effusion identified. no pneumothorax.
+- external monitoring leads and superficial tubing project over the chest.
+
+impression:
+1. no acute cardiopulmonary process identified — no focal lobar consolidation, large effusion, or pneumothorax.
+2. mild chronic/bronchitic-type peribronchial markings/scar.
+3. external monitoring leads project over the chest.",0.126358167740047,0.2846854627132416,0.4193840026855469,0.10777777777777778,3.7925935986953396,1.4287734278043642
+00011355_049.png,83,"Findings: exam: frontal chest radiograph.
+
+findings:
+- cardiomediastinal silhouette within expected size limits for technique.
+- lungs show hyperinflation with increased radiolucency and mild flattening of the diaphragms, most consistent with emphysematous change.
+- no focal lobar air‑space consolidation identified.
+- no pleural effusion or pneumothorax detected.
+- external metallic artifact/monitoring leads projecting over the left chest.
+
+impression:
+1) hyperinflation and emphysematous-type change.
+2) no acute cardiopulmonary process identified—no focal consolidation, pleural effusion, or pneumothorax.
+3) external metallic artifact projects over the left hemithorax. correlate with clinical history and prior radiographs if available.",0.0942478405400904,0.36395201086997986,0.22546496987342834,0.15462962962962962,3.819923080355081,1.4324810933577183
+00011460_066.png,84,"Findings: exam: ap portable cross-table chest radiograph
+
+comparison: none available
+
+findings:
+- right-sided apical pleural line with absence of peripheral lung markings extending along the lateral chest wall, compatible with a small-to-moderate right pneumothorax.
+- right-sided thoracostomy tube/large-bore drainage catheter projects over the right hemithorax with sideholes visualized within the thoracic cavity.
+- low inspiratory volumes. no focal lobar consolidation identified. no large pleural effusion evident on this projection.
+
+impression:
+1) right pneumothorax (small-to-moderate).  
+2) right thoracostomy tube in place; correlate clinically and with dedicated upright or expiratory radiograph/ct if there is concern for residual or tension physiology.",0.03972342845143204,0.3021930754184723,0.5160598158836365,0.11636828644501279,3.4832861462518023,1.2930036617340057
+00011481_002.png,85,"Findings: exam: frontal chest radiograph (upright).
+
+findings:
+- cardiomediastinal silhouette within expected size limits for technique.
+- lungs hyperinflated with mild flattening of the diaphragms and increased lucency with relative paucity of peripheral vascular markings, greater centrally — consistent with emphysematous/copd-type change.
+- no focal lobar airspace consolidation identified. no pleural effusion visualized.
+- external monitoring leads project over the chest.
+
+impression:
+1. radiographic features most consistent with emphysema/copd (hyperinflation, diaphragmatic flattening, decreased peripheral markings).
+2. no acute focal consolidation or pleural effusion identified on this frontal view.
+3. external monitoring leads overlie the chest.",0.09996843600321184,0.31864848732948303,0.2301788181066513,0.18014705882352944,3.9109843048379735,1.4708062811775637
+00011683_029.png,86,"Findings: exam: frontal chest radiograph. no prior available.
+
+findings:
+- cardiomediastinal silhouette within expected size for a single frontal view.
+- linear/plate-like subsegmental air‑space opacities at the bilateral lower lungs, greater on the right — most consistent with subsegmental atelectasis or scarring.
+- small bilateral pleural effusions with blunting of the costophrenic angles, greater on the right.
+- no pneumothorax or dense focal lobar consolidation identified.
+- external monitoring leads/tubes project over the chest.
+
+impression:
+1. subsegmental atelectasis/scar in both lower lobes, greater on the right.
+2. small bilateral pleural effusions (r > l).
+3. no pneumothorax or definite lobar consolidation on this frontal view.
+
+recommend correlation with clinical exam and consider pa/lateral radiographs or chest ct for further evaluation if clinically indicated.",0.07302967433402216,0.2700681686401367,-0.0170731358230114,0.11111111111111112,4.61086540261681,1.8829288111367586
+00011925_037.png,87,"Findings: exam: frontal chest radiograph (ap).
+
+findings:
+- tracheostomy tube in expected position with tip projecting over the lower cervical/upper thoracic trachea.
+- median sternotomy wires and mediastinal/vascular surgical clips noted.
+- cardiomediastinal silhouette mildly enlarged.
+- patchy air‑space/atelectatic opacity in the perihilar and lower lung zones, greater on the left. superimposed scarring versus consolidation is possible.
+- small bilateral pleural effusions with blunting/opacity at the left greater than right costophrenic region.
+- no pneumothorax identified.
+
+impression:
+1) patchy perihilar and lower‑lung air‑space opacity, greater on the left — favored atelectasis or consolidation; correlate clinically for infection.  
+2) small bilateral pleural effusions, left > right.  
+3) tracheostomy tube and median sternotomy wires in place.  
+(educational use only — not for clinical decision making.)",0.1561440116717653,0.2957386374473572,0.18524524569511414,0.3076923076923077,3.9015486725927593,1.3945041196434438
+00012003_000.png,88,"Findings: exam: frontal chest radiograph.
+
+findings: median sternotomy wires. small bilateral pleural effusions with blunting of the costophrenic angles (r > l). subsegmental atelectatic/air‑space changes at the bilateral bases, greater on the right. cardiomediastinal size within expected limits on this frontal view. no pneumothorax identified.
+
+impression:
+1. small bilateral pleural effusions, greater on the right.
+2. bibasilar subsegmental atelectasis/air‑space opacity (r > l); consider aspiration, atelectasis, or early consolidation depending on clinical context.
+3. status post median sternotomy.
+
+clinical correlation and comparison with prior radiographs recommended.",0.09908416528011256,0.25804439187049866,0.1254950910806656,0.10416666666666667,4.40960799676703,1.7696027040077058
+00012018_012.png,89,"Findings: exam: frontal chest radiograph (upright ap view).
+
+findings: cardiomediastinal silhouette mildly enlarged. central pulmonary vascular congestion and increased interstitial markings greatest centrally and at the bases. small bilateral pleural effusions with blunting of the costophrenic angles and mild layering dependent subsegmental atelectatic/air‑space opacity at the bilateral bases (greater on the left). no focal lobar consolidation or pneumothorax identified on this single frontal view.
+
+impression:
+1. mild cardiomegaly.
+2. pulmonary interstitial/vascular congestion consistent with cardiogenic edema.
+3. small bilateral pleural effusions with bibasilar atelectatic change.
+recommend pa and lateral radiographs or chest ultrasound/clinical correlation for further evaluation.",0.18613669293323204,0.38035234808921814,0.24172893166542053,0.29551820728291317,3.581818929741799,1.2137909865983458
+00012049_002.png,90,"Findings: exam: portable ap chest radiograph
+
+findings:
+- ap technique with mildly enlarged cardiac silhouette for technique.
+- bilateral patchy air‑space opacities, greatest in the mid and lower lungs/perihilar regions.
+- small layering bilateral pleural effusions and/or dependent bibasilar atelectasis, greater at the bases.
+- no pneumothorax identified.
+
+impression:
+1. multifocal bilateral air‑space consolidation, most pronounced in the mid–lower lungs — appearance most suspicious for multifocal pneumonia.
+2. small bilateral pleural effusions versus dependent atelectasis.
+3. mild cardiomegaly (may be accentuated by ap technique).
+
+recommendation: correlate with clinical presentation and prior imaging. consider upright pa/lateral chest radiographs or chest ct for further evaluation if clinically indicated.",0.04922381264586222,0.24933570623397827,0.06975142657756805,0.10869565217391303,4.497454159779044,1.833792050599879
+00012364_071.png,91,"Findings: exam: portable ap chest radiograph.
+
+findings:
+- endotracheal tube present with tip approximately 3 cm above the carina. enteric tube courses below the diaphragm.
+- cardiomediastinal silhouette mildly enlarged for technique.
+- patchy, bilateral air‑space/air‑interstitial opacities greatest centrally and at the lung bases, right greater than left.
+- no sizable pleural effusion identified. no pneumothorax detected.
+ 
+impression:
+1. bilateral multifocal air‑space/air‑interstitial opacities (greater centrally and at the bases), most compatible with multifocal infection/inflammation (pneumonia) or edema/ards—correlate clinically.  
+2. endotracheal and enteric tubes in expected positions.  
+3. mild cardiomegaly.",0.09248043889897674,0.23147009313106537,0.2578708529472351,0.16088243206887273,4.146765145144484,1.6111657010619276
+00012414_014.png,92,"Findings: exam: frontal chest radiograph.
+
+findings:
+- cardiomediastinal silhouette within normal size limits for technique.
+- lungs clear of lobar air‑space consolidation.
+- subtle linear subsegmental atelectatic/scar-like subpleural opacities at the bilateral lower lungs, greater on the right.
+- no pleural effusion identified. no pneumothorax.
+
+impression:
+1. mild linear subsegmental atelectasis/scar at the bilateral lower lobes, greater on the right.  
+2. no acute cardiopulmonary consolidation, pleural effusion, or pneumothorax identified on this frontal view.
+
+recommend correlation with clinical exam and chest radiograph pa and lateral or comparison imaging if concern for acute infection.",0.09654105571515413,0.2922112047672272,0.3758602440357208,0.18646616541353384,3.7051523456863293,1.361661730102262
+00012428_003.png,93,"Findings: exam: ap portable chest radiograph, single frontal view.
+
+findings:
+- cardiomediastinal silhouette within expected size for ap technique.
+- lungs clear of focal air‑space consolidation.
+- no pleural effusion identified.
+- no pneumothorax.
+- mild chronic-appearing peribronchial and/or interstitial markings centrally, greater at the perihilar/lower lung zones.
+
+impression:
+1) no acute cardiopulmonary disease identified on this ap portable radiograph.
+2) mild chronic-appearing peribronchial/interstitial markings. correlate clinically; consider pa and lateral radiographs or prior imaging for comparison if concern persists.
+
+educational use only — not for clinical care.",0.10222191934290992,0.34556126594543457,0.40152284502983093,0.2846003898635478,3.3446192972439794,1.1258622625784371
+00012478_000.png,94,"Findings: exam: frontal chest radiograph (upright). comparison: none available.
+
+findings: cardiomediastinal silhouette within normal size for technique. lungs clear bilaterally without focal air‑space consolidation. no pleural effusion or pneumothorax identified. no acute osseous abnormality seen.
+
+impression:
+1. no acute cardiopulmonary disease identified.
+2. heart size within expected limits for a frontal film.",0.3318174849449385,0.5728195309638977,0.844805896282196,0.5550935550935551,1.564271578765069,-0.02709392686323411
+00012620_000.png,95,"Findings: exam: frontal chest radiograph (single view).
+
+findings:
+- cardiomediastinal silhouette within normal size limits for frontal view.
+- lungs clear of focal air‑space consolidation.
+- no pleural effusion or pneumothorax identified.
+- mild hyperinflation with increased lucency of the lungs and mild diaphragmatic flattening, greater centrally and peripherally, compatible with emphysematous change.
+- no acute osseous abnormality seen.
+
+impression:
+1) radiographic features of chronic hyperinflation/emphysema. 
+2) no acute cardiopulmonary process identified (no focal consolidation, pleural effusion, or pneumothorax).
+
+correlation with clinical exam and prior imaging recommended; consider pa and lateral views or chest ct if further evaluation is needed.",0.08528028654224416,0.3534473776817322,0.4016701579093933,0.1878136200716846,3.462309618551708,1.2332174354657297
+00012710_000.png,96,"Findings: exam: frontal chest radiograph, upright.
+
+comparison: none available.
+
+findings: cardiomediastinal silhouette within normal size limits for technique. lungs clear of focal air‑space consolidation. mild hyperinflation with increased bilateral pulmonary lucency and mild flattening of the diaphragms; peripheral vascular markings relatively decreased. no pleural effusion or pneumothorax identified. no acute osseous abnormality apparent.
+
+impression:
+1) hyperinflation and increased bilateral pulmonary lucency—findings most consistent with emphysematous change/copd.
+2) no acute focal consolidation, pleural effusion, or pneumothorax identified.
+
+recommendation: correlate with clinical history and prior imaging; consider chest ct for further characterization if clinically warranted. (educational use only — not for clinical use.)",0.07523547938632788,0.3316611647605896,0.32300546765327454,0.1878136200716846,3.6680792158192332,1.3474365115196822
+00012834_113.png,97,"Findings: exam: ap portable chest radiograph.
+
+findings:
+- cardiomediastinal silhouette mildly enlarged for ap technique.
+- diffuse, bilateral interstitial and patchy air‑space opacities, greatest centrally and in the dependent/lower lungs.
+- small bilateral pleural effusions suspected.
+- external monitoring/line devices project over the chest.
+
+impression:
+1. diffuse bilateral interstitial and alveolar opacities most consistent with pulmonary edema (cardiogenic edema favored given cardiomegaly).
+2. small bilateral pleural effusions suspected.
+3. external monitoring/lines overlie the chest.
+
+recommend correlation with clinical exam and prior radiographs; consider follow-up pa/upright or chest radiograph after therapy as clinically indicated.",0.15261806326998845,0.2911851704120636,0.15864090621471405,0.2508451656524679,4.052908384492787,1.4992734232262646
+00012892_004.png,98,"Findings: exam: chest radiograph, upright frontal view.
+
+findings: cardiomediastinal silhouette within normal size limits. lungs clear of focal air‑space consolidation. mildly increased lucency with hyperinflation and mildly decreased peripheral vascular markings, greater centrally and in the upper lungs. no pleural effusion or pneumothorax identified.
+
+impression:
+1) mild hyperinflation and increased pulmonary lucency, findings most consistent with emphysematous change.
+2) no acute focal consolidation, pleural effusion, or pneumothorax identified.
+
+(for educational use only — not for clinical use.)",0.09984164677317652,0.3905239701271057,0.40169697999954224,0.21607142857142858,3.3161584649463887,1.1367959495659508
+00012973_014.png,99,"Findings: exam: frontal chest radiograph (image: <WORKSPACE>/data/100_datasets_per_class_nih_chest_xray/nih_subset/mass/00012973_014.png).
+no clinical history provided.
+
+findings:
+- cardiomediastinal silhouette mildly enlarged.
+- lungs without focal lobar air‑space consolidation. mild, diffuse peribronchial and interstitial markings centrally and at the bases, greater on the right.
+- no sizable pleural effusion or pneumothorax identified.
+- external monitoring leads and tubing project over the chest.
+
+impression:
+1) mild cardiomegaly.
+2) chronic-appearing diffuse peribronchial/interstitial markings, greater centrally and at the bases — consider chronic interstitial/airways disease or chronic scarring.  
+3) no acute focal consolidation, large effusion, or pneumothorax on this frontal view.",0.07331534612619368,0.12471958249807358,-0.027713753283023834,0.05454545454545454,5.158362506941061,2.2038983100877543
+00012975_008.png,100,"Findings: exam: frontal chest radiograph (single view). no comparison available.
+
+findings: cardiomediastinal silhouette within expected size limits. left lung (marked ""l"") shows increased lucency and hyperinflation with mild diaphragmatic flattening, most consistent with emphysematous change. the right lung demonstrates relative volume loss with mild subsegmental subpleural scarring/atelectatic opacity. no focal lobar consolidation, pleural effusion, or pneumothorax identified.
+
+impression:
+1. hyperinflation and increased lucency of the left lung—findings favor emphysema.
+2. right-sided volume loss/scar or subsegmental atelectasis.
+3. no acute pleural effusion or pneumothorax.",0.10947611030079467,0.3548271059989929,0.45079174637794495,0.1303986710963455,3.474642607183833,1.253568983060023
+00013078_015.png,101,"Findings: exam: frontal chest radiograph (single view).
+
+findings: enteric tube courses midline with tip projecting below the diaphragm. cardiomediastinal silhouette within expected size limits. patchy, ill‑defined air‑space/consolidative opacities and peribronchial cuffing in both lungs, greater on the right mid–to–lower lung zones. no large pleural effusion or pneumothorax identified.
+
+impression:
+1. multifocal patchy air‑space opacities, right greater than left — most suspicious for bronchopneumonia.
+2. enteric tube with tip below the diaphragm.
+3. no sizable pleural effusion or pneumothorax on this frontal view.
+
+educational use only — not for clinical use.",0.13327849749579576,0.3040865957736969,0.42651844024658203,0.23378582202111614,3.5255436472757076,1.2327407468564275
+00013408_017.png,102,"Findings: exam: frontal chest radiograph (upright).
+
+findings: cardiomediastinal silhouette within expected size. linear/subsegmental air‑space opacity at the bilateral lung bases, greater on the right. no focal lobar consolidation identified. no pleural effusion or pneumothorax. no acute osseous abnormality seen.
+
+impression:
+1. subsegmental/bibasilar atelectasis or scarring, greater on the right.
+2. no radiographic evidence of pleural effusion or pneumothorax. heart size within normal limits.",0.17856107630448048,0.41169798374176025,0.31491819024086,0.2831081081081081,3.3646747270920656,1.1046908448554462
+00013447_004.png,103,"Findings: exam: frontal upright chest radiograph.
+
+findings: cardiomediastinal silhouette within expected size. mild, diffuse reticular interstitial markings in both lungs, greater at the bilateral bases. no focal lobar consolidation or pleural effusion identified. no acute osseous abnormality.
+
+impression:
+1. mild bilateral reticular/interstitial opacities, greatest at the lung bases — findings most consistent with chronic interstitial change/fibrosis.
+2. no acute air‑space consolidation or pleural effusion.
+
+recommendation: correlate with clinical history and consider chest ct for further evaluation if clinically indicated.",0.10371747670562782,0.35404977202415466,0.3471134901046753,0.15320754716981133,3.6308547481943503,1.3295864522532512
+00013499_002.png,104,"Findings: exam: frontal chest radiograph.
+
+findings: patchy multifocal air‑space consolidation predominating in the right hemithorax (mid and lower lung zones) with lesser patchy opacities on the left. left subcutaneous port with catheter projecting medially. cardiomediastinal silhouette within expected size for technique. no pneumothorax identified. a small pleural effusion cannot be excluded on this single frontal view.
+
+impression:
+1. multifocal air‑space consolidation, greater on the right — most suspicious for infectious/aspiration pneumonia.  
+2. left subcutaneous port in place.  
+3. no pneumothorax; consider lateral/pa radiograph or chest ct and clinical correlation to further evaluate for small effusion or alternative causes.",0.19243312106699081,0.3571196496486664,0.1461501121520996,0.23364110798875953,3.933620174818304,1.4242740582599651
+00013648_005.png,105,"Findings: frontal chest radiograph (single frontal view). no clinical history or prior comparison available. study limited by single frontal projection and external monitoring leads.
+
+findings:
+- cardiomediastinal silhouette moderately enlarged.
+- mild central vascular congestion and increased perihilar/interstitial markings, greater centrally and at the bases.
+- no focal lobar consolidation identified.
+- no large pleural effusion visualized; costophrenic angles reasonably preserved.
+- external monitoring leads project over the chest.
+
+impression:
+1. cardiomegaly.
+2. mild cardiogenic-type pulmonary vascular congestion/interstitial pulmonary edema versus chronic interstitial change — correlate with exam and volume status.
+3. no focal lobar consolidation or large pleural effusion identified on this single frontal view. recommend pa and lateral radiographs or comparison with prior films for further assessment.
+
+this report is for educational use only — not for clinical decision making.",0.08352989555916718,0.3001777231693268,0.18669261038303375,0.17916666666666667,4.037865713445729,1.5457783053298282
+00014004_013.png,106,"Findings: findings: ap supine technique with external monitoring/tubing projecting over the chest. cardiomediastinal silhouette within expected limits for ap technique. diffuse, bilateral patchy interstitial and air‑space opacities, greatest centrally and in the mid‑to‑lower lungs. no pneumothorax identified. no large pleural effusion.
+
+impression:
+1) diffuse bilateral patchy interstitial and air‑space opacities, greater centrally and in the mid‑to‑lower lungs. differential includes pulmonary edema, multifocal/atypical infection, or hemorrhage—correlate clinically. 
+2) no focal large lobar consolidation, large effusion, or pneumothorax identified. 
+3) recommend upright pa/lateral radiographs or chest ct and clinical correlation if concern for focal disease.",0.07977240352174655,0.23566125333309174,0.2144009917974472,0.13703703703703704,4.244404023673005,1.6771820071022476
+00014145_008.png,107,"Findings: exam: ap frontal chest radiograph.
+
+findings:
+- low inspiratory volumes.
+- cardiomediastinal silhouette within expected size for ap technique.
+- patchy subsegmental atelectatic/air‑space opacity at the dependent/basilar lungs, greater on the right.
+- no focal lobar consolidation to suggest dense pneumonia.
+- no pneumothorax identified. no large pleural effusion.
+- external monitoring leads and a left chest port/port reservoir project over the chest.
+
+impression:
+1. low lung volumes with mild bibasilar subsegmental atelectasis/scar, right greater than left.
+2. no acute focal lobar consolidation, large effusion, or pneumothorax identified on this frontal view.
+3. left chest port and external monitoring leads noted. correlate clinically and with prior radiographs if available.",0.09651592463163185,0.2441747486591339,0.25609293580055237,0.13036750483558995,4.163227355921762,1.6299585872119795
+00014223_011.png,108,"Findings: exam: frontal chest radiograph.
+
+findings: external necklace and monitoring leads project over the chest. cardiomediastinal silhouette is enlarged. there are bilateral, predominantly perihilar and basilar, interstitial and patchy air‑space opacities with cephalization of pulmonary vessels. small bilateral pleural effusions with mild blunting/meniscus at the bases are suspected. no acute osseous abnormality identified; no pneumothorax.
+
+impression:
+1) cardiomegaly with pulmonary interstitial and patchy alveolar edema, pattern most consistent with congestive heart failure/cardiogenic pulmonary edema.
+2) small bilateral pleural effusions.
+3) external leads and necklace projecting over the chest.
+correlate with clinical status and prior imaging.",0.10550699226799948,0.3124614953994751,0.2351066619157791,0.11290322580645162,4.031181376202274,1.5598510872846696
+00014274_004.png,109,"Findings: exam: portable ap chest radiograph (single frontal view). clinical history: not provided.
+
+findings: external monitoring leads and tubing project over the chest. cardiomediastinal silhouette mildly enlarged for ap technique. bilateral perihilar and lower‑lung predominant interstitial and patchy air‑space opacities with vascular congestion. small bilateral pleural effusions layering at the bases. no focal lobar consolidation or pneumothorax identified.
+
+impression:
+1. bilateral interstitial and alveolar opacities most consistent with cardiogenic pulmonary edema.
+2. mild cardiomegaly.
+3. small bilateral pleural effusions.
+
+recommendation: correlate with clinical exam and bnp; consider upright pa and lateral radiographs or chest radiograph follow-up after therapy.",0.0770059681938115,0.3145108222961426,0.28110161423683167,0.17207792207792205,3.824468915802531,1.4370281901738264
+00014280_000.png,110,"Findings: exam: frontal chest radiograph (upright). no prior available for comparison.
+
+findings:
+- cardiomediastinal silhouette within normal size limits for technique.
+- focal pleural-based linear density and scarring at the right (patient's right) lateral lower lung with adjacent areas of subsegmental volume loss/reticular air‑space change extending into the mid/lower lung.
+- left lung clear of focal consolidation.
+- no pleural effusion or pneumothorax identified.
+
+impression:
+1) pleural thickening/scar at the right lateral lower hemithorax with adjacent parenchymal scarring/atelectatic change.  
+2) no acute cardiopulmonary process identified (no effusion, no pneumothorax, no focal lobar consolidation).  
+recommend correlation with prior radiographs. consider chest ct if concern for underlying pleural or parenchymal disease.",0.13211720158614831,0.28352320194244385,0.42978692054748535,0.24205043859649125,3.567351034781743,1.253145102253949
+00014731_016.png,111,"Findings: exam: frontal upright chest radiograph.
+
+findings:
+- right-sided subcutaneous port/central catheter with tip projecting over the region of the expected lower svc.
+- cardiomediastinal silhouette within normal size limits for technique.
+- patchy air‑space/air‑bronchogram opacities in both lower lungs, greater on the left, and perihilar/peribronchial increased markings.
+- no pleural effusion identified. no pneumothorax.
+
+impression:
+1) bilateral multifocal air‑space consolidation, greater in the left lower lung — most suggestive of multifocal pneumonia.
+2) right-sided subcutaneous port/central catheter with tip projecting over the expected central venous position.
+3) no acute cardiopulmonary complication identified (no effusion or pneumothorax) on this frontal view.
+
+recommend pa and lateral radiographs or chest ct if further characterization is needed and correlation with clinical findings.",0.1033549176251127,0.26483964920043945,0.2663363516330719,0.15127751075132814,4.053495718181271,1.5596166915983443
+00014758_006.png,112,"Findings: exam: frontal chest radiograph (single view).
+
+findings:
+- cardiomediastinal silhouette within expected size limits for a frontal view.
+- lungs without lobar air‑space consolidation.
+- focal rounded opacity projected in the right mid‑to‑lower lung region adjacent to the hilum.
+- patchy linear/reticular scarring and peribronchial/bronchitic-type markings at the bilateral lower lungs (greater on the right).
+- no pleural effusion or pneumothorax identified.
+
+impression:
+1. focal rounded pulmonary opacity in the right mid–to–lower lung—suspicious for a pulmonary nodule. 
+2. background chronic-appearing scarring/bronchitic change in the lower lungs, greater on the right.
+3. no acute cardiopulmonary consolidation or pleural effusion on this frontal view.
+
+recommendation: correlate with prior chest radiographs if available. if this is a new or indeterminate finding, obtain dedicated pa and lateral radiographs or chest ct for characterization and measurement.",0.15124753549550501,0.25948387384414673,0.5062599182128906,0.265359477124183,3.473062064407488,1.1877323448921617
+00014818_005.png,113,"Findings: exam: ap portable chest radiograph (image path: <WORKSPACE>/data/100_datasets_per_class_nih_chest_xray/nih_subset/infiltration/00014818_005.png). no clinical history or prior comparison available.
+
+findings: cardiomediastinal silhouette borderline enlarged for ap technique. external monitoring leads project over the chest. patchy bilateral perihilar and basilar air-space/reticular opacities, greater centrally and at the lung bases with mild subsegmental atelectasis. no pleural effusion or pneumothorax identified.
+
+impression:
+1) bilateral perihilar and basilar patchy air-space opacities — suspicious for multifocal infiltration/air-space disease.
+2) no pleural effusion or pneumothorax.
+3) borderline cardiomegaly, may be exaggerated by ap technique.
+recommend clinical correlation and comparison with prior radiographs; consider pa/upright view or chest ct if concern persists.",0.06228472004925022,0.17680157721042633,0.13209283351898193,0.11538461538461538,4.597676675995197,1.883190004637111
+00014890_004.png,114,"Findings: exam: frontal chest radiograph.
+
+findings:
+- cardiomediastinal silhouette mildly enlarged.
+- diffuse bilateral interstitial and patchy air‑space opacities, greater centrally and in the lower lungs.
+- mild blunting/opacity at the bases consistent with small bilateral pleural effusions.
+- right-sided intrathoracic catheter/line courses into the region of the thorax. external monitoring leads project over the chest.
+
+impression:
+1. cardiomegaly with bilateral, perihilar and basilar predominant interstitial/air‑space opacities — most suspicious for pulmonary interstitial/alveolar edema (congestive heart failure pattern).  
+2. small bilateral pleural effusions.  
+3. right-sided intrathoracic catheter in expected course. correlate with clinical exam and prior imaging.",0.09357831382633401,0.3015168607234955,0.005897123366594315,0.125,4.465778961544158,1.7908670495147536
+00015171_008.png,115,"Findings: exam: frontal chest radiograph.
+
+findings: cardiomediastinal silhouette within expected size limits. lungs hyperinflated with increased lucency and relative paucity of peripheral vascular markings, greatest centrally — compatible with emphysematous change. mild linear scarring/atelectatic change at the bases. no focal lobar consolidation, pleural effusion, or pneumothorax identified. a linear radiopaque tubular structure courses along the right paramediastinum/hemithorax—suggestive of an indwelling catheter/tube; correlate with clinical/device information.
+
+impression:
+1. hyperinflation and vascular attenuation consistent with emphysema/copd.
+2. mild bibasilar scarring/linear subsegmental atelectasis.
+3. no acute focal consolidation, pleural effusion, or pneumothorax. confirm catheter/tube type and tip position clinically.",0.11016316230980792,0.30105772614479065,0.3180938959121704,0.16203703703703703,3.8352877747110297,1.4349413699399423
+00015255_013.png,116,"Findings: exam: upright frontal chest radiograph.
+
+findings:
+- cardiomediastinal silhouette within expected size for technique.
+- lungs clear without focal air‑space consolidation.
+- no pleural effusion identified.
+- no pneumothorax.
+- external monitoring/line projects over the chest.
+- no acute osseous abnormality seen.
+
+impression:
+1. no acute cardiopulmonary disease identified on this frontal chest radiograph.
+2. external monitoring/line overlies the chest.",0.2411851576589795,0.521086573600769,0.6693806052207947,0.47619047619047616,2.1092892522054343,0.33106870276974387
+00015284_003.png,117,"Findings: exam: frontal chest radiograph (ap/erect).
+
+findings:
+- cardiomediastinal silhouette within expected size for technique.
+- small-to-moderate right pleural effusion with blunting and subtle layering at the right base.
+- small left pleural effusion.
+- mild bibasilar subsegmental atelectasis/scar, greater on the right.
+- no focal lobar consolidation identified.
+- no pneumothorax detected.
+- multiple external monitoring leads/tubing project over the chest.
+
+impression:
+1. small-to-moderate right pleural effusion; small left pleural effusion.
+2. mild bibasilar subsegmental atelectasis/scar, greater on the right.
+3. no pneumothorax.
+
+educational use only — not for clinical decision-making.",0.11217367323612246,0.40008729696273804,0.2505441904067993,0.11627906976744186,3.737917659744971,1.395633969497707
+00015654_004.png,118,"Findings: exam: frontal chest radiograph.
+
+history: none provided.
+
+findings:
+- left-sided subcutaneous port/reservoir projects over the upper chest.
+- focal air‑space consolidation at the lower lung base, adjacent to the cardiac silhouette, most conspicuous in the dependent lower lung.
+- cardiomediastinal silhouette within expected size limits for technique.
+- no large pleural effusion or pneumothorax identified.
+
+impression:
+1) focal air‑space consolidation at the dependent lower lung base, most consistent with lobar/segmental consolidation (e.g., pneumonia or aspiration).  
+2) left subcutaneous port/reservoir in expected position.  
+recommend clinical correlation and chest radiograph follow-up or chest ct if further characterization or complications are needed.",0.0736577976818308,0.2635340988636017,0.03423119708895683,0.07692307692307691,4.589194157119754,1.8852509493362293
+00015809_017.png,119,"Findings: exam: ap portable chest radiograph. comparison: none available.
+
+findings:
+- right-sided subcutaneous port reservoir with catheter coursing centrally.
+- cardiomediastinal silhouette mildly enlarged for technique.
+- bilateral perihilar and bibasilar predominant interstitial and patchy air‑space opacities, greater centrally and at the bases.
+- small bilateral pleural effusions suspected (layering at the bases).
+- no pneumothorax identified.
+
+impression:
+1. bilateral interstitial and alveolar pulmonary edema pattern, perihilar and basilar predominant — findings most suggestive of cardiogenic pulmonary edema.
+2. small bilateral pleural effusions.
+3. right subcutaneous port with central catheter in expected position.
+recommend clinical correlation and comparison with prior chest radiographs if available.",0.08656944662145073,0.29064249992370605,0.32348912954330444,0.13383838383838384,3.8844926425969843,1.481881695177431
+00015915_008.png,120,"Findings: exam: frontal chest radiograph (upright).
+
+findings:
+- right subcutaneous port reservoir with catheter coursing medially/cephalad; catheter tip projects near the expected region of the svc.
+- cardiomediastinal silhouette within usual size limits for technique.
+- lungs clear of focal lobar air‑space consolidation.
+- no pleural effusion or pneumothorax identified.
+- mild chronic-appearing peribronchial/linear scarring at the perihilar and lower lungs bilaterally.
+
+impression:
+1. right subcutaneous port with catheter in expected position, tip near the region of the svc.
+2. no acute cardiopulmonary process identified on this frontal view—no focal consolidation, effusion, or pneumothorax.
+3. mild chronic peribronchial/linear scarring/scar-like change bilaterally.
+
+if there is clinical concern for a pulmonary mass or new lesion, obtain prior imaging for comparison or consider chest ct for further evaluation.",0.0810041961260418,0.20549078285694122,0.2082914263010025,0.11584840654608096,4.381206389603043,1.759450838954742
+00016006_001.png,121,"Findings: exam: frontal chest radiograph.
+
+findings: cardiomediastinal silhouette within expected size for technique. patchy, bilateral multifocal air‑space opacities, most conspicuous in the mid to lower lungs and perihilar regions. no focal large pleural effusion identified. no pneumothorax.
+
+impression:
+1. bilateral multifocal air‑space consolidation, greatest in the mid–lower lungs and perihilar regions — findings most consistent with multifocal pneumonia or aspiration.
+2. no pleural effusion or pneumothorax identified.
+
+recommend clinical correlation and short‑interval radiographic follow‑up or chest ct if clinically warranted. educational use only — not for clinical use.",0.1600731930504889,0.3696489930152893,0.42381551861763,0.2027272727272727,3.401758497832818,1.1658707723673125
+00016038_000.png,122,"Findings: exam: frontal upright chest radiograph.
+
+findings:
+- cardiomediastinal silhouette mildly to moderately enlarged consistent with cardiomegaly.
+- lungs clear without focal air‑space consolidation.
+- no pleural effusion identified.
+- no radiographic pulmonary interstitial edema.
+- mild aortic atherosclerotic calcification.
+
+impression:
+1. cardiomegaly.
+2. no acute cardiopulmonary process identified on this frontal view (no focal consolidation, pleural effusion, or pulmonary edema).
+recommendation: correlate clinically and with prior imaging. consider echocardiography if further evaluation of cardiac size/function is needed.",0.08152036322449235,0.39611244201660156,0.3775440454483032,0.22267206477732793,3.3210165701226533,1.1433776827962563
+00016094_001.png,123,"Findings: exam: frontal chest radiograph (upright).
+
+findings:
+- enteric tube courses below the diaphragm.
+- cardiomediastinal silhouette within expected size limits for frontal technique.
+- diffuse reticular and linear interstitial markings greatest in the periphery and lung bases, greater on the right.
+- scarring/volume loss at the lower lobes, right greater than left.
+- small layering subpulmonic/pleural effusions at the bases, greater on the right.
+- no focal lobar consolidation or pneumothorax identified on this frontal view.
+
+impression:
+1. bilateral predominantly basilar and peripheral reticular/linear opacities with scarring/volume loss — findings most consistent with chronic interstitial/fibrotic change, right > left.
+2. small bilateral pleural effusions, greater on the right.
+3. enteric tube in expected intragastric position. cardiomediastinal size within expected limits on frontal view.
+
+recommendation: correlate with prior radiographs and clinical history. if further characterization of interstitial/fibrotic disease is needed, consider chest ct.",0.06403335259912864,0.18797069787979126,0.2604759633541107,0.13114754098360656,4.2997507901099,1.717411356344222
+00016677_004.png,124,"Findings: findings:
+- cardiomediastinal silhouette within normal size limits for technique.
+- lungs without focal lobar air‑space consolidation.
+- mild, predominantly subpleural reticular/linear opacities at the lower lungs, greater on the right, consistent with chronic scarring or early fibrotic change.
+- no pleural effusion identified. no acute osseous abnormality evident on this view.
+
+impression:
+1. mild bilateral lower‑lung subpleural reticular/linear opacities, greater on the right — most consistent with chronic scarring/fibrosis.
+2. no acute air‑space consolidation or pleural effusion identified on this frontal view.
+
+recommendation: correlation with prior imaging if available. if fibrosis characterization or suspected active disease is needed, obtain pa and lateral chest radiographs or chest ct for more detailed evaluation.",0.04061004078173098,0.2876175343990326,0.3695513606071472,0.12280701754385966,3.792022469754567,1.4547904786043773
+00016778_047.png,125,"Findings: exam: frontal chest radiograph (single view).
+
+findings:
+- midline thoracic posterior spinal fixation hardware and cervical fusion plate.
+- cardiomediastinal silhouette within expected size limits for a frontal view.
+- rounded focal opacity projecting over the right mid–to–lower lung zone, peripheral in location.
+- no focal lobar consolidation, no pleural effusion, no pneumothorax identified.
+
+impression:
+1) peripheral rounded opacity in the right mid–lower lung — suspicious for a pulmonary nodule/mass. recommend dedicated pa and lateral radiographs or chest ct for further characterization.
+2) no acute cardiopulmonary process identified on this single frontal view.",0.15718875511867383,0.34787803888320923,0.43010494112968445,0.23056092843326886,3.409214992742755,1.160895788113708
+00017089_010.png,126,"Findings: exam: chest radiograph, frontal view.
+
+findings:
+- cardiomediastinal silhouette within normal size limits for technique.
+- lungs clear of focal air‑space consolidation.
+- no pleural effusion identified.
+- no pneumothorax.
+- no acute osseous abnormality seen on this frontal view.
+
+impression:
+1. no acute cardiopulmonary disease identified on this frontal chest radiograph — no consolidation, effusion, or pneumothorax.
+2. no discrete pulmonary mass confidently identified on this single frontal view. if there is clinical concern for a mass or if symptoms persist, recommend dedicated lateral radiograph or chest ct for more sensitive evaluation.",0.10206207261596575,0.3049408495426178,0.33546575903892517,0.1949317738791423,3.7330017060230505,1.3702888323837499
+00017138_076.png,127,"Findings: exam: ap portable chest radiograph.
+
+technique: single frontal ap upright/semierect portable view. external monitoring leads/projecting lines noted.
+
+findings:
+- diffuse, bilateral patchy air‑space opacities, more conspicuous centrally and in the mid-to-lower lungs.
+- cardiomediastinal silhouette mildly enlarged for ap technique.
+- no pneumothorax identified. no large pleural effusion seen.
+
+impression:
+1. bilateral multifocal patchy air‑space consolidation/infiltrates, greater centrally and in the lower lungs — differential includes multifocal pneumonia/aspiration versus pulmonary interstitial/alveolar edema.  
+2. mild cardiomegaly, noting ap technique may exaggerate size.  
+3. no pneumothorax or large pleural effusion identified.
+
+recommendation: correlate with symptoms, vital signs, laboratory data (including infection markers), and prior chest imaging. consider chest radiograph follow-up or chest ct if clinical concern for focal infection or alternative diagnosis.",0.09280196508915879,0.2523786425590515,0.2914256155490875,0.18293650793650792,3.986158289440799,1.5158074960118488
+00017490_000.png,128,"Findings: exam: upright frontal chest radiograph.
+
+findings:
+- cardiomediastinal silhouette mildly enlarged.
+- lungs clear of focal air‑space consolidation.
+- no pleural effusion identified.
+- no acute osseous abnormality seen.
+
+impression:
+1. mild cardiomegaly.
+2. no acute cardiopulmonary disease identified on this frontal view — no focal consolidation or effusion.
+
+comment: assessment of cardiac size is limited on a single frontal view; consider correlation with prior imaging, lateral radiograph, or echocardiography if clinically indicated.",0.11068989227681204,0.42545560002326965,0.44887015223503113,0.2847222222222222,3.021303861464226,0.9467176051119927
+00017625_000.png,129,"Findings: exam: portable ap chest radiograph.
+
+findings: ap technique with mild rotation. cardiomediastinal silhouette mildly enlarged. pulmonary vascular congestion with increased interstitial and patchy perihilar/basilar air‑space opacity bilaterally, greater centrally. small bilateral pleural effusions or dependent subsegmental atelectasis at the bases. no pneumothorax identified. multiple external monitoring leads and tubing project over the chest.
+
+impression:
+1. cardiomegaly with pulmonary interstitial and focal air‑space opacities—appearance most consistent with pulmonary (cardiogenic) edema.
+2. small bilateral pleural effusions vs dependent atelectasis.
+3. external monitoring leads/tubing overlie the chest.
+
+recommendation: correlate with clinical exam and bnp/echocardiography as indicated.",0.07631586874921231,0.27799680829048157,0.2297990918159485,0.146218487394958,4.071077425797099,1.580542067797929
+00017735_000.png,130,"Findings: exam: portable ap chest radiograph.
+
+findings: enteric tube courses midline with tip and side-port projecting below the diaphragm (expected gastric position). large retrocardiac, air‑containing structure with air‑fluid level, most consistent with a hiatal/paraesophageal hernia. cardiomediastinal silhouette mildly enlarged. mild central interstitial/vascular congestion. no focal lobar consolidation, no pneumothorax, and no large pleural effusion identified.
+
+impression:
+1. retrocardiac air‑fluid level compatible with a hiatal hernia.
+2. enteric tube with tip in the stomach.
+3. mild cardiomegaly with pulmonary vascular congestion. no focal consolidation or pneumothorax.",0.14862624792016885,0.3993615210056305,0.14766089618206024,0.15578231292517006,3.8960937879060875,1.4499874201086551
+00017753_027.png,131,"Findings: exam: ap chest radiograph (portable)
+
+findings:
+- endotracheal tube projects in the midline with the tip approximately 3 cm above the carina.
+- cardiomediastinal silhouette mildly enlarged.
+- patchy bilateral air‑space/air‑bronchogram opacity, greater in the right mid‑to‑lower lung and left lower lung.
+- small bilateral pleural effusions with basilar layering, greater on the right.
+- external monitoring leads project over the chest.
+
+impression:
+1) multifocal air‑space consolidation, greatest in the right mid‑to‑lower lung and left lower lobe — suspicious for multifocal pneumonia.  
+2) small bilateral pleural effusions.  
+3) cardiomegaly with superimposed interstitial/air‑space pulmonary edema cannot be excluded; consider mixed cardiogenic and infectious process.  
+4) endotracheal tube in satisfactory position (~3 cm above carina). correlate with clinical exam and, if needed, prior imaging and labs.",0.11618223922317533,0.19244451820850372,0.21415875852108002,0.24949152542372882,4.222233322193294,1.6087369538704004
+00017893_010.png,132,"Findings: exam: ap portable chest radiograph (image provided). no clinical history supplied.
+
+findings:
+- cardiomediastinal silhouette is enlarged for an ap technique.
+- pulmonary vascular congestion with increased interstitial/perihilar markings, greater centrally and at the bases.
+- small bilateral pleural effusions with mild blunting/air‑space subsegmental atelectasis at the bases.
+- median sternotomy wires and external monitoring leads project over the chest. no pneumothorax identified.
+
+impression:
+1. cardiomegaly (noting ap portable technique may exaggerate size).  
+2. pulmonary interstitial edema/vascular congestion — findings most consistent with congestive heart failure.  
+3. small bilateral pleural effusions and mild bibasilar atelectatic change.",0.17122085445801447,0.3947705626487732,0.3029592037200928,0.28698752228163993,3.4266220027403778,1.1397011504511816
+00017972_006.png,133,"Findings: exam: frontal chest radiograph (ap/semi-erect).
+
+findings: cardiomediastinal silhouette within mild enlargement limits. diffuse, bilateral reticular and reticulonodular interstitial opacities, greatest in the peripheral and basilar lungs. mild blunting of the costophrenic sulci suggesting small bilateral pleural effusions. no focal lobar airspace consolidation identified. no pneumothorax. enteric tube courses below the diaphragm. external monitoring leads project over the chest.
+
+impression:
+1. diffuse bilateral interstitial/reticulonodular opacities — pattern most suggestive of pulmonary fibrosis or chronic interstitial lung disease (basilar and peripheral predominance).
+2. small bilateral pleural effusions.
+3. enteric tube in expected course below the diaphragm. no focal lobar consolidation or pneumothorax identified.
+
+correlation with clinical history and prior chest imaging recommended; consider chest ct for further characterization.
+
+(educational use only — not for clinical decision-making.)",0.12080437978727314,0.2906729578971863,0.38250118494033813,0.14598141060688902,3.77899552052234,1.4080071954514508
+00018103_004.png,134,"Findings: exam: portable ap chest radiograph.
+
+findings:
+- endotracheal tube present with tip projecting in the mid thoracic trachea. enteric tube and multiple monitoring leads project over the chest.
+- cardiomediastinal silhouette enlarged.
+- diffuse cardiogenic-type pulmonary interstitial and perihilar air‑space opacities, greater centrally and in the dependent lower lungs.
+- small bilateral pleural effusions with layering at the bases, lower lungs poorly visualized on this single frontal view.
+
+impression:
+1) cardiomegaly with pulmonary interstitial/alveolar edema pattern, most consistent with congestive heart failure/volume overload.
+2) small bilateral pleural effusions.
+3) endotracheal and enteric tubes in expected positions on this frontal view.
+limitations: single ap view, limited inspiration and overlap of lines/tubes.",0.03386149947360788,0.21155478060245514,0.08591943979263306,0.10344827586206896,4.578250092022878,1.8866131517596896
+00018260_004.png,135,"Findings: exam: frontal chest radiograph (single view).
+
+findings:
+- cardiomediastinal silhouette within normal size limits for technique.
+- left subcutaneous port with catheter coursing medially; catheter tip projects near the expected region of the superior vena cava.
+- lungs clear of focal lobar consolidation. no pleural effusion or pneumothorax identified.
+- mild chronic-appearing linear/reticular interstitial markings at the bilateral lower lungs, greater on the left, suggestive of scarring/fibrotic change.
+
+impression:
+1. mild bilateral lower‑lung interstitial/linear scarring, greater on the left — suspicious for chronic fibrotic change.
+2. left subcutaneous port in expected position with catheter projecting to the region of the svc.
+3. no acute cardiopulmonary process identified on this single frontal view.
+
+educational use only — not for clinical use.",0.0742123603558262,0.24974173307418823,0.3658117353916168,0.16871035940803386,3.8640760267309844,1.4638780507528157
+00018421_003.png,136,"Findings: exam: chest radiograph, frontal (upright pa).
+
+findings:
+- cardiomediastinal silhouette within normal size limits for technique.
+- lungs clear without focal air‑space consolidation.
+- no pleural effusion identified.
+- no pneumothorax. no acute osseous abnormality seen on the frontal view.
+
+impression:
+1. no acute cardiopulmonary disease identified on this frontal chest radiograph.
+2. if there is persistent clinical concern, consider lateral view and/or comparison radiographs for further evaluation.
+
+(educational use only — not for clinical decision-making.)",0.21125427194065813,0.46951133012771606,0.8009554147720337,0.5151515151515151,1.9347541116514153,0.23680963265606764
+00018427_003.png,137,"Findings: educational use only — not for clinical use.
+
+exam: frontal chest radiograph (projection not specified). image from <WORKSPACE>/data/100_datasets_per_class_nih_chest_xray/nih_subset/mass/00018427_003.png. clinical history not provided.
+
+findings:
+- cardiomediastinal silhouette within expected size for technique.
+- no focal lobar air‑space consolidation.
+- linear subsegmental scarring/atelectatic changes at the bilateral lower lobes, greater on the right.
+- small metallic/surgical clips project over the left paramedian mediastinum.
+- no pleural effusion or pneumothorax identified.
+
+impression:
+1. bilateral lower‑lung scarring/atelectasis, greater on the right.  
+2. no acute cardiopulmonary process identified (no focal consolidation, pleural effusion, or pneumothorax).  
+3. left paramediastinal surgical clips.  
+recommend comparison with prior chest radiographs for change; if a mass is clinically suspected or if concern persists, consider dedicated pa/lateral radiographs or chest ct for further evaluation.",0.0949816447441648,0.10222828388214111,0.12096685916185379,0.12585034013605442,4.849686015299152,2.0043346907137516
+00018427_004.png,138,"Findings: clinical history: not provided. exam: portable ap frontal chest radiograph.
+
+findings:
+- cardiomediastinal silhouette within expected size for ap technique.
+- linear subsegmental air‑space opacity/scar at the bases, greater on the left.
+- small bilateral pleural effusions with mild blunting of the costophrenic sulci, left > right.
+- no focal lobar consolidation to suggest acute dense airspace pneumonia. no pneumothorax. external monitoring lead projects over the right chest.
+
+impression:
+1. small bilateral pleural effusions, greater on the left.
+2. subsegmental atelectasis/scar at the bilateral lower lobes (left > right).
+3. no focal lobar consolidation or pneumothorax identified.
+
+recommend comparison with prior radiographs and clinical correlation; consider lateral view or chest ct if further evaluation needed.",0.19638608176993516,0.36448803544044495,0.04917426407337189,0.25112994350282486,4.068146221293375,1.486801439367444
+00018724_030.png,139,"Findings: exam: portable ap chest radiograph.
+
+history: none provided.
+
+findings:
+- cardiomediastinal silhouette mildly enlarged for technique.
+- multiple external monitoring leads and tubing project over the chest.
+- focal, rounded opacity projecting over the right mid–to–lower lung zone (~1.5–2 cm).
+- no focal lobar consolidation identified. no large pleural effusion or pneumothorax.
+
+impression:
+1. rounded focal opacity in the right mid–to–lower lung—suspicious for a pulmonary nodule or mass. recommend dedicated chest ct for definitive characterization and comparison with prior imaging if available.
+2. mild cardiomegaly.
+3. no acute large pleural effusion or pneumothorax identified.",0.14550333148602354,0.3893698751926422,0.11443525552749634,0.18403150733977802,3.9412924020887283,1.4643576510015064
+00018867_028.png,140,"Findings: exam: ap chest radiograph.
+
+findings:
+- cardiomediastinal silhouette mildly enlarged.
+- diffuse bilateral interstitial and patchy perihilar and lower‑lung air‑space opacities, greater centrally and at the bases.
+- small bilateral pleural effusions with mild blunting of the costophrenic sulci.
+- enteric tube courses below the diaphragm. right-sided neck central venous catheter projects with tip near the region of the cavo‑atrial junction.
+- no pneumothorax identified.
+
+impression:
+1) pulmonary interstitial and alveolar edema pattern, greater centrally and at the bases — most consistent with cardiogenic pulmonary edema.  
+2) small bilateral pleural effusions.  
+3) enteric tube and right internal jugular central venous catheter in expected positions.  
+
+recommend correlation with clinical findings, volume status, and prior radiographs if available.",0.072952922159024,0.2403029501438141,0.26468193531036377,0.15646571560055222,4.100496859094318,1.5953083157648795
+00018960_005.png,141,"Findings: exam: frontal chest radiograph.
+
+findings:
+- subcutaneous port and associated central catheter project over the chest, coursing toward the expected region of the central veins.
+- cardiomediastinal silhouette within normal size limits for technique.
+- lungs clear of focal air‑space consolidation.
+- no pleural effusion identified.
+- no pneumothorax. mild chronic-appearing peribronchial/linear scarring/scattered interstitial markings greater at the bases.
+
+impression:
+1) no acute cardiopulmonary disease identified—no focal consolidation, pleural effusion, or pneumothorax.
+2) subcutaneous port with catheter in expected central venous distribution.",0.15332536913905662,0.35238856077194214,0.42888134717941284,0.16988416988416988,3.491590547897829,1.2302225013764077
+00018960_022.png,142,"Findings: exam: frontal chest radiograph (single view) — image: <WORKSPACE>/data/100_datasets_per_class_nih_chest_xray/nih_subset/infiltration/00018960_022.png
+clinical history: not provided.
+
+findings: cardiomediastinal silhouette within expected size limits. patchy peribronchial and air‑space opacities in the mid to lower lungs, greater on the right. no pleural effusion identified. no pneumothorax.
+
+impression:
+1) patchy bilateral pulmonary air‑space/bronchovascular infiltrates, right > left, greatest in mid–lower lungs — suspicious for infectious or inflammatory infiltration.
+2) no pleural effusion or pneumothorax. recommend clinical correlation and comparison with prior films; consider follow‑up radiograph or chest ct if clinically warranted.",0.18051113445691197,0.23038043081760406,0.5695958733558655,0.23602177140029684,3.5095178244996617,1.2093046018964622
+00019169_004.png,143,"Findings: exam: portable ap chest radiograph.
+
+findings: portable ap technique with low inspiratory volumes. multifocal patchy air‑space and air‑space/air‑bronchogram opacities in both lungs, greatest in the perihilar regions and bilateral lower lobes (r > l). small bilateral pleural effusions with mild blunting of the costophrenic sulci, greater on the right. enteric tube courses below the diaphragm with tip projecting over the stomach. cardiomediastinal silhouette within expected size limits for ap technique.
+
+impression:
+1. bilateral multifocal air‑space consolidation, greatest in the lower lungs — most consistent with multifocal/bronchopneumonia.
+2. small bilateral pleural effusions (r > l).
+3. enteric tube with tip projecting over the stomach.
+4. portable ap technique and low volumes may accentuate vascular congestion and basilar atelectasis; correlate clinically.",0.07843197564226982,0.18329738080501556,0.06569487601518631,0.078125,4.773248471712726,1.9849135286922548
+00019275_002.png,144,"Findings: exam: frontal chest radiograph (upright). no prior comparison available.
+
+findings:
+- cardiomediastinal silhouette within expected size limits.
+- lungs clear without focal lobar consolidation.
+- no pleural effusion or pneumothorax identified.
+- surgical clips over the right upper chest/axilla.
+
+impression:
+1. no acute cardiopulmonary disease identified on this frontal radiograph — no focal consolidation to suggest lobar pneumonia.
+2. surgical clips in the right upper chest/axilla.
+recommend clinical correlation; consider pa and lateral or follow-up radiograph if clinical concern for early/occult infection.",0.11227217828476796,0.3846430778503418,0.37649834156036377,0.14372469635627533,3.504901479005852,1.2616586180815161
+00019373_050.png,145,"Findings: exam: frontal chest radiograph.
+
+findings:
+- cardiomediastinal silhouette within normal size limits for technique.
+- lungs clear of focal airspace consolidation. no pleural effusion identified.
+- a rounded nodular opacity measuring roughly 8–12 mm is noted in the right mid–lung zone, projecting near the right hilum/middle lobe region.
+- external monitoring/lead artifact projects over the right upper chest.
+
+impression:
+1) rounded nodular opacity in the right mid–lung (approx 1 cm).  
+2) no acute cardiopulmonary consolidation or effusion on this frontal view.  
+recommendation: correlate with prior radiographs if available. recommend chest ct for definitive characterization and staging of the nodule.",0.15208431939419922,0.36065372824668884,0.42666104435920715,0.20833333333333334,3.408890175914249,1.1709091564763972
+00019441_019.png,146,"Findings: exam: frontal chest radiograph (ap). no prior available for comparison.
+
+findings: cardiomediastinal silhouette mildly enlarged for technique. multiple patchy air‑space and interstitial opacities throughout both lungs, greater in the right mid‑to‑lower lung. small bilateral layering pleural effusions, greater on the right. external monitoring leads project over the chest. no pneumothorax identified.
+
+impression:
+1) multifocal bilateral air‑space/interstitial opacities, right > left — differential includes multifocal pneumonia (including aspiration), pulmonary edema, or hemorrhage.  
+2) small bilateral pleural effusions, greater on the right.  
+3) mild cardiomegaly for ap technique.
+
+recommendation: correlate with clinical findings and prior imaging. consider pa and lateral radiographs or chest ct for further characterization if clinically indicated.",0.14156716222546725,0.3120902180671692,-0.050300922244787216,0.18585858585858586,4.4767896517685335,1.7535341927648431
+00020129_003.png,147,"Findings: exam: portable ap chest radiograph.
+
+findings: a tunneled central venous catheter courses from the neck with the tip projecting over the expected region of the superior vena cava. cardiomediastinal silhouette within expected limits for ap technique. bilateral patchy perihilar and basilar air‑space opacities, greater centrally and in the lower lungs. no large pleural effusion identified. no pneumothorax.
+
+impression:
+1) tunneled central venous catheter with tip projecting over the region of the svc.
+2) multifocal bilateral air‑space consolidation, greatest centrally and at the bases — suspicious for multifocal infection/aspiration or edema; correlate clinically.
+3) no large effusion or pneumothorax identified. ap technique may limit sensitivity.",0.08759600952138208,0.24811875820159912,0.3399512767791748,0.11818181818181818,4.0072538860465965,1.5552015484799833
+00020130_006.png,148,"Findings: exam: frontal chest radiograph (upright).
+
+findings: cardiomediastinal silhouette without definite enlargement for frontal technique. lungs clear of focal air‑space consolidation. no pleural effusion identified. no pneumothorax. a linear radiopaque structure projects from the neck into the thorax—likely external tubing/monitoring line or catheter; correlate clinically. no acute osseous abnormality identified on this view.",0.14096602506310643,0.3417496085166931,0.13435032963752747,0.08333333333333331,4.2040864521880685,1.6485514042206109
+00020335_000.png,149,"Findings: exam: frontal upright chest radiograph (single view).
+
+findings:
+- cardiomediastinal silhouette within expected size limits for a single frontal view.
+- lungs without focal lobar air‑space consolidation.
+- scattered chronic-appearing peribronchial/linear scarring greatest in the lower lobes bilaterally.
+- a rounded focal opacity projects over the right mid–to–lower hemithorax/infrahilar region, suspicious for a pulmonary mass.
+- no pleural effusion or pneumothorax identified.
+
+impression:
+1) rounded opacity in the right mid-to-lower lung suspicious for a pulmonary mass — further evaluation with dedicated chest ct (with contrast if clinically appropriate) recommended for characterization. correlate with prior radiographs if available.
+2) chronic-appearing scarring/bronchitic-type change in both lower lobes.
+3) no acute cardiopulmonary process identified on this single frontal view.
+
+this report is for educational use only and not for clinical decision-making.",0.11904415831071667,0.22854897379875183,0.45618391036987305,0.26367781155015196,3.639662720658504,1.2907093133728516
+00020398_016.png,150,"Findings: exam: portable ap chest radiograph.
+
+comparison: none available.
+
+findings:
+- cardiomediastinal silhouette within normal size limits for ap technique.
+- left-sided central venous/vascular access catheter courses medially; tip projects over the region of the superior vena cava.
+- patchy, multifocal air‑space/air‑bronchogram-like opacities in both lungs, greatest in the perihilar regions and bilateral lower lobes (right greater than left).
+- no visually large pleural effusion or pneumothorax identified.
+- external monitoring leads project over the chest.
+
+impression:
+1. multifocal patchy air‑space opacities in both lungs, greatest perihilar and in the lower lobes — suspicious for multifocal pneumonia. differential includes pulmonary edema or aspiration depending on clinical context.
+2. left-sided central venous/vascular access catheter with tip over the expected region of the svc.
+3. no large pleural effusion or pneumothorax identified.
+
+recommend correlation with clinical exam, labs, and follow-up radiograph or chest radiograph with pa and lateral views if clinically warranted.",0.08190205331021506,0.17824417352676392,0.34330472350120544,0.1769119769119769,4.113892878119908,1.5940860135392194
+00020458_015.png,151,"Findings: exam: portable ap chest radiograph (supine). comparison: none available.
+
+findings:
+- endotracheal tube projects in the mid trachea with the tip approximately 3 cm above the carina.
+- numerous monitoring leads and external lines project over the chest.
+- diffuse, bilateral patchy air‑space and interstitial opacities, greatest centrally and in the lower lungs.
+- no pneumothorax identified. small bilateral pleural effusions cannot be excluded on this supine ap study.
+
+impression:
+1. diffuse bilateral patchy air‑space and interstitial opacities — differential includes pulmonary edema versus multifocal infection/aspiration.
+2. endotracheal tube appropriately positioned (~3 cm above carina).
+3. no pneumothorax. small effusions possible but difficult to assess on supine ap radiograph.
+recommend correlation with clinical picture and consider follow-up upright/pa and lateral radiographs or chest ct if clinically indicated.",0.07915594835766293,0.251639187335968,0.20197167992591858,0.11764705882352942,4.249969103659391,1.6873139546947251
+00020725_001.png,152,"Findings: exam: portable ap chest radiograph.
+
+findings:
+- right/left-sided external monitoring leads and a central venous catheter course over the chest; catheter tip projects over the region of the mid–lower svc/cavoatrial junction.
+- cardiomediastinal silhouette within expected limits for an ap technique.
+- lungs clear of focal air‑space consolidation. no pleural effusion identified. no pneumothorax detected.
+
+impression:
+1) central venous catheter with tip projecting at the region of the mid–lower svc/cavoatrial junction.
+2) no acute cardiopulmonary disease identified on this single frontal ap view.",0.12298800925361818,0.3020302653312683,0.6205288171768188,0.18703703703703703,3.2352179105180534,1.101351746967708
+00020779_001.png,153,"Findings: exam: frontal upright chest radiograph.
+
+findings:
+- cardiomediastinal silhouette within expected size for technique.
+- patchy bilateral air‑space and interstitial opacities, greater on the right, with lower‑lung and perihilar predominance.
+- no definite pleural effusion identified.
+- no pneumothorax seen on this frontal view.
+
+impression:
+1) bilateral patchy air‑space and interstitial opacities, greater on the right — differential includes multifocal/atypical pneumonia, aspiration, or pulmonary edema; correlate clinically.
+2) no pneumothorax identified on this single frontal radiograph. if clinical concern for pneumothorax persists, consider expiratory or lateral decubitus radiographs or chest ct for greater sensitivity.",0.09496659611157075,0.3164047300815582,0.25227612257003784,0.14625850340136054,3.9266202198280293,1.494727186682609
+00021179_010.png,154,"Findings: exam: chest radiograph, single frontal view.
+
+findings:
+- median sternotomy wires and mediastinal surgical clips consistent with prior cabg.
+- a right-sided pleural drainage catheter projects with its course directed toward the right apex.
+- small right apical pleural air collection consistent with a small right pneumothorax, best appreciated at the apex with a thin pleural line and paucity of peripheral lung markings.
+- lungs otherwise clear of focal air‑space consolidation. no large pleural effusion.
+
+impression:
+1) small right apical pneumothorax. right pleural drain in place, tip projects toward the apex.  
+2) postoperative median sternotomy wires and mediastinal clips.  
+3) no acute air-space consolidation or large effusion identified on this frontal view.
+
+recommendation: correlate clinically and consider expiratory or upright decubitus radiographs or chest radiograph follow-up to document pneumothorax size and chest tube function.",0.06504968033649225,0.2555429935455322,0.4854431450366974,0.17615042058386937,3.6041369870326196,1.3260306397212414
+00021222_020.png,155,"Findings: exam: frontal chest radiograph.
+
+findings:
+- external monitoring leads and tubing project over the chest.
+- right-sided central venous catheter courses into the region of the lower svc/cavo‑atrial junction.
+- cardiomediastinal silhouette mildly enlarged.
+- bilateral, predominantly perihilar and mid-to‑lower lung patchy air‑space and interstitial opacities, greater on the right.
+- small bilateral pleural effusions with blunting/volume at the bases (left greater than right).
+
+impression:
+1. multifocal bilateral air‑space and interstitial opacities, greatest centrally and in the mid/lower lungs — suspicious for multifocal infection/aspiration or pulmonary edema (correlate clinically).
+2. small bilateral pleural effusions, greater on the left.
+3. right-sided central venous catheter with tip projecting near the cavo‑atrial junction.",0.16293763397807054,0.29292723536491394,0.18547827005386353,0.2040182270091135,4.079165888703159,1.5280101618864257
+00021338_000.png,156,"Findings: exam: frontal chest radiograph (single view).
+
+findings:
+- patchy air‑space consolidation in the left mid-to-lower lung zone, greatest laterally and posteriorly.
+- mild cardiomegaly.
+- right subcutaneous port reservoir with catheter coursing medially; catheter tip projects toward the region of the superior vena cava.
+- no large pleural effusion or pneumothorax identified on this single frontal view.
+
+impression:
+1. left mid‑to‑lower lung air‑space consolidation — most suspicious for left lower‑lobe pneumonia.  
+2. right subcutaneous port with catheter projecting to the region of the svc.  
+3. mild cardiomegaly.  
+
+recommendation: correlate with clinical findings. consider lateral view or chest radiograph follow‑up (or chest ct) if further characterization or complication evaluation is needed.",0.12847010636216566,0.3056935667991638,0.20394310355186462,0.18011855905152757,4.019519482952784,1.5183268861583035
+00021441_004.png,157,"Findings: exam: frontal upright chest radiograph.
+
+findings: left subcutaneous port with catheter coursing medially; tip projects near the expected cavo‑atrial junction. small bilateral pleural effusions layering at the bases (right greater than left) with adjacent bibasilar subsegmental atelectatic/air‑space opacity. cardiomediastinal silhouette within expected size for technique. no pneumothorax identified.
+
+impression:
+1. small bilateral pleural effusions, greater on the right, with associated bilateral basilar subsegmental atelectasis.
+2. left subcutaneous port with catheter tip at/near the cavo‑atrial junction.
+3. no pneumothorax. correlate with prior imaging or consider lateral/decubitus views if clinical question persists.",0.13294001880879835,0.3065434992313385,0.2897346317768097,0.2319093286835222,3.777135860420989,1.3670900820768404
+00021449_008.png,158,"Findings: exam: ap portable chest radiograph.
+
+findings:
+- patchy air‑space consolidation and volume loss in the perihilar and lower lungs, greater on the right.
+- right subcutaneous chest port with catheter projecting medially.
+- cardiomediastinal silhouette mildly enlarged (may be accentuated by ap technique).
+- no pneumothorax identified. no large pleural effusion detected on this single frontal view.
+
+impression:
+1. patchy bilateral lower‑lung and perihilar air‑space opacities with associated volume loss, greater on the right — most consistent with atelectasis or consolidation (infection/aspiration possible in the right clinical setting).
+2. right chest port in expected position.
+3. mild cardiomegaly, assessment limited by ap portable technique.
+4. no acute pneumothorax or large effusion identified.
+
+recommend correlation with clinical history and prior radiographs; consider dedicated pa and lateral radiographs or chest ct if further characterization is needed.",0.07909402552227782,0.2484365701675415,0.0053876833990216255,0.10256410256410256,4.651806459580017,1.9069387215627949
+00021463_001.png,159,"Findings: exam: portable ap chest radiograph (single frontal view). no prior comparison available.
+
+findings:
+- cardiomediastinal silhouette within expected size limits for ap technique.
+- lungs clear of focal lobar air‑space consolidation.
+- mild linear subsegmental atelectatic/scar-like opacity at the bilateral bases, greater on the left.
+- no pleural effusion identified. no pneumothorax.
+- external monitoring leads project over the chest.
+
+impression:
+1. mild bibasilar subsegmental atelectasis/scar, greater on the left.  
+2. no focal consolidation to suggest lobar pneumonia, no pleural effusion or pneumothorax.  
+3. cardiomediastinal size within expected limits for an ap portable exam.
+
+if there is specific concern for hiatal/abdominal hernia or retrocardiac pathology, consider dedicated upright chest and/or lateral views or ct for further evaluation.",0.08492448937663685,0.22418095171451569,0.16769632697105408,0.1579626047711154,4.336879825497347,1.7165378299038003
+00021845_005.png,160,"Findings: exam: portable ap chest radiograph.
+
+findings: cardiomediastinal silhouette is enlarged for technique, consistent with cardiomegaly (ap projection may magnify heart size). cardiac contours are smooth. mild pulmonary vascular congestion and increased central interstitial markings. no focal lobar consolidation identified. no large pleural effusion or pneumothorax. external monitoring leads project over the chest.
+
+impression:
+1) cardiomegaly on ap portable view (ap technique may exaggerate size).
+2) mild pulmonary vascular congestion/interstitial edema.
+3) no focal consolidation, large effusion, or pneumothorax identified.",0.12412156325548757,0.38340622186660767,0.4320475459098816,0.25219298245614036,3.240659849469049,1.0733752179979095
+00022048_000.png,161,"Findings: exam: frontal chest radiograph (upright).
+
+findings: cardiomediastinal silhouette within normal size limits for technique. lungs clear of focal air‑space consolidation. no pleural effusion or pneumothorax identified. mild chronic‑appearing peribronchial/perihilar interstitial markings greater at the bases.
+
+impression:
+1) no acute cardiopulmonary disease identified—no focal consolidation, pleural effusion, or pneumothorax.
+2) mild chronic-appearing peribronchial/perihilar interstitial changes/scar at the bases.
+
+correlate with clinical history and prior imaging as needed. (educational use only — not for clinical decision making.)",0.1770003218190595,0.35172951221466064,0.4996055066585541,0.3076923076923077,3.159002223463098,0.9893551521077734
+00022235_002.png,162,"Findings: findings:
+- cardiomediastinal silhouette within expected size limits for technique.
+- lungs demonstrate hyperinflation with increased radiolucency and mild flattening of the diaphragms, greater centrally and in the upper lungs — findings most consistent with emphysematous change/copd.
+- no focal lobar air‑space consolidation identified.
+- no pleural effusion or pneumothorax detected on this frontal view.
+- multiple monitoring leads and external lines project over the chest. a right-sided indwelling central venous catheter/line projects with the tip coursing toward the region of the central thorax/heart.
+
+impression:
+1. hyperinflation and increased lucency consistent with emphysematous change/copd.
+2. no acute focal consolidation, pleural effusion, or pneumothorax on this frontal radiograph.
+3. right-sided central venous catheter with tip projecting over the central thorax. multiple external monitoring leads present.
+
+correlation with lateral radiograph or prior imaging and clinical exam recommended if there is concern for subtle consolidation or effusion.",0.0673404490507766,0.27738189697265625,0.06929418444633484,0.1416666666666667,4.374438628376006,1.7468909334958889
+00022559_007.png,163,"Findings: exam: frontal chest radiograph (single frontal view).
+
+findings: cardiomediastinal silhouette within expected size limits for technique. lungs without focal air‑space consolidation. mild hyperinflation with increased central and peribronchial markings and scattered reticular/scar-like changes, greater centrally and at the bases. no pleural effusion identified. no acute osseous abnormality seen.
+
+impression:
+1. mild hyperinflation with chronic-appearing bronchitic/scar-like parenchymal changes — findings most consistent with chronic obstructive/emphysematous change.
+2. no focal consolidation or pleural effusion to suggest acute lobar pneumonia.
+for clinical concern, consider pa and lateral views or chest ct. (educational use only; not for clinical decisions.)",0.08941717498434856,0.280003160238266,0.1722046583890915,0.16904761904761906,4.146011728598229,1.6060959963841117
+00022611_004.png,164,"Findings: exam: frontal (ap) chest radiograph.
+
+findings: right subcutaneous port with catheter coursing medially; tip projects near the cavo‑atrial junction. linear pleural‑based opacity and volume loss along the left mid-to-lower hemithorax compatible with pleural thickening/scar with adjacent subsegmental atelectasis or scarring. no large left pleural effusion identified. no pneumothorax. cardiomediastinal silhouette within expected size limits for technique.
+
+impression:
+1. pleural‑based thickening/scar at the left mid–to–lower lung with adjacent subsegmental atelectasis/scar.
+2. right subcutaneous port with catheter tip projecting near the cavo‑atrial junction.
+3. no acute cardiopulmonary process identified on this frontal view (no large effusion, no pneumothorax).",0.11350219521948252,0.2939548194408417,0.4759725332260132,0.15746180963572265,3.57055501292787,1.2953111165957294
+00022730_003.png,165,"Findings: exam: frontal chest radiograph (single view).
+
+findings: cardiomediastinal silhouette within expected size for technique. lungs clear of focal air‑space consolidation. pulmonary vascular and parenchymal markings extend to the periphery bilaterally. no visible pleural line or peripheral lucency to suggest pneumothorax. no pleural effusion identified. mild chronic-appearing peribronchial/perihilar markings/scar.
+
+impression:
+1) no pneumothorax identified on this frontal single-view radiograph.
+2) mild chronic-appearing bronchitic-type/perihilar markings. 
+
+recommendation: if there remains clinical concern for occult/small pneumothorax, obtain upright expiratory radiographs or chest ct for greater sensitivity.",0.11299615367639218,0.29988646507263184,0.2257855236530304,0.13124999999999998,4.062685211670275,1.5670372191485
+00022826_001.png,166,"Findings: exam: portable ap chest radiograph.
+
+comparison: none available.
+
+findings: right-sided pleural line with absence of peripheral vascular markings consistent with a small-to-moderate right pneumothorax, greatest at the right apex/lateral hemithorax. left lung shows patchy air‑space opacity at the mid‑to‑lower lung and mild blunting consistent with subsegmental atelectasis or small effusion. enteric tube courses below the diaphragm; external monitoring leads project over the chest. cardiomediastinal silhouette mildly enlarged for technique.
+
+impression:
+1) right pneumothorax, small-to-moderate, greatest apically/laterally.
+2) patchy left mid–lower lung air‑space opacity, possible small left pleural effusion or atelectasis.
+3) enteric tube in expected position; external monitoring leads present.
+
+recommend correlation with upright expiratory or lateral decubitus radiographs or chest ct if clinically warranted and follow-up imaging after any intervention.",0.06010743070375285,0.20337042212486267,0.2885361313819885,0.07272727272727272,4.290862037273566,1.7368212043055753
+00022837_028.png,167,"Findings: exam: frontal chest radiograph (upright).
+
+findings:
+- small bilateral pleural effusions with mild blunting/meniscus at the costophrenic angles and layering at the bases.
+- mild bibasilar subsegmental atelectatic/scar-like air‑space opacity, greater on the left.
+- cardiomediastinal silhouette within expected size limits.
+- no focal lobar consolidation or pneumothorax identified.
+- surgical clips/metallic densities at the lower neck.
+
+impression:
+1. small bilateral pleural effusions with adjacent bibasilar subsegmental atelectasis/scar (greater on the left).
+2. no acute cardiopulmonary consolidation or pneumothorax identified.
+
+recommendation: correlate with clinical exam. consider lateral radiograph, chest ultrasound, or chest ct if further evaluation or quantification of effusion is needed.
+
+educational use only — not for clinical care.",0.17144437348155506,0.32743799686431885,0.09714048355817795,0.2541666666666667,4.067169598841451,1.4964685071606965
+00023075_011.png,168,"Findings: exam: frontal upright chest radiograph.
+
+findings:
+- cardiomediastinal silhouette within expected size for technique.
+- lungs are hyperinflated with increased lucency and vascular attenuation, most consistent with chronic emphysematous change/copd.
+- no focal lobar air‑space consolidation identified.
+- no pleural effusion or pneumothorax detected.
+- right subcutaneous port/central venous port with catheter coursing medially; tip projects in the region of the expected svc.
+
+impression:
+1. hyperinflation and increased lucency consistent with emphysema/copd.
+2. no acute cardiopulmonary process identified (no focal consolidation, pleural effusion, or pneumothorax).
+3. right subcutaneous central venous port with catheter tip projecting over the expected svc location.",0.13412576247652283,0.33308932185173035,0.33785900473594666,0.16203703703703703,3.718958620087145,1.3624003887481884
+00023075_027.png,169,"Findings: exam: ap upright chest radiograph.
+
+findings: right-sided thoracostomy tube courses superiorly with tip projecting near the right apex. there is a visible right pleural/visceral pleural line with absent peripheral pulmonary markings consistent with a residual right pneumothorax (small–to–moderate in size). left lung demonstrates preserved markings without focal consolidation. no sizable pleural effusion. cardiomediastinal silhouette within expected size limits for technique. external monitoring leads and tubing project over the chest.
+
+impression:
+1. residual right pneumothorax despite a right thoracostomy tube in place (small–to–moderate).  
+2. no acute left pneumothorax or large pleural effusion identified.
+3. right-sided chest tube and external monitoring leads project over the chest.",0.0715781254233747,0.31516867876052856,0.4640779495239258,0.15064102564102563,3.5098949876562746,1.2806160629838435
+00023078_000.png,170,"Findings: exam: frontal chest radiograph (upright).
+
+findings:
+- cardiomediastinal silhouette within normal size for frontal projection.
+- lungs clear of focal lobar air‑space consolidation.
+- mild linear subsegmental/plate-like opacity at the right infrahilar/right middle–lower lung region, greater on the right than left, most consistent with subsegmental atelectasis or scarring.
+- no pleural effusion identified. no pneumothorax.
+
+impression:
+1. mild linear subsegmental atelectasis/scar at the right infrahilar/mid–lower lung region.
+2. no acute lobar consolidation, pleural effusion, or pneumothorax identified.
+
+recommend clinical correlation and follow-up radiograph or comparison imaging if concern for evolving infection.",0.14703661667689652,0.3270842730998993,0.09331504255533218,0.24872448979591838,4.066622806479754,1.5076345783730891
+00023313_002.png,171,"Findings: exam: frontal chest radiograph (single view).
+
+findings: cardiomediastinal silhouette within expected size for a frontal technique. small-to-moderate layering left pleural effusion with blunting/meniscus along the left hemithorax. right costophrenic angle is sharp. no focal lobar air‑space consolidation identified. no pneumothorax detected. external monitoring leads and a right-sided linear catheter/projecting tubing overlie the chest.
+
+impression:
+1) small-to-moderate left pleural effusion with meniscus/layering on the frontal view.
+2) no focal consolidation or pneumothorax identified.
+3) external monitoring leads and right-sided catheter project over the chest.
+
+educational use only — not for clinical use.",0.0717958158617738,0.35931575298309326,0.29510417580604553,0.10204081632653061,3.7709532953144445,1.4363441753707633
+00023316_002.png,172,"Findings: exam: frontal chest radiograph.
+
+findings: cardiomediastinal silhouette within expected size limits for frontal view. lungs are hyperinflated with increased radiolucency and mild flattening of the diaphragms, greater centrally and peripherally, compatible with emphysematous change. no focal lobar air‑space consolidation identified. no pleural effusion or pneumothorax detected on this view. external monitoring leads and cables project over the chest.
+
+impression:
+1) imaging appearance of hyperinflation and increased lung lucency consistent with emphysema/copd.
+2) no acute focal consolidation, pleural effusion, or pneumothorax identified on this frontal view.
+3) external monitoring leads overlie the chest. correlate with clinical exam and prior imaging if available.",0.11652404142771204,0.35568758845329285,0.36574676632881165,0.22387136672850957,3.487874060595294,1.220355072581739
+00024039_000.png,173,"Findings: exam: frontal chest radiograph (single view).
+
+findings:
+- cardiomediastinal silhouette within expected size for technique.
+- lungs without focal lobar air‑space consolidation.
+- mild central peribronchial/perihilar bronchitic-type markings.
+- no pleural effusion identified. no pneumothorax.
+- no acute osseous abnormality apparent.
+
+impression:
+1. no focal consolidation to suggest lobar pneumonia.
+2. mild central peribronchial/perihilar bronchitic-type prominence.
+3. no pleural effusion or pneumothorax.
+
+recommend clinical correlation and pa/lateral or comparison radiographs if further evaluation is needed.",0.12085382706823943,0.2887263298034668,0.3334205150604248,0.1515863689776733,3.867929710633857,1.4530654534203038
+00024083_000.png,174,"Findings: exam: frontal chest radiograph.
+
+findings: cardiomediastinal silhouette within normal size limits for technique. lungs clear of focal lobar air‑space consolidation. mild, linear reticular/scarring-type interstitial markings in the perihilar to mid‑lower lungs bilaterally (greater on the right), without pleural effusion or pneumothorax.
+
+impression:
+1. mild bilateral perihilar/mid‑lower linear reticular scarring, most compatible with chronic scarring/fibrotic change.
+2. no acute cardiopulmonary disease identified — no focal consolidation, pleural effusion, or pneumothorax.
+
+this read is for educational purposes only and not for clinical decision-making.",0.11218511182864452,0.33030053973197937,0.4459245204925537,0.17656415694591726,3.4861570608943815,1.241414312142646
+00024466_000.png,175,"Findings: exam: frontal chest radiograph (single view).
+
+comparison: none available.
+
+findings: cardiomediastinal silhouette within expected size for technique. lungs clear of focal air‑space consolidation. no pleural effusion identified. no pneumothorax. mild chronic-appearing peribronchial/perihilar bronchitic-type markings, greater centrally. no acute osseous abnormality seen.
+
+impression:
+1. no acute cardiopulmonary disease identified — no focal consolidation, pleural effusion, or pneumothorax.
+2. mild chronic peribronchial/perihilar markings.
+3. evaluation limited by single frontal view; consider pa and lateral radiographs or clinical correlation if concern persists.",0.12519577145903363,0.2916923463344574,0.39305001497268677,0.16526610644257705,3.7286566111665183,1.371817046973532
+00024740_000.png,176,"Findings: exam: chest radiograph, frontal view (upright pa). no prior for comparison; clinical history not provided.
+
+findings: cardiomediastinal silhouette within normal size limits. lungs clear of focal lobar air‑space consolidation. mild, more central/perihilar and peribronchial increased interstitial markings bilaterally, greater centrally. no pleural effusion or pneumothorax identified.
+
+impression:
+1. no focal lobar consolidation to suggest acute lobar pneumonia.
+2. mild bilateral perihilar/peribronchial interstitial prominence — may reflect bronchitic or inflammatory/atypical infectious change; correlate with symptoms.
+3. no pleural effusion or pneumothorax.",0.10962079598903958,0.28479087352752686,0.441853791475296,0.15064102564102563,3.670121384987781,1.352873084493402
+00025461_002.png,177,"Findings: exam: frontal chest radiograph.
+
+findings:
+- right-sided subcutaneous/central venous catheter with tip projecting near the cavo‑atrial junction.
+- cardiomediastinal silhouette within expected size for technique.
+- lungs without focal lobar consolidation or pleural effusion.
+- a small, well‑defined nodular opacity is present in the right mid‑lung zone.
+
+impression:
+1) small nodular opacity in the right mid‑lung — etiology indeterminate on radiograph. recommend correlation with prior chest radiographs and consideration of chest ct for characterization.
+2) right-sided central venous catheter with tip at the cavo‑atrial region.
+3) no acute cardiopulmonary consolidation or effusion identified.",0.16910817521824992,0.34120887517929077,0.25084927678108215,0.18012422360248448,3.8537559565505015,1.4130286176083984
+00025556_017.png,178,"Findings: exam: frontal chest radiograph.
+
+findings:
+- cardiomediastinal silhouette within expected size limits for a frontal view.
+- linear pleural-based opacity along the left lateral lower hemithorax, greatest at the lateral costophrenic region, consistent with pleural thickening/scar.
+- lungs otherwise clear of focal air‑space consolidation.
+- no pleural effusion or pneumothorax identified.
+- no acute osseous abnormality seen.
+
+impression:
+1. pleural thickening/scar along the left lateral lower hemithorax.
+2. no acute cardiopulmonary process identified — no focal consolidation, pleural effusion, or pneumothorax.
+
+recommendation: correlate with prior imaging if available. consider lateral radiograph or chest ct if further characterization is required.",0.1420924147150354,0.35323888063430786,0.5436068177223206,0.17765567765567764,3.253738910440153,1.1050158942245056
+00025628_016.png,179,"Findings: exam: ap frontal chest radiograph
+
+history: not provided.
+
+findings:
+- median sternotomy wires and mediastinal surgical clips. multiple external monitoring leads project over the chest.
+- cardiomediastinal silhouette mildly enlarged for technique.
+- linear pleural-based and subsegmental parenchymal scarring/pleural thickening at the bilateral lower lungs, greater on the left.
+- no focal lobar airspace consolidation identified.
+- no large pleural effusion or pneumothorax detected on this frontal view.
+
+impression:
+1. pleural-based linear scarring/pleural thickening at the bilateral lower lungs, greater on the left.
+2. mild cardiomegaly.
+3. median sternotomy wires and external monitoring leads present.
+4. no acute large effusion or pneumothorax identified on this single frontal ap view.
+
+recommendation: if clinical concern persists or further characterization is needed, obtain pa and lateral radiographs or chest ct.",0.09385087057253412,0.2783501446247101,0.41903960704803467,0.19517241379310346,3.6502256226168264,1.330749425172851
+00025935_001.png,180,"Findings: exam: frontal upright chest radiograph.
+
+findings: cardiomediastinal silhouette within expected size limits for technique. lungs clear without focal air‑space consolidation. no pleural effusion identified. no pneumothorax. visualized osseous structures without acute abnormality.
+
+impression:
+1) no acute cardiopulmonary disease identified on this frontal chest radiograph.",0.2906721087531666,0.5712531805038452,0.7740285396575928,0.48459383753501406,1.7842293837385261,0.13368658693667895
+00026024_004.png,181,"Findings: exam: portable ap chest radiograph.
+
+findings:
+- cardiomediastinal silhouette mildly enlarged for an ap technique.
+- patchy linear and subsegmental air‑space opacities at the dependent lower lungs, greater on the left, most consistent with subsegmental atelectasis/scar.
+- no pneumothorax identified. no definite large pleural effusion on this supine/semirecumbent ap view.
+- external monitoring leads project over the chest.
+
+impression:
+1. subsegmental/linear atelectatic change in the dependent lower lung zones, greater on the left.  
+2. mild cardiomegaly (may be accentuated by ap technique).  
+3. no pneumothorax identified.  
+
+recommend correlation with clinical exam and, if concern for lobar consolidation or effusion persists, upright pa/lateral radiographs or chest ct for further evaluation.",0.06362370636794122,0.22030837833881378,0.153435617685318,0.11793611793611794,4.423647160233946,1.7869586347412103
+00026132_011.png,182,"Findings: exam: ap chest radiograph.
+
+findings: endotracheal tube courses centrally with tip approximately 3 cm above the carina. enteric tube extends below the diaphragm. multiple external monitoring leads and a right-sided central venous catheter/line project over the chest. cardiomediastinal silhouette mildly enlarged for technique. lungs show bilateral patchy air‑space and interstitial opacities, greater centrally and at the bases (r > l). small bilateral pleural effusions suspected. no pneumothorax identified.
+
+impression:
+1) support devices: endotracheal and enteric tubes in expected positions; right-sided central line.
+2) bilateral patchy air‑space and interstitial opacities, greater centrally and at the bases — differential includes pulmonary edema, multifocal infection/aspiration; correlate clinically.
+3) mild cardiomegaly and probable small bilateral pleural effusions.",0.05550885058256205,0.2419028878211975,-0.09337639063596725,0.07042253521126761,4.890729163212306,2.055995731627876
+00026232_040.png,183,"Findings: portable ap supine chest radiograph: cardiomegaly. moderate bilateral pleural effusions with dependent layering (r > l). diffuse bilateral interstitial and patchy air‑space opacities, greatest centrally and at the bases — favored to represent pulmonary interstitial/alveolar edema; multifocal infection or aspiration is an alternate consideration. enteric tube and external monitoring leads project over the chest. no pneumothorax identified.",0.14085923026002417,0.3959578275680542,0.36822444200515747,0.18560606060606058,3.440204664987045,1.199058998854838
+00026695_000.png,184,"Findings: exam: frontal (ap/pa) chest radiograph.
+
+technique: single frontal upright view. no prior available for comparison.
+
+findings:
+- cardiomediastinal silhouette within expected size limits.
+- lungs clear of focal air‑space consolidation. no pleural effusion identified.
+- a small, well‑circumscribed rounded nodular opacity (~8–12 mm) projects over the mid‑lung zone on the frontal view.
+- no acute osseous abnormality identified.
+
+impression:
+1) small solitary rounded pulmonary nodule projecting over the mid‑lung zone on the frontal radiograph. characterization limited by a single frontal view.
+2) no acute cardiopulmonary process identified (no focal consolidation or pleural effusion).
+
+recommendation: correlate with prior radiographs if available. if new or indeterminate, consider dedicated chest ct for accurate localization and characterization per fleischner/clinical guidelines.",0.10249000771134846,0.2617643177509308,0.4137398302555084,0.26041666666666663,3.6125670862993697,1.2821589188672473
+00026828_020.png,185,"Findings: exam: frontal chest radiograph.
+
+findings: median sternotomy wires and mediastinal surgical clips. subcutaneous chest port with catheter projects over the chest. cardiomediastinal silhouette mildly enlarged. bilateral perihilar and basilar-predominant interstitial and patchy air‑space opacities with mild vascular congestion. small bilateral pleural effusions layer at the bases.
+
+impression:
+1) cardiomegaly with bilateral interstitial and patchy alveolar opacities most consistent with cardiogenic pulmonary edema/volume overload. 
+2) small bilateral pleural effusions. 
+3) postoperative median sternotomy changes and indwelling chest port/catheter.
+
+correlation with clinical exam and prior imaging recommended; consider heart-failure management and follow-up radiograph after therapy.",0.05685352436149612,0.2238006889820099,0.13449044525623322,0.08,4.504075522289146,1.8472781651089936
+00026966_002.png,186,"Findings: exam: ap upright chest radiograph
+clinical info: not provided.
+
+findings:
+- left hemithorax demonstrates near-complete opacification with a dense layering pleural collection and associated air‑space consolidation/atelectatic change of the left lung.
+- multiple left-sided radiopaque tubing/lines project over the left pleural space, compatible with chest tube/pigtail catheters.
+- right lung is clear of focal consolidation. no visible pneumothorax. cardiomediastinal silhouette within expected size limits.
+
+impression:
+1. large left pleural effusion with associated collapse/consolidation of the left lung.
+2. left-sided chest tubes/pigtail catheters in place.
+3. right lung clear; no pneumothorax identified.
+
+recommend correlation with clinical status and prior imaging; consider chest ct if further characterization is needed.",0.10397504898200725,0.28626158833503723,0.266863077878952,0.10204081632653061,4.066714096871221,1.5850387470226377
+00027079_007.png,187,"Findings: exam: frontal chest radiograph (ap).
+
+technique: single frontal view.
+
+comparison: none available.
+
+findings:
+- median sternotomy wires and mediastinal surgical clips consistent with prior cardiac surgery.
+- left greater-than-right heterogeneous reticular and linear opacities with volume loss, most pronounced in the left mid‑to‑lower lung.
+- small layering left pleural effusion versus atelectatic/subsegmental scarring along the left base.
+- enteric tube coursing below the diaphragm with tip projecting over the stomach. external monitoring leads project over the chest.
+- cardiomediastinal silhouette within expected size for technique.
+- no focal lobar consolidation or pneumothorax identified.
+
+impression:
+1) left-predominant reticular/linear opacities with volume loss consistent with pulmonary fibrosis/scar, greater on the left.
+2) small left pleural effusion versus adjacent atelectasis.
+3) postoperative median sternotomy changes. enteric tube in expected gastric position. no acute focal lobar consolidation or pneumothorax detected on this frontal view.
+
+educational use only — not for clinical decision-making.",0.09944659232000767,0.2162862867116928,0.14836518466472626,0.13293650793650794,4.44699110293915,1.7799636786400865
+00027731_000.png,188,"Findings: exam: frontal chest radiograph (ap)
+
+history: not provided.
+
+comparison: none available.
+
+findings:
+- patchy bilateral air‑space opacities predominating in the mid and lower lungs, greater on the right.
+- small bilateral pleural effusions with mild basilar blunting.
+- cardiomediastinal silhouette within expected limits for ap technique.
+
+impression:
+1. bilateral multifocal air‑space consolidation, right greater than left — most suggestive of multifocal pneumonia or similar inflammatory/infiltrative process.
+2. small bilateral pleural effusions.
+
+recommendation: correlate with clinical findings and prior imaging. consider dedicated pa and lateral chest radiographs or chest ct if further evaluation is needed.
+
+note: educational use only — not for clinical decision-making.",0.11036071393157615,0.29695168137550354,0.13065184652805328,0.11904761904761905,4.267247601802177,1.6817129875411616
+00027779_000.png,189,"Findings: exam: frontal chest radiograph (upright).
+
+findings:
+- cardiomediastinal silhouette within expected size limits for frontal technique.
+- lungs clear of focal air-space consolidation.
+- no pleural effusion or pneumothorax identified.
+- mild chronic-appearing peribronchial/perihilar interstitial markings.
+- aortic atherosclerotic calcification.
+
+impression:
+1. cardiomediastinal size within expected limits on this frontal view.
+2. no acute cardiopulmonary consolidation, pleural effusion, or pneumothorax.
+3. mild chronic bronchitic-type interstitial markings and aortic atherosclerotic calcification.
+
+correlation with clinical history and prior radiographs recommended. educational use only — not for clinical use.",0.08938686975386545,0.28941696882247925,0.25384148955345154,0.16847826086956522,3.965624727298347,1.5100542186504606
+00027817_004.png,190,"Findings: exam: frontal chest radiograph.
+
+findings:
+- cardiomediastinal silhouette within expected size for technique.
+- linear pleural-based opacity/scarring along the bilateral basilar/lateral lungs, greater on the left.
+- minimal adjacent subsegmental atelectatic change at the left base.
+- no focal lobar air‑space consolidation identified.
+- no pleural effusion or pneumothorax detected.
+- external monitoring leads project over the chest.
+
+impression:
+1. pleural-based linear scarring/pleural thickening at the left greater than right basilar lungs.
+2. no acute cardiopulmonary consolidation, effusion, or pneumothorax identified.",0.08475799258447432,0.3525131046772003,0.22407962381839752,0.1285714285714286,3.8915796869633263,1.4851911587656774
+00027818_000.png,191,"Findings: exam: frontal chest radiograph (upright).
+
+findings:
+- cardiomediastinal silhouette within expected size limits for a frontal view.
+- lungs clear of focal air‑space consolidation.
+- no pleural effusion identified.
+- no visible pneumothorax on this frontal view.
+
+impression:
+1. no acute cardiopulmonary disease identified on this frontal radiograph. no pneumothorax seen.
+2. if there is persistent clinical concern for pneumothorax (especially small/apical), recommend expiratory or lateral decubitus radiographs or chest ct for increased sensitivity.",0.11692108443873356,0.40292173624038696,0.2844265103340149,0.20535714285714285,3.527753567316226,1.2463281041430714
+00028097_008.png,192,"Findings: exam: chest radiograph, single frontal view.
+
+findings:
+- cardiac silhouette mildly-to-moderately enlarged for projection.
+- lungs clear of focal air‑space consolidation.
+- no pleural effusion identified on this frontal view.
+- no acute pulmonary interstitial edema.
+- aortic atherosclerotic calcification/tortuosity along the aortic knob.
+
+impression:
+1) cardiomegaly.  
+2) no acute cardiopulmonary consolidation or pleural effusion identified on this frontal radiograph.  
+3) aortic atherosclerotic calcification.
+
+recommendation: correlate with prior imaging and clinical exam. consider pa and lateral chest radiographs or echocardiography if further evaluation of cardiac size/function is required.
+
+educational use only — not for clinical use.",0.08433229324146388,0.31074169278144836,0.4716446101665497,0.3304347826086957,3.2324515948734867,1.0565151099351986
+00028485_007.png,193,"Findings: exam: ap upright frontal chest radiograph. external monitoring leads project over the chest.
+
+findings:
+- mild cardiomegaly.
+- bilateral patchy interstitial and air‑space opacities, greatest centrally and at the bases (r > l).
+- small-to-moderate bilateral pleural effusions with dependent layering/blunting, greater on the right.
+- no pneumothorax identified.
+
+impression:
+1. small-to-moderate bilateral pleural effusions, right greater than left.
+2. bilateral interstitial/alveolar opacities — consider cardiogenic pulmonary edema versus multifocal infection/aspiration; correlate clinically.
+3. mild cardiomegaly.
+
+recommend prior comparison and consider lateral/decubitus views to better quantify effusions.",0.19138975058773822,0.36632925271987915,0.33698639273643494,0.21454735740450023,3.577989262153044,1.2430077454500792
+00028637_000.png,194,"Findings: exam: frontal chest radiograph.
+
+findings:
+- cardiomediastinal silhouette within expected size limits for technique.
+- linear/plate-like subsegmental atelectatic/scar-like opacities at the bilateral lower lungs, greater on the left.
+- small left-sided layering pleural effusion with blunting of the left costophrenic sulcus.
+- no focal lobar air‑space consolidation identified. no pneumothorax.
+- small round radiopaque skin/soft‑tissue marker projected over the mid thorax.
+
+impression:
+1. subsegmental/basilar atelectasis/scar, greater on the left.  
+2. small left pleural effusion.  
+3. no acute focal lobar consolidation or pneumothorax identified.
+
+educational use only — not for clinical decision making.",0.13294001880879835,0.3613232970237732,0.3796721398830414,0.17337570621468926,3.53678352074499,1.26007684286734
+00028640_001.png,195,"Findings: exam: frontal chest radiograph (upright).
+
+findings:
+- right subcutaneous port reservoir with catheter coursing medially; catheter tip projects near the region of the proximal svc.
+- cardiomediastinal silhouette within normal size limits for technique.
+- lungs clear of focal lobar air‑space consolidation.
+- no pleural effusion or pneumothorax identified.
+- small rounded nodular opacity in the right mid‑lung zone (~≤1 cm).
+
+impression:
+1. small rounded opacity in the right mid‑lung—suspicious for a pulmonary nodule; recommend comparison with prior chest radiographs and/or chest ct for further characterization.
+2. right chest port in expected position.
+3. no acute cardiopulmonary process otherwise identified.",0.15731421799361647,0.34287089109420776,0.4965673089027405,0.28431372549019607,3.2144514760160137,1.0361130709069302
+00028811_003.png,196,"Findings: exam: portable ap chest radiograph.
+
+findings:
+- near-complete opacification of the right hemithorax with a meniscus-like superior margin and medial shift of the mediastinum, best interpreted as a large right pleural effusion producing mass effect.
+- left lung clearer with focal pleural-based linear/reticular density at the left base suggestive of pleural thickening/scar.
+- external monitoring leads and tubing project over the chest. cardiomediastinal silhouette may be magnified due to ap technique.
+
+impression:
+1. large right-sided pleural effusion with mass effect/mediastinal shift to the left.
+2. left basilar pleural-based scarring/pleural thickening.
+3. portable ap technique and external leads limit evaluation. correlate with prior radiographs and consider upright/lateral radiographs, chest ultrasound, or ct for further characterization as clinically indicated.
+
+educational use only — not for clinical use.",0.07874992309581579,0.2477533370256424,0.0887678936123848,0.07462686567164178,4.541808304990445,1.859910263342379
+00029159_005.png,197,"Findings: exam: frontal chest radiograph.
+
+findings:
+- right subcutaneous port and left tunneled central venous catheter; catheter tips project near the cavo‑atrial region.
+- cardiomediastinal silhouette within expected size limits.
+- diffuse bilateral reticular/interstitial opacities, greatest centrally and at the bases.
+- small bilateral pleural effusions with mild blunting of the costophrenic sulci.
+- no focal lobar airspace consolidation or pneumothorax identified on this frontal view.
+
+impression:
+1. right subcutaneous port and left tunneled cvc with tips at/near the cavo‑atrial junction.
+2. diffuse bilateral interstitial/reticular opacities — differential includes chronic interstitial lung disease versus cardiogenic/noncardiogenic pulmonary edema; correlate clinically.
+3. small bilateral pleural effusions.
+recommendation: correlate with symptoms and prior imaging. consider pa and lateral radiographs or chest ct if further characterization or evaluation for an underlying focal mass is required.",0.09174183232066813,0.21085631847381592,0.14671172201633453,0.09523809523809522,4.520835252830741,1.8375152133175128
+00029213_003.png,198,"Findings: exam: frontal chest radiograph (ap).
+
+findings:
+- external monitoring leads project over the chest.
+- cardiomediastinal silhouette mildly enlarged.
+- right greater-than-left patchy air‑space opacity involving the right mid to lower lung, with a rounded component along the right hilum/paramediastinal region.
+- patchy air‑space consolidation in the left perihilar/lingular region.
+- small bilateral pleural effusions with blunting of the costophrenic sulci, greater on the right.
+- no pneumothorax identified.
+
+impression:
+1) focal rounded/patchy opacity in the right mid–lower lung (perihilar/paramediastinal) — differential includes pulmonary mass/tumor versus focal consolidation; ct chest recommended for characterization.
+2) multifocal air‑space consolidation, left greater than expected in the lingula/ perihilar region.
+3) small bilateral pleural effusions, greater on the right.
+4) mild cardiomegaly.
+
+correlation with prior radiographs and chest ct is recommended to distinguish mass from consolidation.",0.14667255471536397,0.2332543134689331,0.1552831381559372,0.261559696342305,4.212290267768528,1.5849066118784398
+00029813_010.png,199,"Findings: exam: portable ap chest radiograph.
+
+comparison: none available.
+
+findings:
+- right-sided central venous catheter coursing into the region of the mediastinum with the tip projecting near the expected region of the svc.
+- small right apical pneumothorax with a thin pleural line and a small volume of extrapulmonary air at the right apex.
+- cardiomediastinal silhouette within expected size limits for ap technique.
+- no obvious focal lobar consolidation or large pleural effusion. monitoring leads project over the chest.
+
+impression:
+1. small right apical pneumothorax.
+2. right-sided central venous catheter with tip projecting near the region of the svc.
+3. no acute cardiopulmonary consolidation or large effusion identified on this ap portable view.
+
+recommendation: correlate with clinical status. if concern for progression, obtain upright inspiratory/expiration or ct chest and repeat radiograph for follow-up as clinically indicated.
+
+educational use only — not for clinical use.",0.07558946658585376,0.24557751417160034,0.4802895486354828,0.20454545454545453,3.606190102368644,1.3122507966985597
+00029813_026.png,200,"Findings: exam: frontal chest radiograph.
+
+findings: blunting and mild layering of the bilateral costophrenic sulci consistent with small bilateral pleural effusions, greater on the right. lungs clear of focal lobar air‑space consolidation. cardiomediastinal silhouette within expected size limits for technique. external monitoring leads project over the chest.
+
+impression:
+1. small bilateral pleural effusions, right > left.
+2. no focal lobar consolidation identified on this frontal view.
+3. cardiomediastinal size within expected limits.
+recommendation: if further characterization or quantification of effusion is needed, obtain a lateral chest radiograph or chest ultrasound.",0.12565617248750868,0.4029947519302368,0.31803521513938904,0.278448275862069,3.354664238130286,1.121760305464699
+00029866_007.png,201,"Findings: exam: portable ap chest radiograph.
+
+findings:
+- right internal jugular central venous catheter coursing to the region of the svc. enteric tube courses below the diaphragm. multiple monitoring leads project over the chest.
+- cardiomediastinal silhouette mildly enlarged for technique.
+- patchy bilateral air‑space/atelectatic opacities, greater on the left mid‑to‑lower lung.
+- solitary, rounded nodular opacity approximately 1 cm in the left mid‑lung zone (best seen on the frontal view).
+- small pleural effusions cannot be excluded on this limited portable frontal view.
+
+impression:
+1. rounded nodular opacity (≈1 cm) in the left mid‑lung zone — indeterminate on a single frontal portable film. recommend dedicated pa and lateral chest radiographs or chest ct for further characterization.
+2. bilateral patchy air‑space/atelectatic change, greater on the left.
+3. mild cardiomegaly.
+4. right internal jugular central line with tip in/near the svc and enteric tube with tip below the diaphragm.",0.06894502533266923,0.2008865624666214,0.12771162390708923,0.13398486759142497,4.508591228867175,1.8246263848057207
+00029950_006.png,202,"Findings: exam: portable ap chest radiograph.
+
+findings: external monitoring leads project over the chest. cardiomediastinal silhouette within expected size for ap technique. lungs without focal lobar consolidation or pleural effusion. there is a rounded, well‑circumscribed nodular opacity projecting in the right mid‑lung zone, approximately 1 cm in greatest dimension. no acute airspace consolidation or pneumothorax identified.
+
+impression:
+1) rounded nodular opacity in the right mid‑lung zone (~1 cm). differential includes granuloma, focal scarring, or neoplasm.  
+2) no acute cardiopulmonary process identified on this single ap view.
+
+recommendation: correlate with prior chest radiographs if available. recommend chest ct with thin sections for definitive characterization of the nodule.",0.1590108488852604,0.31404465436935425,0.3813613951206207,0.19212962962962962,3.664732031636251,1.313093454233729
+00029976_007.png,203,"Findings: exam: portable ap chest radiograph.
+
+technique: ap portable, limited inspiration. external monitoring leads project over the chest.
+
+findings:
+- focal, wedge-shaped air‑space opacity with associated volume loss in the right mid–to–lower lung zone (perihilar to basilar distribution).
+- left lung more lucent without focal consolidation.
+- no large pleural effusion identified. cardiomediastinal silhouette within expected limits for ap technique.
+
+impression:
+1. focal air‑space opacity with volume loss in the right mid–lower lung — most consistent with subsegmental atelectasis; consolidation (pneumonia) cannot be excluded.
+2. no large pleural effusion or acute cardiogenic pulmonary edema identified.
+
+recommendation: correlate with clinical signs and prior radiographs; consider upright pa/lateral chest radiograph or chest ct if concern for infection.",0.0951526903338171,0.26152968406677246,0.2540474534034729,0.2220555138784696,3.968155241975726,1.4891716550347165
+00030235_000.png,204,"Findings: exam: frontal chest radiograph (upright).
+
+findings:
+- cardiomediastinal silhouette within expected size limits for technique.
+- lungs clear of focal air‑space consolidation.
+- no pleural effusion identified.
+- no pneumothorax.
+- mild chronic-appearing peribronchial/peribronchovascular markings centrally, greater on the right.
+- no acute osseous abnormality.
+
+impression:
+1. no acute cardiopulmonary disease identified — no focal consolidation, pleural effusion, or pneumothorax.
+2. mild chronic peribronchial/bronchitic-type interstitial markings.
+3. no radiographic evidence of intrathoracic/hiatal hernia on this frontal view; chest radiograph is limited for small hernias — consider dedicated gi or ct imaging if clinically suspected.
+
+(for educational use only; not for clinical decision-making.)",0.10482848367219184,0.2667398452758789,0.3844135105609894,0.15441176470588236,3.822645645288868,1.4351171206080047
+00030280_002.png,205,"Findings: exam: frontal chest radiograph (single view).
+history: none provided. no prior comparison available.
+
+findings: cardiomediastinal silhouette within expected size limits for a single frontal view. lungs without focal lobar airspace consolidation. mild, chronic-appearing peribronchial and subsegmental scarring/linear atelectatic change at the perihilar and basilar regions (greater on the right). no pleural effusion identified. no discrete pleural line or peripheral lucency to suggest pneumothorax on this frontal view.
+
+impression:
+1. no acute cardiopulmonary process identified on this frontal radiograph — no pneumothorax or effusion seen.
+2. mild chronic-appearing peribronchial and subsegmental scarring/scar-like change, greater on the right.",0.0966194849360389,0.27862733602523804,0.19521422684192657,0.07353865493400377,4.2639562952831565,1.70440732346414
+00030305_002.png,206,Findings: frontal chest radiograph: right-sided pleural drain/pigtail projecting along the right hemithorax with tip near the right upper chest. no focal lobar consolidation or pleural effusion. no large pneumothorax seen; a trace/small right apical pneumothorax cannot be excluded on this single frontal view. mild chronic-appearing peribronchial/linear scarring. correlate clinically and consider dedicated upright expiratory radiograph or chest ct if there is concern for a small pneumothorax.,0.10709254351850822,0.357147753238678,0.21692626178264618,0.04545454545454545,4.039052231457437,1.5881545331765274
+00030310_000.png,207,"Findings: exam: frontal chest radiograph.
+
+findings:
+- cardiomediastinal silhouette within normal size limits for technique.
+- lungs clear of focal lobar consolidation.
+- chronic-appearing peribronchial and reticular scarring/atelectatic change at both lower lobes (greater at the bases).
+- no pleural effusion identified. no pneumothorax.
+- no convincing intrathoracic air–fluid level to indicate a large hiatal or intrathoracic hernia on this frontal view.
+
+impression:
+1. chronic-appearing scarring/linear subsegmental atelectasis at the bilateral lower lobes, greater at the bases.
+2. no acute cardiopulmonary consolidation, effusion, or pneumothorax identified.
+3. no radiographic evidence of a large hiatal/intrathoracic hernia on this frontal radiograph; if clinical concern persists, recommend lateral chest radiograph or ct for better evaluation.",0.095672974646988,0.2921350598335266,0.3509751260280609,0.1409028727770178,3.8237824774651568,1.4432786009842664
+00030323_015.png,208,"Findings: exam: portable ap chest radiograph.
+
+technique: single frontal (ap) view.
+
+findings: cardiomediastinal silhouette within expected limits for ap technique. patchy air‑space consolidation and increased peribronchial/air‑space markings in the perihilar regions and bilateral lower lungs, greater on the right. no pneumothorax identified. no sizable pleural effusion seen.
+
+impression:
+1. multifocal patchy air‑space consolidation, greatest in the perihilar and bilateral lower lungs (r > l) — suspicious for multifocal/aspiration or infectious pneumonia.
+2. no large pleural effusion or pneumothorax.
+3. exam limited by portable ap technique and lack of prior comparison; correlate with clinical findings and consider follow-up pa/lateral radiographs or chest radiograph/ct as clinically indicated.
+
+(educational use only — not for clinical decision making.)",0.11038511652201954,0.2660464346408844,0.4639233350753784,0.1716634429400387,3.6523348430593803,1.3356856389833942
+00030497_005.png,209,"Findings: exam: frontal chest radiograph (single frontal/portable view).
+
+findings: external monitoring leads project over the chest. linear tube/tubing projects down the midline chest. cardiomediastinal silhouette within expected size for a frontal view. patchy bilateral air‑space opacity involving the perihilar regions and predominantly the lower lungs, greater on the right. no large pleural effusion identified. no pneumothorax seen.
+
+impression:
+1. multifocal bilateral air‑space consolidation, greatest in the lower lungs (r > l) — most suspicious for multifocal pneumonia or aspiration in the appropriate clinical setting.
+2. external monitoring leads and midline tube project over the chest.
+3. no large effusion or pneumothorax identified.",0.11623794295676013,0.32497718930244446,0.393304705619812,0.22153209109730848,3.532193812989499,1.2465522374645932

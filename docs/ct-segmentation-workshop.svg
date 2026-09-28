@@ -1,0 +1,184 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="6.6667in" height="7.5in" viewBox="0 0 960 1080" role="img" aria-labelledby="title description">
+  <title id="title">From CT to a measured report: the MedImageParse workshop</title>
+  <desc id="description">A concept illustration for half of a widescreen PowerPoint slide. Three workshop chapters introduce a CT-reporting agent and skill, MedImageParse segmentation through MCP, and patient context. The agent sends CT images and a prompt to MedImageParse and receives segmentation masks. Measurement tooling combines masks with CT spacing to calculate diameter and volume. A schematic CT overlay and draft abdominal CT report show an illustrative hepatic lesion measuring 24 millimeters and 6.8 milliliters. The anatomy and values are synthetic, not actual model output. Radiologist review is required.</desc>
+
+  <rect width="960" height="1080" fill="#FFFFFF"/>
+  <g font-family="Aptos, Segoe UI, Arial, sans-serif" letter-spacing="0">
+    <rect x="48" y="39" width="28" height="5" fill="#087F78"/>
+    <text x="89" y="48" font-size="17" font-weight="700" fill="#526169">SIIM LEARNING LAB / WORKSHOP CONCEPT</text>
+    <text x="48" y="111" font-size="53" font-weight="700" fill="#202C32">From CT to a measured report</text>
+    <text x="48" y="157" font-size="25" fill="#526169">An agent grounded in MedImageParse segmentation</text>
+
+    <path d="M96 211 H325 M387 211 H616" fill="none" stroke="#CEDBD9" stroke-width="2"/>
+    <path d="M318 206 L325 211 L318 216 M609 206 L616 211 L609 216" fill="none" stroke="#8EA5A2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="69" cy="211" r="21" fill="#087F78"/>
+    <circle cx="360" cy="211" r="21" fill="#087F78"/>
+    <circle cx="651" cy="211" r="21" fill="#087F78"/>
+    <g font-size="18" font-weight="700" fill="#FFFFFF" text-anchor="middle">
+      <text x="69" y="217">01</text>
+      <text x="360" y="217">02</text>
+      <text x="651" y="217">03</text>
+    </g>
+    <g font-size="26" font-weight="700" fill="#202C32">
+      <text x="48" y="267">Agent + skill</text>
+      <text x="339" y="267">MedImageParse</text>
+      <text x="630" y="267">Patient context</text>
+    </g>
+    <g font-size="21" fill="#526169">
+      <text x="48" y="299">Draft a CT report</text>
+      <text x="339" y="299">Add segmentation via MCP</text>
+      <text x="630" y="299">Add history + prior reports</text>
+    </g>
+
+    <path d="M48 328 H912" stroke="#DCE4E4" stroke-width="1.5"/>
+    <text x="48" y="367" font-size="17" font-weight="700" fill="#526169">THE AGENT AT WORK</text>
+
+    <g stroke-linejoin="round">
+      <rect x="84" y="398" width="152" height="114" rx="5" fill="#E9EDED" stroke="#9DABAF" stroke-width="1.5"/>
+      <rect x="72" y="410" width="152" height="114" rx="5" fill="#C4CDCE" stroke="#8F9FA3" stroke-width="1.5"/>
+      <rect x="60" y="422" width="152" height="114" rx="5" fill="#20282D"/>
+      <ellipse cx="136" cy="480" rx="59" ry="43" fill="#9DA4A6"/>
+      <ellipse cx="136" cy="480" rx="53" ry="37" fill="#575F63"/>
+      <path d="M85 471 C91 449 119 447 139 456 L152 466 C137 474 126 483 120 497 C102 498 87 490 85 480 Z" fill="#969D9F"/>
+      <path d="M170 456 C185 461 188 475 180 482 L169 478 L164 465 Z" fill="#939A9C"/>
+      <path d="M151 456 C165 451 172 462 164 473 C160 480 150 478 146 472 Z" fill="#B1B6B7"/>
+      <ellipse cx="156" cy="465" rx="7" ry="5" fill="#343B40"/>
+      <path d="M113 488 C103 486 100 499 109 504 C115 509 123 501 119 497 L114 499 Z" fill="#B7BCBD"/>
+      <path d="M158 488 C168 486 172 499 163 504 C157 509 149 501 153 497 L158 499 Z" fill="#B7BCBD"/>
+      <ellipse cx="136" cy="502" rx="12" ry="9" fill="#DEE1E0"/>
+      <ellipse cx="136" cy="503" rx="7" ry="5" fill="#929C9E"/>
+      <path d="M132 511 L136 520 L140 511" fill="#DEE1E0"/>
+      <g fill="#D5DAD9">
+        <ellipse cx="84" cy="481" rx="3" ry="7"/>
+        <ellipse cx="189" cy="481" rx="3" ry="7"/>
+        <ellipse cx="95" cy="504" rx="5" ry="3"/>
+        <ellipse cx="178" cy="504" rx="5" ry="3"/>
+      </g>
+    </g>
+    <path d="M253 468 H321 M312 461 L321 468 L312 475" fill="none" stroke="#7D9095" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+
+    <circle cx="395" cy="466" r="56" fill="#EEF4F3" stroke="#CBDAD8" stroke-width="1.5"/>
+    <path d="M369 440 H421 Q427 440 427 446 V481 Q427 487 421 487 H389 L374 499 V487 H369 Q363 487 363 481 V446 Q363 440 369 440 Z" fill="#FFFFFF" stroke="#087F78" stroke-width="2.5" stroke-linejoin="round"/>
+    <g fill="#087F78">
+      <circle cx="381" cy="465" r="3.5"/>
+      <circle cx="395" cy="465" r="3.5"/>
+      <circle cx="409" cy="465" r="3.5"/>
+    </g>
+    <path d="M421 420 L425 429 L434 433 L425 437 L421 446 L417 437 L408 433 L417 429 Z" fill="#087F78" stroke="#EEF4F3" stroke-width="3"/>
+
+    <path d="M473 435 H661 M652 428 L661 435 L652 442" fill="none" stroke="#7D9095" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="567" y="418" text-anchor="middle" font-size="20" fill="#526169">CT + prompt</text>
+    <path d="M661 495 H473 M482 488 L473 495 L482 502" fill="none" stroke="#087F78" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="567" y="526" text-anchor="middle" font-size="20" fill="#087F78">Segmentation masks</text>
+
+    <g fill="none" stroke="#B7CBC7" stroke-width="1.5">
+      <path d="M703 422 V404 H721 M873 404 H891 V422 M891 504 V522 H873 M721 522 H703 V504"/>
+      <path d="M734 416 V510 M765 416 V510 M796 416 V510 M827 416 V510 M858 416 V510 M715 438 H879 M715 463 H879 M715 488 H879" stroke="#EDF3F1"/>
+    </g>
+    <path d="M718 461 C721 433 744 419 778 425 C805 431 832 431 855 439 L879 451 C862 462 846 464 828 468 C808 474 799 496 774 501 C748 505 724 492 718 477 Z" fill="#C5E8DC" stroke="#087F78" stroke-width="2.5"/>
+    <path d="M789 429 C779 446 784 463 801 480 M726 478 C748 473 764 477 778 499" fill="none" stroke="#5DAF98" stroke-width="1.5"/>
+    <path d="M749 450 C754 441 766 441 773 450 C780 460 776 472 765 475 C753 477 745 465 749 450 Z" fill="#F4C76D" stroke="#BD7C14" stroke-width="2"/>
+
+    <g text-anchor="middle">
+      <g font-size="25" font-weight="700" fill="#202C32">
+        <text x="143" y="575">CT study</text>
+        <text x="395" y="575">CT agent</text>
+        <text x="797" y="575">MedImageParse</text>
+      </g>
+      <g font-size="20" fill="#526169">
+        <text x="143" y="604">DICOM series</text>
+        <text x="395" y="604">Skill + patient context</text>
+        <text x="797" y="604">Segmentation model</text>
+      </g>
+    </g>
+
+    <rect x="48" y="637" width="864" height="62" fill="#EAF5F0"/>
+    <path d="M48 637 H912 M48 699 H912" stroke="#C7E2D8" stroke-width="1"/>
+    <g fill="none" stroke="#087F78" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="72" y="656" width="35" height="24" rx="2"/>
+      <path d="M79 657 V666 M86 657 V663 M93 657 V666 M100 657 V663"/>
+      <path d="M444 668 H486 M478 662 L486 668 L478 674"/>
+    </g>
+    <text x="125" y="677" font-size="25" fill="#245F51">Masks + CT spacing</text>
+    <text x="514" y="677" font-size="25" font-weight="700" fill="#245F51">Diameter + volume</text>
+    <path d="M798 699 V721 M791 713 L798 721 L805 713" fill="none" stroke="#087F78" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+
+    <text x="48" y="737" font-size="17" font-weight="700" fill="#526169">SEGMENTATION OVERLAY</text>
+    <text x="493" y="737" font-size="17" font-weight="700" fill="#526169">MEASUREMENT-GROUNDED REPORT</text>
+
+    <rect x="48" y="754" width="405" height="259" rx="6" fill="#1D252B"/>
+    <text x="67" y="779" font-size="14" fill="#B9C4C7">AXIAL CT / SCHEMATIC</text>
+    <text x="69" y="902" font-size="16" fill="#CFD7D8">R</text>
+    <text x="424" y="902" font-size="16" fill="#CFD7D8">L</text>
+
+    <path d="M89 895 C89 841 146 797 249 797 C352 797 414 838 414 895 C414 956 353 998 250 998 C146 998 89 958 89 895 Z" fill="#A3AAAC"/>
+    <path d="M98 895 C98 846 150 806 249 806 C347 806 405 844 405 895 C405 951 349 989 250 989 C150 989 98 953 98 895 Z" fill="#535C61"/>
+    <path d="M108 883 C123 838 169 821 226 823 C242 825 248 847 243 862 C223 883 186 895 159 923 L122 928 Z" fill="#727B7E"/>
+    <path d="M111 911 C136 919 150 939 171 955 L187 978 C147 971 119 948 111 911 Z" fill="#929A9C"/>
+    <path d="M389 911 C365 919 350 939 329 955 L313 978 C353 971 381 948 389 911 Z" fill="#929A9C"/>
+    <path d="M117 870 C119 840 160 816 201 820 C234 823 267 830 290 844 C277 859 256 866 240 879 C222 893 209 919 183 930 C151 931 119 910 115 890 Z" fill="#A4ACAE"/>
+    <path d="M355 837 C377 842 388 861 384 884 C380 901 368 906 357 895 C347 884 345 870 347 851 Z" fill="#A8B0B1"/>
+    <path d="M282 834 C307 827 334 839 333 859 C331 880 310 891 289 880 C274 873 270 850 282 834 Z" fill="#BDC3C3"/>
+    <path d="M288 843 C305 836 323 844 323 858 C320 869 307 877 291 870 C282 865 280 851 288 843 Z" fill="#343E44"/>
+    <path d="M239 882 C259 872 280 881 294 892 L316 895 L322 908 C294 914 279 900 260 900 L240 902 Z" fill="#9CA6A8"/>
+    <g fill="#929EA1" stroke="#455056" stroke-width="3">
+      <path d="M198 881 C184 877 174 888 179 900 C184 912 202 908 205 896 Z"/>
+      <path d="M219 894 C208 890 200 900 204 910 C210 921 225 916 227 905 Z"/>
+      <path d="M276 915 C265 909 253 917 257 927 C261 939 279 938 283 928 Z"/>
+      <path d="M324 909 C310 903 299 913 304 924 C309 935 326 931 329 919 Z"/>
+      <path d="M238 918 C226 911 216 920 220 931 C223 942 239 944 244 932 Z"/>
+    </g>
+    <path d="M187 917 C170 909 155 924 160 939 C165 954 184 958 194 946 C198 940 195 935 188 934 L180 940 L177 931 L188 925 Z" fill="#BDC6C6"/>
+    <path d="M314 917 C331 909 346 924 341 939 C336 954 317 958 307 946 C303 940 306 935 313 934 L321 940 L324 931 L313 925 Z" fill="#BDC6C6"/>
+    <path d="M212 956 C200 944 189 955 192 970 L211 983 L231 982 L229 964 Z" fill="#A5AEB0"/>
+    <path d="M289 956 C301 944 312 955 309 970 L290 983 L270 982 L272 964 Z" fill="#A5AEB0"/>
+    <ellipse cx="250" cy="949" rx="24" ry="20" fill="#E0E4E1"/>
+    <ellipse cx="250" cy="948" rx="17" ry="13" fill="#9AA6A8"/>
+    <path d="M231 963 L239 977 L245 977 L250 993 L255 977 L261 977 L269 963 L260 961 L257 972 H243 L240 961 Z" fill="#D9DEDB"/>
+    <ellipse cx="250" cy="970" rx="7" ry="6" fill="#45535A"/>
+    <ellipse cx="243" cy="918" rx="8" ry="10" fill="#D0D8D7"/>
+    <ellipse cx="263" cy="917" rx="7" ry="10" fill="#B4C0C1"/>
+    <g fill="#DCE0DC" stroke="#9DA7A7" stroke-width="1">
+      <ellipse cx="111" cy="872" rx="5" ry="10" transform="rotate(21 111 872)"/>
+      <ellipse cx="389" cy="872" rx="5" ry="10" transform="rotate(-21 389 872)"/>
+      <ellipse cx="106" cy="909" rx="5" ry="10" transform="rotate(-12 106 909)"/>
+      <ellipse cx="395" cy="909" rx="5" ry="10" transform="rotate(12 395 909)"/>
+      <ellipse cx="129" cy="948" rx="9" ry="5" transform="rotate(38 129 948)"/>
+      <ellipse cx="371" cy="948" rx="9" ry="5" transform="rotate(-38 371 948)"/>
+    </g>
+
+    <path d="M117 870 C119 840 160 816 201 820 C234 823 267 830 290 844 C277 859 256 866 240 879 C222 893 209 919 183 930 C151 931 119 910 115 890 Z" fill="#39BD9B" fill-opacity="0.38" stroke="#65D4B6" stroke-width="2"/>
+    <path d="M155 859 C157 848 172 845 183 852 C193 858 194 870 184 877 C175 884 163 879 157 871 Z" fill="#F4C76D" fill-opacity="0.85" stroke="#FFE2A1" stroke-width="2"/>
+    <path d="M153 850 V836 H193 V850 M153 843 H193" fill="none" stroke="#FFE2A1" stroke-width="1.8" stroke-linecap="round"/>
+    <text x="173" y="826" text-anchor="middle" font-size="19" font-weight="700" fill="#FFE2A1">24 mm</text>
+
+    <g font-size="17" fill="#526169">
+      <rect x="61" y="1028" width="12" height="12" rx="2" fill="#39A88C"/>
+      <text x="82" y="1041">Liver mask</text>
+      <rect x="222" y="1028" width="12" height="12" rx="2" fill="#E8B24D"/>
+      <text x="243" y="1041">Lesion mask</text>
+    </g>
+
+    <rect x="493" y="754" width="419" height="287" rx="5" fill="#FFFFFF" stroke="#C9D8D5" stroke-width="1.5"/>
+    <path d="M511 774 V791" stroke="#087F78" stroke-width="4" stroke-linecap="round"/>
+    <text x="526" y="790" font-size="23" font-weight="700" fill="#202C32">CT ABDOMEN</text>
+    <text x="888" y="789" text-anchor="end" font-size="16" font-weight="700" fill="#71817F">DRAFT</text>
+    <path d="M516 806 H889" stroke="#E0E7E5" stroke-width="1"/>
+    <text x="516" y="828" font-size="15" font-weight="700" fill="#667873">FINDINGS</text>
+    <text x="516" y="860" font-size="24" fill="#202C32">Focal hepatic lesion</text>
+    <rect x="511" y="876" width="384" height="78" rx="3" fill="#F2F7F5"/>
+    <g font-size="21" fill="#405650">
+      <text x="523" y="903">Longest diameter</text>
+      <text x="523" y="940">Segmented volume</text>
+    </g>
+    <g text-anchor="end" font-size="27" font-weight="700">
+      <text x="882" y="904" fill="#956115">24 mm</text>
+      <text x="882" y="941" fill="#087F78">6.8 mL</text>
+    </g>
+    <text x="516" y="972" font-size="15" font-weight="700" fill="#667873">IMPRESSION</text>
+    <text x="516" y="1000" font-size="21" fill="#202C32">Measured focal hepatic lesion.</text>
+    <text x="516" y="1026" font-size="16" fill="#667873">Radiologist review required</text>
+
+    <text x="48" y="1070" font-size="16" fill="#73827F">Illustrative anatomy and values. Concept only; not for clinical use.</text>
+  </g>
+</svg>

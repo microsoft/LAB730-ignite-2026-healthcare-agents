@@ -1,0 +1,15 @@
+{
+  "servers": {
+    "medimageinsight": {
+      "command": "uv",
+      "args": [
+        "run",
+        "--directory",
+        "${workspaceFolder}/mcp/medimageinsight-server",
+        "mcp",
+        "run",
+        "server.py"
+      ]
+    }
+  }
+}

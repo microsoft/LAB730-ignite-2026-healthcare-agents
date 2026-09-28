@@ -1,0 +1,427 @@
+{
+  "patient": {
+    "patient_id": "MRN-00482719",
+    "name": {
+      "given": "Robert",
+      "middle": "James",
+      "family": "Whitaker"
+    },
+    "date_of_birth": "1962-08-14",
+    "age_years": 63,
+    "sex": "male",
+    "biological_sex": "male",
+    "gender_identity": "male",
+    "race": "White",
+    "ethnicity": "Not Hispanic or Latino",
+    "height_cm": 178,
+    "weight_kg": 92.5,
+    "bmi": 29.2,
+    "blood_type": "A+",
+    "primary_care_provider": "Dr. Elena Marquez, MD (Internal Medicine)",
+    "insurance": {
+      "primary": "Medicare Part B",
+      "secondary": "Blue Cross Blue Shield Federal"
+    },
+    "smoking_status": "Former smoker (quit 2014, 25 pack-year history)",
+    "alcohol_use": "Occasional, 2-3 drinks per week",
+    "occupation": "Retired electrical engineer"
+  },
+  "allergies": [
+    {
+      "substance": "Penicillin",
+      "reaction": "Urticaria, mild angioedema",
+      "severity": "moderate",
+      "noted_date": "1998-03-22"
+    },
+    {
+      "substance": "Iodinated contrast (low-osmolar)",
+      "reaction": "Bronchospasm, hypotension",
+      "severity": "severe",
+      "noted_date": "2019-05-08",
+      "notes": "Requires premedication protocol (prednisone + diphenhydramine) for any iodinated contrast study."
+    },
+    {
+      "substance": "Latex",
+      "reaction": "Contact dermatitis",
+      "severity": "mild",
+      "noted_date": "2008-11-04"
+    }
+  ],
+  "active_problems": [
+    {
+      "condition": "Coronary artery disease, status post CABG",
+      "icd10": "I25.10",
+      "onset_date": "2017-02-11"
+    },
+    {
+      "condition": "Type 2 diabetes mellitus, controlled",
+      "icd10": "E11.9",
+      "onset_date": "2011-06-30"
+    },
+    {
+      "condition": "Essential hypertension",
+      "icd10": "I10",
+      "onset_date": "2008-04-17"
+    },
+    {
+      "condition": "Hyperlipidemia",
+      "icd10": "E78.5",
+      "onset_date": "2008-04-17"
+    },
+    {
+      "condition": "Osteoarthritis, primary, bilateral knees",
+      "icd10": "M17.0",
+      "onset_date": "2013-09-12"
+    },
+    {
+      "condition": "Chronic kidney disease, stage 3a",
+      "icd10": "N18.31",
+      "onset_date": "2021-08-19"
+    },
+    {
+      "condition": "Benign prostatic hyperplasia with LUTS",
+      "icd10": "N40.1",
+      "onset_date": "2019-02-02"
+    },
+    {
+      "condition": "Pulmonary nodule, stable",
+      "icd10": "R91.1",
+      "onset_date": "2022-10-04"
+    }
+  ],
+  "medications": [
+    { "name": "Aspirin", "dose": "81 mg", "route": "PO", "frequency": "daily", "indication": "secondary cardiac prevention" },
+    { "name": "Atorvastatin", "dose": "40 mg", "route": "PO", "frequency": "nightly", "indication": "hyperlipidemia / CAD" },
+    { "name": "Metoprolol succinate", "dose": "50 mg", "route": "PO", "frequency": "daily", "indication": "HTN, post-CABG" },
+    { "name": "Lisinopril", "dose": "10 mg", "route": "PO", "frequency": "daily", "indication": "HTN, CKD" },
+    { "name": "Metformin", "dose": "1000 mg", "route": "PO", "frequency": "twice daily", "indication": "T2DM" },
+    { "name": "Tamsulosin", "dose": "0.4 mg", "route": "PO", "frequency": "nightly", "indication": "BPH" },
+    { "name": "Acetaminophen", "dose": "650 mg", "route": "PO", "frequency": "every 6 hours PRN", "indication": "knee pain" }
+  ],
+  "family_history": [
+    { "relation": "father", "condition": "Myocardial infarction", "age_at_event": 67, "notes": "Deceased age 71, complications post-MI" },
+    { "relation": "mother", "condition": "Breast cancer", "age_at_event": 72, "notes": "Deceased age 84, unrelated cause" },
+    { "relation": "brother", "condition": "Type 2 diabetes mellitus", "age_at_event": 55, "notes": "Living, age 67" },
+    { "relation": "paternal uncle", "condition": "Colon adenocarcinoma", "age_at_event": 68, "notes": "Deceased" }
+  ],
+  "surgical_history": [
+    {
+      "event_id": "SX-001",
+      "date": "1981-07-22",
+      "procedure": "Open appendectomy",
+      "cpt": "44950",
+      "indication": "Acute appendicitis with localized peritonitis",
+      "surgeon": "Dr. Harold Levin, MD",
+      "facility": "St. Mary's Regional Hospital",
+      "anesthesia": "General",
+      "approach": "Open, McBurney incision",
+      "findings": "Inflamed, gangrenous appendix without perforation. Localized purulent peritonitis in the right lower quadrant.",
+      "complications": "None",
+      "length_of_stay_days": 4,
+      "pathology": "Acute suppurative and gangrenous appendicitis. No malignancy.",
+      "follow_up": "Wound healed by secondary intention; uneventful recovery."
+    },
+    {
+      "event_id": "SX-002",
+      "date": "2009-11-15",
+      "procedure": "Laparoscopic cholecystectomy with intraoperative cholangiogram",
+      "cpt": "47563",
+      "indication": "Symptomatic cholelithiasis with recurrent biliary colic; mild gallbladder wall thickening on US",
+      "surgeon": "Dr. Priya Anand, MD, FACS",
+      "facility": "Mercy Medical Center",
+      "anesthesia": "General endotracheal",
+      "approach": "Laparoscopic, four-port technique",
+      "findings": "Chronically inflamed gallbladder containing multiple cholesterol stones (largest 1.4 cm). Cholangiogram negative for choledocholithiasis. No bile duct injury.",
+      "complications": "None",
+      "length_of_stay_days": 1,
+      "pathology": "Chronic cholecystitis with cholelithiasis. No dysplasia or malignancy.",
+      "follow_up": "Returned to baseline activity at 2 weeks. No post-cholecystectomy syndrome."
+    },
+    {
+      "event_id": "SX-003",
+      "date": "2014-06-03",
+      "procedure": "Open right inguinal hernia repair with mesh (Lichtenstein)",
+      "cpt": "49505",
+      "indication": "Symptomatic right indirect inguinal hernia, reducible",
+      "surgeon": "Dr. Marcus O'Connell, MD",
+      "facility": "Mercy Medical Center",
+      "anesthesia": "Spinal with sedation",
+      "approach": "Open, Lichtenstein tension-free with polypropylene mesh",
+      "findings": "Indirect hernia sac extending into the inguinal canal; no incarceration. Internal ring widened to 3 cm.",
+      "complications": "Mild postoperative urinary retention requiring single in-and-out catheterization.",
+      "length_of_stay_days": 0,
+      "follow_up": "No recurrence at 12-month follow-up. Mesh well incorporated on subsequent imaging."
+    },
+    {
+      "event_id": "SX-004",
+      "date": "2017-02-11",
+      "procedure": "Coronary artery bypass grafting x3 (LIMA to LAD; SVG to OM1; SVG to PDA)",
+      "cpt": "33533",
+      "indication": "Three-vessel coronary artery disease with NSTEMI; LAD 90% proximal, LCx 80% mid, RCA 85% distal",
+      "surgeon": "Dr. Jonathan Hsieh, MD (Cardiothoracic Surgery)",
+      "facility": "University Heart Institute",
+      "anesthesia": "General endotracheal with TEE",
+      "approach": "Median sternotomy, on-pump CPB, mild hypothermia (32 \u00b0C)",
+      "findings": "Heavily calcified LAD; diffuse disease in LCx and RCA. Ejection fraction intraoperatively 45%. All grafts patent at completion.",
+      "complications": "Postoperative atrial fibrillation on POD 2, converted with amiodarone. Sternal wound seroma (resolved with conservative management).",
+      "cpb_time_min": 112,
+      "cross_clamp_time_min": 78,
+      "length_of_stay_days": 7,
+      "icu_days": 2,
+      "follow_up": "Cardiac rehab completed 12 weeks. EF improved to 52% at 6 months."
+    },
+    {
+      "event_id": "SX-005",
+      "date": "2019-05-08",
+      "procedure": "CT-guided percutaneous biopsy, right upper lobe pulmonary nodule",
+      "cpt": "32408",
+      "indication": "8 mm spiculated RUL nodule with interval growth on surveillance CT",
+      "operator": "Dr. Susan Liang, MD (Interventional Radiology)",
+      "facility": "University Medical Center, IR Suite",
+      "anesthesia": "Local with moderate sedation",
+      "approach": "Posterior approach, 18-gauge coaxial core biopsy",
+      "findings": "Three core specimens obtained from the periphery of the nodule.",
+      "complications": "Small (10%) right apical pneumothorax, observed without chest tube; iodinated contrast reaction during planning CT (severe bronchospasm) - allergy added to record.",
+      "length_of_stay_days": 0,
+      "pathology": "Benign granulomatous inflammation with non-caseating granulomas. Special stains negative for AFB and fungal organisms.",
+      "follow_up": "Pneumothorax resolved on 4-hour post-procedure imaging. Pulmonology follow-up; nodule monitored."
+    },
+    {
+      "event_id": "SX-006",
+      "date": "2022-03-18",
+      "procedure": "Right total knee arthroplasty (cemented, posterior-stabilized)",
+      "cpt": "27447",
+      "indication": "End-stage primary osteoarthritis right knee, refractory to conservative management",
+      "surgeon": "Dr. Aisha Patel, MD (Orthopedic Surgery)",
+      "facility": "Orthopedic Specialty Hospital",
+      "anesthesia": "Spinal with adductor canal block",
+      "approach": "Medial parapatellar arthrotomy",
+      "implant": "Zimmer Biomet Persona PS, size F femur / size 5 tibia, 10 mm polyethylene insert; cemented with Palacos",
+      "findings": "Severe tricompartmental cartilage loss with eburnation; medial meniscal tear; mild varus deformity (5\u00b0) corrected intraoperatively.",
+      "complications": "None intraoperative. Postoperative DVT prophylaxis with enoxaparin; no thromboembolic events.",
+      "estimated_blood_loss_ml": 150,
+      "length_of_stay_days": 2,
+      "follow_up": "Excellent ROM at 6 weeks (0\u2013115\u00b0). KOOS score improved from 38 (preop) to 81 (12 months)."
+    },
+    {
+      "event_id": "SX-007",
+      "date": "2024-09-26",
+      "procedure": "Transurethral resection of the prostate (TURP)",
+      "cpt": "52601",
+      "indication": "BPH with refractory LUTS, recurrent urinary retention, post-void residual >250 mL",
+      "surgeon": "Dr. Kevin Park, MD (Urology)",
+      "facility": "Mercy Medical Center",
+      "anesthesia": "Spinal",
+      "approach": "Bipolar TURP",
+      "findings": "Prostate volume ~78 mL preop; trilobar enlargement with median lobe prominence. Smooth bladder mucosa; trabeculation grade 2.",
+      "complications": "Transient post-op hematuria, resolved with continuous bladder irrigation x 24 hours.",
+      "length_of_stay_days": 1,
+      "pathology": "Nodular prostatic hyperplasia. No high-grade intraepithelial neoplasia or carcinoma.",
+      "follow_up": "Catheter removed POD 2; voiding trial successful. IPSS improved from 24 to 8 at 3 months."
+    }
+  ],
+  "imaging_history": [
+    {
+      "study_id": "IMG-2009-0411",
+      "date": "2009-11-02",
+      "modality": "US",
+      "body_part": "Right upper quadrant / abdomen",
+      "indication": "RUQ pain, evaluation for cholelithiasis",
+      "facility": "Mercy Medical Center",
+      "radiologist": "Dr. Karen Whitfield, MD",
+      "technique": "Real-time gray-scale ultrasound of the gallbladder, liver, biliary tree, pancreas, and right kidney.",
+      "findings": "Gallbladder contains multiple mobile, shadowing echogenic foci, the largest measuring approximately 1.4 cm, consistent with cholelithiasis. Gallbladder wall measures 3 mm (mildly thickened). No pericholecystic fluid. Negative sonographic Murphy sign at time of exam. Common bile duct measures 5 mm (within normal limits). Liver parenchyma is homogeneous without focal lesion. Pancreatic head visualized and unremarkable.",
+      "impression": [
+        "Cholelithiasis with mild gallbladder wall thickening, suggestive of chronic cholecystitis.",
+        "No sonographic evidence of acute cholecystitis at this time.",
+        "Normal common bile duct caliber."
+      ],
+      "bi_rads_or_lirads": null,
+      "follow_up": "Surgical consultation for elective cholecystectomy."
+    },
+    {
+      "study_id": "IMG-2017-0021",
+      "date": "2017-02-09",
+      "modality": "Coronary angiography (cardiac catheterization)",
+      "body_part": "Coronary arteries",
+      "indication": "NSTEMI; troponin peak 4.8 ng/mL; new T-wave inversions in V3\u2013V6.",
+      "facility": "University Heart Institute, Cath Lab 2",
+      "interventionalist": "Dr. Anil Krishnan, MD",
+      "technique": "Right radial access; selective left and right coronary angiography in standard projections; left ventriculography deferred due to renal function.",
+      "findings": "Left main: minimal disease. LAD: 90% proximal stenosis with TIMI 2 flow. LCx: 80% mid-vessel stenosis. OM1 with 60% ostial disease. RCA: dominant; 85% stenosis in distal segment with TIMI 3 flow. No thrombus. Mild diffuse disease throughout.",
+      "impression": [
+        "Severe three-vessel coronary artery disease.",
+        "Recommendation: surgical revascularization (CABG)."
+      ],
+      "follow_up": "CABG performed 2017-02-11."
+    },
+    {
+      "study_id": "IMG-2018-0742",
+      "date": "2018-03-04",
+      "modality": "CXR",
+      "body_part": "Chest",
+      "indication": "Routine 1-year post-CABG follow-up; no acute symptoms.",
+      "facility": "Mercy Medical Center",
+      "radiologist": "Dr. Theodore Brennan, MD",
+      "technique": "PA and lateral views of the chest.",
+      "findings": "Median sternotomy wires intact and aligned. Mediastinal contour normal for postoperative state. Heart size top-normal. Lungs are clear without focal consolidation, effusion, or pneumothorax. No pleural-based lesions. Bony thorax otherwise unremarkable. Surgical clips along the left internal mammary artery course.",
+      "impression": [
+        "Stable post-CABG appearance.",
+        "No acute cardiopulmonary process."
+      ]
+    },
+    {
+      "study_id": "IMG-2019-0188",
+      "date": "2019-04-22",
+      "modality": "CT",
+      "body_part": "Chest, low-dose without contrast",
+      "indication": "Lung cancer screening; 25 pack-year history, age 56, former smoker.",
+      "facility": "University Medical Center",
+      "radiologist": "Dr. Marisol Vega, MD",
+      "technique": "Low-dose helical CT of the chest from thoracic inlet to upper abdomen, 1.0 mm reconstructions, no IV contrast.",
+      "findings": "An 8 mm spiculated nodule is identified in the apical segment of the right upper lobe (series 3, image 42), increased from 5 mm on the prior outside study from 2017-08. No additional pulmonary nodules. No mediastinal or hilar lymphadenopathy by size criteria. Mild centrilobular emphysema, predominantly upper lobes. Median sternotomy and CABG clips noted. Visualized upper abdomen unremarkable.",
+      "impression": [
+        "8 mm spiculated right upper lobe nodule with interval growth \u2014 Lung-RADS 4B.",
+        "Recommend tissue sampling (PET/CT or CT-guided biopsy)."
+      ],
+      "lung_rads": "4B",
+      "follow_up": "PET/CT performed; subsequent CT-guided biopsy SX-005."
+    },
+    {
+      "study_id": "IMG-2019-0203",
+      "date": "2019-04-30",
+      "modality": "PET/CT",
+      "body_part": "Skull base to mid-thigh, with 18F-FDG",
+      "indication": "Characterization of growing RUL pulmonary nodule.",
+      "facility": "University Medical Center, Nuclear Medicine",
+      "radiologist": "Dr. Marisol Vega, MD",
+      "technique": "Whole-body PET/CT 60 minutes after IV administration of 10 mCi 18F-FDG. Blood glucose 118 mg/dL.",
+      "findings": "RUL spiculated nodule measures 8 mm with mild FDG uptake (SUVmax 2.4), nonspecific. No hypermetabolic mediastinal, hilar, or supraclavicular adenopathy. No FDG-avid distant lesion. Mildly FDG-avid sigmoid focus (SUVmax 4.1) likely physiologic; correlate with colonoscopy as clinically indicated.",
+      "impression": [
+        "RUL nodule with low-level FDG uptake \u2014 indeterminate; tissue sampling recommended.",
+        "Incidental sigmoid focal uptake \u2014 recommend correlation with colonoscopy."
+      ]
+    },
+    {
+      "study_id": "IMG-2019-0212",
+      "date": "2019-05-08",
+      "modality": "CT",
+      "body_part": "Chest, post-biopsy non-contrast",
+      "indication": "Post-procedure following CT-guided RUL nodule biopsy (SX-005).",
+      "facility": "University Medical Center",
+      "radiologist": "Dr. Susan Liang, MD",
+      "technique": "Limited non-contrast chest CT.",
+      "findings": "Small (~10%) right apical pneumothorax. Tract of biopsy needle visible with mild adjacent ground-glass hemorrhage in the RUL. No pneumomediastinum. No expanding hematoma. No left-sided pneumothorax.",
+      "impression": [
+        "Small right apical pneumothorax post-biopsy, no chest tube indicated.",
+        "Expected post-biopsy intraparenchymal hemorrhage."
+      ]
+    },
+    {
+      "study_id": "IMG-2020-1109",
+      "date": "2020-11-12",
+      "modality": "MRI",
+      "body_part": "Right knee, without contrast",
+      "indication": "Persistent right knee pain with mechanical symptoms; refractory to PT and intra-articular injections.",
+      "facility": "Orthopedic Specialty Hospital",
+      "radiologist": "Dr. Henrik Olsen, MD",
+      "technique": "Multiplanar, multisequence MRI of the right knee at 1.5 T including PD fat-sat, T2, T1, and STIR sequences. No IV contrast.",
+      "findings": "Severe full-thickness chondral loss in the medial tibiofemoral compartment with subchondral marrow edema and a 1.2 cm subchondral cyst in the medial tibial plateau. Complex tear of the posterior horn of the medial meniscus extending to the inferior articular surface. Moderate joint effusion with synovitis. Patellofemoral compartment shows grade 3 chondromalacia and small Baker's cyst measuring 2.4 \u00d7 1.0 cm. ACL and PCL intact. Collateral ligaments intact.",
+      "impression": [
+        "Severe medial compartment osteoarthritis with full-thickness cartilage loss and meniscal tear.",
+        "Moderate-grade patellofemoral chondromalacia.",
+        "Likely candidate for surgical management given severity and prior failed conservative care."
+      ]
+    },
+    {
+      "study_id": "IMG-2021-0608",
+      "date": "2021-06-21",
+      "modality": "US",
+      "body_part": "Renal/bladder",
+      "indication": "Rising creatinine (1.5 mg/dL) and elevated PVR; evaluate for obstructive uropathy.",
+      "facility": "Mercy Medical Center",
+      "radiologist": "Dr. Karen Whitfield, MD",
+      "findings": "Right kidney measures 11.2 cm; left kidney 11.0 cm. No hydronephrosis or nephrolithiasis. Cortical thickness preserved bilaterally. Bladder is markedly distended pre-void (volume ~520 mL). Prostate enlarged with median lobe protrusion, estimated volume 78 mL. Post-void residual 285 mL.",
+      "impression": [
+        "No hydronephrosis.",
+        "Markedly elevated post-void residual with prostatomegaly and median lobe component \u2014 consistent with obstructive BPH."
+      ]
+    },
+    {
+      "study_id": "IMG-2022-0301",
+      "date": "2022-03-15",
+      "modality": "XR",
+      "body_part": "Right knee, weight-bearing",
+      "indication": "Preoperative planning for right TKA.",
+      "facility": "Orthopedic Specialty Hospital",
+      "radiologist": "Dr. Henrik Olsen, MD",
+      "technique": "Standing AP, lateral, sunrise, and Rosenberg views.",
+      "findings": "Bone-on-bone narrowing of the medial tibiofemoral compartment with subchondral sclerosis and large medial osteophytes. Mild lateral compartment narrowing. Patellofemoral joint with moderate narrowing and osteophytosis. Mild varus alignment (~5\u00b0). No fracture or lytic lesion.",
+      "impression": [
+        "Severe tricompartmental osteoarthritis, medial-predominant, with mild varus deformity.",
+        "Findings support indication for total knee arthroplasty."
+      ],
+      "kellgren_lawrence_grade": 4
+    },
+    {
+      "study_id": "IMG-2022-1004",
+      "date": "2022-10-04",
+      "modality": "CT",
+      "body_part": "Chest, low-dose without contrast",
+      "indication": "Annual lung cancer screening; surveillance of known RUL biopsy-proven granuloma.",
+      "facility": "University Medical Center",
+      "radiologist": "Dr. Marisol Vega, MD",
+      "findings": "RUL apical nodule measures 7 mm, stable to mildly decreased compared with 2021 study (was 8 mm). No new pulmonary nodules. No adenopathy. Stable centrilobular emphysema. Postsurgical changes from CABG unchanged.",
+      "impression": [
+        "Stable RUL nodule, consistent with previously biopsied granuloma \u2014 Lung-RADS 2.",
+        "Continue annual screening."
+      ],
+      "lung_rads": "2"
+    },
+    {
+      "study_id": "IMG-2024-0901",
+      "date": "2024-09-12",
+      "modality": "MRI",
+      "body_part": "Pelvis, multiparametric prostate (mpMRI)",
+      "indication": "Pre-TURP planning; rule out clinically significant prostate cancer (PSA 6.2 ng/mL).",
+      "facility": "University Medical Center",
+      "radiologist": "Dr. Anand Subramanian, MD",
+      "technique": "3 T multiparametric MRI of the prostate including T2WI, DWI (b values 50, 800, 1400, 2000), and DCE.",
+      "findings": "Prostate volume 78 mL. Marked transition zone enlargement with heterogeneous BPH nodules. No discrete focal lesion in the peripheral zone. No restricted diffusion or suspicious early enhancement. Seminal vesicles symmetric, no invasion. No lymphadenopathy. Bladder wall mildly thickened with trabeculation.",
+      "impression": [
+        "PI-RADS 2 \u2014 clinically significant prostate cancer is unlikely.",
+        "Markedly enlarged prostate with median lobe component, consistent with BPH."
+      ],
+      "pi_rads": 2
+    },
+    {
+      "study_id": "IMG-2025-1115",
+      "date": "2025-11-05",
+      "modality": "CT",
+      "body_part": "Abdomen and pelvis, with oral contrast (no IV contrast given iodine allergy and CKD)",
+      "indication": "Acute LLQ abdominal pain x 24 hours with low-grade fever; rule out diverticulitis.",
+      "facility": "Mercy Medical Center, Emergency Department",
+      "radiologist": "Dr. Theodore Brennan, MD",
+      "technique": "Helical CT of the abdomen and pelvis with oral contrast only.",
+      "findings": "Sigmoid colon shows mural thickening over a 6 cm segment with associated mesenteric fat stranding and several diverticula. No pneumoperitoneum, abscess, or extraluminal contrast. Small adjacent reactive lymph node (8 mm short axis). Rest of the colon unremarkable. Postsurgical changes from cholecystectomy and inguinal hernia mesh repair noted, stable. Mild bilateral renal cortical thinning consistent with known CKD; no hydronephrosis. Bladder postsurgical from prior TURP. Aortoiliac calcifications without aneurysm. No free fluid.",
+      "impression": [
+        "Acute uncomplicated sigmoid diverticulitis (Hinchey Ia).",
+        "No abscess or perforation.",
+        "Recommend outpatient antibiotic therapy and interval colonoscopy after resolution."
+      ],
+      "hinchey_classification": "Ia"
+    }
+  ],
+  "encounters_summary": {
+    "total_surgical_events": 7,
+    "total_imaging_studies": 12,
+    "last_updated": "2026-04-30",
+    "data_source": "Synthesized for educational use \u2014 fictional patient",
+    "phi_status": "All identifiers are fictional. Not for clinical use."
+  },
+  "notes": [
+    "This record is a synthetic, fictional patient generated for SIIM workshop / agent training purposes.",
+    "Any resemblance to real persons, providers, or institutions is coincidental.",
+    "Do not use for clinical decision-making."
+  ]
+}

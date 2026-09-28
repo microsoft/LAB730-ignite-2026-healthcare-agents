@@ -1,0 +1,3003 @@
+study_id,report,bleu_score,bertscore,semb_score,radgraph_combined,RadCliQ-v0,RadCliQ-v1
+00000116_031.png,"exam: chest radiograph (single frontal ap view)
+history/indication: not provided.
+technique: single frontal ap chest radiograph.
+
+findings:
+- imaging model shows a high probability of pleural effusion.
+- possible focal mass and pleural thickening are noted as lower-confidence differentials.
+- no model-supported evidence for acute cardiogenic edema, consolidation, pneumothorax, or focal pulmonary nodule on this view.
+
+impression:
+1. pleural effusion identified (highest probability finding on image classification).
+2. possible superimposed mass and pleural thickening—consider further evaluation.
+3. single frontal ap view limits assessment for precise size, sidedness, and parenchymal detail. recommend correlation with clinical history, prior imaging, and targeted imaging (e.g., lateral or decubitus radiographs and/or chest ct) as clinically indicated.
+
+note: findings are based on automated zero‑shot classification of this image and intended for educational use only—not a substitute for formal radiologic interpretation.",0.07452377101866406,0.3308252692222595,0.27070480585098267,0.1851351351351351,3.7723217854993694,1.4041789575765269
+00000133_000.png,"indication: not provided.
+
+technique: single frontal chest radiograph.
+
+findings: cardiomediastinal silhouette within expected size limits for technique. lungs clear of focal air‑space consolidation. a small, well‑circumscribed nodular opacity projects over the right lower lung zone. no pleural effusion or pneumothorax identified. visualized osseous structures without acute abnormality.
+
+impression:
+1. small nodular opacity in the right lower lung zone, suspicious for a pulmonary nodule. 
+2. no acute cardiopulmonary consolidation, pleural effusion, or pneumothorax identified.
+
+recommendation: correlate with prior chest radiographs if available; consider dedicated chest ct for further characterization of the nodule.",0.14792199740194073,0.4569214880466461,0.44767698645591736,0.27556818181818177,2.9699597681365995,0.9073579790125815
+00000284_001.png,"indication:
+not provided.
+
+technique:
+frontal chest radiograph.
+
+findings:
+retrocardiac air‑fluid level projecting behind the cardiac silhouette consistent with a hiatal/diaphragmatic hernia. lungs clear without focal air‑space consolidation. no pleural effusion or pneumothorax. cardiomediastinal silhouette within normal size limits. no acute osseous abnormality identified.
+
+impression:
+1. retrocardiac air‑fluid level consistent with a hiatal/diaphragmatic hernia.
+2. no acute cardiopulmonary disease identified — no focal consolidation, pleural effusion, or pneumothorax.",0.22886885410853172,0.5945912599563599,0.385398268699646,0.3265765765765766,2.6490055911519548,0.6785230994032306
+00000385_001.png,"indication: not provided.
+
+technique: single frontal (anteroposterior) chest radiograph.
+
+findings: imaging demonstrates features consistent with a hernia. cardiomediastinal silhouette within expected size for ap technique. no focal airspace consolidation to suggest acute pneumonia. no pleural effusion or pneumothorax identified.
+
+impression:
+1. hernia — imaging appearance consistent with intrathoracic herniation.
+2. no acute cardiopulmonary consolidation, pleural effusion, or pneumothorax identified.",0.1767766952966369,0.49770548939704895,0.37184473872184753,0.20168067226890757,3.1272791979865957,1.0074716089262463
+00000393_000.png,"indication: not provided.
+
+technique: single frontal chest radiograph (ap).
+
+findings: cardiomediastinal silhouette within expected size limits for a frontal ap technique. no pleural effusion or pneumothorax identified. lungs without dense focal lobar air‑space consolidation on this frontal view. there is an air‑containing/soft‑tissue contour in the lower mediastinum/retrocardiac region suspicious for herniation of abdominal contents (hernia). no acute osseous abnormality seen.
+
+impression:
+1. imaging appearance suspicious for a hiatal/retrocardiac hernia.
+2. no definite pleural effusion or pneumothorax.
+3. possible mild pulmonary infiltration/consolidation or small nodular opacity cannot be excluded on this single frontal view — consider correlation with clinical exam and prior imaging or a pa and lateral radiographs for further evaluation.",0.12035969077901981,0.3955736458301544,0.2586383521556854,0.24823529411764705,3.5325009920130537,1.2307194208494117
+00000634_000.png,"indication: not provided.
+
+technique: single frontal chest radiograph (ap technique).
+
+findings: there is imaging appearance consistent with a hernia projecting into the thoracic cavity. no focal air‑space consolidation to suggest pneumonia. no pleural effusion or pneumothorax identified. cardiomediastinal silhouette within expected size limits for technique. no acute osseous abnormality identified.
+
+impression:
+1. radiographic appearance consistent with a hernia involving the thoracic cavity (highest probability). 
+2. no acute cardiopulmonary consolidation, pleural effusion, or pneumothorax identified.",0.13263707095903693,0.4648919105529785,0.3683270215988159,0.18785578747628084,3.2230875782430735,1.0823560500542186
+00000683_002.png,"indication: none provided.
+
+technique: single frontal chest radiograph (ap view), image: <WORKSPACE>/data/100_datasets_per_class_nih_chest_xray/nih_subset/cardiomegaly/00000683_002.png.
+
+findings:
+- imaging evidence of pulmonary fibrosis pattern (positive on classifier).
+- cardiac silhouette may be enlarged for technique (possible cardiomegaly).
+- possible focal air‑space consolidation suggesting superimposed pneumonia.
+- possible hiatal/diaphragmatic hernia suggested by image classifier.
+- no convincing pleural effusion or pneumothorax identified on this view.
+
+impression:
+1) pulmonary fibrosis (classifier positive).  
+2) possible cardiomegaly.  
+3) possible superimposed pneumonia.  
+4) possible hiatal/diaphragmatic hernia.  
+correlation with clinical history and comparison with prior imaging recommended; consider pa and lateral radiographs or chest radiograph follow-up/ct if clinically indicated.",0.0925555693055815,0.3084796071052551,0.4188418686389923,0.4264705882352941,3.1914460088519956,0.9931907833894443
+00000688_002.png,"indication: not provided.
+
+technique: single frontal (ap) chest radiograph.
+
+findings: focal air‑space opacity with associated volume loss consistent with atelectasis. no pleural effusion identified. no pneumothorax. cardiomediastinal silhouette within expected limits for ap technique. no focal lobar consolidation to suggest acute lobar pneumonia.
+
+impression:
+1. atelectasis/volume loss on the chest radiograph.
+2. no pleural effusion or pneumothorax identified.
+3. no focal lobar consolidation to suggest acute lobar pneumonia.",0.15067416070017678,0.49498623609542847,0.4968196153640747,0.19053708439897699,2.9004111408702364,0.9015153817345746
+00000766_003.png,"indication: not provided.
+
+technique: single frontal (anteroposterior) chest radiograph.
+
+comparison: none available.
+
+findings:
+- prominent reticular/linear interstitial pattern consistent with fibrosis (x-ray chest anteroposterior fibrosis: probability 0.60).
+- possible pleural thickening (x-ray chest anteroposterior pleural_thickening: probability 0.15).
+- no acute focal lobar consolidation to suggest pneumonia, no sizable pleural effusion, and no pneumothorax identified. cardiomediastinal silhouette not enlarged on this ap view.
+
+impression:
+1. fibrotic-appearing interstitial changes of the lungs — most conspicuous finding.
+2. possible pleural thickening.
+3. no acute airspace consolidation, pleural effusion, or pneumothorax identified on this frontal ap radiograph.
+
+educational use only — not for clinical decision-making.",0.08263408336789432,0.3982429504394531,0.578842043876648,0.24400330851943758,2.904397181018399,0.9130529763141279
+00000861_002.png,"exam: frontal chest radiograph (ap)
+
+indication: not provided.
+
+technique: single frontal ap view.
+
+findings: imaging features most consistent with pleural effusion. there are also imaging signals suggesting possible air‑space process and/or pulmonary interstitial/vascular congestion (pneumonia, edema flagged as possible). no radiographic evidence of pneumothorax or cardiomegaly identified by the classifier.
+
+impression:
+1) pleural effusion — most likely (highest model probability).
+2) possible concurrent pneumonia and/or pulmonary edema — cannot be excluded.
+3) no pneumothorax or cardiomegaly identified on this frontal ap view.
+
+recommendation: correlate with clinical exam, consider lateral and/or upright films or chest ultrasound/ct for effusion characterization and to clarify consolidation vs. edema.",0.0696545190318858,0.315527081489563,0.3072313666343689,0.08333333333333331,3.9082290916550653,1.5198635761534927
+00000910_001.png,"exam: chest radiograph (frontal, anteroposterior)
+indication: not provided.
+
+technique: single frontal ap view.
+
+findings:
+- focal opacity consistent with atelectasis identified on the frontal image (highest model probability).
+- areas of possible air‑space opacity that could reflect superimposed pneumonia or scarring/fibrosis (see ""pneumonia"" and ""fibrosis"" flagged as possible).
+- no imaging evidence of large pleural effusion or pneumothorax.
+- cardiomediastinal silhouette not enlarged for technique.
+
+impression:
+1. atelectasis — most likely (positive on zero‑shot classifier).
+2. possible superimposed pneumonia and/or fibrosis (model indicates these as possible; correlate clinically).
+3. no acute pleural effusion or pneumothorax identified on this frontal ap view.
+
+recommendation: correlate with clinical exam and prior radiographs if available; consider pa and lateral views or chest radiograph follow‑up or chest ct if there is clinical concern for consolidation or to further evaluate fibrosis.",0.08669682733111428,0.30380627512931824,0.3266042172908783,0.18872549019607843,3.751909649450977,1.3887052160590814
+00001373_022.png,"indication: not provided.
+
+technique: single frontal chest radiograph (ap).
+
+findings: cardiomediastinal silhouette is enlarged consistent with cardiomegaly. there is mild diffuse/central interstitial and patchy air‑space opacity raising concern for pulmonary interstitial edema and/or air‑space infiltration. no pleural effusion identified. no pneumothorax identified.
+
+impression:
+1. cardiomegaly.
+2. possible pulmonary interstitial edema.
+3. possible air‑space infiltration (patchy).
+4. no pleural effusion or pneumothorax detected.",0.18581403127845014,0.5403081178665161,0.5005506277084351,0.32186234817813764,2.573417886734031,0.6594560963767852
+00001582_019.png,"indication: not provided.
+
+technique: single frontal chest radiograph (anteroposterior).
+
+findings:
+- patchy air‑space consolidation and increased air‑space opacity consistent with pneumonia.
+- additional patchy air‑space infiltration is present.
+- no pleural effusion identified. no pneumothorax.
+- cardiomediastinal silhouette within expected size for ap technique.
+
+impression:
+1. pneumonia — patchy air‑space consolidation consistent with infection.
+2. possible additional consolidation/infiltration.
+3. no pleural effusion or pneumothorax. cardiomediastinal size within expected limits for ap technique.",0.17167901505579045,0.49631989002227783,0.6082278490066528,0.25974025974025977,2.5927180658748537,0.7023150425646785
+00001951_007.png,"indication: not provided.
+
+technique: ap chest radiograph.
+
+findings: cardiomediastinal silhouette within expected size for ap technique. lungs clear of focal lobar airspace consolidation. no pleural effusion identified. no large pneumothorax seen on this single ap view — a small apical pneumothorax cannot be excluded. external monitoring leads and wires project over the chest.
+
+impression:
+1. no focal lobar consolidation identified.
+2. no pleural effusion.
+3. no large pneumothorax identified on this ap view; small apical pneumothorax cannot be excluded. correlate clinically or consider dedicated upright/lateral or expiratory radiographs if concern persists.
+4. external monitoring leads project over the chest.",0.08576413194015868,0.38143810629844666,0.297542542219162,0.1823671497584541,3.5821320747427507,1.2973743116843377
+00001989_011.png,"exam: chest radiograph (single frontal ap view).
+history: not provided.
+
+technique: ap frontal chest radiograph.
+
+findings:
+- imaging demonstrates pleural thickening and pleural effusion with high model probability.
+- no radiographic evidence of pneumothorax.
+- no focal air‑space consolidation to suggest lobar pneumonia identified on this frontal ap view.
+- cardiomediastinal contours are not enlarged on this view (no cardiomegaly detected by the model).
+
+impression:
+1. pleural thickening — high probability.
+2. pleural effusion — high probability.
+3. no pneumothorax identified. no focal consolidation to suggest lobar pneumonia on this view.
+
+recommendation: if clinical management depends on laterality/volume or better characterization, obtain upright pa and lateral chest radiographs and/or chest ultrasound or ct as indicated.",0.11031147872326735,0.38620319962501526,0.4462653696537018,0.05405405405405406,3.5105960956473985,1.3013401808305907
+00002003_005.png,"indication: not provided.
+
+technique: single frontal (ap) chest radiograph.
+
+findings: linear/reticular scarring and parenchymal volume loss consistent with pulmonary fibrosis. focal pleural thickening along the chest wall. no focal lobar airspace consolidation or pleural effusion identified. possible small pneumothorax is suggested.
+
+impression:
+1. pulmonary fibrosis.
+2. pleural thickening.
+3. possible small pneumothorax — consider upright expiratory chest radiographs or chest ct for confirmation if clinically suspected.",0.18764665626020038,0.575767993927002,0.5356854796409607,0.29642857142857143,2.4425925751193427,0.5976367231336362
+00002381_010.png,"exam: chest radiograph, single frontal ap view
+indication: not provided.
+technique: ap frontal radiograph of the chest.
+
+findings:
+- prominent central/perihilar interstitial and patchy air‑space opacities bilaterally, greater centrally.
+- cardiomediastinal silhouette mildly enlarged.
+- small bilateral pleural effusions are suggested.
+
+impression:
+1. cardiogenic pulmonary edema—central/perihilar interstitial and alveolar opacities (supports positive edema label).
+2. cardiomegaly — possible.
+3. small bilateral pleural effusions — possible.
+4. no focal lobar consolidation or pneumothorax identified on this ap view.
+
+correlation with clinical status and prior radiographs recommended.",0.1768475618840883,0.4914529323577881,0.44512954354286194,0.19850498338870431,3.0139055254416443,0.9488463827566531
+00002469_004.png,"exam: chest radiograph, single frontal ap view
+
+history/indication: not provided.
+
+technique: single frontal anteroposterior chest radiograph.
+
+findings:
+- imaging demonstrates findings consistent with pneumothorax on the supplied frontal ap view.
+- possible emphysematous-type hyperinflation/airspace lucency suggested.
+- no radiographic evidence of pleural effusion or focal air‑space consolidation on this view.
+
+impression:
+1. pneumothorax identified on the frontal ap radiograph. the extent and exact location (laterality and volume) are limited by the single ap projection; consider an upright pa and/or expiratory film or chest radiograph/ct for more accurate assessment and sizing if clinically warranted.
+2. possible emphysematous change.
+3. no acute pleural effusion or focal consolidation identified on this image.
+
+recommendation: correlate with clinical examination. if concern for clinically significant pneumothorax, obtain upright expiratory chest radiograph or chest ct and notify clinical team promptly.",0.07193255131717366,0.33713093400001526,0.44292953610420227,0.06666666666666667,3.6171023400229165,1.3699638629500976
+00002510_008.png,"indication: not provided.
+
+technique: single frontal (ap) chest radiograph.
+
+findings: there is a focal rounded pulmonary opacity consistent with a mass. mild pleural thickening is suggested. patchy air‑space consolidation is possible. no pleural effusion or pneumothorax identified. cardiomediastinal silhouette within expected limits on this single frontal view.
+
+impression:
+1. focal pulmonary mass — imaging appearance highly suspicious for a true pulmonary/soft‑tissue mass on this frontal view.
+2. possible pleural thickening.
+3. possible focal air‑space consolidation.
+4. no pleural effusion or pneumothorax identified on this view.
+
+recommendation: correlate with prior chest imaging if available. dedicated chest ct is recommended for lesion characterization and staging if clinically indicated.",0.06765100914917384,0.38827788829803467,0.25961509346961975,0.15945512820512822,3.6560739724380475,1.3523424658594703
+00002628_001.png,"indication:
+not provided.
+
+technique:
+frontal chest radiograph.
+
+findings:
+cardiac silhouette within normal size limits for technique. lungs without focal airspace consolidation. linear pleural-based scarring/pleural thickening along the left lateral and basilar pleural surface. no pleural effusion identified. no pneumothorax. mediastinal contours unremarkable. no acute osseous abnormality. left-sided radiopaque marker projects over the shoulder.
+
+impression:
+1. linear pleural thickening/scar along the left lateral/basilar pleural surface, most consistent with chronic pleural change.
+2. no focal consolidation to suggest acute lobar pneumonia.
+3. no pleural effusion or pneumothorax. cardiomediastinal silhouette within expected limits.",0.19215631129292463,0.4866780936717987,0.5230636596679688,0.18237547892720307,2.9188373021037854,0.8992869715037919
+00002755_000.png,"indication: not provided.
+
+technique: single frontal (ap) chest radiograph.
+
+findings: patchy subsegmental air‑space opacity and volume loss most consistent with atelectasis. no pleural effusion or pneumothorax identified. cardiomediastinal silhouette within expected size for ap technique.
+
+impression:
+1. atelectasis — imaging findings most consistent with atelectasis (high probability).
+2. possible superimposed pneumonia — differential includes pneumonia given intermediate probability; correlate with clinical signs and symptoms.
+3. no pleural effusion or pneumothorax detected.",0.1414213562373095,0.4241340160369873,0.3888399302959442,0.14256410256410257,3.3855751213323924,1.1856333142961957
+00002856_017.png,"indication: no clinical history provided.
+
+technique: frontal chest radiograph (anteroposterior view).
+
+findings: focal air‑space opacity with associated volume loss most consistent with atelectasis, greatest in the dependent lower lung zone(s). cardiomediastinal silhouette within expected size for an ap technique. no pleural effusion identified. no pneumothorax.
+
+impression:
+1. atelectasis, greatest in the dependent lower lung zone(s).
+2. no pleural effusion or pneumothorax identified.",0.12400668195182848,0.492937296628952,0.2593093812465668,0.12121212121212122,3.442643764598292,1.2274909012043607
+00003072_016.png,"exam: chest radiograph (single frontal ap view; image provided).
+
+technique: ap chest radiograph.
+
+findings:
+- pneumothorax detected (highest model probability).
+- possible pleural effusion.
+- possible pleural thickening.
+- no radiographic evidence of cardiomegaly or focal lobar consolidation identified on this view.
+
+impression:
+1. pneumothorax — imaging strongly suggests presence. correlate with clinical status; consider urgent evaluation and management as indicated.
+2. possible pleural effusion and pleural thickening — recommend correlation and follow-up imaging (upright pa/lateral radiographs or chest ct) if clinically warranted.
+3. no acute cardiomegaly or focal consolidation seen on the provided frontal view.
+
+educational use only — not for clinical use.",0.13800094300966587,0.43419280648231506,0.5004790425300598,0.06451612903225806,3.2677372417857935,1.1551589879914883
+00003098_012.png,"exam: chest radiograph (single frontal ap image)
+image file: <WORKSPACE>/data/100_datasets_per_class_nih_chest_xray/nih_subset/fibrosis/00003098_012.png
+
+history/indication: not provided.
+
+technique: single frontal (anteroposterior) chest radiograph.
+
+comparison: none available.
+
+findings:
+- imaging features most consistent with pulmonary fibrosis (see above classifier result).
+- possible pleural thickening.
+- possible emphysematous change.
+- no radiographic evidence of large pleural effusion or pneumothorax.
+- no imaging-predominant cardiomegaly identified.
+- no focal consolidation to suggest lobar pneumonia identified on this view.
+
+impression:
+1. imaging appearance most consistent with pulmonary fibrosis (positive by zero-shot classifier).
+2. possible pleural thickening and emphysematous change.
+3. no acute large pleural effusion or pneumothorax identified; no definite focal consolidation on this single frontal view.
+
+recommendation: correlate with clinical history and prior imaging if available. consider pa and lateral radiographs or chest ct for further evaluation if clinically indicated.",0.09709042925675021,0.21045731008052826,0.4656883776187897,0.2565284178187404,3.671997100663466,1.3200236186249061
+00003230_009.png,"indication: not provided.
+
+technique: single frontal chest radiograph (anteroposterior).
+
+findings: pleural effusion is present. there is possible pleural thickening. possible subsegmental/linear atelectatic change. no focal air‑space consolidation to suggest lobar pneumonia. no pneumothorax identified. cardiomediastinal silhouette within expected limits for ap technique.
+
+impression:
+1. pleural effusion.
+2. possible pleural thickening.
+3. possible subsegmental atelectasis.
+4. no pneumothorax or acute lobar consolidation identified.",0.18548972648583734,0.47684070467948914,0.12096308916807175,0.04878048780487805,3.909257465693771,1.4818799147325141
+00003450_000.png,"indication: not provided.
+
+technique: single frontal chest radiograph (ap).
+
+findings:
+- focal rounded pulmonary opacity consistent with a pulmonary nodule.
+- pleural effusion identified.
+- no focal lobar air‑space consolidation detected.
+- no pneumothorax identified.
+- cardiomediastinal silhouette within expected limits for an ap technique.
+
+impression:
+1. pulmonary nodule — high probability.
+2. pleural effusion — high probability.
+3. no acute lobar consolidation or pneumothorax identified.
+
+recommendation: correlate with prior imaging. consider dedicated chest ct for nodule characterization and upright/lateral radiographs if further evaluation of effusion is needed.",0.19735738889116605,0.5174732208251953,0.2569107115268707,0.15833333333333333,3.3666696632834388,1.1431480746013238
+00003741_008.png,"indication: not provided.
+
+technique: single frontal chest radiograph (projection not specified).
+
+findings:
+- moderate pleural effusion projecting over the lower lungs.
+- subsegmental atelectatic change/scar at the dependent lower lungs.
+- patchy air‑space opacity in the lower lungs, more compatible with possible consolidation or pneumonia.
+- cardiomediastinal silhouette within expected size limits for frontal view.
+- no pneumothorax identified.
+
+impression:
+1. moderate pleural effusion.
+2. subsegmental atelectasis at the lower lungs.
+3. possible air‑space consolidation/pneumonia (lower lungs).
+4. no radiographic evidence of pneumothorax. correlate with clinical exam and prior imaging if available.",0.09128709291752769,0.45843786001205444,0.25886479020118713,0.058823529411764705,3.6230918170382918,1.3625736949089156
+00003873_000.png,"exam: chest radiograph, single frontal (ap) view.
+history: not provided. image path: <WORKSPACE>/data/100_datasets_per_class_nih_chest_xray/nih_subset/consolidation/00003873_000.png
+
+technique: single frontal ap radiograph.
+
+findings:
+- focal air‑space consolidation identified (highest model probabilities for pneumonia and consolidation).
+- no large pleural effusion identified.
+- no pneumothorax identified.
+- cardiomediastinal silhouette within expected limits for a frontal ap view.
+- no acute osseous abnormality seen on this view.
+
+impression:
+1. air‑space consolidation most consistent with pneumonia.  
+2. no pleural effusion or pneumothorax identified on this frontal ap view.  
+3. correlate with clinical findings. if needed for localization or to assess extent, consider comparison with prior radiographs or dedicated pa and lateral radiographs or chest ct as clinically indicated.",0.10300524052492095,0.2692049443721771,0.41066473722457886,0.175,3.732030710075585,1.379296838917108
+00003973_006.png,"indication: not provided.
+
+technique: single frontal chest radiograph (ap).
+
+findings:
+- cardiac silhouette is enlarged, consistent with cardiomegaly.
+- increased chronic-appearing interstitial markings, greatest centrally/perihilar, which may reflect fibrosis.
+- linear/subsegmental suboptimal aeration at the lung bases compatible with atelectasis.
+- no acute large consolidation, pleural effusion, or pneumothorax identified on this single frontal view.
+
+impression:
+1. cardiomegaly.
+2. findings suggestive of pulmonary fibrosis/scar pattern.
+3. subsegmental atelectasis at the bases.
+4. no acute large consolidation, effusion, or pneumothorax identified on this ap view.
+
+recommendation: correlate with prior chest radiographs or chest ct if clinically indicated; consider pa and lateral views for better assessment.",0.1516964551161236,0.47441813349723816,0.5479960441589355,0.3148809523809524,2.6695883578022466,0.7297262594151298
+00003999_000.png,"indication: not provided.
+
+technique: single frontal ap chest radiograph.
+
+findings: there is imaging evidence most consistent with pleural effusion and adjacent subsegmental atelectasis. focal air‑space consolidation is possible. no large pneumothorax is identified on this frontal view, though a small pneumothorax cannot be excluded. cardiomediastinal silhouette within expected size for an ap technique. no acute cardiogenic pulmonary edema identified.
+
+impression:
+1. pleural effusion — most likely (highest probability on classifier).  
+2. subsegmental atelectasis adjacent to the effusion.  
+3. possible air‑space consolidation/pneumonia.  
+4. possible small pneumothorax cannot be excluded on this frontal ap view.
+
+recommend correlation with clinical exam and prior imaging. if concern for a small pneumothorax or to better evaluate consolidation/effusion, consider upright and lateral radiographs or chest radiograph with expiratory views and/or chest ct as clinically indicated.",0.061639209090192236,0.32254019379615784,0.3522290885448456,0.13273809523809524,3.7185950324488894,1.4020039355027578
+00004338_011.png,"exam: portable ap chest radiograph (single frontal view)
+
+indication: not provided.
+
+technique: single frontal (anteroposterior) chest radiograph.
+
+findings:
+- focal subsegmental air‑space opacity consistent with atelectatic change.
+- no radiographic evidence of pleural effusion or pneumothorax.
+- cardiomediastinal silhouette within expected limits for technique.
+
+impression:
+1. atelectasis — focal subsegmental air‑space opacity identified.
+2. no acute pleural effusion or pneumothorax detected on this frontal ap view.
+3. if clinical concern for infection or nonresolving opacity, consider pa/lateral radiographs or chest radiograph follow-up and clinical correlation.
+
+educational use only — not for clinical use.",0.10146490513094991,0.4165278673171997,0.4827638864517212,0.2195767195767196,3.081611587040784,1.0088596268300587
+00004490_008.png,"exam: portable/ap chest radiograph
+history: not provided
+technique: single frontal (anteroposterior) view.
+
+comparison: none available.
+
+findings:
+- predominant reticular/linear interstitial-type opacities consistent with chronic scarring/fibrotic change.
+- a focal rounded nodular opacity identified (nodule).
+- mild pleural irregularity/pleural thickening; small pleural effusion cannot be excluded.
+- no radiographic evidence of pneumothorax.
+- no focal lobar consolidation to suggest dense airspace pneumonia on this single frontal view.
+
+impression:
+1. imaging features most suggestive of pulmonary fibrosis/scar.  
+2. rounded pulmonary nodule identified — characterize further with prior imaging or dedicated chest ct if clinically indicated.  
+3. pleural thickening and possible small pleural effusion.  
+4. no acute pneumothorax or dense lobar consolidation identified on this frontal view.
+
+educational use only — not for clinical use. correlate with clinical exam and prior imaging; consider chest radiograph pa/lateral or chest ct for further evaluation as indicated.",0.08073820953538471,0.27516040205955505,0.12312423437833786,0.09615384615384615,4.362167909832005,1.7536829746633915
+00004517_000.png,"exam: chest radiograph, single frontal (ap) view
+history/indication: none provided
+comparison: none available
+
+technique: single frontal ap radiograph.
+
+findings:
+- high-probability pneumothorax suggested on the provided frontal image.
+- focal air‑space opacity/consolidation is possible (model indicates possible pneumonia/consolidation).
+- no sizable pleural effusion identified.
+- cardiomediastinal silhouette not enlarged on this view.
+- no acute osseous abnormality identified on the frontal view.
+
+impression:
+1) pneumothorax — imaging strongly suggests presence. correlate with clinical exam; urgent evaluation/management as indicated.  
+2) possible focal consolidation/pneumonia — consider targeted clinical correlation and follow-up radiograph or chest ct if clinically warranted.  
+3) no large pleural effusion or cardiomegaly identified on this frontal view.
+
+this output is for educational use only and not a substitute for formal radiology interpretation.",0.08064232046777159,0.28383514285087585,0.024372244253754616,0.04166666666666667,4.607571132451448,1.905446330840938
+00004523_000.png,"indication: not provided.
+
+technique: single frontal chest radiograph (ap view) — image supplied.
+
+findings:
+- zero-shot model highest probabilities: pneumonia (0.269), atelectasis (0.264).
+- additional probabilities: nodule (0.195), consolidation (0.101).
+- no meaningful probability for cardiomegaly, large effusion, pneumothorax, or emphysema.
+
+impression:
+1. findings most consistent with pneumonia and coexisting atelectasis (highest model probabilities).
+2. possible pulmonary nodule and consolidation—consider correlation with prior radiographs or chest ct for further evaluation.
+3. no acute large pleural effusion or pneumothorax identified by the model.
+
+note: this is a vision-model–assisted, educational read only. correlate with clinical exam and prior imaging.",0.16453705394526125,0.37624552845954895,0.4485376179218292,0.17084639498432602,3.3894371084604416,1.1700866573001998
+00004623_006.png,"indication: not provided.
+technique: ap chest radiograph.
+
+findings:
+- prominent reticular/linear interstitial opacities consistent with fibrosis.
+- patchy air‑space consolidation.
+- possible pleural thickening.
+- no pleural effusion or pneumothorax identified.
+
+impression:
+1. fibrotic-appearing interstitial lung disease.
+2. patchy air‑space consolidation — may reflect superimposed infection or organizing pneumonia.
+3. possible pleural thickening.
+4. no pleural effusion or pneumothorax.
+
+recommend correlation with clinical status and prior imaging; consider chest radiograph follow-up or chest ct for further characterization if clinically indicated.",0.21341988155254937,0.5130684971809387,0.38480034470558167,0.10204081632653061,3.241260734850006,1.093294964769334
+00004832_008.png,"indication: not provided.
+
+technique: single frontal chest radiograph (ap).
+
+findings: there is radiographic evidence of pleural effusion and pleural thickening. no focal lobar air‑space consolidation identified. no pneumothorax. cardiomediastinal contours within expected size for technique.
+
+impression:
+1. pleural effusion.
+2. pleural thickening.
+3. no acute focal consolidation to suggest lobar pneumonia. no pneumothorax noted.",0.19835388147218586,0.5871694087982178,0.36318841576576233,0.16666666666666669,2.945267817642349,0.9119915922210146
+00004893_045.png,"indication: none provided.
+
+technique: single frontal chest radiograph (anteroposterior).
+
+findings: focal area of subsegmental air‑space opacity with associated volume loss, most consistent with atelectasis. patchy air‑space opacity that could reflect superimposed consolidation is also present. no pleural effusion identified. no pneumothorax. cardiomediastinal silhouette within expected size limits for technique.
+
+impression:
+1. focal subsegmental atelectasis (primary finding).
+2. possible superimposed air‑space consolidation — differential includes early/partial pneumonia.
+3. possible mild pulmonary interstitial edema cannot be excluded, though cardiomegaly is not evident.
+4. no pleural effusion or pneumothorax identified.
+
+correlation with clinical history and prior radiographs recommended to distinguish atelectasis from infection or edema.",0.1072827634156815,0.402203768491745,0.41266945004463196,0.23492063492063492,3.2358092313103715,1.0831279666786693
+00004924_000.png,"exam: portable ap chest radiograph (single frontal view).
+
+technique: frontal ap radiograph.
+
+findings:
+- imaging-based classification: pleural thickening (high probability) and fibrosis (high probability).
+- no imaging evidence of large airspace consolidation, pleural effusion, cardiomegaly, or pneumothorax.
+
+impression:
+1. pleural thickening — most prominent finding.
+2. imaging features suggestive of pulmonary fibrosis.
+3. no acute cardiopulmonary process identified (no effusion, consolidation, or pneumothorax).
+
+correlation with clinical history and prior imaging recommended for chronicity and distribution.",0.12401353750547009,0.45499593019485474,0.5892938375473022,0.2988115449915111,2.6564506177653646,0.7407173250756728
+00004992_015.png,"indication: no clinical history provided.
+
+technique: single frontal ap chest radiograph (image supplied).
+
+findings: cardiomediastinal silhouette within expected limits for ap technique. patchy perihilar and interstitial air‑space opacities, greater centrally. a focal pulmonary nodule is suggested. no pleural effusion identified. no pneumothorax.
+
+impression:
+1) pulmonary interstitial/alveolar edema — appearance most consistent with edema.
+2) focal pulmonary nodule — recommended correlation with prior imaging; consider dedicated chest radiograph or chest ct for characterization.
+3) possible superimposed pneumonia (differential includes infectious consolidation).
+
+recommend clinical correlation and comparison with prior studies when available.",0.08819603380977965,0.4425661265850067,0.41642045974731445,0.20666666666666667,3.138568061787506,1.0479468607014142
+00005267_001.png,"exam: chest radiograph, single frontal (anteroposterior) view.
+
+history/indication: not provided.
+
+technique: ap frontal radiograph.
+
+findings:
+- imaging features most consistent with atelectasis (highest model probability).
+- cardiomediastinal silhouette may be mildly enlarged—possible cardiomegaly.
+- subtle reticular changes that could represent fibrosis (possible).
+- no radiographic evidence of pleural effusion or pneumothorax identified.
+- no acute focal consolidation to suggest lobar pneumonia.
+
+impression:
+1) atelectasis — imaging appearance most consistent with volume loss/atelectatic change.
+2) possible cardiomegaly.
+3) possible chronic-appearing interstitial/fibrotic change.
+4) no acute pleural effusion or pneumothorax identified.
+
+correlation with clinical exam and comparison with prior chest radiographs (if available) recommended to confirm chronicity and to localize atelectasis.",0.08320342938321963,0.39470964670181274,0.266791969537735,0.18337850045167117,3.596358981806974,1.3047955004893808
+00005646_020.png,"indication: not provided.
+
+technique: single frontal chest radiograph (anteroposterior view).
+
+findings:
+- predominant linear/plate-like opacities consistent with atelectasis/volume loss.
+- patchy air‑space opacity that may reflect consolidation or early pneumonia (possible).
+- no large pleural effusion identified.
+- no pneumothorax detected.
+- cardiomediastinal silhouette within expected limits for ap technique.
+
+impression:
+1. atelectasis/volume loss — the most likely and highest-probability finding on this image.
+2. possible superimposed consolidation/pneumonia (lesser probability) — correlate clinically.
+3. no acute large pleural effusion or pneumothorax identified.
+
+recommendation: correlate with clinical status and prior chest radiographs if available to distinguish atelectasis from consolidative infection. consider follow-up radiograph or chest radiograph with pa and lateral views or chest ct if clinical concern persists.",0.08934871726729447,0.3630138337612152,0.17017003893852234,0.13703703703703704,3.950792336146952,1.5109422950880809
+00005852_004.png,"indication:
+not provided.
+
+technique:
+frontal chest radiograph.
+
+findings:
+lungs are hyperinflated with radiographic emphysematous change. mild reticular/linear interstitial prominence, greater at the bases, which may reflect fibrosis or chronic scarring. mild pleural thickening. no focal airspace consolidation. no pleural effusion or pneumothorax. cardiac silhouette within normal size limits. mediastinal contours unremarkable. no acute osseous abnormality identified.
+
+impression:
+1. emphysematous hyperinflation.
+2. mild interstitial/reticular change and mild pleural thickening — differential includes fibrosis or chronic scarring.
+3. no focal consolidation, pleural effusion, or pneumothorax.",0.20903440093446932,0.48266029357910156,0.3878350555896759,0.3527204502814259,2.9256296227400567,0.8283249872594868
+00005991_013.png,"indication: not provided.
+technique: single frontal (ap) chest radiograph.
+
+findings: there is imaging evidence most consistent with pleural thickening and a pleural effusion. no focal lobar consolidation identified on this view. a pneumothorax is possible on this ap view and cannot be excluded.
+
+impression:
+1. pleural thickening.
+2. pleural effusion.
+3. possible pneumothorax — recommend upright pa and lateral chest radiographs or chest ct for confirmation and clinical correlation. compare with prior imaging if available.",0.16666666666666669,0.5378313064575195,0.45901137590408325,0.14945652173913043,2.918979782855365,0.9195495518611351
+00006008_014.png,"indication: not provided.
+
+technique: frontal ap chest radiograph.
+
+findings: moderate pleural effusion. possible patchy air‑space consolidation. cardiomediastinal silhouette within expected limits for ap technique. no pneumothorax identified.
+
+impression:
+1. moderate pleural effusion — high confidence.
+2. possible focal air‑space consolidation (differential: pneumonia vs. atelectasis) — moderate confidence.
+3. no pneumothorax identified.
+
+consider upright/lateral radiographs or chest ultrasound for further characterization of the effusion and targeted clinical correlation.",0.09811250899138689,0.4590570628643036,0.33792129158973694,0.06896551724137931,3.4618828927859466,1.270279347054822
+00006039_015.png,"exam: chest radiograph, frontal (ap) view.
+
+history/indication: not provided.
+
+technique: single frontal ap radiograph.
+
+findings:
+- patchy air‑space consolidation identified within the lungs.
+- small-to-moderate pleural effusion.
+- no definite pneumothorax identified on the frontal view.
+- no convincing cardiomegaly on this single ap view.
+
+impression:
+1. consolidation of the lungs — most suspicious for air‑space process (e.g., pneumonia or aspiration).
+2. pleural effusion, small-to-moderate in size.
+3. possible pulmonary interstitial edema is less likely but cannot be excluded.
+
+recommendation: correlate with clinical findings. consider pa and lateral radiographs or chest radiograph with decubitus/lateral view and/or chest ct if further characterization or drainage planning is needed.",0.15358132564613314,0.4233262538909912,0.4821588397026062,0.12820512820512822,3.244683756203849,1.1120158231940898
+00006100_001.png,"indication: not provided.
+
+technique: single frontal chest radiograph (ap).
+
+comparison: none available.
+
+findings:
+- cardiomediastinal silhouette within expected size limits for ap technique.
+- patchy focal air‑space opacity/infiltrate identified (most conspicuous centrally) consistent with an infiltration.
+- no large pleural effusion identified. no pneumothorax detected.
+- no acute cardiogenic enlargement suggested.
+
+impression:
+1) infiltration — positive on image.  
+2) possible pneumonia (differential includes infectious consolidation) — correlate clinically.  
+recommendations: correlate with symptoms, exam, and laboratory data. if clinically indicated, obtain pa and lateral radiographs or chest radiograph follow-up to assess evolution; consider chest ct if clinical concern persists.",0.10340729813185671,0.41234296560287476,0.4950365424156189,0.1682051282051282,3.154234156831198,1.0675285058364545
+00006251_000.png,"exam: chest radiograph, single view (ap) — file: <WORKSPACE>/data/100_datasets_per_class_nih_chest_xray/nih_subset/nodule/00006251_000.png
+history/indication: not provided.
+comparison: none available.
+
+technique: ap radiograph of the chest.
+
+findings:
+- irregular reticular/linear opacities greatest centrally and peripherally consistent with pulmonary fibrosis/scar.
+- no large focal lobar airspace consolidation identified; patchy increased markings could reflect superimposed infection but are limited.
+- no pleural effusion or pneumothorax identified.
+- no cardiomegaly evident on this single ap view.
+
+impression:
+1. imaging findings most consistent with pulmonary fibrosis/scar (positive on zero-shot image classification).
+2. possible superimposed pneumonia — limited by single ap view and absence of clinical history; consider correlation with symptoms and follow-up imaging or chest radiographs with lateral view/ct if clinically indicated.
+3. no pleural effusion or pneumothorax identified on this view.",0.13912166872805046,0.23092584311962128,0.06810206174850464,0.16225490196078432,4.5350289544810956,1.7991317761239476
+00006304_001.png,"indication: none provided.
+
+technique: single frontal (ap) chest radiograph.
+
+findings: linear and confluent air‑space opacity consistent with atelectasis. additional air‑space opacity that may reflect pneumonia. mild increased interstitial/air‑space markings raising the possibility of pulmonary edema or infiltration. no pleural effusion identified. no pneumothorax. cardiomediastinal silhouette within expected size for ap technique.
+
+impression:
+1. atelectasis — highest probability.
+2. pneumonia — probable.
+3. possible pulmonary interstitial edema or pulmonary infiltration.
+4. no pleural effusion or pneumothorax. cardiomediastinal silhouette within expected limits for ap technique.",0.14012617035555253,0.4967763125896454,0.4400046169757843,0.2931392931392931,2.830889851470652,0.827316249417375
+00006304_009.png,"indication:
+- unknown (no clinical history supplied).
+
+technique:
+- single frontal chest radiograph (ap projection).
+
+findings:
+- imaging features most consistent with a right-sided (or bilateral) pleural effusion (highest model probability).
+- a small focal pulmonary opacity flagged as a possible nodule.
+- no convincing imaging evidence of pneumothorax, lobar consolidation, overt pulmonary edema, or cardiomegaly on this ap view.
+
+impression:
+1. probable pleural effusion.
+2. possible pulmonary nodule — consider targeted radiographic views or chest ct for characterization.
+3. no acute pneumothorax or focal lobar consolidation identified on this frontal ap image.
+
+note: automated zero-shot classification informed this report for educational purposes only and does not replace formal radiologist interpretation.",0.10318435272370828,0.4660857915878296,0.7707266807556152,0.2396972245584525,2.3622447151135475,0.6155355371707042
+00006329_007.png,"indication: not provided.
+
+technique: single frontal chest radiograph (digital).
+
+findings: cardiomediastinal silhouette within expected size limits for technique. peripheral and subpleural reticular/reticulonodular interstitial markings greater in the bilateral lower lungs, more conspicuous at the bases, with mild associated volume loss/scar. no focal lobar air‑space consolidation identified. no pleural effusion. no pneumothorax.
+
+impression:
+1) peripheral and subpleural reticular/reticulonodular opacities predominantly at the bilateral lung bases, with mild volume loss — findings most consistent with chronic interstitial fibrotic change/scar.
+2) no acute cardiopulmonary process identified: no focal lobar consolidation to suggest pneumonia, and no pleural effusion or pneumothorax.",0.11009637651263604,0.387522429227829,0.43796592950820923,0.18600252206809584,3.312349171792051,1.1431139979272444
+00006386_006.png,"indication: not provided.
+
+technique: frontal chest radiograph (ap).
+
+findings:
+- imaging features most consistent with atelectasis.
+- possible consolidation and small pleural effusion are also suggested by the image-based model.
+- no acute pneumothorax identified by the classifier.
+
+impression:
+1. atelectasis — dominant finding.  
+2. possible consolidation.  
+3. possible small pleural effusion.
+
+recommendation: correlate with clinical presentation and prior imaging. consider pa and lateral radiographs or chest ct for further characterization if clinically warranted.
+
+(educational use only — not for clinical decision-making.)",0.12014425971949098,0.493085652589798,0.3145100474357605,0.11111111111111112,3.352079177909046,1.1849118702451154
+00006808_011.png,"indication: not provided.
+
+technique: single frontal chest radiograph (anteroposterior).
+
+findings: cardiomediastinal silhouette is enlarged consistent with cardiomegaly. possible mild subsegmental atelectasis. lungs clear of focal airspace consolidation. no pleural effusion or pneumothorax identified.
+
+impression:
+1. cardiomegaly.
+2. possible mild atelectasis.
+3. no acute focal consolidation, pleural effusion, or pneumothorax detected.",0.1973855084879307,0.5640077590942383,0.4690394401550293,0.3269230769230769,2.5613378503134765,0.6453763901261508
+00006829_007.png,"indication: unknown.
+
+technique: frontal chest radiograph (ap).
+
+findings:
+- focal rounded pulmonary opacity projecting over the lung, most consistent with a mass.
+- no radiographic evidence of pleural effusion or pneumothorax.
+- cardiomediastinal silhouette within expected size limits on this ap view.
+
+impression:
+1. focal pulmonary opacity most consistent with a mass (vision model probability 0.74).
+2. possible additional pulmonary nodule (vision model probability 0.19) — cannot exclude.
+3. no pleural effusion or pneumothorax identified.
+
+recommendation: correlate with prior radiographs if available. chest ct is recommended for definitive characterization and staging if clinically warranted.",0.1384604813135885,0.3941095769405365,0.31774866580963135,0.1676190476190476,3.567196888715496,1.2747197711312068
+00006978_004.png,"exam: chest radiograph, single frontal (ap) view
+history/indication: not provided
+
+technique: single frontal ap view.
+
+findings:
+- automated zero‑shot classification indicates highest probability for pneumonia.
+- additional possible findings include infiltration and fibrosis.
+- no evidence suggested for large pleural effusion, pneumothorax, or cardiomegaly by the classifier.
+
+impression:
+1. imaging features most suggestive of pneumonia (highest classifier probability).
+2. possible superimposed infiltration and/or fibrosis (classifier probabilities in the possible range).
+3. no classifier evidence of large effusion, pneumothorax, or cardiomegaly.
+
+recommendation: correlate with clinical presentation and prior imaging. if clinical concern for infection is present, consider dedicated pa and lateral radiographs or chest radiograph follow-up and clinical/laboratory correlation.",0.057558196405867616,0.33014634251594543,0.17917905747890472,0.20333333333333334,3.9047969935915203,1.473686291942042
+00007016_001.png,"indication: not provided.
+
+technique: single frontal chest radiograph, anteroposterior (ap) view.
+
+findings: patchy air‑space opacity consistent with consolidation. mild diffuse interstitial/air‑space prominence. cardiomediastinal silhouette within expected size for ap technique. no pleural effusion or pneumothorax identified.
+
+impression:
+1. pneumonia — air‑space consolidation consistent with infection.
+2. possible pulmonary interstitial/air‑space process (differential includes pulmonary edema or infiltration).
+3. no pleural effusion or pneumothorax.
+4. cardiomediastinal size within expected limits for ap technique.",0.0930484210398471,0.42258796095848083,0.19024211168289185,0.20170454545454544,3.6337643682219687,1.3121024579045948
+00007326_000.png,"indication: not provided.
+
+technique: single frontal chest radiograph (anteroposterior).
+
+findings: cardiomediastinal silhouette is enlarged, consistent with cardiomegaly. a rounded pulmonary nodule is present. no focal lobar air‑space consolidation identified. no pleural effusion or pneumothorax detected.
+
+impression:
+1. cardiomegaly.
+2. pulmonary nodule.
+3. no acute air-space consolidation, pleural effusion, or pneumothorax.
+
+recommend comparison with prior chest radiographs. consider dedicated chest ct for further characterization of the pulmonary nodule if clinically indicated.",0.13834289277321496,0.5391626358032227,0.5291734337806702,0.38127090301003347,2.3949505780432117,0.5588974497966884
+00007352_000.png,"indication:
+not provided.
+
+technique:
+frontal chest radiograph.
+
+findings:
+retrocardiac air-fluid level compatible with a hiatal/diaphragmatic hernia. lungs clear of focal airspace consolidation. no pleural effusion or pneumothorax. cardiomediastinal silhouette within expected size for technique. mediastinal contours unremarkable. no acute osseous abnormality identified.
+
+impression:
+1. hiatal/diaphragmatic hernia with retrocardiac air-fluid level.
+2. no acute cardiopulmonary process identified—no focal consolidation, pleural effusion, or pneumothorax.",0.2375084343981418,0.5993142127990723,0.3963160514831543,0.2890756302521008,2.6800956854133133,0.706562324108637
+00007451_006.png,"indication: not provided.
+
+technique: single frontal (anteroposterior) chest radiograph.
+
+findings: there is imaging evidence of pleural thickening. there are radiographic features that may reflect pneumothorax and/or pulmonary fibrosis. no pleural effusion identified. cardiomediastinal silhouette within expected size limits for a frontal ap technique. no focal lobar consolidation identified.
+
+impression:
+1. pleural thickening — present.
+2. possible pneumothorax — cannot exclude on a single frontal ap radiograph; correlation with clinical exam or dedicated expiratory/upright or lateral radiographs (or chest radiography/ct) recommended if clinically suspected.
+3. possible pulmonary fibrosis/scarring pattern.
+4. no pleural effusion or focal lobar consolidation identified.",0.15724272550828775,0.3992619514465332,0.3232432007789612,0.1766917293233083,3.540388438683342,1.249450738397667
+00007471_001.png,"indication: not provided.
+
+technique: single frontal chest radiograph (ap).
+
+comparison: none available.
+
+findings:
+- cardiomediastinal silhouette within expected size for an ap technique.
+- lungs hyperinflated with increased radiolucency and flattening of the diaphragms bilaterally.
+- relative paucity of peripheral vascular markings consistent with emphysematous change.
+- no focal lobar air‑space consolidation identified.
+- no pleural effusion or pneumothorax detected on this frontal view.
+
+impression:
+1. hyperinflation with diffuse increased lucency and flattened diaphragms — findings most consistent with emphysematous change/copd.
+2. no acute focal consolidation, pleural effusion, or pneumothorax identified on this single frontal radiograph.
+
+limitations: single ap view only; correlation with pa/lateral radiographs and clinical history or prior imaging recommended for full assessment.",0.11997001124531455,0.43445438146591187,0.45441266894340515,0.2882352941176471,2.984878937708797,0.9219739355017164
+00007887_000.png,"indication:
+not provided.
+
+technique:
+frontal chest radiograph.
+
+findings:
+retrocardiac air-fluid level consistent with a hiatal hernia. lungs clear without focal consolidation. heart size within normal limits. no pleural effusion or pneumothorax. mediastinal contours unremarkable. no acute osseous abnormality identified.
+
+impression:
+1. retrocardiac air-fluid level consistent with a hiatal hernia.  
+2. no acute cardiopulmonary process identified—no focal consolidation, pleural effusion, or pneumothorax.",0.3270978553781834,0.6620046496391296,0.5824050307273865,0.4571428571428572,1.9396913502386788,0.2086740022235824
+00008004_005.png,"indication:
+not provided.
+
+technique:
+frontal chest radiograph.
+
+findings:
+a focal rounded/oval opacity is present on the frontal view, consistent with a pulmonary mass and a separate pulmonary nodule. there is slight streaky subsegmental subpleural opacity that may reflect adjacent atelectasis. heart size within expected limits for a frontal view. no pleural effusion identified. no pneumothorax. mediastinal contours without acute widening. no acute osseous abnormality identified. only a single frontal view is available, which limits characterization and precise localization.
+
+impression:
+1. pulmonary mass and a pulmonary nodule seen on the frontal radiograph—findings most suspicious for a true pulmonary mass/nodule.  
+2. possible adjacent subsegmental atelectasis.  
+3. no pleural effusion or pneumothorax identified.
+
+correlation with prior imaging if available is recommended. consider dedicated chest ct for further characterization and localization.",0.10308675224596868,0.3511548340320587,0.6143366694450378,0.25094850948509484,2.983195639660916,0.9468308463918195
+00008147_001.png,"indication: not provided.
+
+technique: single frontal chest radiograph (ap).
+
+findings: patchy air‑space opacity consistent with consolidation/pneumonia. imaging features also suggest pulmonary interstitial/alveolar edema. no pleural effusion or pneumothorax identified. cardiomediastinal silhouette within expected size for technique.
+
+impression:
+1. pneumonia — imaging appearance most consistent with infectious consolidation.
+2. pulmonary interstitial/alveolar edema.
+3. possible additional consolidation/infiltration.
+no pleural effusion or pneumothorax.",0.12214096331049187,0.4903011918067932,0.4232027232646942,0.3073593073593074,2.846418576052735,0.8370127268829332
+00008195_000.png,"exam: chest radiograph (single frontal ap image)
+indication: not provided.
+
+technique: frontal ap chest radiograph, single view.
+
+findings:
+- large right/left pleural effusion (blunting of the costophrenic sulcus and layering opacity projecting over the hemithorax).
+- no pneumothorax identified.
+- no focal lobar airspace consolidation to suggest lobar pneumonia.
+- cardiomediastinal silhouette not enlarged for ap technique.
+- no acute osseous abnormality identified.
+
+impression:
+1. large pleural effusion.  
+2. no pneumothorax identified.  
+3. no focal lobar consolidation identified to suggest lobar pneumonia.  
+4. cardiomediastinal size within expected limits for an ap technique.
+
+note: no clinical history or prior imaging was provided; single frontal ap view limits assessment of loculation and precise laterality/volume. consider upright and/or lateral views or chest ultrasound for better characterization.",0.10086832309824113,0.43444541096687317,0.29188892245292664,0.1553030303030303,3.4869697495790306,1.2491921948799376
+00008468_020.png,"indication: none provided.
+
+technique: single frontal (ap) chest radiograph.
+
+findings: the study demonstrates a pneumothorax (high likelihood). no pleural effusion identified. no focal airspace consolidation to suggest lobar pneumonia. cardiomediastinal silhouette within expected size limits.
+
+impression:
+1. pneumothorax — high likelihood.
+2. no pleural effusion identified.
+3. no focal consolidation identified. cardiac size within expected limits.
+
+recommend correlation with clinical exam and consider upright or expiratory views and/or chest radiograph follow-up or chest ct as clinically indicated.",0.08962214298964417,0.3951687812805176,0.3358153700828552,0.14638157894736842,3.529042541904378,1.2814441851427627
+00008508_004.png,"exam: chest radiograph, single frontal (ap) view — image: <WORKSPACE>/data/100_datasets_per_class_nih_chest_xray/nih_subset/hernia/00008508_004.png
+history: not provided. comparison: none available.
+
+findings:
+- air- and soft-tissue–contour projecting over the left lower hemithorax/retrocardiac region with an apparent air–fluid level, favored to represent intrathoracic bowel.
+- cardiomediastinal silhouette within expected limits for ap technique.
+- no focal lobar consolidation identified. no large pleural effusion or pneumothorax seen.
+
+impression:
+1) appearance most consistent with a diaphragmatic/hiatal hernia with intrathoracic bowel/air-fluid level.
+2) no acute cardiopulmonary consolidation, large effusion, or pneumothorax identified on this frontal view.
+
+recommendation: correlate with clinical history and consider dedicated lateral radiograph or ct chest/abdomen for characterization if clinically indicated.",0.09091725847488691,0.25778594613075256,0.3098132014274597,0.266046511627907,3.802026229044257,1.3850994901728881
+00008566_012.png,"exam: chest radiograph, ap view.
+
+history/indication: none provided.
+
+comparison: none available.
+
+technique: single frontal ap view.
+
+findings:
+- imaging features consistent with pneumothorax.
+- possible subsegmental atelectasis.
+- no convincing pleural effusion or focal consolidation identified on this view.
+- cardiomediastinal silhouette within expected size limits for ap technique.
+
+impression:
+1. pneumothorax — imaging appearance strongly suggestive. correlate with clinical exam.
+2. possible atelectasis.
+
+recommendation: urgent clinical correlation. if pneumothorax confirmed clinically or by exam, consider upright expiratory chest radiograph or chest ct for localization and sizing; consult treating team for management (e.g., oxygen, needle decompression/chest tube) as clinically indicated.
+
+(for educational use only — not for clinical decision-making.)",0.09407208683835971,0.3812999129295349,0.40803730487823486,0.19583333333333333,3.3600834208651946,1.1709170721815745
+00008678_006.png,"exam: chest radiograph, single frontal view (ap)
+
+history/indication: not provided. image path: <WORKSPACE>/data/100_datasets_per_class_nih_chest_xray/nih_subset/consolidation/00008678_006.png
+
+technique: single frontal chest radiograph (anteroposterior).
+
+findings:
+- air‑space consolidation is present on the frontal image (highest model probability).
+- imaging features also favor pneumonia as a likely etiology.
+- small-to-moderate pleural effusion is possible (borderline probability).
+- a focal pulmonary mass is a possible consideration.
+- no evidence of pneumothorax. cardiomediastinal silhouette within expected size limits for a frontal ap view.
+
+impression:
+1. air‑space consolidation on the frontal chest radiograph — findings most consistent with pneumonia.
+2. possible pleural effusion. correlate with clinical exam; consider lateral or upright radiographs to better assess effusion.
+3. focal pulmonary opacity/“mass” is a possible alternative or concurrent finding — consider short‑interval follow-up imaging or chest ct if clinically indicated to further characterize.
+4. no pneumothorax identified. cardiac size not enlarged for an ap view.
+
+comment: report based on automated image classification and frontal view only; no clinical history or prior imaging was provided. correlate with symptoms, laboratory data, and prior radiographs. this output is for educational use only — not for clinical decision making.",0.06266339897165353,0.12147480249404907,0.23286864161491394,0.125,4.560401501351187,1.8623037956224497
+00008701_035.png,"indication: not provided.
+
+technique: single frontal (ap) chest radiograph.
+
+findings:
+- cardiomediastinal silhouette within expected size for ap technique.
+- prominent interstitial and patchy air‑space opacities consistent with pulmonary edema.
+- additional patchy air‑space consolidation/infiltration, which could reflect consolidation or pneumonia (possible).
+- no pleural effusion identified. no pneumothorax.
+
+impression:
+1. pulmonary interstitial and alveolar edema — most likely (highest model probability).
+2. possible air‑space consolidation/infiltrate; differential includes pneumonia.
+3. no pleural effusion or pneumothorax. cardiomediastinal size within expected limits for ap technique.",0.17341330172659108,0.42112037539482117,0.2947816848754883,0.1749128919860627,3.5422887788388673,1.2438936093955568
+00008713_002.png,"indication: not provided.
+
+technique: single frontal chest radiograph (ap).
+
+findings: patchy air‑space opacity consistent with infiltration. additional areas of air‑space consolidation are possible. no pleural effusion or pneumothorax identified. cardiomediastinal silhouette within expected size limits. small focal opacity that could represent a nodule or mass is not excluded.
+
+impression:
+1. infiltration of the lungs (positive).
+2. possible air‑space consolidation — differential includes pneumonia.
+3. no pleural effusion or pneumothorax identified.
+4. small nodule or mass cannot be excluded; correlate with prior imaging or consider chest ct if clinically indicated.",0.12085036614161987,0.41347673535346985,0.31493937969207764,0.13703703703703704,3.550191132305045,1.2836234054690747
+00008777_000.png,"exam: chest radiograph (single frontal ap view)
+indication: not provided.
+
+technique: single frontal (anteroposterior) chest radiograph.
+
+findings:
+- there is a focal, well‑defined pulmonary opacity consistent with a mass (highest model probability).
+- mild adjacent volume loss or subsegmental atelectatic change is possible.
+- no pleural effusion identified. no pneumothorax detected.
+- cardiomediastinal silhouette within expected size limits for an ap technique.
+
+impression:
+1) large pulmonary mass projecting on the frontal radiograph — highly suspicious for a true pulmonary/soft‑tissue mass.  
+2) possible adjacent/subsegmental atelectasis.  
+3) no acute pleural effusion or pneumothorax identified on this ap view.
+
+recommendation: correlate with prior chest imaging if available. chest ct with contrast is recommended for localization, characterization, and staging workup. consider pulmonary consultation and tissue diagnosis as clinically indicated.
+
+(educational use only — not for clinical decision-making.)",0.0738012404616746,0.363301157951355,0.24758324027061462,0.11111111111111112,3.83500102722972,1.4657428911806238
+00009144_000.png,"indication:
+not provided.
+
+technique:
+frontal chest radiograph.
+
+findings:
+patchy air‑space consolidation is present. pneumothorax is identified. blunting of the costophrenic sulci suggests possible small pleural effusion. cardiomediastinal silhouette within expected limits for frontal technique. no support devices. no acute osseous abnormality identified.
+
+impression:
+1. consolidation.
+2. pneumothorax.
+3. possible small pleural effusion and possible associated atelectasis.",0.20378924074839852,0.5972051620483398,0.07993359863758087,0.14638157894736842,3.4818176954662152,1.2024573163436798
+00009507_001.png,"indication: not provided.
+technique: frontal chest radiograph, anteroposterior (ap) view.
+
+findings: there is imaging appearance consistent with a hernia projecting into the thoracic cavity. patchy air‑space opacity is present and may reflect possible pneumonia. no pleural effusion identified. no pneumothorax. no cardiomegaly evident.
+
+impression:
+1) hernia projecting into the thoracic cavity — high confidence.
+2) possible pneumonia (air‑space opacity) — moderate confidence; correlate clinically.
+3) no pleural effusion or pneumothorax.",0.1475532366691952,0.4247497320175171,0.45605751872062683,0.2252747252747253,3.1307461873611793,1.0147580891729824
+00009507_002.png,"exam: frontal chest radiograph (single ap view) — image provided at <WORKSPACE>/data/100_datasets_per_class_nih_chest_xray/nih_subset/hernia/00009507_002.png
+
+indication: not provided.
+
+technique: single frontal (ap) chest radiograph.
+
+findings:
+- imaging appearance consistent with a hernia.
+- pleural effusion is present.
+- no radiographic evidence of pneumothorax, cardiomegaly, or focal consolidation identified on this view.
+
+impression:
+1. imaging findings consistent with hernia.
+2. pleural effusion.
+3. no acute pneumothorax or cardiomegaly identified on the provided ap view.
+
+correlation with clinical history and prior imaging recommended for localization/etiology and to assess the size or laterality of the effusion.",0.1861162909841816,0.3217690885066986,0.3288581669330597,0.08571428571428572,3.9282901933635372,1.48508045818838
+00009613_000.png,"indication: not provided.
+technique: single frontal chest radiograph (ap).
+
+findings: patchy air‑space consolidation detected within the lungs consistent with focal consolidation/pneumonia. no radiographic evidence of a large pleural effusion or pneumothorax. cardiomediastinal silhouette within expected size limits.
+
+impression:
+1. air‑space consolidation—findings most consistent with pneumonia.
+2. no acute pleural effusion or pneumothorax identified.
+3. if evaluation for a pulmonary nodule is clinically required, consider pa/lateral radiographs or chest ct for dedicated assessment.",0.13358688028679358,0.4230150878429413,0.32874369621276855,0.15625,3.4741847701167545,1.230220622072867
+00009788_000.png,"indication: not provided.
+
+technique: single frontal ap chest radiograph.
+
+findings:
+- focal mass-like pulmonary opacity projecting within the chest.
+- small pleural effusion, pleural thickening, and adjacent subsegmental atelectatic change are possible.
+- no pneumothorax identified. cardiomediastinal silhouette within expected limits for ap technique.
+
+impression:
+1. focal pulmonary mass-like opacity—most suspicious for an intrapulmonary mass (positive finding on image).  
+2. possible small pleural effusion with pleural thickening and adjacent subsegmental atelectasis.  
+3. no pneumothorax; cardiomediastinal size not clearly enlarged on this ap view.
+
+recommendation: correlate clinically and consider dedicated pa and lateral chest radiographs or chest ct with contrast for further characterization and to assess extent.",0.10397504898200725,0.42503705620765686,0.27246060967445374,0.13953488372093023,3.5789578971485367,1.303685422877235
+00009920_005.png,"indication: not provided.
+
+technique: single frontal (ap) chest radiograph.
+
+findings: there is a pleural effusion with associated subsegmental air‑space opacity most consistent with atelectasis. no acute focal consolidation to suggest lobar pneumonia. no pneumothorax identified. cardiomediastinal silhouette within expected size limits for technique.
+
+impression:
+1. pleural effusion — imaging appearance most consistent with a moderate pleural effusion.  
+2. associated subsegmental atelectasis.  
+3. no radiographic evidence of pneumothorax or acute lobar consolidation to suggest pneumonia.",0.11245796163277197,0.47343701124191284,0.4846104681491852,0.10256410256410256,3.100650854042838,1.058780526738335
+00010007_065.png,"indication: not provided.
+
+technique: single frontal chest radiograph (ap).
+
+findings:
+- image analysis shows increased probability of pleural effusion and pleural thickening.
+- no high-probability evidence of consolidation, pneumothorax, cardiomegaly, or nodal mass on this view.
+
+impression:
+1. effusion — high probability on image analysis.
+2. pleural_thickening — high probability on image analysis.
+
+recommendation: correlate with clinical context and prior imaging. consider lateral radiograph or chest ultrasound/ct if determination of effusion size, complexity, or loculation is clinically important.",0.13192825054225207,0.45549294352531433,0.4579302668571472,0.1336996336996337,3.169066613418011,1.076173644674695
+00010007_158.png,"indication: no clinical history provided.
+
+technique: frontal chest radiograph, anteroposterior view.
+
+findings: cardiomediastinal silhouette within expected limits for technique. pleural effusion is present. patchy air‑space opacities/infiltrates and pulmonary interstitial edema are possible. no pneumothorax identified on this frontal view.
+
+impression:
+1. pleural effusion — positive finding.
+2. possible air‑space consolidation, pulmonary edema, or infiltration.
+3. no pneumothorax identified. cardiomediastinal size not enlarged for technique.",0.12687229593911023,0.47860732674598694,0.25466635823249817,0.14634146341463414,3.4565871444969782,1.2244747456985474
+00010365_004.png,"indication: not provided.
+
+technique: single frontal chest radiograph (anteroposterior technique). no prior available for comparison.
+
+findings: lungs show patchy/reticular opacities. no pleural effusion or pneumothorax identified. cardiomediastinal silhouette within expected size limits on ap projection. image quality adequate for limited assessment.
+
+impression:
+1. possible diaphragmatic hernia (highest model probability).  
+2. patchy air‑space/reticular opacities—differential includes pulmonary infiltration or pneumonia.  
+3. pulmonary nodule(s) or focal opacity cannot be excluded.  
+4. no pleural effusion or pneumothorax identified.
+
+recommendation: correlate with clinical picture. comparison radiographs or chest ct recommended for confirmation and further evaluation if clinically indicated.",0.081199794294115,0.35448628664016724,0.2826741933822632,0.1700404858299595,3.7074352371523975,1.372007573244437
+00010575_001.png,"exam: chest radiograph, single frontal (anteroposterior) view.
+history: none provided. comparison: none available.
+
+findings:
+- focal rounded pulmonary opacity consistent with a pulmonary nodule.
+- patchy air‑space attenuation that could reflect consolidation or atelectasis.
+- no large pleural effusion or pneumothorax identified. cardiomediastinal silhouette within expected limits for ap technique.
+
+impression:
+1) pulmonary nodule — suspicious finding on this ap radiograph; further evaluation with dedicated chest ct is recommended for characterization.  
+2) possible focal air‑space consolidation/atelectasis — correlate clinically.  
+3) no acute large pleural effusion or pneumothorax identified.",0.06629935441317959,0.4046064019203186,0.40381619334220886,0.26342710997442453,3.170605617764692,1.052471831536104
+00010594_009.png,"indication:
+not provided.
+
+technique:
+frontal chest radiograph.
+
+findings:
+the cardiac silhouette is enlarged. lungs clear of focal airspace consolidation. no pleural effusion identified. no pneumothorax. mediastinal contours are within expected limits. no acute osseous abnormality.
+
+impression:
+1. cardiomegaly.  
+2. no acute airspace consolidation, pleural effusion, or pneumothorax identified.",0.1807097762216006,0.5772379040718079,0.25435590744018555,0.060606060606060615,3.3349807707574746,1.16871886917121
+00010828_006.png,"exam: chest radiograph (single frontal ap view)
+history/indication: not provided.
+
+technique: single frontal chest radiograph (ap). comparison: none available.
+
+findings:
+- cardiomediastinal silhouette mildly enlarged.
+- bilateral, predominantly central/perihilar interstitial and patchy air‑space opacities greater than the peripheral lungs.
+- mild blunting of the bilateral costophrenic sulci suggesting small pleural effusions.
+- no focal lobar consolidation identified. no pneumothorax.
+
+impression:
+1. imaging findings most consistent with pulmonary interstitial and early alveolar edema, greater centrally — concerning for cardiogenic pulmonary edema.
+2. mild cardiomegaly.
+3. small bilateral pleural effusions.
+
+recommendation: correlate with clinical exam, bnp, and prior imaging if available. consider follow-up radiograph after therapy or chest radiograph with upright and lateral views if clinical uncertainty persists.",0.19045868266876564,0.4585760831832886,0.5006434321403503,0.3110632183908046,2.839719768561177,0.8077379775810806
+00010864_006.png,"exam: chest radiograph (frontal ap)
+
+history/indication: not provided.
+
+technique: single frontal ap chest radiograph.
+
+findings:
+- imaging demonstrates a pneumothorax with high model probability.
+- no radiographic evidence of a large pleural effusion.
+- no focal lobar consolidation to suggest a large acute pneumonia.
+- cardiomediastinal silhouette within expected limits for ap technique.
+
+impression:
+1. pneumothorax identified (high likelihood on image analysis). correlate with clinical exam and consider upright expiratory chest radiograph or chest ct if clinically indicated to assess size and guide management.
+2. no acute large pleural effusion or focal consolidation identified on this frontal ap view.",0.12712834523274566,0.4191397726535797,0.1671787053346634,0.10230179028132992,3.86963462738756,1.4645156415781042
+00011355_049.png,"exam: frontal chest radiograph (anteroposterior view)
+
+indication: none provided.
+
+technique: single frontal ap view.
+
+findings:
+- radiographic appearance most consistent with pneumothorax.
+- focal opacity suspicious for a pulmonary or mediastinal mass.
+- no radiographic evidence of pleural effusion or cardiomegaly on this view.
+- no dense focal airspace consolidation identified.
+
+impression:
+1. pneumothorax — radiographic appearance concerning; correlate with clinical status. consider urgent clinical evaluation and follow-up upright radiograph or chest ct as indicated.
+2. focal opacity suspicious for pulmonary/mediastinal mass — recommend correlation with prior imaging and chest ct for further characterization.
+3. no pleural effusion or cardiomegaly identified on this ap view.
+
+note: findings derived from image review aided by a zero-shot classifier. this report is educational and not a substitute for clinical radiologic interpretation.",0.11721969977468452,0.3747783303260803,0.37690433859825134,0.16961789375582476,3.49621917559842,1.2452972838410907
+00011460_066.png,"exam: chest radiograph (single frontal anteroposterior view)
+indication: not provided
+
+technique: single frontal ap chest radiograph.
+
+findings:
+- imaging shows consolidation within the lungs (highest probability on zero-shot analysis).
+- possible small pleural effusion.
+- possible atelectatic change.
+- no radiographic evidence of pneumothorax on this ap view.
+- no cardiomegaly suggested by the model.
+
+impression:
+1. consolidation on the ap chest radiograph (most likely finding).
+2. possible small pleural effusion and/or atelectasis.
+3. no pneumothorax detected on this view.
+
+recommendation: correlate with clinical exam. if there is persistent concern for pneumothorax or to further evaluate extent/location of consolidation/effusion, consider upright pa and lateral chest radiographs or chest ct as clinically indicated.",0.12057594613498333,0.41736024618148804,0.24013429880142212,0.07142857142857142,3.7826983246176544,1.4333230405607964
+00011481_002.png,"exam: chest radiograph (image provided: <WORKSPACE>/data/100_datasets_per_class_nih_chest_xray/nih_subset/emphysema/00011481_002.png)
+history/indication: not provided.
+
+technique: single frontal chest radiograph (ap view as supplied).
+
+findings:
+- zero-shot image analysis: pneumothorax (score 0.776) — positive.
+- no evidence above probability threshold for cardiomegaly, consolidation, effusion, emphysema, pneumonia, or other labeled findings.
+
+impression:
+1. pneumothorax identified on the provided frontal chest radiograph.
+2. no acute cardiopulmonary consolidation or pleural effusion detected by the classifier.
+
+recommendation: urgent radiologist review and clinical correlation. consider upright inspiratory/expiratory chest radiographs or chest ct for confirmation and to determine size and laterality.",0.08178608201095305,0.26658836007118225,0.28746142983436584,0.18037135278514588,3.947027266193116,1.4994870831093945
+00011683_029.png,"exam: chest radiograph, single frontal (anteroposterior) view
+indication: not provided
+
+technique: ap view of the chest.
+
+findings:
+- imaging features most consistent with atelectasis.
+- suggestion of pneumothorax.
+- possible pleural thickening.
+- no large pleural effusion identified on this view.
+- cardiomediastinal silhouette within expected limits for an ap technique.
+
+impression:
+1. atelectasis — most prominent finding.
+2. pneumothorax — imaging appearance suggests presence; correlate clinically.
+3. possible pleural thickening.
+recommendation: correlate with exam technique and clinical exam. consider upright pa and lateral radiographs or chest radiograph with expiratory and/or ct chest for confirmation and to better characterize pneumothorax and extent of atelectasis.",0.16012815380508713,0.47424089908599854,0.521287739276886,0.15,2.9881776064465955,0.9618999665058371
+00011925_037.png,"indication: not provided.
+
+technique: single frontal chest radiograph (ap).
+
+findings: pleural thickening is present. patchy air‑space opacity suggesting possible consolidation is seen. small layering pleural effusion cannot be excluded. cardiomediastinal silhouette within expected size limits for technique. no pneumothorax identified.
+
+impression:
+1. pleural thickening (positive).
+2. possible air‑space consolidation.
+3. possible small pleural effusion.
+4. no pneumothorax. cardiac size not enlarged.",0.14388861576723852,0.44970574975013733,0.38831502199172974,0.11627906976744186,3.353121191720976,1.1766710531570899
+00012003_000.png,"exam: chest radiograph, single frontal (ap) view
+history: not provided
+
+technique: single frontal ap chest radiograph.
+
+findings:
+- abnormal density projecting into the lower thorax consistent with a hernia.
+- no radiographic evidence of acute lobar consolidation, large pleural effusion, or pneumothorax identified on this single frontal view.
+- cardiomediastinal silhouette within expected size limits for a single ap view.
+
+impression:
+1. radiographic appearance most consistent with a hernia projecting into the lower thorax (positive on image classifier).
+2. no acute cardiopulmonary process identified on this single frontal ap radiograph (no convincing consolidation, large effusion, or pneumothorax).
+recommendation: correlate with clinical history. if further characterization is needed, consider dedicated chest and abdominal radiographs (including lateral) or ct imaging to confirm hernia type and evaluate extent.",0.10895397074882347,0.37912800908088684,0.4373129904270172,0.14514514514514515,3.402946307467406,1.2084976854930094
+00012018_012.png,"indication: not provided.
+
+technique: ap chest radiograph.
+
+findings: there is a moderate pleural effusion. adjacent subsegmental atelectatic volume loss is present, likely related to the effusion. cardiomediastinal silhouette within expected ap limits. no pneumothorax identified. lungs otherwise without focal consolidation to suggest lobar pneumonia.
+
+impression:
+1. moderate pleural effusion.
+2. adjacent subsegmental atelectasis, likely related to the effusion.
+3. no pneumothorax identified.",0.0911702827699797,0.48327362537384033,0.3585890233516693,0.058823529411764705,3.3614364291669037,1.2223708420155543
+00012049_002.png,"indication: not provided.
+
+technique: single frontal ap chest radiograph.
+
+findings: patchy air‑space opacities and focal consolidation in the lungs consistent with air‑space infiltrate. no pleural effusion identified. no pneumothorax identified. cardiomediastinal silhouette within expected size for ap technique.
+
+impression:
+1. pneumonia — air‑space consolidation/infiltrate identified.
+2. possible pulmonary interstitial/edematous change and additional focal consolidation cannot be excluded.
+3. no pleural effusion or pneumothorax identified.
+
+recommend clinical correlation and follow-up radiograph or pa/lateral views as clinically indicated.",0.12751534261266764,0.4401381015777588,0.5474346280097961,0.21309523809523812,2.9182942483048118,0.9136210044902647
+00012364_071.png,"exam: chest radiograph (frontal ap) — image: <WORKSPACE>/data/100_datasets_per_class_nih_chest_xray/nih_subset/infiltration/00012364_071.png
+
+history/indication: none provided.
+
+technique: single frontal chest radiograph (ap view).
+
+findings:
+- imaging features most suggestive of pulmonary infiltration and interstitial/air‑space edema.
+- areas of possible consolidation and pneumonia overlap with the above findings.
+- no radiographic evidence of pneumothorax or large pleural effusion.
+- cardiomediastinal silhouette not suggestive of cardiomegaly on this projection.
+
+impression:
+1. imaging findings positive for pulmonary infiltration.
+2. imaging findings positive for pulmonary edema—consider cardiogenic vs noncardiogenic etiologies; correlate with clinical exam and bnp/volume status.
+3. possible pneumonia and consolidation superimposed (differential includes infectious vs inflammatory/aspiration processes).
+4. no pneumothorax or large pleural effusion identified. heart size not enlarged on this ap view.
+
+recommendation: correlate with clinical findings. if infection is a concern, consider pa and lateral radiographs or chest ct and follow-up radiograph after treatment/interval change.",0.11371470653683553,0.18092869222164154,0.32170507311820984,0.21241830065359477,4.112568727471552,1.5669279553297424
+00012414_014.png,"exam: chest radiograph, single frontal (anteroposterior) view
+history: not provided
+comparison: none available
+
+technique: single frontal ap radiograph.
+
+findings:
+- focal subsegmental air‑space opacity with associated volume loss consistent with atelectasis.
+- probable small pleural effusion cannot be excluded.
+- superimposed infectious consolidation (pneumonia) is a possible alternative explanation for the opacity.
+- cardiomediastinal silhouette within expected limits for ap technique. no pneumothorax identified.
+
+impression:
+1. atelectasis — focal subsegmental air‑space opacity with volume loss (highest model probability).
+2. possible superimposed pneumonia.
+3. possible small pleural effusion.
+
+recommendation: correlate with clinical presentation. if clinical concern for infection or to further evaluate the lungs/pleura, consider frontal and lateral radiographs and/or chest ct for definitive characterization and side/localization.",0.07677557328414644,0.3420100212097168,0.12844663858413696,0.10344827586206896,4.136570879666352,1.6289468730516554
+00012428_003.png,"indication: not provided.
+
+technique: single frontal (ap) chest radiograph.
+
+findings:
+- focal air‑space opacity most consistent with atelectasis.
+- a rounded density suspicious for a pulmonary nodule is present (possible).
+- patchy increased air‑space/reticular opacity that could represent infiltration (possible).
+- no pleural effusion identified. no pneumothorax. cardiomediastinal silhouette not enlarged for technique.
+
+impression:
+1. atelectasis — most conspicuous finding.
+2. possible pulmonary nodule; further comparison with prior imaging or dedicated pa/lateral radiographs (or chest ct) recommended for characterization.
+3. possible patchy air‑space infiltration; correlate clinically for infection or aspiration.
+4. no pleural effusion or pneumothorax. cardiac size within expected limits for ap technique.",0.1194231338731602,0.3939276337623596,0.5123644471168518,0.14604236343366778,3.223851338487904,1.1082894976568662
+00012478_000.png,"indication: no clinical history provided.
+
+technique: frontal chest radiograph, anteroposterior (ap) view, single frontal projection.
+
+findings: patchy air‑space infiltration/consolidation within the lungs. cardiomediastinal silhouette within expected size limits for ap technique. no pleural effusion identified. no pneumothorax detected.
+
+impression:
+1. patchy pulmonary air‑space infiltration/consolidation — findings most consistent with pneumonia.
+2. no pleural effusion.
+3. no pneumothorax. cardiomediastinal size within expected limits for ap technique.",0.12112539577787729,0.42840132117271423,0.4371347427368164,0.1827731092436975,3.203873498646192,1.08047742878624
+00012620_000.png,"exam: frontal chest radiograph (ap view). indication: not provided.
+
+findings:
+- lungs show increased hyperlucency consistent with emphysematous change, greater than other labels.
+- subtle reticular/linear opacities suggested (possible fibrosis).
+- no focal airspace consolidation identified to suggest lobar pneumonia.
+- no sizable pleural effusion or pneumothorax detected.
+- cardiomediastinal silhouette not enlarged.
+
+impression:
+1. emphysematous change of the lungs — most likely finding on this image.
+2. possible pulmonary fibrosis/reticular scarring — consider correlation with prior imaging and clinical history.
+3. no acute consolidation, pleural effusion, or pneumothorax identified on this frontal view.
+
+educational use only — not for clinical use.",0.11602387022306429,0.4357806444168091,0.2726534605026245,0.18082422203532383,3.489252225995423,1.2343434195880092
+00012710_000.png,"indication: not provided.
+
+technique: single frontal (ap) chest radiograph.
+
+findings:
+- lungs appear hyperinflated with increased lucency consistent with emphysematous change.
+- discrete pulmonary nodule is present (see above classifier result).
+- cardiomediastinal silhouette within expected size for technique.
+- no pleural effusion identified. no pneumothorax identified.
+
+impression:
+1. emphysematous change of the lungs.
+2. pulmonary nodule identified — correlation with prior chest imaging is recommended; consider dedicated chest ct if characterization or further evaluation is required.
+3. no acute cardiopulmonary process identified (no effusion or pneumothorax).",0.16945237491930515,0.556138813495636,0.3838564157485962,0.31738437001594894,2.739816206692372,0.7549822184325444
+00012834_113.png,"indication: unknown (image provided without clinical history).
+
+technique: frontal chest radiograph (single view).
+
+findings: cardiomediastinal silhouette mildly enlarged. prominent pulmonary vascular congestion with bilateral perihilar and basilar-predominant interstitial and patchy air‑space opacities. small bilateral pleural effusions suspected with mild blunting of the costophrenic sulci. no pneumothorax identified.
+
+impression:
+1) pulmonary interstitial and air‑space edema, bilateral and greater centrally/basally — pattern most consistent with cardiogenic pulmonary edema.
+2) mild cardiomegaly, which may reflect underlying cardiac dysfunction.
+3) small bilateral pleural effusions suspected.
+4) no pneumothorax.",0.20289273959345622,0.47194012999534607,0.281789094209671,0.2638297872340426,3.2934245157132933,1.0622019465092276
+00012892_004.png,"indication:
+not provided.
+
+technique:
+frontal chest radiograph.
+
+findings:
+a focal rounded pulmonary opacity is present, most consistent with a mass or larger nodule. no focal airspace consolidation identified. no pleural effusion or pneumothorax. cardiomediastinal silhouette within expected limits for a frontal technique. no acute osseous abnormality.
+
+impression:
+1. focal pulmonary mass/nodule — radiographic appearance concerning for a pulmonary neoplasm; cross-sectional chest ct recommended for further characterization.
+2. no pleural effusion or pneumothorax.
+3. cardiomediastinal silhouette within expected limits. no acute osseous abnormality.",0.1568194981030677,0.4476880431175232,0.4813064634799957,0.20014094432699084,3.060959118723561,0.983070544037731
+00012973_014.png,"exam: chest radiograph (single frontal ap view)
+history: not provided.
+
+technique: single frontal (ap) view.
+
+findings:
+- model indicates a focal mass-like opacity within the thorax (highest probability).
+- possible pulmonary nodule.
+- possible pneumothorax (lower probability).
+- no large pleural effusion identified on this view.
+
+impression:
+1. mass-like opacity identified on ap chest radiograph — high-probability finding on image.
+2. possible pulmonary nodule.
+3. possible pneumothorax (less certain) — correlate clinically.
+
+recommendation: correlate with prior chest radiographs if available. recommend dedicated pa and lateral radiographs and/or chest ct for localization and characterization, and urgent ct or upright expiratory radiograph if pneumothorax is clinically suspected.",0.1290880619484715,0.3930167853832245,0.3364992141723633,0.08823529411764705,3.65481139828913,1.3567212321769306
+00012975_008.png,"indication: not provided.
+
+technique: single frontal (ap) chest radiograph.
+
+findings:
+- cardiomediastinal silhouette within expected size limits for an ap technique.
+- patchy subsegmental air‑space opacity consistent with atelectatic change.
+- imaging features suggest small pleural effusion is possible.
+- a pneumothorax cannot be excluded on this frontal view.
+- no dense lobar consolidation confidently identified. no acute osseous abnormality seen.
+
+impression:
+1. subsegmental/patchy atelectasis (highest confidence).
+2. possible small pleural effusion.
+3. possible pneumothorax — small pneumothorax cannot be excluded on this single frontal view.
+4. possible patchy air‑space consolidation/pneumonia (less certain).
+
+recommendation: correlate with clinical exam. consider upright pa and lateral chest radiographs or chest radiography/ct as clinically indicated to evaluate pleural fluid or to exclude small pneumothorax.",0.09016114605562929,0.3565504252910614,-0.002378938952460885,0.0425531914893617,4.444212563511381,1.810912051499072
+00013078_015.png,"indication: not provided.
+
+technique: single frontal chest radiograph (ap).
+
+findings:
+- patchy air‑space opacity compatible with consolidation/pneumonia.
+- a focal pulmonary nodule is identified (location not specified on single frontal view).
+- mild interstitial/air‑space prominence that could reflect pulmonary edema or reactive/atelectatic change.
+- cardiomediastinal silhouette within expected size limits.
+- no pleural effusion identified. no pneumothorax.
+
+impression:
+1. pulmonary nodule identified on the frontal radiograph — location not well characterized on a single ap view. correlate with prior imaging; consider dedicated chest radiographs with lateral view or chest ct for further characterization.
+2. air‑space consolidation consistent with pneumonia.
+3. possible pulmonary interstitial edema and/or subsegmental atelectasis.
+4. no pleural effusion or pneumothorax identified.",0.13396328420673198,0.401748925447464,0.3277205228805542,0.19846491228070176,3.4732968802796105,1.2137788926551585
+00013408_017.png,"exam: chest radiograph (single frontal — anteroposterior view provided)
+
+history/indication: not provided.
+
+technique: single frontal ap chest radiograph.
+
+findings:
+- automated zero-shot classifier gives a high probability for pneumothorax.
+- no imaging evidence of a large pleural effusion, consolidation, or cardiomegaly per the classifier probabilities.
+- no other acute cardiopulmonary abnormalities identified by the classifier.
+
+impression:
+1. pneumothorax — high probability on automated image classification.  
+2. no acute effusion or consolidation identified by the model.
+
+recommendation: correlate with patient's clinical status and obtain urgent radiologist review. if confirmed clinically, obtain dedicated radiographic views (upright pa and lateral if feasible) or chest ct to determine side and size and guide management.
+
+educational use only — not for clinical decision-making.",0.08451542547285168,0.3613252639770508,0.4240785837173462,0.1626984126984127,3.4359820659695957,1.2291948620361877
+00013447_004.png,"exam: chest radiograph (single frontal ap view)
+image path: <WORKSPACE>/data/100_datasets_per_class_nih_chest_xray/nih_subset/fibrosis/00013447_004.png
+
+indication: not provided.
+
+technique: single frontal (anteroposterior) chest radiograph.
+
+findings:
+- cardiomediastinal silhouette is enlarged for technique.
+- patchy air‑space opacity compatible with focal consolidation, most suggestive of pneumonia.
+- no large pleural effusion identified. no pneumothorax detected on this view.
+- no acute osseous abnormality identified on the provided view.
+
+impression:
+1. findings most consistent with pneumonia (see focal air‑space/ consolidation) — high probability on image analysis.
+2. cardiomegaly.
+3. no large pleural effusion or pneumothorax identified on this frontal ap view.
+
+note: limited by single ap view and lack of clinical history. correlate with symptoms, prior imaging, and consider frontal+pa and lateral views or chest radiograph follow-up / chest ct if clinically indicated.",0.1264677606672506,0.2213207483291626,0.20909833908081055,0.1607142857142857,4.293214158475875,1.6766475949883064
+00013499_002.png,"indication: not provided.
+
+technique: frontal chest radiograph (anteroposterior).
+
+findings: focal rounded dense pulmonary opacity consistent with a mass. no focal lobar airspace consolidation to suggest pneumonia identified. no pleural effusion or pneumothorax. cardiomediastinal size within expected limits on this frontal view.
+
+impression:
+1. focal pulmonary opacity most consistent with a pulmonary mass (high confidence by image classifier).
+2. no pleural effusion or pneumothorax identified.
+recommendation: correlate with prior radiographs if available and consider chest ct for further characterization and staging.",0.1323140310062408,0.37714818120002747,0.4641583263874054,0.24775353016688062,3.2122434484010123,1.0572914577720218
+00013648_005.png,"indication: not provided.
+
+technique: single frontal chest radiograph (ap).
+
+findings:
+- pneumothorax present (highest-scoring zero-shot label).
+- possible consolidation and atelectasis.
+- no radiographic evidence of pleural effusion.
+- cardiomediastinal size not increased for ap technique (cardiomegaly not supported by image-based labels).
+
+impression:
+1) pneumothorax identified on the frontal ap radiograph.  
+2) possible consolidation and/or atelectasis — consider clinical correlation.  
+3) no pleural effusion or cardiomegaly detected on this view.
+
+recommendation: correlate with clinical exam. consider dedicated upright inspiratory/expiratory chest radiographs or chest ct for confirmation and to assess pneumothorax size/location.",0.06664328715808636,0.43097302317619324,0.12190287560224533,0.08,3.911092505724686,1.5177904431176559
+00014004_013.png,"indication: clinical indication not provided.
+
+technique: single frontal ap chest radiograph.
+
+findings:
+- cardiomediastinal silhouette within normal size limits for technique.
+- diffuse interstitial and air-space opacities greatest centrally and perihilar, consistent with pulmonary interstitial/alveolar edema.
+- patchy air-space consolidation/infiltration in the lungs, greater on the right, which could reflect superimposed infection.
+- no pleural effusion identified. no pneumothorax.
+- no acute osseous abnormality identified.
+
+impression:
+1. pulmonary interstitial and alveolar edema pattern, most consistent with congestive/vascular pulmonary edema.
+2. patchy air-space consolidation/infiltration (greater on the right) — possible superimposed pneumonia or aspiration; differential includes infectious consolidation.
+3. no pleural effusion or pneumothorax identified.
+4. cardiomediastinal size within limits on ap technique.",0.14067730786280436,0.35285118222236633,0.1656484752893448,0.16326530612244894,3.984818772038288,1.4995573155211994
+00014145_008.png,"indication:
+not provided.
+
+technique:
+frontal chest radiograph.
+
+findings:
+air-space consolidation is present. pleural effusion is present. heart size is within normal limits. mediastinal contours are unremarkable. no pneumothorax identified. no acute osseous abnormality.
+
+impression:
+1. air-space consolidation.
+2. pleural effusion.
+3. no cardiomegaly, pneumothorax, or acute osseous abnormality.",0.3959152831931253,0.6995517015457153,0.5367999076843262,0.6666666666666666,1.628307585045253,-0.06884615610473294
+00014223_011.png,"exam: chest radiograph, single frontal (ap) view
+history: none provided.
+
+technique: frontal ap view (as supplied). no prior available for comparison.
+
+findings:
+- high model probability for: edema.
+- moderate probabilities (possible): pneumonia, consolidation, effusion, infiltration.
+- low probability (not suggested): cardiomegaly, pneumothorax, emphysema, fibrosis, hernia, mass, nodule, pleural_thickening, atelectasis.
+
+impression:
+1. pulmonary edema — image findings most consistent with interstitial/alveolar pulmonary edema.
+2. possible superimposed air‑space consolidation/pneumonia.
+3. possible pleural effusion.
+4. cardiomegaly and pneumothorax not suggested by this image.
+
+recommendation: correlate with clinical presentation and prior chest radiographs; consider follow-up radiograph or chest radiograph with lateral view and/or chest ct if there is clinical concern for consolidation or effusion.",0.12948970103254506,0.33315882086753845,0.0867387130856514,0.1408657373440939,4.219523131704381,1.6384558659701716
+00014274_004.png,"indication: none provided.
+
+technique: single frontal chest radiograph (anteroposterior).
+
+findings: cardiomediastinal silhouette within expected size for ap technique. prominent bilateral perihilar and interstitial/air‑space opacities greater centrally. mild blunting of the bilateral costophrenic sulci consistent with small pleural effusions. no focal lobar consolidation identified. no pneumothorax.
+
+impression:
+1. pulmonary interstitial and alveolar edema, greatest centrally — imaging most consistent with pulmonary edema.
+2. possible small bilateral pleural effusions.
+3. no focal lobar consolidation to suggest pneumonia. no pneumothorax.",0.10910894511799621,0.4510054588317871,0.23530253767967224,0.20014347202295554,3.4777644788686537,1.222308601520217
+00014280_000.png,"indication: not provided.
+
+technique: single frontal chest radiograph (ap).
+
+findings: focal pleural-based thickening is present. discrete mass-like and nodular opacities are seen. no pleural effusion or pneumothorax identified. cardiomediastinal silhouette within expected limits for technique.
+
+impression:
+1. pleural thickening.
+2. pulmonary mass and pulmonary nodule.
+3. no pleural effusion or pneumothorax.
+
+recommendation: correlate with prior imaging if available. consider chest ct for further characterization of the mass/nodule and pleural abnormality.",0.2235336056107062,0.47141894698143005,0.6587797999382019,0.19963369963369962,2.7054956240274857,0.7679806677326442
+00014731_016.png,"indication: not provided.
+technique: single frontal ap chest radiograph.
+findings: cardiomediastinal silhouette within expected size limits. no pleural effusion or pneumothorax identified. no focal lobar consolidation evident on this single frontal view. there are subtle linear subsegmental atelectatic changes and faint patchy air‑space opacity/infiltrate suggested.
+impression:
+1. possible subsegmental atelectasis.
+2. possible faint patchy air‑space infiltrate (cannot exclude early/atypical infectious process).
+3. no pleural effusion or pneumothorax identified.",0.13423132147224287,0.3726068139076233,0.2686305046081543,0.11531986531986531,3.804018943391533,1.4242026599677569
+00014758_006.png,"exam: chest radiograph, single frontal (ap) view.
+
+history/indication: not provided.
+
+technique: single frontal ap radiograph.
+
+findings:
+- there is a focal, rounded pulmonary opacity consistent with a mass/nodule appearance on this frontal view.
+- no radiographic evidence of large pleural effusion or pneumothorax identified on this view.
+- cardiomediastinal contours are within expected limits for a single frontal radiograph.
+
+impression:
+1. imaging appearance most consistent with a pulmonary mass/nodule (x-ray chest anteroposterior mass and nodule positive on zero-shot classification).
+2. no acute large effusion or pneumothorax identified on this view.
+
+recommendation: correlate with prior imaging and clinical data. recommend dedicated chest radiographs with lateral view and/or chest ct for lesion characterization and staging as clinically indicated.
+
+educational use only — not for clinical use.",0.11710800875382398,0.363681435585022,0.5650196671485901,0.24358974358974358,3.059585466496281,0.9843737787651737
+00014818_005.png,"exam: frontal chest radiograph (single ap view)
+
+history/indication: not provided.
+
+technique: single frontal (anteroposterior) chest radiograph.
+
+findings:
+- imaging shows prominent atelectatic-type opacity pattern on the frontal view (highest classifier score for atelectasis).
+- mild interstitial/air‑space change suggesting possible pulmonary edema (lower confidence).
+- no radiographic evidence of a large pleural effusion or pneumothorax.
+- no focal lobar consolidation identified to suggest frank pneumonia on this view.
+
+impression:
+1. appearance most consistent with atelectasis on the frontal radiograph.
+2. possible pulmonary edema (lower-confidence finding).
+3. no acute large pleural effusion or pneumothorax identified on this single frontal view.
+
+limitations: single ap view only; correlation with clinical exam, prior imaging, and a pa and lateral chest radiograph or chest radiograph comparison is recommended for further characterization.",0.13093073414159542,0.3973555266857147,0.2435445785522461,0.10416666666666667,3.7918911730710256,1.4221892776725316
+00014890_004.png,"indication: not provided.
+
+technique: single frontal chest radiograph (anteroposterior).
+
+findings:
+- cardiothoracic silhouette within expected size limits for a frontal ap view.
+- diffuse bilateral interstitial and perihilar air‑space opacities, greater centrally.
+- no large pleural effusion identified. no pneumothorax detected.
+- no focal lobar consolidation to suggest a localized lobar pneumonia.
+
+impression:
+1. imaging appearance most consistent with pulmonary interstitial/air-space edema (positive on zero-shot classifier).  
+2. no large pleural effusion or pneumothorax identified.  
+3. no definite focal lobar consolidation identified to suggest lobar pneumonia.
+
+educational use only — not for clinical decision making.",0.11926387284810314,0.45785340666770935,0.37434157729148865,0.24318936877076414,3.1355301400873463,1.0190901424424255
+00015171_008.png,"exam: chest radiograph (image provided: <WORKSPACE>/data/100_datasets_per_class_nih_chest_xray/nih_subset/emphysema/00015171_008.png)
+indication: not provided.
+
+technique: single frontal chest radiograph (image supplied).
+
+findings:
+- pneumothorax identified with high model probability.
+- no radiographic evidence of large pleural effusion.
+- no convincing cardiomegaly, focal consolidation, or acute alveolar edema identified on this image.
+- additional low-probability labels (emphysema, pleural thickening, nodules, mass, fibrosis) were not strongly supported by the model on this single frontal view.
+
+impression:
+1. pneumothorax identified on the provided frontal chest radiograph (high-confidence by automated classification). 
+2. no acute pleural effusion or focal lobar consolidation identified on this view.
+
+recommendation: correlate with clinical exam. obtain dedicated upright and/or expiratory radiographs or chest radiograph series and consider chest ct if sizing/side localization or complications (tension physiology) are required for management. this interpretation is for educational use and should be confirmed by a radiologist.",0.08302058985472334,0.20556886494159698,0.3559245765209198,0.11309523809523811,4.110214075517214,1.6158889469410027
+00015255_013.png,"exam: chest radiograph
+
+history: none provided. image path: <WORKSPACE>/data/100_datasets_per_class_nih_chest_xray/nih_subset/no finding/00015255_013.png
+
+technique: single frontal chest radiograph (ap view as provided).
+
+findings:
+- imaging analysis shows increased probability of pulmonary air‑space opacity labeled as ""pneumonia.""
+- a focal nodular opacity labeled ""nodule"" is also detected with elevated probability.
+- lesser probability scores suggest possible pulmonary infiltration and mild edema.
+- no sizable pleural effusion, pneumothorax, or cardiomegaly identified by the model.
+
+impression:
+1. findings most suggestive of pneumonia (highest-probability label).
+2. focal pulmonary nodule identified — further characterization with prior imaging comparison or chest ct recommended depending on clinical context.
+3. possible pulmonary infiltration and mild edema (less certain).
+4. no acute large pleural effusion or pneumothorax identified by the model.
+
+this report is for educational use only and should be correlated with the clinical exam and prior imaging. if clinically important, consider dedicated chest radiography series or ct for confirmation and localization.",0.07979865739888382,0.1787521094083786,0.16526323556900024,0.14256410256410257,4.4989802098965255,1.813128658911112
+00015284_003.png,"indication: not provided.
+
+technique: frontal ap chest radiograph.
+
+findings: high-probability pneumothorax identified on this frontal ap view. no radiographic evidence to support effusion, consolidation, cardiomegaly, or other labeled acute findings from the supplied label set.
+
+impression:
+1. pneumothorax — high probability based on image analysis.
+2. no evidence of pleural effusion, consolidation, or cardiomegaly by the same model outputs.
+
+recommend clinical correlation and immediate clinical/portable radiology evaluation if pneumothorax is suspected clinically (e.g., upright or expiratory views and/or urgent chest radiology consultation or chest tube placement as indicated).",0.07252218309367978,0.3703591823577881,0.33328256011009216,0.07407407407407407,3.711150838499081,1.414959049197857
+00015654_004.png,"exam: portable chest radiograph (single frontal ap view)
+history/indication: not provided.
+
+technique: single frontal (anteroposterior) chest radiograph.
+
+findings:
+- imaging features most consistent with pleural effusion (highest model probability).
+- air‑space consolidation is present (high probability).
+- secondary label probability for pneumonia is elevated.
+- no radiographic evidence suggesting pneumothorax or cardiomegaly above background probability.
+- no other acute osseous abnormality identified on this frontal view.
+
+impression:
+1. pleural effusion — most conspicuous finding on this frontal ap radiograph.
+2. superimposed air‑space consolidation, differential includes infectious pneumonia or aspiration.
+3. no pneumothorax identified on this view. cardiomediastinal size not enlarged on the single frontal view.
+
+comment: correlate with clinical exam and prior imaging. if clinically indicated, obtain lateral and/or upright views and consider chest radiograph follow-up or chest ct for better characterization and localization of effusion and consolidation.",0.10264979663762958,0.3202488124370575,0.29535791277885437,0.08695652173913043,3.9340602153189135,1.5193684512676764
+00015809_017.png,"indication:
+not provided.
+
+technique:
+frontal chest radiograph.
+
+findings:
+diffuse bilateral interstitial and patchy perihilar air‑space opacities, greater centrally, consistent with pulmonary edema. cardiac silhouette within normal size limits for technique. no pleural effusion identified. no pneumothorax. no acute osseous abnormality.
+
+impression:
+1. pulmonary interstitial/alveolar edema — findings most consistent with pulmonary edema.  
+2. possible superimposed air‑space consolidation; differential includes pneumonia.  
+3. no pleural effusion or pneumothorax detected.",0.21896393648144902,0.577476441860199,0.7621825933456421,0.32407407407407407,1.991566218805273,0.33507878801657487
+00015915_008.png,"indication: not provided.
+
+technique: single frontal chest radiograph (view not specified).
+
+findings:
+- there is a focal, rounded mass-like opacity projecting within the thorax.
+- no pleural effusion identified. no pneumothorax detected.
+- cardiomediastinal silhouette within expected size limits on this single frontal view.
+
+impression:
+1. rounded mass-like opacity within the chest, suspicious for a pulmonary or mediastinal mass.
+2. no pleural effusion or pneumothorax identified on this frontal radiograph.
+recommendation: correlate with prior imaging if available and obtain chest ct for further characterization and staging as clinically indicated.",0.1269535982838459,0.4934534430503845,0.5766697525978088,0.28695652173913044,2.5852867104458324,0.7045500707098029
+00016006_001.png,"indication: not provided.
+
+technique: single frontal chest radiograph (anteroposterior projection).
+
+findings:
+- zero-shot image classification shows highest probability for fibrosis (x-ray chest anteroposterior fibrosis) — score 0.84.
+- low scores for pneumonia (0.03) and consolidation (0.03). pleural_thickening 0.055. effusion (0.0014) and pneumothorax (0.009) are not supported by the model. cardiomegaly not suggested.
+
+impression:
+1. findings most consistent with pulmonary fibrosis/scarring (highest-probability label: fibrosis, score 0.84).
+2. no imaging evidence on this view to suggest acute lobar consolidation, sizable pleural effusion, or pneumothorax.
+3. correlate with clinical history and prior imaging. if acute process is a concern, consider chest radiograph comparison or chest ct for further evaluation.
+
+educational use only — not for clinical use.",0.1066469798105514,0.3085518181324005,0.30716219544410706,0.17252747252747253,3.8140309582339285,1.4203814679425488
+00016038_000.png,"indication: not provided.
+
+technique: single frontal chest radiograph (ap view).
+
+findings:
+- patchy subsegmental/linear airspace opacity compatible with atelectasis.
+- cardiomediastinal silhouette mildly enlarged — cardiomegaly is possible.
+- small pleural effusion and pleural thickening cannot be excluded.
+- no pneumothorax identified.
+
+impression:
+1. atelectasis (appears present).
+2. possible cardiomegaly.
+3. possible small pleural effusion and pleural thickening.
+4. no pneumothorax detected.
+
+correlation with prior radiographs or clinical data recommended to assess chronicity and cardiac size.",0.15286934299349847,0.5742258429527283,0.31291601061820984,0.18181818181818182,3.021855061849162,0.9645020696330086
+00016094_001.png,"exam: chest radiograph, single frontal (anteroposterior) view
+clinical indication: not provided.
+
+technique: single frontal ap radiograph.
+
+findings:
+- patchy air‑space opacity most pronounced centrally, appearance most suggestive of pneumonia (highest model probability).
+- scattered reticular/linear interstitial markings and pleural‑margin irregularity raise concern for chronic fibrotic change and pleural thickening (possible).
+- small rounded focal opacity consistent with a nodule is possible.
+- no large pleural effusion identified. no pneumothorax detected.
+- cardiomediastinal silhouette within expected limits for ap technique.
+
+impression:
+1. findings most suggestive of pneumonia (highest-probability automated classification). correlate with clinical signs/symptoms and consider antimicrobial therapy if clinically indicated.
+2. possible chronic interstitial/fibrotic change and pleural thickening.
+3. possible pulmonary nodule — consider comparison with prior imaging if available or short-interval follow-up imaging based on clinical context.
+4. no acute large pleural effusion or pneumothorax identified.
+
+recommendation: correlate with clinical exam and prior chest radiographs (if available). consider chest radiograph pa and lateral or chest ct for better characterization if clinically warranted.
+
+(educational use only — not for clinical care.)",0.06396021490668313,0.23324806988239288,0.5239036083221436,0.173731030873888,3.602256854394553,1.3275893931586034
+00016677_004.png,"indication: not provided.
+
+technique: single frontal chest radiograph (anteroposterior).
+
+findings:
+- probable pleural effusion.
+- associated pleural thickening.
+- possible small pneumothorax (cannot be excluded on this single ap view).
+- no radiographic evidence of cardiomegaly or focal consolidation identified.
+
+impression:
+1. pleural effusion with pleural thickening (highest probability).
+2. possible pneumothorax — correlation with additional views (upright or lateral decubitus) or chest ct recommended if clinically important.
+3. no acute cardiopulmonary consolidation identified on this view.
+
+study interpretation aided by medimageinsight zero-shot classifier; correlate with clinical data and additional imaging as needed.",0.11098661682987526,0.4423837959766388,0.5600146055221558,0.028571428571428567,3.1693822167839913,1.127171565608498
+00016778_047.png,"indication: not provided.
+
+technique: single frontal chest radiograph, anteroposterior projection (image as provided).
+
+findings:
+- there is a focal, mass-like rounded opacity projecting within the thorax (most conspicuous on the ap view).
+- small layering pleural effusion cannot be excluded.
+- patchy air‑space consolidation is possible in the adjacent lung.
+- no large pneumothorax identified on this frontal view.
+- comparison with prior imaging not available.
+
+impression:
+1. mass-like opacity within the chest (most likely representing a pulmonary/mediastinal mass on this single ap view). correlate with prior imaging if available and consider dedicated chest ct for further characterization.
+2. possible small pleural effusion.
+3. possible adjacent consolidation.
+recommendation: cross-sectional chest ct with contrast (or clinical correlation and follow-up radiographs) to better characterize the mass and assess for associated pleural effusion or consolidation.",0.10408993857394311,0.40628013014793396,0.3549654483795166,0.21860095389507153,3.355294159968399,1.1541223656460906
+00017089_010.png,"indication: not provided.
+
+technique: frontal chest radiograph (anteroposterior single view).
+
+findings:
+- a rounded pulmonary mass and a separate pulmonary nodule project within the thorax, best appreciated on this frontal ap view.
+- possible pleural thickening.
+- no pleural effusion identified. no pneumothorax.
+- cardiomediastinal silhouette within expected limits for technique.
+
+impression:
+1. pulmonary mass — high probability on this frontal radiograph.  
+2. additional pulmonary nodule — high probability.  
+3. possible pleural thickening.  
+4. no pleural effusion or pneumothorax identified.
+
+recommendation: correlate with prior chest imaging if available. consider dedicated chest ct for lesion characterization and to assess size, exact location, and multiplicity.",0.13574799603500018,0.4365614652633667,0.48373669385910034,0.2038288288288288,3.0689915012720377,0.9944290646839017
+00017138_076.png,"exam: chest radiograph
+
+indication: not provided.
+
+technique: single frontal ap portable chest radiograph.
+
+findings:
+- cardiomediastinal silhouette mildly enlarged for technique.
+- patchy, bilateral air‑space opacities involving the perihilar regions and greater at the lung bases, more confluent on the right.
+- no large pleural effusion identified.
+- no pneumothorax detected.
+- external monitoring leads project over the chest.
+
+impression:
+1. multifocal bilateral air‑space consolidation/infiltrates, greatest centrally and at the bases — suspicious for multifocal pneumonia or infectious/inflammatory process.
+2. mild cardiomegaly (may be exaggerated by ap technique).
+3. no pleural effusion or pneumothorax identified on this single frontal view.
+
+recommendation: correlate with clinical exam and, if question remains or to better localize/characterize disease, obtain pa and lateral radiographs or chest ct as clinically indicated.",0.1234426799696735,0.3918670117855072,0.29892903566360474,0.16346153846153846,3.605087379070974,1.3023201332467709
+00017490_000.png,"indication: not provided.
+technique: single frontal chest radiograph.
+
+findings: cardiomediastinal silhouette is mildly–moderately enlarged. lungs without focal air‑space consolidation. no radiographic evidence of pulmonary interstitial/alveolar edema or pleural effusion. no lines, tubes, or acute osseous abnormality identified.
+
+impression:
+1. mild–moderate cardiomegaly.
+2. no acute cardiopulmonary process identified on this single frontal view—no focal consolidation, pulmonary edema, or pleural effusion.
+recommendation: correlate clinically and consider pa/lateral or prior comparison if concern for cardiopulmonary disease.",0.10640494030829264,0.4652631878852844,0.6218240857124329,0.33691756272401435,2.491483388333913,0.6439572646153117
+00017625_000.png,"indication: not provided.
+
+technique: single frontal chest radiograph, anteroposterior projection.
+
+findings: cardiomediastinal silhouette within expected size for ap technique. prominent bilateral perihilar and interstitial/air‑space opacities consistent with pulmonary edema. patchy focal air‑space consolidation is possible. small bilateral pleural effusions cannot be excluded. no pneumothorax identified.
+
+impression:
+1. pulmonary interstitial and alveolar edema — imaging appearance strongly suggestive of pulmonary edema.
+2. possible superimposed focal air‑space consolidation (differential includes infection or atelectasis).
+3. small bilateral pleural effusions cannot be excluded.
+4. no pneumothorax.",0.1128453915629865,0.45928430557250977,0.24645423889160156,0.22181818181818183,3.400181024517126,1.1705584066085544
+00017735_000.png,"indication: not provided.
+
+technique: single frontal chest radiograph (ap).
+
+findings:
+- imaging appearance consistent with a hernia.
+- patchy increased opacity in the lungs that could reflect air‑space process; pneumonia and atelectasis are possible.
+- no pleural effusion identified. no pneumothorax.
+- cardiomediastinal silhouette within expected size for ap technique.
+
+impression:
+1. findings consistent with hernia (highest-probability classifier finding).
+2. possible pneumonia and possible atelectasis — differential includes early or limited air‑space disease; correlate clinically.
+3. no pleural effusion or pneumothorax identified. cardiomediastinal size not enlarged for ap technique.",0.16216453127415395,0.462441623210907,0.12796330451965332,0.11764705882352941,3.8133980776444236,1.4129331760978898
+00017753_027.png,"indication: not provided.
+
+technique: single frontal (ap) chest radiograph.
+
+findings: moderate pleural effusion. patchy air‑space consolidation/opacity within the lungs. additional lesser air‑space infiltration is present. no pneumothorax identified. cardiomediastinal silhouette not enlarged for ap technique.
+
+impression:
+1. pleural effusion (moderate).  
+2. air‑space consolidation, which may reflect pneumonia or related infectious/aspiration process.  
+3. additional pulmonary infiltration/pneumonia is possible.  
+4. no pneumothorax. correlate with clinical exam and consider follow‑up imaging or dedicated lateral view if clinically indicated.",0.09533351465411206,0.4030829966068268,0.31583312153816223,0.16666666666666669,3.5145001656851695,1.262997492751436
+00017893_010.png,"indication: not provided.
+
+technique: single frontal anteroposterior (ap) chest radiograph.
+
+findings:
+- cardiomediastinal silhouette borderline to mildly enlarged for ap technique.
+- patchy subsegmental airspace opacity consistent with atelectasis.
+- small pleural effusion(s) identified.
+- no pneumothorax detected. no acute osseous abnormality identified.
+
+impression:
+1. patchy subsegmental airspace opacity, most consistent with atelectasis.
+2. small pleural effusion(s).
+3. cardiomediastinal silhouette borderline/mildly enlarged — cardiomegaly is possible; assessment limited by ap technique.",0.17263770265825146,0.49282917380332947,0.44238346815109253,0.15151515151515152,3.0865705491996183,1.007818645103759
+00017972_006.png,"indication: not provided.
+
+technique: single frontal ap chest radiograph.
+
+findings: cardiomediastinal silhouette within expected size limits for ap technique. multifold reticular/linear interstitial opacities throughout the lungs with associated pleural‑based thickening/scarring. focal patchy air‑space opacity is present and may reflect consolidation. no pleural effusion or pneumothorax identified.
+
+impression:
+1. imaging findings most consistent with pulmonary fibrosis, with associated pleural thickening/scarring.
+2. possible focal air‑space consolidation — differential includes pneumonia.
+3. no pleural effusion or pneumothorax. cardiomediastinal size within expected limits.
+
+correlation with prior radiographs and clinical history recommended to assess chronicity and to help distinguish fibrosis from chronic scarring versus active inflammatory change.",0.0988379646450785,0.42271095514297485,0.5579437017440796,0.3012646793134598,2.790481356590055,0.8221463705238158
+00018103_004.png,"exam: chest radiograph (single frontal ap view provided)
+history/indication: not provided in the submission (no clinical history or prior imaging available).
+
+technique: single frontal (anteroposterior) chest radiograph.
+
+findings:
+- imaging demonstrates findings most consistent with pulmonary consolidation and interstitial/alveolar edema.
+- small-to-moderate pleural effusion is possible.
+- no confident evidence of pneumothorax, cardiomegaly, or focal mass/nodule identified on this view.
+- limited assessment due to single frontal ap projection; lateral and pa views, or comparison with prior studies, would improve specificity.
+
+impression:
+1. pulmonary consolidation — most likely present.
+2. radiographic pulmonary edema — present.
+3. possible pleural effusion (recommend correlation with clinical exam and, if needed, lateral or upright films or ultrasound).
+
+recommendation: correlate with clinical status (oxygenation, bnp, infection signs). consider pa and lateral chest radiographs or chest radiograph comparison and chest ultrasound/ct as clinically indicated to further characterize effusion and distribution of consolidation/edema.",0.07818731427319982,0.302622526884079,0.05732111632823944,0.2438423645320197,4.166281976208162,1.5899021793915689
+00018260_004.png,"indication: not provided.
+
+technique: single frontal chest radiograph (view and exam history not provided).
+
+findings:
+- diffuse reticular and reticulonodular interstitial opacities, greater in the bilateral mid-to-lower lungs with peripheral predominance.
+- mild architectural distortion and volume loss at the bases.
+- no focal lobar airspace consolidation identified.
+- no pleural effusion detected.
+- no pneumothorax.
+- cardiomediastinal silhouette within expected size limits for a single frontal view.
+
+impression:
+1. imaging findings most suggestive of chronic interstitial change, favoring pulmonary fibrosis/scarring, greater at the bilateral mid–to–lower lungs.
+2. no acute focal consolidation to suggest lobar pneumonia.
+3. no pleural effusion or pneumothorax identified.
+
+recommendation: correlate with clinical history and prior chest radiographs. consider chest ct (high-resolution) for further characterization if active clinical management or staging is required.",0.13059197358908195,0.46392834186553955,0.45982152223587036,0.25142857142857145,2.9521051365791866,0.9137687435875962
+00018421_003.png,"exam: chest radiograph (image: <WORKSPACE>/data/100_datasets_per_class_nih_chest_xray/nih_subset/no finding/00018421_003.png)
+indication: not provided.
+comparison: none available.
+
+technique: frontal chest radiograph (single view) as provided.
+
+findings:
+- imaging demonstrates pulmonary infiltration (highest model probability).
+- pneumonia is a possible diagnosis based on imaging appearance.
+- no radiographic evidence of pleural effusion or pneumothorax identified.
+- cardiomediastinal silhouette within expected limits for a single frontal view.
+
+impression:
+1. pulmonary infiltration — most likely representation of an air‑space process.
+2. possible pneumonia; correlate with clinical presentation and, if indicated, follow-up radiographs or clinical testing.
+3. no acute pleural effusion or pneumothorax detected on the provided frontal image.",0.12146775958307787,0.26795753836631775,0.5962552428245544,0.2,3.3615604966654695,1.1656055209435283
+00018427_003.png,"indication: not provided (image supplied).
+
+technique: single frontal chest radiograph.
+
+findings:
+- cardiomediastinal silhouette within expected size for technique.
+- rounded focal opacity in the right mid–to–lower hemithorax, projecting over the perihilar/infrahilar region.
+- linear subsegmental scarring/atelectatic change at the bilateral bases, greater on the right.
+- no pleural effusion identified. no pneumothorax.
+
+impression:
+1. rounded focal opacity in the right mid–to–lower lung, suspicious for a pulmonary mass — further evaluation recommended with dedicated lateral chest radiograph and chest ct for characterization.
+2. subsegmental scarring/atelectasis at the bilateral bases (right > left).
+3. no pleural effusion or pneumothorax. cardiomediastinal size within expected limits.",0.1587955014648953,0.44190514087677,0.5224072337150574,0.30628019323671496,2.8341195034024187,0.8195650117948369
+00018427_004.png,"exam: chest radiograph (single frontal ap image)
+indication: not provided / unspecified.
+comparison: none available.
+
+technique: single frontal ap chest radiograph.
+
+findings:
+- moderate-to-large pleural effusion projected on the frontal view.
+- a mass-like rounded opacity is present within the thorax on the frontal projection.
+- possible associated nodular opacity and areas of subsegmental volume loss (atelectasis) adjacent to the effusion.
+- no acute cardiogenic edema identified on this view (limited by single frontal technique).
+
+impression:
+1) moderate-to-large pleural effusion.  
+2) mass-like thoracic opacity on the frontal view — suspicious for a pulmonary or mediastinal mass.  
+3) possible associated atelectasis and focal nodularity adjacent to the effusion.
+
+recommendation: correlate with clinical exam. recommend a lateral chest radiograph if available and chest ct for definitive characterization and to assess location, size, and relationship to adjacent structures.",0.0873228053325973,0.33700600266456604,0.5681638717651367,0.17834793491864834,3.2163902885441003,1.106523192369251
+00018724_030.png,"exam: chest radiograph (single frontal ap image)
+history/indication: not provided.
+
+technique: single frontal ap chest radiograph.
+
+findings:
+- patchy air‑space consolidation projected within the thorax.
+- pleural effusion(s) are present (moderate probability on image analysis).
+- imaging features raise the possibility of pulmonary interstitial/vascular congestion or edema (possible).
+- cardiomediastinal silhouette not enlarged on this view. no pneumothorax identified.
+
+impression:
+1. air‑space consolidation — most consistent with consolidation on this frontal ap radiograph.
+2. pleural effusion(s).
+3. possible pulmonary edema/vascular congestion (less certain).
+
+if clinically indicated, recommend pa and lateral radiographs or chest radiograph comparison with prior studies and correlation with clinical exam and chest ct as needed.",0.1461202447927114,0.3764149844646454,0.37172380089759827,0.11904761904761904,3.601989403788669,1.3107198052251057
+00018867_028.png,"indication: not provided.
+
+technique: single frontal chest radiograph (anteroposterior technique).
+
+findings: cardiomediastinal silhouette within expected size for ap technique. diffuse bilateral interstitial and perihilar air‑space opacities with vascular congestion, greater centrally. small dependent layering pleural effusions are possible. no focal lobar consolidation identified. no pneumothorax.
+
+impression:
+1. pulmonary interstitial and alveolar edema, greatest centrally. 
+2. possible small bilateral pleural effusions.
+3. no focal lobar consolidation or pneumothorax identified.",0.10259783520851541,0.48432543873786926,0.33301955461502075,0.18421052631578946,3.2150861464053087,1.0899363087625014
+00018960_005.png,"indication: not provided.
+
+technique: single frontal chest radiograph (ap).
+
+findings: there is a pneumothorax identified on the exam. lungs without focal airspace consolidation. no pleural effusion. cardiomediastinal contours within expected limits for technique.
+
+impression:
+1. pneumothorax.
+2. no acute cardiopulmonary process identified otherwise — no focal consolidation to suggest lobar pneumonia and no pleural effusion. correlate with clinical exam; consider expiratory or upright upright/decubitus radiographs or chest radiograph follow-up as clinically indicated.",0.14881035630802766,0.5160107016563416,0.33149534463882446,0.2344497607655502,3.075735488570947,0.9765863662904039
+00018960_022.png,"indication: not provided.
+
+technique: single frontal ap chest radiograph.
+
+findings:
+- patchy air‑space consolidation occupying a portion of the lungs on this frontal ap view.
+- no focal pleural effusion identified.
+- no clear cardiomegaly on the available frontal view.
+- a pneumothorax cannot be excluded on this single ap projection.
+
+impression:
+1. air‑space consolidation most consistent with consolidation (high probability on image analysis).
+2. findings may reflect an infectious or inflammatory process; pneumonia is a possible etiology.
+3. possible pneumothorax cannot be excluded on this single frontal ap view.
+
+correlation with clinical exam, prior imaging, and targeted additional radiographs or chest ct if there is clinical concern for pneumothorax or to further evaluate the consolidation is recommended.",0.11351279250209931,0.42123478651046753,0.3540849983692169,0.12275132275132275,3.470968309670737,1.249663913752888
+00019169_004.png,"indication:
+not provided.
+
+technique:
+frontal chest radiograph.
+
+findings:
+lungs show diffuse interstitial and patchy perihilar air‑space opacities, greater centrally. small layering pleural effusions suspected at the bilateral bases. cardiomediastinal silhouette within expected size limits for a frontal view. no pneumothorax identified. no acute osseous abnormality.
+
+impression:
+1. pulmonary interstitial/alveolar edema (most likely).
+2. possible superimposed pneumonia; cannot exclude infection as a contributor to the air‑space opacities.
+3. small bilateral pleural effusions suspected.
+4. no pneumothorax. cardiomediastinal silhouette within expected limits.",0.18493168036382726,0.4594072699546814,0.2859418988227844,0.12962962962962962,3.5237920415630266,1.2458688951948982
+00019275_002.png,"indication: not provided.
+
+technique: single frontal chest radiograph (anteroposterior view).
+
+findings:
+- focal air‑space/infiltrative opacity(s) identified (x-ray chest anteroposterior infiltration).
+- pulmonary nodule(s) noted (x-ray chest anteroposterior nodule).
+- patchy fibrotic-appearing change is possible (x-ray chest anteroposterior fibrosis).
+- no radiographic evidence of cardiomegaly, large pleural effusion, or pneumothorax identified on this frontal view.
+
+impression:
+1. air‑space infiltration (positive). differential includes infection (pneumonia), aspiration, or inflammatory process—correlate clinically.
+2. pulmonary nodule(s) (positive). recommend correlation with prior chest radiographs; consider chest ct for further characterization if persistent or clinically concerning.
+3. possible pulmonary fibrosis (possible).
+4. no acute cardiomegaly, large effusion, or pneumothorax identified on this ap radiograph.
+
+note: report limited by single frontal view and lack of clinical history/prior imaging. correlate with symptoms, labs, and prior studies; consider pa and lateral radiographs or chest ct if clinically warranted.",0.04976635386172043,0.21550779044628143,0.267121821641922,0.1888888888888889,4.10247987010901,1.5934402945786699
+00019373_050.png,"indication: evaluation of the chest (no prior provided).
+
+technique: single frontal anteroposterior (ap) chest radiograph.
+
+findings: a focal pulmonary nodule and a separate mass-like opacity are identified within the visualized lungs. cardiomediastinal contours are within expected limits for an ap technique. no focal airspace consolidation, pleural effusion, or pneumothorax identified on this single frontal view. study limited by single ap projection.
+
+impression:
+1. pulmonary nodule and pulmonary mass identified on the ap chest radiograph.  
+2. no acute cardiopulmonary process otherwise identified on this single frontal view.  
+3. recommend correlation with prior imaging if available and consideration of dedicated chest ct for further characterization of the nodule and mass.
+
+for educational purposes only — not for clinical use.",0.062217101683825514,0.3320847749710083,0.5428183674812317,0.1904761904761905,3.241487672811007,1.1247580668074801
+00019441_019.png,"indication: not provided.
+
+technique: single frontal chest radiograph (ap).
+
+findings:
+- pulmonary nodule identified (highest model probability).
+- possible pleural thickening.
+- possible focal mass and possible focal consolidation.
+- possible small pleural effusion.
+- no pneumothorax identified.
+- cardiomediastinal silhouette within expected limits for ap technique.
+
+impression:
+1. pulmonary nodule — most likely finding on this image.
+2. possible pleural thickening.
+3. possible focal mass and possible focal consolidation.
+4. possible small pleural effusion.
+
+recommendation: correlate with prior chest imaging if available. consider dedicated pa/lateral chest radiographs or chest ct for further characterization of the nodule and to evaluate pleural thickening and the possibility of effusion.",0.1671165100399357,0.5147777795791626,0.3296886682510376,0.1469298245614035,3.234972655090851,1.0894002142781716
+00020129_003.png,"indication: not provided.
+
+technique: single frontal chest radiograph (projection not specified).
+
+findings: focal air‑space opacity in the right mid-to-lower lung zone, greater than the contralateral side, consistent with consolidation. no large pleural effusion identified. no pneumothorax detected. cardiomediastinal silhouette within expected size limits for a frontal radiograph.
+
+impression:
+1. focal air‑space consolidation in the right mid-to-lower lung—suspicious for lobar/segmental consolidation (e.g., infectious pneumonia).
+2. no pleural effusion or pneumothorax identified.
+3. cardiomediastinal size within expected limits.
+
+recommend correlation with clinical presentation and prior radiographs; consider follow-up radiograph or chest radiograph with lateral projection for further localization if clinically indicated.",0.18400125734622114,0.40142330527305603,0.40741071105003357,0.22382978723404257,3.3204061462353396,1.1034581401612875
+00020130_006.png,"exam: chest radiograph, single frontal view (image provided).
+history: not supplied.
+
+technique: frontal view only.
+
+findings:
+- cardiac silhouette enlarged consistent with cardiomegaly.
+- lungs clear of focal lobar air‑space consolidation.
+- no large pleural effusion identified.
+- no visible pneumothorax.
+- no definite pulmonary interstitial edema identified on this frontal view.
+
+impression:
+1) cardiomegaly.
+2) no acute cardiopulmonary consolidation, large pleural effusion, or pneumothorax identified on this frontal radiograph.
+
+recommendation: correlate with clinical exam. if acute heart failure or volume status is a concern, consider pa and lateral radiographs or chest radiography correlation with clinical data and, if needed, chest ct or bedside ultrasound.",0.09178729991076338,0.4769769608974457,0.49850866198539734,0.3305263157894737,2.6869623124272497,0.7552488167948582
+00020335_000.png,"exam: chest radiograph, single frontal (ap) view.
+indication: not provided.
+
+technique: single frontal chest radiograph (ap).
+
+findings:
+- imaging features most consistent with pulmonary fibrosis.
+- associated pleural thickening noted.
+- no focal lobar consolidation identified. no large pleural effusion or pneumothorax seen on this single ap view.
+- cardiomediastinal silhouette within limits expected for ap technique.
+
+impression:
+1. pulmonary fibrosis — imaging appearance most consistent with chronic fibrotic change.
+2. pleural thickening.
+3. no acute airspace consolidation, large effusion, or pneumothorax identified on this single frontal view.
+
+recommendation: correlate with prior chest radiographs if available. consider chest ct for further characterization if clinically indicated.",0.11694665688789271,0.42121055722236633,0.5078237056732178,0.1948717948717949,3.0708811710878336,1.0069634066047084
+00020398_016.png,"exam: frontal chest radiograph (ap)
+
+history: not provided.
+
+technique: single frontal ap chest radiograph.
+
+findings:
+- rounded focal pulmonary opacity most suspicious for a pulmonary nodule.
+- imaging features suggest pulmonary interstitial/air‑space edema.
+- no pleural effusion or pneumothorax identified on this view.
+- cardiomediastinal silhouette within expected limits for an ap projection.
+
+impression:
+1. pulmonary nodule — highly likely on this image. recommend correlation with prior radiographs and chest ct for characterization.  
+2. pulmonary edema pattern present. correlate with clinical exam and volume status.  
+3. no radiographic evidence of pleural effusion or pneumothorax on the frontal ap view.
+
+educational use only — not for clinical use.",0.13453050062515784,0.45005789399147034,0.43311354517936707,0.23359073359073357,3.0750436115064783,0.9854470145717696
+00020458_015.png,"exam: portable chest radiograph (ap)
+
+indication: not provided.
+
+technique: single frontal anteroposterior view.
+
+findings:
+- prominent bilateral interstitial and alveolar-type opacities greatest centrally, consistent with pulmonary edema.
+- patchy air‑space air‑opacity in the right/left lung (infiltrate/consolidation) — possible superimposed pneumonia or focal consolidation.
+- no large pleural effusion identified. no pneumothorax detected.
+- cardiomediastinal silhouette not enlarged for ap technique.
+
+impression:
+1. imaging appearance most consistent with pulmonary edema (positive).
+2. superimposed focal air‑space consolidation/infiltrate suspicious for pneumonia (possible).
+3. no large pleural effusion or pneumothorax identified.
+
+correlation with clinical exam and, if concern for infection, consider correlation with laboratory data and follow-up radiograph after therapy or an additional pa/lateral study if clinically feasible.",0.112221669691846,0.37712162733078003,0.3570464849472046,0.2443181818181818,3.4040977730567,1.1681648753375542
+00020725_001.png,"indication: none provided.
+
+technique: frontal chest radiograph (ap).
+
+findings: patchy air‑space infiltration involving the lungs. no pleural effusion or pneumothorax identified. cardiomediastinal size within expected limits for technique. possible focal pulmonary nodule. possible areas of consolidation or subsegmental atelectasis.
+
+impression:
+1. patchy air‑space infiltration — most favored finding.
+2. possible pulmonary nodule (recommend follow-up or correlation with prior imaging).
+3. possible consolidation versus subsegmental atelectasis.
+4. no pleural effusion or pneumothorax.",0.13954997918088902,0.4382707476615906,0.321102499961853,0.20261437908496732,3.373165346620123,1.1549034511872605
+00020779_001.png,"exam: frontal (anteroposterior) chest radiograph
+indication: not provided
+comparison: none available
+
+findings:
+- image demonstrates a pneumothorax (highest probability on zero‑shot classification).
+- possible pleural thickening.
+- no radiographic evidence of focal consolidation, pleural effusion, or cardiomegaly based on the classifier outputs.
+
+impression:
+1. pneumothorax — classifier strongly positive. correlate with clinical exam; consider immediate chest radiograph correlation with expiratory or lateral views and clinical management as indicated.
+2. possible pleural thickening.
+3. no acute cardiopulmonary consolidation or effusion identified on this single frontal view.
+
+limitations: single frontal view only; assessment of pneumothorax size and laterality and exclusion of small effusions is limited. this report is for educational use and not a substitute for a radiologist read.",0.12125902849638698,0.3855527639389038,0.34351205825805664,0.09224441833137485,3.652179060983072,1.3570747712874094
+00021179_010.png,"indication: not provided.
+
+technique: ap chest radiograph.
+
+findings: there is a dominant focal pulmonary opacity consistent with a mass. a smaller nodular opacity is suggested. no pleural effusion identified. no pneumothorax identified.
+
+impression:
+1. pulmonary mass — highly likely.
+2. possible associated pulmonary nodule.
+3. no pleural effusion or pneumothorax.
+
+recommendation: correlate clinically and consider chest ct for further characterization.",0.11425240939959672,0.5637918710708618,0.35770171880722046,0.19293478260869565,2.9241243617961805,0.9233328151393853
+00021222_020.png,"indication: not provided.
+
+technique: single frontal (ap) chest radiograph.
+
+findings: imaging suggests a moderate pleural effusion. patchy air‑space consolidation and interstitial/air‑space edema are possible. mild pleural thickening is also a possible finding. cardiomediastinal silhouette within expected size limits for an ap technique. no pneumothorax identified.
+
+impression:
+1. moderate pleural effusion (most likely finding).
+2. possible air‑space consolidation, interstitial/air‑space edema, and pleural thickening.
+3. no pneumothorax identified.",0.14134061323544514,0.436803936958313,0.30247363448143005,0.09523809523809526,3.5843819867623177,1.3095630992263982
+00021338_000.png,"indication:
+not provided.
+
+technique:
+frontal chest radiograph.
+
+findings:
+patchy air‑space consolidation is present. pleural effusion is present. cardiac silhouette within normal size limits. no pneumothorax identified. mediastinal contours are unremarkable. no acute osseous abnormality.
+
+impression:
+1. pleural effusion.
+2. air‑space consolidation consistent with pneumonia.
+3. possible pleural thickening.",0.20857082506648017,0.5032240748405457,0.2611142098903656,0.1276595744680851,3.4584298516743397,1.2006851548934887
+00021441_004.png,"indication:
+not provided.
+
+technique:
+frontal chest radiograph.
+
+findings:
+moderate pleural effusion layering dependent on the chest. lungs otherwise without focal airspace consolidation. cardiac silhouette within normal size limits. no pneumothorax identified. mediastinal contours unremarkable. no acute osseous abnormality.
+
+impression:
+1. pleural effusion, moderate in size.
+2. no focal airspace consolidation to suggest lobar pneumonia.
+3. no pneumothorax.",0.15932167156129495,0.5788769125938416,0.5712565779685974,0.07894736842105263,2.6919600534184394,0.8279304025647383
+00021449_008.png,"exam: chest radiograph (single frontal anteroposterior view)
+indication: not provided.
+
+technique: single frontal ap radiograph of the chest.
+
+findings:
+- imaging shows a focal pulmonary opacity most consistent with a mass.
+- additional discrete nodular opacity is present.
+- pleural thickening is noted.
+- there is a possible pleural effusion (probability in the possible range).
+- no radiographic evidence of pneumothorax. no cardiomegaly identified. no imaging signs strongly supporting atelectasis.
+
+impression:
+1. pulmonary mass (highest-probability finding on image classification). correlate clinically and with prior imaging if available. recommend ct chest for characterization and staging as clinically indicated.
+2. pulmonary nodule.
+3. pleural thickening.
+4. possible pleural effusion.
+5. no acute pneumothorax or cardiomegaly identified. low likelihood of atelectasis on this view.
+
+this report is image-based and educational only. correlate with clinical history and prior studies; consider dedicated chest ct for further evaluation.",0.10918117878702584,0.3865354359149933,0.3390156924724579,0.11428571428571428,3.6139974934930175,1.3324792076530645
+00021463_001.png,"indication: not provided.
+
+technique: single frontal chest radiograph (anteroposterior view as supplied).
+
+findings:
+- imaging demonstrates a large air‑ and soft‑tissue containing opacity projecting from the region of the diaphragm into the lower thorax, most consistent with a diaphragmatic/hiatal hernia.
+- lungs without focal lobar consolidation to suggest pneumonia.
+- no sizable pleural effusion identified. no pneumothorax evident on this frontal view.
+- cardiomediastinal silhouette within expected size limits for a single frontal image.
+
+impression:
+1. radiographic appearance most consistent with a diaphragmatic/hiatal hernia projecting into the thorax (high likelihood by zero‑shot classifier).
+2. no acute cardiopulmonary process identified on this frontal view—no focal consolidation, large effusion, or pneumothorax detected.
+
+recommendation: correlate with clinical history and prior imaging. consider dedicated chest radiographs with lateral view or chest ct if further characterization of the hernia or associated complications is clinically required.",0.09519118222838308,0.3444520831108093,0.24511703848838806,0.19384615384615383,3.7801560128028022,1.3962900797944762
+00021845_005.png,"indication:
+not provided.
+
+technique:
+frontal ap chest radiograph.
+
+findings:
+cardiac silhouette is enlarged. lungs clear of focal airspace consolidation. no pleural effusion or pneumothorax. mediastinal contours are within expected limits. no acute osseous abnormality identified.
+
+impression:
+1. cardiomegaly — cardiac silhouette enlarged.
+2. no acute airspace consolidation, pleural effusion, or pneumothorax identified.",0.2529289702131094,0.6253450512886047,0.5969701409339905,0.41784989858012167,2.0322302337296536,0.3036326030315423
+00022048_000.png,"indication: clinical indication not provided.
+
+technique: single frontal ap chest radiograph.
+
+findings: cardiomediastinal silhouette within expected limits for ap technique. lungs clear of focal airspace consolidation. no pleural effusion. no pneumothorax identified.
+
+impression:
+1. no acute cardiopulmonary disease identified.
+2. no pleural effusion or pneumothorax.
+3. cardiomediastinal silhouette within expected limits for ap technique.",0.20789501913959083,0.5530771613121033,0.7809211611747742,0.24617996604414263,2.145773446745795,0.4537126445702636
+00022235_002.png,"indication: clinical history not provided.
+
+technique: single frontal ap chest radiograph.
+
+findings:
+- pneumothorax identified.
+- focal mass-like opacity projecting within the thorax.
+- possible pleural thickening.
+- no pleural effusion identified. cardiomediastinal size within expected limits on the single frontal view.
+
+impression:
+1. pneumothorax.
+2. focal pulmonary/mediastinal mass-like opacity.
+3. possible pleural thickening.
+
+recommendation: correlate with clinical exam. consider upright/lateral views and chest ct for confirmation, sidedness, and further characterization of the mass.",0.17503151326555638,0.4660857915878296,0.5421449542045593,0.20512820512820515,2.8966893052438345,0.8859680790423131
+00022559_007.png,"indication:
+not provided.
+
+technique:
+frontal chest radiograph.
+
+findings:
+reticular interstitial/linear opacities throughout the lungs, most suggestive of chronic interstitial change. lungs show mild hyperinflation. subtle focal rounded opacity in the lungs suspicious for a small nodule. mild pleural surface irregularity/pleural thickening. no pleural effusion identified. cardiomediastinal silhouette within expected limits. no acute osseous abnormality identified. a small pneumothorax cannot be excluded on a single frontal view.
+
+impression:
+1. imaging appearance most consistent with pulmonary fibrosis / chronic interstitial change.
+2. possible pulmonary nodule—further evaluation with dedicated chest radiographs or ct recommended.
+3. possible pleural thickening.
+4. mild hyperinflation, raising possibility of emphysematous change.
+5. small pneumothorax cannot be excluded on this frontal view; correlate clinically and consider additional views or ct if suspected.",0.08295658533072574,0.3678261339664459,0.273056298494339,0.11451814768460575,3.7747835975401056,1.4286904804678073
+00022611_004.png,"indication: none provided.
+
+technique: single frontal chest radiograph (ap).
+
+findings:
+- image limited to a single ap view.
+- imaging analysis indicates pleural effusion and pleural thickening.
+- patchy air‑space opacity which may represent consolidation or pneumonia.
+- no pneumothorax identified.
+- cardiomediastinal contours are suboptimally assessed on ap technique.
+
+impression:
+1. pleural effusion — imaging most consistent with a true effusion.
+2. pleural thickening — probable.
+3. patchy consolidation/pneumonia — possible; differential includes focal air‑space disease.
+4. no pneumothorax identified. cardiomediastinal size assessment limited by ap view.
+
+recommendation: correlate with clinical history. consider upright frontal and lateral radiographs or chest radiograph comparison; chest ct if further characterization is required.",0.1210178041632103,0.4440024793148041,0.31435346603393555,0.16847826086956522,3.409569822267663,1.1946618486162963
+00022730_003.png,"exam: chest radiograph (single anteroposterior view)
+image file: <WORKSPACE>/data/100_datasets_per_class_nih_chest_xray/nih_subset/pneumothorax/00022730_003.png
+indication: not provided.
+
+technique: ap chest radiograph.
+
+findings:
+- focal increased opacity consistent with atelectatic subsegmental collapse.
+- a rounded/concave focal opacity suspicious for a mass.
+- mild pleural thickening is possible.
+- no radiographic evidence of a pleural effusion.
+- no pneumothorax identified on this ap view.
+- cardiomediastinal silhouette within expected size limits for ap technique.
+
+impression:
+1. atelectasis — most likely (positive on model).
+2. focal opacity suspicious for pulmonary/mediastinal mass — further evaluation recommended (positive on model).
+3. possible pneumonia and pleural thickening (model indicates these as possible).
+4. no pleural effusion or pneumothorax identified on this ap radiograph.
+
+recommendation: correlate with clinical exam. if mass is suspected clinically or persistent, consider chest ct for characterization and targeted evaluation; follow-up radiographs after clinical treatment if infection/atelectasis suspected.
+
+(educational use only — not for clinical decision making.)",0.09288002583078314,0.18250833451747894,0.16795054078102112,0.2016806722689075,4.398041372184606,1.730641539059852
+00022826_001.png,"indication: none provided.
+technique: ap chest radiograph.
+
+findings: radiographic evidence of pneumothorax with a visible pleural line and loss of peripheral lung markings. no pleural effusion identified. cardiomediastinal silhouette within expected limits for ap technique. no focal lobar airspace consolidation identified.
+
+impression:
+1. pneumothorax — radiographic evidence of air in the pleural space (high confidence).
+2. no pleural effusion identified.",0.13427153888239368,0.48934194445610046,0.467106431722641,0.12061403508771931,3.0724629384530937,1.027460391499526
+00022837_028.png,"indication: not provided.
+
+technique: frontal chest radiograph (ap view).
+
+findings: model-detected pneumothorax. focal pulmonary opacity labeled as mass. additional low-to-moderate probability for a pulmonary nodule. no pleural effusion identified. cardiomediastinal silhouette within expected size limits for an ap view.
+
+impression:
+1. pneumothorax detected on the frontal ap radiograph (highest model probability).  
+2. focal pulmonary mass identified (high model probability).  
+3. possible pulmonary nodule (moderate probability; differential includes a nodule).  
+4. no pleural effusion or cardiomegaly identified.
+
+recommend correlation with clinical exam and upright pa and lateral chest radiographs or chest ct for confirmation and better characterization as clinically indicated.",0.06711000765613381,0.3576783537864685,0.3489072918891907,0.0975609756097561,3.6788615788541312,1.391103821364186
+00023075_011.png,"indication: not provided.
+
+technique: single frontal chest radiograph (anteroposterior view).
+
+findings:
+- pleural_thickening: visualized with the highest model probability.
+- mass: focal pulmonary/mediastinal density favored by the model.
+- pneumothorax: model indicates presence.
+- no large effusion or cardiogenic pulmonary edema identified on this view.
+
+impression:
+1) pleural thickening.
+2) pulmonary mass.
+3) pneumothorax.
+
+recommendation: correlate with clinical exam and prior imaging. consider dedicated chest radiographs with decubitus/expiration views or chest ct for characterization and to confirm the pneumothorax if clinically indicated.",0.11510439339618048,0.47921013832092285,0.5243002772331238,0.21096345514950163,2.838560072907839,0.8747870437024619
+00023075_027.png,"indication: no clinical history provided.
+
+technique: single frontal chest radiograph (ap).
+
+findings:
+- imaging features most consistent with a pulmonary/pleural mass (highest probability).
+- imaging also shows features consistent with pneumothorax.
+- possible pleural thickening and small pleural effusion.
+- no convincing evidence of cardiomegaly, consolidation, or large infiltrate per model output.
+
+impression:
+1. pneumothorax — model-positive. recommend clinical correlation and urgent evaluation if the patient is symptomatic.
+2. pulmonary/pleural mass — highest-probability finding; consider targeted chest ct for characterization.
+3. possible pleural thickening and small effusion.
+recommendation: correlate with clinical exam. recommend upright chest radiographs and/or chest ct for confirmation, side/localization, and further characterization prior to management.
+
+note: findings derived from automated zero-shot image classification and should be confirmed by radiologist review. educational use only — not for clinical use.",0.0787981619506279,0.36335232853889465,0.3447078764438629,0.13043478260869565,3.6257580025672325,1.344979425009278
+00023078_000.png,"indication: not provided.
+
+technique: single frontal chest radiograph (ap).
+
+findings: a solitary rounded pulmonary opacity projecting within the lung consistent with a pulmonary nodule (highest model probability). focal increased air‑space opacity that may reflect subsegmental atelectasis or consolidation (possible). no pleural effusion identified. no pneumothorax. cardiomediastinal silhouette within expected limits for ap technique.
+
+impression:
+1. solitary pulmonary nodule.
+2. possible focal consolidation or subsegmental atelectasis.
+3. no pleural effusion or pneumothorax.
+
+recommend comparison with prior imaging and/or chest ct for further characterization of the nodule.",0.17656541675180248,0.4366360604763031,0.38103047013282776,0.2891891891891892,3.1546746464768436,0.9901830503680915
+00023313_002.png,"indication: not provided.
+
+technique: frontal ap chest radiograph.
+
+findings:
+- pneumothorax identified on the frontal ap view.
+- a mass-like opacity projecting within the thorax, suspicious for a pulmonary or mediastinal mass.
+- no pleural effusion identified. no focal lobar consolidation evident. cardiomediastinal silhouette within expected limits for ap technique.
+
+impression:
+1. pneumothorax.
+2. pulmonary or mediastinal mass-like opacity.
+3. no pleural effusion or focal consolidation identified on this ap view.
+
+recommendation: correlate with clinical exam and consider upright pa and lateral radiographs or chest ct for characterization and confirmation.",0.12005489478786666,0.4388130307197571,0.354765385389328,0.08333333333333333,3.4840933779448724,1.2690520457829737
+00023316_002.png,"indication: not provided.
+
+technique: frontal chest radiograph, ap view.
+
+findings: there is radiographic evidence of a pneumothorax on the frontal ap image. lungs show hyperlucency and mild hyperinflation suggestive of emphysematous change (possible). no pleural effusion identified. no focal lobar consolidation to suggest acute pneumonia.
+
+impression:
+1. pneumothorax — present.
+2. possible emphysematous change/hyperinflation.
+3. no pleural effusion or focal consolidation identified.
+
+correlation with upright and/or expiratory views and clinical exam recommended for pneumothorax sizing and management.",0.08131305618461816,0.4777156114578247,0.23262782394886017,0.18166383701188457,3.4119023138029956,1.2038861436641033
+00024039_000.png,"exam: chest radiograph, ap view.
+
+indication: not provided.
+
+technique: single frontal (anteroposterior) chest radiograph.
+
+findings:
+- x-ray chest anteroposterior fibrosis — imaging most consistent with fibrosis.
+- possible: x-ray chest anteroposterior pneumonia; x-ray chest anteroposterior infiltration; x-ray chest anteroposterior nodule; x-ray chest anteroposterior hernia.
+- no radiographic evidence to suggest x-ray chest anteroposterior effusion, x-ray chest anteroposterior pneumothorax, x-ray chest anteroposterior cardiomegaly, or x-ray chest anteroposterior edema.
+
+impression:
+1) fibrosis (positive).  
+2) possible pneumonia, infiltration, pulmonary nodule, and hernia—correlate clinically and with prior imaging. consider dedicated pa/lateral radiographs or chest ct if further characterization is required.",0.06471587386334907,0.24634118378162384,0.323413610458374,0.125,4.016415868576806,1.5660971401240156
+00024083_000.png,"indication: not provided.
+
+technique: single frontal chest radiograph (anteroposterior view).
+
+comparison: none available.
+
+findings:
+- no cardiomegaly identified.
+- patchy air‑space opacity noted consistent with pneumonia (model score highest).
+- pleural thickening is present (model-supported).
+- imaging features suggest chronic interstitial change/fibrosis.
+- additional focal infiltration is possible.
+- no large pleural effusion or pneumothorax identified.
+
+impression:
+1. findings most suggestive of air‑space opacity compatible with pneumonia.
+2. pleural thickening and imaging features suggest chronic interstitial change / fibrosis.
+3. possible superimposed infiltration (cannot exclude evolving/ongoing infectious or inflammatory process).
+4. no large effusion or pneumothorax identified. heart size within expected limits on ap view.
+
+recommendation: correlate with clinical presentation and prior imaging if available. consider pa and lateral radiographs or chest ct for further characterization if clinically indicated.",0.08032869295250453,0.36471879482269287,0.6472123861312866,0.19696969696969696,2.950308234084618,0.9589503110977465
+00024466_000.png,"indication: none provided. image: <WORKSPACE>/data/100_datasets_per_class_nih_chest_xray/nih_subset/hernia/00024466_000.png
+
+technique: single frontal chest radiograph (ap technique).
+
+findings:
+- rounded, air-containing retrocardiac/mediastinal opacity with an apparent air–fluid level, most consistent with a hiatal/paraesophageal hernia.
+- cardiomediastinal silhouette within expected size for ap technique.
+- no focal lobar airspace consolidation identified.
+- no pleural effusion detected on this frontal view.
+- no pneumothorax identified.
+
+impression:
+1) imaging features most suggestive of a hiatal/paraesophageal hernia — retrocardiac air-containing structure with probable air–fluid level.  
+2) no acute cardiopulmonary consolidation, pleural effusion, or pneumothorax identified on this frontal radiograph.
+
+recommendation: correlate with clinical history and prior imaging. consider dedicated upright chest and/or supine/erect abdominal radiographs or ct if further evaluation of the suspected hernia is needed.",0.13343062490356697,0.31060269474983215,0.22437216341495514,0.2535014005602241,3.8534062933779767,1.3985229118519047
+00024740_000.png,"indication: no clinical history provided.
+
+technique: single frontal ap chest radiograph.
+
+findings:
+- patchy air‑space opacity in the mid to lower lungs consistent with pulmonary infiltration.
+- no dense lobar consolidation identified.
+- no pleural effusion or pneumothorax detected on this frontal ap view.
+- cardiomediastinal silhouette not enlarged for ap technique.
+
+impression:
+1. pulmonary infiltration in the mid-to-lower lungs — most likely inflammatory/infectious (differential includes pneumonia) but chronic/organizing fibrosis cannot be excluded. (confidence: medium)
+2. no acute large pleural effusion or pneumothorax identified. (confidence: high)
+3. cardiomediastinal size within expected limits for ap technique. (confidence: high)
+
+recommendation: correlate with clinical exam and prior imaging if available. consider pa and lateral radiographs or chest radiograph follow-up and/or chest ct if clinical concern for infection or focal mass persists.",0.12356041264304313,0.4270922541618347,0.2842750549316406,0.24464285714285713,3.397601895722616,1.1576577681159825
+00025461_002.png,"exam: portable ap chest radiograph
+indication: none provided.
+technique: single frontal (ap) view.
+
+findings:
+- imaging shows a high probability of atelectasis.
+- pneumonia is a possible secondary consideration.
+- no cardiomegaly identified. no pleural effusion detected. other listed findings (mass, nodule, pneumothorax, edema, emphysema, fibrosis, hernia) not supported by the model.
+
+impression:
+1. atelectasis — high likelihood on this ap view.
+2. pneumonia — possible, cannot be excluded.
+recommendation: correlate with clinical exam and prior imaging; consider dedicated pa and lateral radiographs or chest ct if concern for focal consolidation or underlying mass.",0.13572417850765922,0.4296081066131592,0.4250135123729706,0.16138763197586725,3.2673537869825298,1.1171726152251653
+00025556_017.png,"exam: chest radiograph, single frontal view.
+
+findings:
+- probabilistic model indicates prominent air‑space consolidation (highest score: consolidation).
+- no pleural effusion identified.
+- no cardiomegaly identified.
+- small pneumothorax cannot be excluded (model flagged as possible).
+
+impression:
+1. air‑space consolidation (most likely finding on this frontal radiograph). correlate for infectious or inflammatory process vs. atelectasis.  
+2. possible small pneumothorax—if clinically suspected, obtain dedicated upright lateral/expiratory views or chest ct for confirmation.  
+3. no radiographic evidence of pleural effusion or cardiomegaly on this single frontal view.
+
+limitations: single frontal image only; localization and subtle findings limited. this report is for educational use only — not for clinical decision making.",0.08949387307563465,0.3612038493156433,0.1675870567560196,0.08703703703703704,4.040634312112212,1.5787605935613984
+00025628_016.png,"indication: not provided.
+
+technique: single frontal (ap) chest radiograph.
+
+findings: moderate pleural effusion layering along the dependent pleural space. no pneumothorax identified. cardiomediastinal silhouette within expected size for a frontal technique. there is suggestion of pleural thickening and a focus of air‑space opacity that could represent consolidation.
+
+impression:
+1. pleural effusion — high confidence.
+2. possible pleural thickening.
+3. possible focal consolidation/air‑space process (cannot exclude pneumonia).
+
+single ap view limits sensitivity for small effusions or pneumothorax; consider lateral/upright radiographs or chest ultrasound for further evaluation.",0.15898026693500447,0.4789544343948364,0.1726899892091751,0.07142857142857141,3.751076994248608,1.398732253666828
+00025935_001.png,"indication: not provided.
+
+technique: single frontal (anteroposterior) chest radiograph.
+
+findings: patchy air‑space opacity/infiltration projected throughout the lungs, greatest on the radiograph centrally. no pleural effusion identified. no pneumothorax. cardiomediastinal silhouette within expected size limits for a single frontal view.
+
+impression:
+1. patchy pulmonary air‑space infiltration — suspicious for acute air‑space process (infiltration).
+2. pneumonia is a possible differential consideration (pneumonia).
+3. no pleural effusion or pneumothorax. cardiomediastinal size within expected limits.",0.1407605051622074,0.4229217767715454,0.6447142958641052,0.1845238095238095,2.8427287378252357,0.880849042041947
+00026024_004.png,"indication:
+not provided.
+
+technique:
+frontal chest radiograph.
+
+findings:
+patchy airspace consolidation is present. retrocardiac density consistent with a hiatal hernia. small pleural effusion cannot be excluded. cardiac silhouette within normal size limits. no pneumothorax identified. mediastinal contours unremarkable. no acute osseous abnormality.
+
+impression:
+1. hiatal (likely hiatal) hernia.
+2. patchy airspace consolidation.
+3. possible small pleural effusion.
+4. no pneumothorax identified.",0.1826543149527315,0.5342796444892883,0.22210285067558289,0.10526315789473685,3.4551264303669083,1.2161129928694352
+00026132_011.png,"indication: not provided.
+
+technique: frontal anteroposterior (ap) chest radiograph.
+
+findings: patchy air‑space consolidation/infiltration in the lungs. pneumothorax is present. no pleural effusion identified. cardiomediastinal silhouette within expected size limits for technique.
+
+impression:
+1. patchy air‑space consolidation/infiltration.
+2. pneumothorax.
+3. no pleural effusion or cardiomegaly identified.
+
+recommendation: correlate with clinical status. consider immediate clinical evaluation for pneumothorax and follow-up radiograph or chest ct as indicated.",0.179984349867379,0.45832112431526184,0.5191224813461304,0.18956043956043955,2.9914630339110753,0.9410736842777988
+00026232_040.png,"exam: chest radiograph (single frontal view provided: <WORKSPACE>/data/100_datasets_per_class_nih_chest_xray/nih_subset/effusion/00026232_040.png)
+
+indication: not provided.
+
+technique: single frontal chest radiograph (ap view as supplied).
+
+findings:
+- radiographic evidence of air‑space consolidation.
+- moderate probability of pleural effusion.
+- no radiographic evidence of pneumothorax or cardiomegaly identified on the frontal view.
+- no focal mass, nodule, or acute osseous abnormality confidently identified on this view.
+
+impression:
+1. air‑space consolidation — most suggestive of focal consolidation (e.g., pneumonia or aspiration) given the imaging appearance.
+2. pleural effusion — present radiographically.
+3. no pneumothorax detected on this frontal view. cardiomediastinal size appears within expected limits for a single frontal image.
+
+recommendation: correlate with clinical presentation and prior chest radiographs. consider lateral radiograph or chest ct if clarification of effusion size, loculation, or extent of consolidation is needed.",0.08856148855400955,0.20674364268779755,0.26747778058052063,0.06382978723404255,4.354612286836488,1.7632800847085903
+00026695_000.png,"indication: not provided.
+
+technique: single frontal chest radiograph (ap).
+
+findings: there is a single focal rounded pulmonary opacity consistent with a mass. the cardiomediastinal silhouette is within expected limits for the ap technique. no pleural effusion or pneumothorax identified.
+
+impression:
+1. focal pulmonary mass — radiographic appearance most consistent with a mass (zero-shot classifier: ""x-ray chest anteroposterior mass"" high probability).
+2. no pleural effusion or pneumothorax.
+
+recommendation: correlate with prior imaging if available and consider chest ct for further characterization.",0.16594796272900447,0.41849637031555176,0.6228388547897339,0.2618181818181818,2.7921882684711994,0.813667558866325
+00026828_020.png,"indication: not provided.
+
+technique: single frontal chest radiograph (ap).
+
+findings: pneumothorax is present on this frontal view. moderate probability pleural effusion. possible pleural thickening. no focal lobar air‑space consolidation identified. cardiomediastinal silhouette not enlarged for technique. no radiographic edema detected.
+
+impression:
+1. pneumothorax.
+2. pleural effusion (moderate probability).
+3. possible pleural thickening.
+4. no focal consolidation or radiographic pulmonary edema identified.
+
+correlation with clinical history and additional imaging (e.g., upright pa and lateral views or chest ct) recommended to localize and quantify findings.",0.08556272074312186,0.45835745334625244,0.023552900180220604,0.07692307692307691,4.031312795732743,1.574250192307928
+00026966_002.png,"indication:
+not provided.
+
+technique:
+frontal chest radiograph.
+
+findings:
+pleural effusion is present. there is a focal rounded pulmonary opacity suspicious for a mass. patchy air‑space opacity is seen and may reflect consolidation versus atelectasis. cardiomediastinal silhouette is within expected size for technique. no pneumothorax. no acute osseous abnormality identified.
+
+impression:
+1. pleural effusion.
+2. focal pulmonary opacity suspicious for mass — consider chest ct for further evaluation.
+3. patchy air‑space opacity; differential includes consolidation versus atelectasis.
+4. no pneumothorax. cardiomediastinal silhouette within expected limits.",0.13074409009212268,0.4481015205383301,0.21674089133739471,0.16846846846846844,3.5870566034889633,1.2850093867933505
+00027079_007.png,"exam: chest radiograph, single frontal (anteroposterior) view.
+history/indication: none provided.
+
+technique: ap frontal chest radiograph.
+
+findings:
+- imaging-supported pneumothorax identified (highest probability).
+- possible pulmonary mass suggested.
+- possible pleural thickening.
+- no radiographic evidence of large pleural effusion or overt cardiogenic pulmonary edema.
+- no convincing consolidation identified.
+
+impression:
+1) pneumothorax — imaging-positive. correlate clinically; consider chest radiograph with expiratory and/or upright views or chest ct as indicated for sizing and side confirmation. 
+2) possible pulmonary mass — recommend correlation with prior imaging and follow-up chest radiograph or ct for characterization.
+3) possible pleural thickening. 
+
+(educational use only — not for clinical decision-making.)",0.17219057955454922,0.408981055021286,0.4021261930465698,0.16422764227642278,3.3938361813594735,1.1704559175068858
+00027731_000.png,"exam: chest radiograph (frontal ap)
+
+history/indication: not provided.
+
+technique: single frontal (anteroposterior) chest radiograph.
+
+findings:
+- imaging demonstrates findings most consistent with pleural effusion and air‑space consolidation.
+- no radiographic evidence of pneumothorax.
+- cardiomediastinal silhouette within expected size limits for ap technique.
+
+impression:
+1. pleural effusion — most conspicuous finding (positive on zero‑shot classification).
+2. air‑space consolidation consistent with pneumonia.
+3. no pneumothorax identified. cardiomediastinal size within expected limits.
+
+recommendation: correlate with clinical exam and prior imaging. if localization or extent of effusion/consolidation needs clarification, consider lateral radiograph or chest ct as clinically indicated.",0.10854507082585142,0.3979911208152771,0.23094625771045685,0.10000000000000002,3.804218394594759,1.438860864580031
+00027779_000.png,"indication:
+not provided.
+
+technique:
+frontal chest radiograph.
+
+findings:
+patchy airspace infiltration is present. subtle rounded nodular-appearing opacity is identified. linear subsegmental opacity suggesting atelectasis or scarring is present. no pleural effusion or pneumothorax. cardiomediastinal silhouette within normal size limits. no acute osseous abnormality identified.
+
+impression:
+1. patchy pulmonary airspace infiltration.  
+2. possible pneumonia — differential includes infectious or inflammatory process.  
+3. possible small pulmonary nodule.  
+4. subsegmental atelectasis or scarring cannot be excluded.  
+5. no pleural effusion or pneumothorax. cardiac size within expected limits.",0.11754058649540683,0.4417743682861328,0.17476922273635864,0.1923076923076923,3.637420916985916,1.3075217741368783
+00027817_004.png,"indication: not provided.
+
+technique: single frontal (anteroposterior) chest radiograph.
+
+findings:
+- imaging demonstrates pneumothorax (identified as the highest-probability finding).
+- possible small pleural effusion.
+- possible pleural thickening.
+- no acute focal air‑space consolidation identified.
+- cardiomediastinal size within expected limits for frontal technique.
+
+impression:
+1. pneumothorax — present.
+2. possible pleural effusion.
+3. possible pleural thickening.
+4. no acute focal consolidation or cardiomegaly identified on the frontal ap view.
+
+correlation with clinical exam and comparison radiographs (or dedicated lateral/expiration views) recommended to confirm size and laterality of pneumothorax and to further evaluate pleural findings.",0.17675809799025788,0.42078423500061035,0.38759171962738037,0.05660377358490566,3.559818040155264,1.2994441747264134
+00027818_000.png,"exam: chest radiograph
+
+indication: not provided.
+
+technique: single frontal (anteroposterior) view.
+
+findings:
+- pneumothorax present (high confidence).
+- patchy pulmonary infiltration suggested (possible).
+- no pleural effusion identified.
+- cardiomediastinal silhouette within expected size for technique.
+
+impression:
+1. pneumothorax — image shows a pneumothorax with high model probability.
+2. possible pulmonary infiltration.
+3. no pleural effusion identified.
+
+correlation with clinical exam is suggested; consider dedicated upright/expiratory radiographs or chest ct if precise size/localization of the pneumothorax is required.",0.108094949066235,0.5081660151481628,0.5700874328613281,0.20077972709551656,2.676809397014558,0.7941185472060784
+00028097_008.png,"exam: chest radiograph (single frontal ap view)
+indication: none provided
+technique: single frontal (ap) chest radiograph.
+
+findings:
+- imaging shows a pleural effusion (highest model probability).
+- cardiomediastinal silhouette appears enlarged by model assessment (possible cardiomegaly).
+- no strong evidence of consolidation, pneumothorax, or focal mass on this view.
+
+impression:
+1. pleural effusion — positive on this frontal ap radiograph.
+2. possible cardiomegaly.
+
+recommendation: correlate with clinical presentation. consider upright and lateral chest radiographs or chest ultrasound for effusion characterization and lateralizing, and follow-up imaging or echocardiography if cardiomegaly is clinically suspected.",0.10652393300977037,0.46251463890075684,0.5066626071929932,0.14814814814814817,3.015542325717531,0.9981128321335149
+00028485_007.png,"indication: no clinical indication provided.
+
+technique: single frontal (ap) chest radiograph.
+
+findings:
+- patchy air‑space consolidation.
+- pleural effusion.
+- no pneumothorax identified.
+- cardiomediastinal silhouette within expected size for technique.
+
+impression:
+1. air‑space consolidation — most consistent with an air‑space process; differential includes pneumonia.
+2. pleural effusion.
+3. no pneumothorax. cardiomediastinal size within expected limits.
+
+correlation with clinical exam and prior imaging (if available) recommended to assess acuity and volume of effusion.",0.15217718205053643,0.4812543988227844,0.37882140278816223,0.1142857142857143,3.28503525909595,1.136515255788455
+00028637_000.png,"indication: not provided.
+technique: single frontal (ap) chest radiograph.
+findings: pleural effusion. no focal airspace consolidation to suggest lobar pneumonia. no pneumothorax identified. cardiomediastinal silhouette not enlarged for technique; no cardiomegaly identified.
+impression:
+1. pleural effusion.
+2. no focal airspace consolidation to suggest pneumonia.
+3. no pneumothorax. cardiomediastinal size within expected limits for ap technique.",0.13797661494548216,0.45682817697525024,0.2952538728713989,0.075,3.5673950498426223,1.3088889973984956
+00028640_001.png,"exam: chest radiograph (image: <WORKSPACE>/data/100_datasets_per_class_nih_chest_xray/nih_subset/nodule/00028640_001.png)
+indication: not provided.
+
+technique: single frontal (ap) chest radiograph (image file provided).
+
+findings:
+- focal rounded pulmonary opacity most consistent with a pulmonary nodule (see image).
+- no image features to suggest large pleural effusion or pneumothorax.
+- cardiomediastinal silhouette within expected limits for a frontal view.
+- mild probabilities for consolidation/atelectasis.
+
+impression:
+1) pulmonary nodule identified (highest probability finding by zero-shot model). correlate with prior imaging if available. consider dedicated chest radiographs or chest ct for characterization and stability.
+2) possible superimposed consolidation or atelectasis (model indicates probability); correlate clinically.
+3) no acute large effusion or pneumothorax identified on this frontal view.
+
+this is an ai-assisted, educational read — not for clinical diagnosis. correlate with prior studies and clinical context.",0.09733152211308725,0.22863994538784027,0.18481092154979706,0.27705627705627706,4.111010992323204,1.5438542210052337
+00028811_003.png,"indication: not provided.
+
+technique: single frontal chest radiograph (ap).
+
+findings: imaging demonstrates evidence of pulmonary interstitial/alveolar edema. patchy air‑space opacity suggesting consolidation/atelectasis is present to a lesser degree. pleural effusion is possible but not clearly identified. no pneumothorax. cardiomediastinal silhouette without evidence of cardiomegaly.
+
+impression:
+1. pulmonary interstitial/alveolar edema — positive on this study.
+2. possible focal consolidation/atelectasis; pneumonia is in the differential.
+3. possible pleural effusion (not definitively seen on this frontal view).
+4. no pneumothorax or cardiomegaly identified.
+
+recommend correlation with clinical exam and prior imaging; consider pa and lateral radiographs or chest radiograph follow-up as clinically indicated.",0.15538115130441452,0.34913673996925354,-0.02503221668303013,0.12906784335355764,4.41805305451015,1.7379562817394751
+00029159_005.png,"indication:
+not provided.
+
+technique:
+frontal chest radiograph.
+
+findings:
+rounded focal opacity projects over the right mid lung. diffuse bilateral reticular and linear interstitial opacities, greater at the lung bases. no focal lobar air‑space consolidation identified. no pleural effusion or pneumothorax. cardiomediastinal silhouette within expected size limits for technique. transvenous cardiac leads and a subcutaneous port project over the chest. no acute osseous abnormality identified.
+
+impression:
+1. rounded opacity in the right mid lung, suspicious for a pulmonary mass — recommend chest ct for further characterization.
+2. diffuse bilateral reticular/linear interstitial opacities, greater at the bases, which may reflect chronic interstitial change or scarring.
+3. no focal consolidation, pleural effusion, or pneumothorax identified.
+4. transvenous cardiac leads and a subcutaneous port project over the chest.",0.17872780670671748,0.4024181067943573,0.4025871157646179,0.2841342486651411,3.226857558811912,1.0315221526746619
+00029213_003.png,"indication: not provided.
+
+technique: frontal chest radiograph (ap).
+
+findings: patchy consolidation of the lungs consistent with air‑space opacification. possible small pleural effusion. no cardiomegaly identified. no pneumothorax.
+
+impression:
+1. consolidation consistent with air‑space process.
+2. possible small pleural effusion.
+3. no pneumothorax or cardiomegaly identified on this frontal ap radiograph.",0.12630885540605702,0.3930027484893799,0.2795708477497101,0.11764705882352941,3.712781145246929,1.3767511234597087
+00029813_010.png,"indication:
+not provided.
+
+technique:
+frontal chest radiograph.
+
+findings:
+there is a pneumothorax identified on the frontal image. lungs otherwise without focal airspace consolidation. no pleural effusion identified. cardiomediastinal silhouette within expected size limits. no acute osseous abnormality.
+
+impression:
+1. pneumothorax.
+2. no pleural effusion. no focal consolidation identified.",0.20550493309503587,0.615632176399231,0.6067409515380859,0.18205128205128204,2.3839940460906144,0.6035676191696935
+00029813_026.png,"indication: no clinical history provided.
+
+technique: single frontal ap chest radiograph.
+
+findings: cardiomediastinal silhouette within expected size for ap technique. there is layering opacity at the lung bases with blunting of the costophrenic sulci, consistent with pleural effusion. pleural thickening is also noted. no focal lobar consolidation identified on this view. a small pneumothorax cannot be excluded on a single frontal ap image.
+
+impression:
+1. pleural effusion — present.
+2. pleural thickening.
+3. possible small pneumothorax; consider additional views (upright or expiratory) or chest ct if clinically indicated.
+4. no radiographic cardiomegaly or focal lobar consolidation identified on this view.",0.0993227325042359,0.44429999589920044,0.3914194405078888,0.16883116883116886,3.248251329022207,1.1170681970009142
+00029866_007.png,"exam: chest radiograph (single frontal view).  
+image: <WORKSPACE>/data/100_datasets_per_class_nih_chest_xray/nih_subset/nodule/00029866_007.png
+
+indication: not provided.
+
+technique: single frontal chest radiograph (ap view likely).
+
+findings:
+- radiographic evidence of pneumothorax.
+- areas of atelectasis.
+- possible focal air‑space consolidation; pneumonia cannot be excluded.
+- no large pleural effusion identified. cardiomediastinal silhouette within expected limits for a single frontal view.
+
+impression:
+1. pneumothorax — radiographic evidence on the provided frontal view.  
+2. atelectasis.  
+3. possible consolidation/pneumonia (cannot be excluded).  
+4. no large pleural effusion identified.
+
+recommend correlation with clinical exam and, if clinically important, dedicated frontal+lateral radiographs or chest ct for confirmation and sizing of pneumothorax.",0.0993227325042359,0.24975384771823883,0.3082590103149414,0.1497326203208556,4.0199408333971585,1.5447412645502716
+00029950_006.png,"indication: not provided.
+
+technique: single frontal chest radiograph (anteroposterior view).
+
+findings: there is imaging evidence of a pneumothorax. lungs otherwise show no focal airspace consolidation. no pleural effusion identified. there are imaging features that may reflect emphysematous change (possible). cardiomediastinal silhouette within expected size limits on this ap view.
+
+impression:
+1. pneumothorax.
+2. possible emphysematous change.
+3. no pleural effusion or focal consolidation identified on this ap radiograph.",0.16657655221473325,0.45546677708625793,0.44653069972991943,0.14604236343366778,3.19562484912174,1.0721874396471072
+00029976_007.png,"indication: not provided.
+
+technique: single frontal (ap) chest radiograph.
+
+findings: frontal ap projection. imaging demonstrates pleural thickening. a pneumothorax is identified. a small pleural effusion cannot be excluded. no focal lobar air‑space consolidation identified. cardiomediastinal silhouette within expected size for ap technique.
+
+impression:
+1. pneumothorax.
+2. pleural thickening.
+3. possible small pleural effusion.
+
+recommend correlation with clinical exam and a dedicated upright or expiratory radiograph (or chest radiograph with lateral view/ct) if characterization or side/size assessment is required.",0.17544159644157914,0.3969045877456665,0.17718222737312317,0.0824915824915825,3.983790392251204,1.515939266265965
+00030235_000.png,"indication: not provided.
+
+technique: single frontal (anteroposterior) chest radiograph.
+
+findings: rounded focal mass-like opacity projecting within the thorax. patchy air-space consolidation. soft-tissue/air-density projecting from the upper abdomen into the chest compatible with a hernia. no pleural effusion or pneumothorax identified. cardiomediastinal silhouette within expected limits for ap technique.
+
+impression:
+1. focal thoracic mass-like opacity—radiographic appearance concerning for a pulmonary or intrathoracic mass; recommend further characterization (chest radiograph lateral and/or chest ct) and clinical correlation.
+2. patchy air-space consolidation—could reflect pneumonia or atelectasis.
+3. imaging findings suspicious for a hernia projecting into the thorax.
+4. no pleural effusion or pneumothorax.",0.11652404142771204,0.39203450083732605,0.34074607491493225,0.2451219512195122,3.3915437101277233,1.1587603477030861
+00030280_002.png,"indication:
+not provided.
+
+technique:
+frontal chest radiograph.
+
+findings:
+there is focal air‑space opacity consistent with consolidation. a small pneumothorax cannot be excluded. no pleural effusion identified. cardiomediastinal silhouette within expected limits for technique. no acute osseous abnormality.
+
+impression:
+1. focal air‑space consolidation most consistent with pneumonia.
+2. small pneumothorax cannot be excluded.
+3. no pleural effusion identified.",0.19276532350336043,0.579662024974823,0.27937862277030945,0.13657407407407407,3.1686989173069917,1.0452285203099805
+00030305_002.png,"exam: chest radiograph, single frontal (ap) view
+history/indication: not provided
+technique: frontal ap radiograph
+
+findings:
+- imaging and zero-shot model strongly indicate a pneumothorax. there is pleural lucency consistent with air in the pleural space on the provided frontal image.
+- no large pleural effusion identified.
+- the model flags a possible pulmonary nodule; no definite focal consolidation or large mass identified on this single frontal view.
+- cardiomediastinal silhouette size limited by ap technique and single view.
+
+impression:
+1. pneumothorax identified on the frontal ap chest radiograph (model-supported). correlate with clinical status; consider urgent clinical evaluation and/or repeat radiograph (upright expiratory or lateral decubitus) or chest ct if indicated to assess size and laterality precisely.
+2. possible pulmonary nodule (low-to-moderate suspicion by model). recommend correlation with prior imaging if available and consider dedicated chest radiograph comparison or chest ct for characterization.
+3. no acute large pleural effusion identified on this view.
+
+limitations: single frontal ap view; assessment of pneumothorax size and exact location (right vs left) and evaluation for small effusions or subtle parenchymal disease are limited.",0.07220909014927566,0.26013511419296265,0.4061608612537384,0.10638297872340424,3.8548149272690937,1.4841930895134507
+00030310_000.png,"indication: not provided.
+
+technique: single frontal (ap) chest radiograph.
+
+findings: there is an imaging appearance most consistent with a hernia. cardiomediastinal silhouette within expected size for ap technique. no focal lobar consolidation to suggest pneumonia. no pleural effusion identified. no pneumothorax.
+
+impression:
+1. hernia identified on the frontal chest radiograph — high probability.
+2. no acute cardiopulmonary disease identified: no focal consolidation, pleural effusion, or pneumothorax.",0.1897201629218474,0.4826403856277466,0.32236260175704956,0.16883116883116883,3.3267609056284178,1.122469933095471
+00030323_015.png,"indication:
+not provided.
+
+technique:
+frontal chest radiograph.
+
+findings:
+patchy airspace consolidation within the lungs. cardiomediastinal silhouette within expected size limits for technique. no pleural effusion identified. no pneumothorax. no acute osseous abnormality.
+
+impression:
+1. patchy airspace consolidation, most suspicious for pneumonia.
+2. no pleural effusion or pneumothorax.",0.2114118610036715,0.5308287143707275,0.5763083696365356,0.26340996168582376,2.571185075664662,0.6725293332861554
+00030497_005.png,"indication: evaluation of chest radiograph (educational use only). no prior available for comparison.
+
+technique: single frontal ap chest radiograph (portable technique).
+
+findings:
+- patchy air‑space consolidation in the lungs, greatest centrally and in the dependent/perihilar regions.
+- no large pleural effusion identified on this single frontal view.
+- no pneumothorax detected.
+- cardiomediastinal silhouette not enlarged for ap technique.
+
+impression:
+1. multifocal air‑space consolidation — imaging appearance most consistent with pneumonia.  
+2. possible pulmonary interstitial/vascular congestion/edema (less likely) and small effusion cannot be entirely excluded on a single ap view.  
+3. no pneumothorax or large pleural effusion identified.
+
+recommendation: correlate with clinical presentation, vital signs, and laboratory data. if infection is suspected, consider chest radiograph follow-up or chest ct for further evaluation and to better characterize extent. if concern for heart failure, correlate with bnp and volume status.",0.0918102324032913,0.3518368899822235,0.24790413677692413,0.19242424242424241,3.7525533917894442,1.3830969666672717
