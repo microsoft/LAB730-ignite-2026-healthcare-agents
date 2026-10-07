@@ -1,17 +1,17 @@
 {
   "servers": {
-    "medimageinsight": {
+    "medimageparse": {
       "command": "uv",
       "args": [
         "run",
         "--directory",
-        "${workspaceFolder}/mcp/medimageinsight-server",
+        "${workspaceFolder}/mcp/medimageparse-server",
         "mcp",
         "run",
         "server.py"
       ],
       "env": {
-        "MI2_ENV_FILE": "${workspaceFolder}/mcp/medimageinsight-server/.env"
+        "MIP_ENV_FILE": "${workspaceFolder}/mcp/medimageparse-server/.env"
       }
     }
   }

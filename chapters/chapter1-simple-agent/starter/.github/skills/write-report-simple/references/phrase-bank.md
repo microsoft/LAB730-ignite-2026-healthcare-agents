@@ -1,125 +1,91 @@
-# Phrase Bank — example CXR wordings
+# Phrase Bank — example brain MRI wordings
 
-Example phrasings drawn from real radiology reports; each finding has positive / possible / negative examples — borrow patterns.
+Example phrasings in common neuroradiology usage; each finding has positive / possible / negative examples — borrow patterns.
+
+<!-- PLACEHOLDER (Ignite 2026): pending neuroradiologist review. -->
 
 ## No acute findings
 
-**Examples:** The lungs are clear / no focal consolidation, pleural effusion, or pneumothorax / heart size is normal / mediastinal contours are unremarkable / no acute osseous abnormality.
+**Examples:** No focal parenchymal signal abnormality / no mass effect or midline shift / the ventricles and sulci are normal in size and configuration / no extra-axial collection / gray-white matter differentiation is preserved.
 
-## Pleural effusion
+## Enhancing lesion / mass
 
-**Positive:** Loculated left pleural effusion is seen / small bilateral pleural effusions / moderate right pleural effusion layering laterally.
+**Positive:** Heterogeneously enhancing intra-axial mass in the left frontal lobe / irregular peripheral enhancement surrounding a central non-enhancing component / nodular enhancement along the posterior wall of the resection cavity.
 
-**Possible:** Blunting of the left costophrenic angle may represent a small effusion / trace layering fluid cannot be excluded.
+**Possible:** Subtle focus of enhancement along the cavity margin; residual tumor cannot be excluded / ill-defined enhancement may represent treatment-related change versus tumor.
 
-**Negative:** No pleural effusion or pneumothorax / no effusion or pleural thickening.
+**Negative:** No abnormal enhancement / no enhancing mass.
 
-## Pneumothorax
+## Lesion size
 
-**Positive:** Small left apical pneumothorax / enlarging left pneumothorax with small lateral component / the left pneumothorax is decreased in size.
+**With tool-supplied measurements:** The enhancing lesion measures {longest} × {perpendicular} mm (longest × perpendicular, axial) / previously {prior longest} × {prior perpendicular} mm.
 
-**Possible:** Pneumothorax is suspected in the left apex; clinical correlation recommended / small pneumothorax cannot be excluded.
+**Without measurements (qualitative only):** Large enhancing mass / moderate-sized lesion / small focus of enhancement.
 
-**Negative:** No pneumothorax / no new or enlarging pneumothorax.
+## Peritumoral edema / FLAIR hyperintensity
 
-## Pulmonary opacity / consolidation / infiltrate
+**Positive:** Surrounding vasogenic edema / extensive FLAIR hyperintensity in the left frontal white matter / FLAIR hyperintensity extends into the genu of the corpus callosum.
 
-**Positive:** Increased opacity at the right lung base / patchy airspace opacity in the left lower lobe / confluent consolidation in the right lower lobe.
+**Possible:** Mild FLAIR hyperintensity adjacent to the cavity may reflect post-treatment change versus infiltrative tumor.
 
-**Possible:** Vague increased density in the left mid lung / subtle opacity; early consolidation cannot be excluded.
+**Negative:** No significant surrounding edema.
 
-**Negative:** No focal airspace consolidation / no confluent opacity identified.
+## Mass effect / midline shift / herniation
 
-## Cardiomegaly
+**Positive:** Local mass effect with effacement of the adjacent sulci / partial effacement of the frontal horn of the left lateral ventricle / rightward midline shift / subfalcine herniation.
 
-**Positive:** Cardiac silhouette is enlarged / moderate cardiomegaly / the cardiac silhouette is mildly enlarged.
+**Possible:** Mild sulcal effacement; minimal mass effect cannot be excluded.
 
-**Possible:** Cardiac silhouette is borderline in size / heart is at the upper limits of normal; mild cardiomegaly cannot be excluded given AP technique.
+**Negative:** No midline shift / no herniation.
 
-**Negative:** Heart size is normal / cardiomediastinal silhouette and pulmonary vasculature are within normal limits.
+## Necrosis / cystic change
 
-## Pulmonary edema
+**Positive:** Central non-enhancing necrotic component / cystic component following fluid signal.
 
-**Positive:** Mild pulmonary edema / moderate pulmonary edema with bilateral airspace disease / diffuse interstitial pulmonary edema with perihilar opacities.
+**Possible:** Central area of lower signal may represent necrosis.
 
-**Possible:** Vascular redistribution and mild interstitial prominence raise the possibility of early pulmonary edema.
+## Hemorrhage / blood products
 
-**Negative:** No pulmonary edema / no evidence of pulmonary edema.
+**Positive:** Intrinsic T1 hyperintensity consistent with blood products / small amount of blood products along the resection cavity.
 
-## Pneumonia
+**Possible:** Focus of T1 hyperintensity may represent blood products versus proteinaceous content.
 
-**Positive:** Left lower lobe pneumonia / dense consolidation in the right lower lobe with air bronchograms.
+**Negative:** No hemorrhage identified on the provided image.
 
-**Possible:** Differential includes pneumonia versus atelectasis / right lower lobe opacity; pneumonia cannot be excluded.
+## Ventricles / hydrocephalus
 
-**Negative:** No radiographic evidence of pneumonia.
+**Positive:** Enlargement of the lateral ventricles out of proportion to the sulci, concerning for hydrocephalus / entrapment of the temporal horn.
 
-## Atelectasis
+**Negative:** The ventricles are normal in size / no hydrocephalus.
 
-**Positive:** Bibasilar atelectasis / linear atelectasis at the left lung base / improving right basilar atelectasis.
+## Acute infarct / stroke lesion
 
-**Possible:** Linear density at the left base may represent atelectasis versus scarring / subtle linear density at the right base; atelectasis cannot be excluded.
+**Positive:** Signal abnormality in the left middle cerebral artery territory consistent with acute infarct.
 
-## Pulmonary mass
+**Possible:** Subtle cortical signal abnormality in the right insula; early infarct cannot be excluded; correlate with diffusion-weighted imaging.
 
-**Positive:** Well-circumscribed rounded opacity in the right upper lung measuring approximately 4 cm / right upper lobe mass / mass-like opacity in the left perihilar region.
+**Negative:** No evidence of acute infarct on the provided image.
 
-**Possible:** Perihilar opacity is concerning for a mass lesion; CT chest recommended.
+## White matter lesions
 
-**Negative:** No discrete mass identified.
+**Positive:** Multiple ovoid periventricular FLAIR hyperintense lesions oriented perpendicular to the lateral ventricles / scattered punctate subcortical white matter FLAIR hyperintensities, nonspecific, most commonly related to chronic small vessel ischemic change.
 
-## Pulmonary nodule
+**Possible:** Few nonspecific white matter FLAIR hyperintensities; differential includes chronic microvascular change versus demyelination.
 
-**Positive:** Small rounded opacity in the right mid lung measuring approximately 8 mm / indeterminate left upper lobe nodule.
+**Negative:** No white matter signal abnormality.
 
-**Possible:** Subtle nodular opacity in the left upper lobe; a small nodule cannot be excluded; CT recommended.
+## Extra-axial lesion / collection
 
-**Negative:** No discrete pulmonary nodule.
+**Positive:** Dural-based enhancing extra-axial mass along the left frontal convexity / thin subdural collection along the right convexity.
 
-## Pulmonary fibrosis / interstitial pattern
+**Possible:** Subtle dural thickening; a small extra-axial collection cannot be excluded.
 
-**Positive:** Reticular interstitial opacities most prominent in the lower lung zones / coarse reticulation with traction bronchiectasis / honeycombing at the lung bases.
+**Negative:** No extra-axial collection.
 
-**Possible:** Differential includes pulmonary fibrosis versus chronic interstitial pneumonia / mild interstitial prominence; early interstitial lung disease cannot be excluded.
+## Post-surgical / post-treatment changes
 
-**Negative:** No reticular or interstitial opacities.
+**Examples:** Postsurgical changes of left frontal craniotomy and tumor resection / resection cavity containing fluid signal / expected postoperative dural thickening and enhancement / treatment-related change (pseudoprogression) cannot be distinguished from tumor progression on this study.
 
-## Pleural thickening
+## Limitations
 
-**Positive:** Mild pleural thickening along the left lateral chest wall / apical pleural thickening, likely chronic.
-
-**Possible:** Subtle irregularity of the left pleural surface may represent pleural thickening.
-
-**Negative:** No pleural thickening.
-
-## Hyperinflation / emphysematous changes
-
-**Positive:** Lungs are hyperinflated / hyperinflated lungs with flattened diaphragms / barrel chest configuration with hyperinflation.
-
-**Possible:** Mild hyperinflation raising the possibility of emphysema or air trapping.
-
-## Hernia (hiatal / diaphragmatic)
-
-**Positive:** Retrocardiac air-fluid level consistent with a hiatal hernia / large hiatal hernia.
-
-**Possible:** Retrocardiac density may represent a hiatal hernia; clinical correlation recommended.
-
-**Negative:** No diaphragmatic hernia.
-
-## Subcutaneous emphysema
-
-**Positive:** Subcutaneous emphysema in the left chest wall / extensive bilateral subcutaneous emphysema.
-
-**Negative:** No subcutaneous emphysema.
-
-## Bones / osseous structures
-
-**Positive:** Nondisplaced left sixth rib fracture / old right rib fractures / acute right clavicle fracture.
-
-**Possible:** Subtle lucency in the left fifth rib; fracture cannot be excluded; dedicated rib views recommended.
-
-**Negative:** No acute osseous abnormality.
-
-## Support devices
-
-**Examples:** Endotracheal tube tip projects 3 cm above the carina / nasogastric tube extends below the diaphragm / right internal jugular central line tip in the right atrium / left chest tube has been removed / cardiac pacemaker overlies the left chest with leads in expected position.
+**Examples:** Evaluation is limited to the provided axial image / motion degrades image quality / only a post-contrast T1-weighted image is provided; FLAIR signal cannot be assessed.

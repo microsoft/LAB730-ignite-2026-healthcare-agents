@@ -1,0 +1,190 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="6.6667in" height="7.5in" viewBox="0 0 960 1080" role="img" aria-labelledby="title description">
+  <title id="title">From MRI to a measured report: the MedImageParse workshop</title>
+  <desc id="description">A concept illustration for half of a widescreen PowerPoint slide. Three workshop chapters introduce a brain MRI reporting agent and skill, MedImageParse segmentation and lesion measurement through MCP, and patient context. The agent sends an axial brain MRI slice and a text prompt to MedImageParse and receives lesion masks. Measurement tooling combines the masks with pixel spacing to calculate the patient side and the longest and perpendicular diameters. A schematic axial MRI overlay and draft brain MRI report show an illustrative left frontal enhancing lesion measuring 32 by 24 millimeters. The anatomy and values are synthetic, not actual model output. Radiologist review is required.</desc>
+
+  <rect width="960" height="1080" fill="#FFFFFF"/>
+  <g font-family="Aptos, Segoe UI, Arial, sans-serif" letter-spacing="0">
+    <rect x="48" y="39" width="28" height="5" fill="#087F78"/>
+    <text x="89" y="48" font-size="17" font-weight="700" fill="#526169">MICROSOFT IGNITE 2026 / HANDS-ON LAB</text>
+    <text x="48" y="111" font-size="53" font-weight="700" fill="#202C32">From MRI to a measured report</text>
+    <text x="48" y="157" font-size="25" fill="#526169">A brain lesion agent grounded in MedImageParse</text>
+
+    <path d="M96 211 H325 M387 211 H616" fill="none" stroke="#CEDBD9" stroke-width="2"/>
+    <path d="M318 206 L325 211 L318 216 M609 206 L616 211 L609 216" fill="none" stroke="#8EA5A2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="69" cy="211" r="21" fill="#087F78"/>
+    <circle cx="360" cy="211" r="21" fill="#087F78"/>
+    <circle cx="651" cy="211" r="21" fill="#087F78"/>
+    <g font-size="18" font-weight="700" fill="#FFFFFF" text-anchor="middle">
+      <text x="69" y="217">01</text>
+      <text x="360" y="217">02</text>
+      <text x="651" y="217">03</text>
+    </g>
+    <g font-size="26" font-weight="700" fill="#202C32">
+      <text x="48" y="267">Agent + skill</text>
+      <text x="339" y="267">MedImageParse</text>
+      <text x="630" y="267">Patient context</text>
+    </g>
+    <g font-size="21" fill="#526169">
+      <text x="48" y="299">Draft a brain MRI report</text>
+      <text x="339" y="299">Segment + measure via MCP</text>
+      <text x="630" y="299">Add history + prior reports</text>
+    </g>
+
+    <path d="M48 328 H912" stroke="#DCE4E4" stroke-width="1.5"/>
+    <text x="48" y="367" font-size="17" font-weight="700" fill="#526169">THE AGENT AT WORK</text>
+
+    <g stroke-linejoin="round">
+      <rect x="84" y="398" width="152" height="114" rx="5" fill="#E9EDED" stroke="#9DABAF" stroke-width="1.5"/>
+      <rect x="72" y="410" width="152" height="114" rx="5" fill="#C4CDCE" stroke="#8F9FA3" stroke-width="1.5"/>
+      <rect x="60" y="422" width="152" height="114" rx="5" fill="#20282D"/>
+      <ellipse cx="136" cy="479" rx="40" ry="49" fill="#B3BABC"/>
+      <ellipse cx="136" cy="479" rx="36" ry="45" fill="#2E363B"/>
+      <ellipse cx="136" cy="479" rx="33" ry="42" fill="#7A8488"/>
+      <ellipse cx="136" cy="481" rx="26" ry="34" fill="#9AA3A6"/>
+      <path d="M136 438 V462 M136 498 V521" stroke="#3A4247" stroke-width="2"/>
+      <path d="M133 468 C126 471 125 485 129 493 C132 490 133 478 134 469 Z" fill="#3A4247"/>
+      <path d="M139 468 C146 471 147 485 143 493 C140 490 139 478 138 469 Z" fill="#3A4247"/>
+      <ellipse cx="152" cy="458" rx="8.5" ry="7" fill="#E6EAE8"/>
+      <ellipse cx="152" cy="458" rx="4.5" ry="3.5" fill="#4F585C"/>
+    </g>
+    <path d="M253 468 H321 M312 461 L321 468 L312 475" fill="none" stroke="#7D9095" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+
+    <circle cx="395" cy="466" r="56" fill="#EEF4F3" stroke="#CBDAD8" stroke-width="1.5"/>
+    <path d="M369 440 H421 Q427 440 427 446 V481 Q427 487 421 487 H389 L374 499 V487 H369 Q363 487 363 481 V446 Q363 440 369 440 Z" fill="#FFFFFF" stroke="#087F78" stroke-width="2.5" stroke-linejoin="round"/>
+    <g fill="#087F78">
+      <circle cx="381" cy="465" r="3.5"/>
+      <circle cx="395" cy="465" r="3.5"/>
+      <circle cx="409" cy="465" r="3.5"/>
+    </g>
+    <path d="M421 420 L425 429 L434 433 L425 437 L421 446 L417 437 L408 433 L417 429 Z" fill="#087F78" stroke="#EEF4F3" stroke-width="3"/>
+
+    <path d="M473 435 H661 M652 428 L661 435 L652 442" fill="none" stroke="#7D9095" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="567" y="418" text-anchor="middle" font-size="20" fill="#526169">MRI slice + prompt</text>
+    <path d="M661 495 H473 M482 488 L473 495 L482 502" fill="none" stroke="#087F78" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="567" y="526" text-anchor="middle" font-size="20" fill="#087F78">Lesion masks</text>
+
+    <g fill="none" stroke="#B7CBC7" stroke-width="1.5">
+      <path d="M703 422 V404 H721 M873 404 H891 V422 M891 504 V522 H873 M721 522 H703 V504"/>
+    </g>
+    <ellipse cx="797" cy="463" rx="46" ry="54" fill="#EEF4F3" stroke="#8EA5A2" stroke-width="2"/>
+    <path d="M797 411 V441 M797 485 V515" stroke="#B7CBC7" stroke-width="1.5"/>
+    <g fill="none" stroke="#CBDAD8" stroke-width="1.5" stroke-linecap="round">
+      <path d="M762 432 C768 436 770 441 768 447"/>
+      <path d="M755 458 C762 459 766 462 766 468"/>
+      <path d="M760 486 C766 483 771 485 773 490"/>
+      <path d="M778 508 C781 502 786 500 790 502"/>
+      <path d="M834 486 C828 483 823 485 821 490"/>
+      <path d="M816 508 C813 502 808 500 804 502"/>
+    </g>
+    <path d="M793 452 C787 456 786 472 790 479 C793 475 794 462 795 453 Z" fill="#CBDAD8"/>
+    <path d="M801 452 C807 456 808 472 804 479 C801 475 800 462 799 453 Z" fill="#CBDAD8"/>
+    <path d="M800 440 C799 428 810 421 821 422 C832 423 839 431 838 441 C837 451 828 457 818 456 C808 455 801 449 800 440 Z M810 439 C810 434 815 431 820 431 C826 432 829 436 828 441 C827 446 823 448 818 448 C813 447 810 444 810 439 Z" fill="#F4C76D" fill-rule="evenodd" stroke="#BD7C14" stroke-width="2"/>
+    <path d="M810 439 C810 434 815 431 820 431 C826 432 829 436 828 441 C827 446 823 448 818 448 C813 447 810 444 810 439 Z" fill="#8FD3BE" stroke="#087F78" stroke-width="1.5"/>
+
+    <g text-anchor="middle">
+      <g font-size="25" font-weight="700" fill="#202C32">
+        <text x="143" y="575">MRI study</text>
+        <text x="395" y="575">Radiology agent</text>
+        <text x="797" y="575">MedImageParse</text>
+      </g>
+      <g font-size="20" fill="#526169">
+        <text x="143" y="604">Axial brain slices</text>
+        <text x="395" y="604">Skills + patient context</text>
+        <text x="797" y="604">Segmentation model</text>
+      </g>
+    </g>
+
+    <rect x="48" y="637" width="864" height="62" fill="#EAF5F0"/>
+    <path d="M48 637 H912 M48 699 H912" stroke="#C7E2D8" stroke-width="1"/>
+    <g fill="none" stroke="#087F78" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="72" y="656" width="35" height="24" rx="2"/>
+      <path d="M79 657 V666 M86 657 V663 M93 657 V666 M100 657 V663"/>
+      <path d="M444 668 H486 M478 662 L486 668 L478 674"/>
+    </g>
+    <text x="125" y="677" font-size="25" fill="#245F51">Masks + pixel spacing</text>
+    <text x="514" y="677" font-size="25" font-weight="700" fill="#245F51">Side + diameters</text>
+    <path d="M798 699 V721 M791 713 L798 721 L805 713" fill="none" stroke="#087F78" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+
+    <text x="48" y="737" font-size="17" font-weight="700" fill="#526169">SEGMENTATION OVERLAY</text>
+    <text x="493" y="737" font-size="17" font-weight="700" fill="#526169">MEASUREMENT-GROUNDED REPORT</text>
+
+    <rect x="48" y="754" width="405" height="259" rx="6" fill="#1D252B"/>
+    <text x="67" y="779" font-size="14" fill="#B9C4C7">AXIAL MRI / SCHEMATIC</text>
+    <text x="69" y="902" font-size="16" fill="#CFD7D8">R</text>
+    <text x="424" y="902" font-size="16" fill="#CFD7D8">L</text>
+
+    <ellipse cx="250" cy="895" rx="98" ry="112" fill="#B9C1C3"/>
+    <ellipse cx="250" cy="895" rx="92" ry="106" fill="#2C3439"/>
+    <ellipse cx="250" cy="895" rx="86" ry="100" fill="#7C868A"/>
+    <path d="M326.5 897 L324.5 900.2 L319.8 903 L315 905.5 L312.9 908 L314.4 911.1 L318.4 914.9 L322.3 918.9 L323.4 922.5 L320.8 925 L315.6 926.4 L310.4 927.4 L307.8 929.2 L308.5 932.5 L311.4 937.3 L314.2 942.2 L314.4 945.9 L311.3 947.5 L306 947.3 L300.9 946.8 L298 947.8 L297.9 951.1 L299.5 956.4 L300.8 961.8 L300.1 965.4 L296.8 966 L291.9 964.2 L287.3 962.2 L284.3 962.2 L283.4 965.3 L283.5 970.7 L283.4 976.2 L281.8 979.3 L278.5 978.9 L274.5 975.7 L270.7 972.3 L267.9 971.4 L266.2 973.9 L264.9 979.1 L263.2 984.2 L260.9 986.6 L258 985.1 L255 980.8 L252.3 976.4 L250 974.5 L247.7 976.4 L245 980.8 L242 985.1 L239.1 986.6 L236.8 984.2 L235.1 979.1 L233.8 973.9 L232.1 971.4 L229.3 972.3 L225.5 975.7 L221.5 978.9 L218.2 979.3 L216.6 976.2 L216.5 970.7 L216.6 965.3 L215.7 962.2 L212.7 962.2 L208.1 964.2 L203.2 966 L199.9 965.4 L199.2 961.8 L200.5 956.4 L202.1 951.1 L202 947.8 L199.1 946.8 L194 947.3 L188.7 947.5 L185.6 945.9 L185.8 942.2 L188.6 937.3 L191.5 932.5 L192.2 929.2 L189.6 927.4 L184.4 926.4 L179.2 925 L176.6 922.5 L177.7 918.9 L181.6 914.9 L185.6 911.1 L187.1 908 L185 905.5 L180.2 903 L175.5 900.2 L173.5 897 L175.5 893.8 L180.2 891 L185 888.5 L187.1 886 L185.6 882.9 L181.6 879.1 L177.7 875.1 L176.6 871.5 L179.2 869 L184.4 867.6 L189.6 866.6 L192.2 864.8 L191.5 861.5 L188.6 856.7 L185.8 851.8 L185.6 848.1 L188.7 846.5 L194 846.7 L199.1 847.2 L202 846.2 L202.1 842.9 L200.5 837.6 L199.2 832.2 L199.9 828.6 L203.2 828 L208.1 829.8 L212.7 831.8 L215.7 831.8 L216.6 828.7 L216.5 823.3 L216.6 817.8 L218.2 814.7 L221.5 815.1 L225.5 818.3 L229.3 821.7 L232.1 822.6 L233.8 820.1 L235.1 814.9 L236.8 809.8 L239.1 807.4 L242 808.9 L245 813.2 L247.7 817.6 L250 819.5 L252.3 817.6 L255 813.2 L258 808.9 L260.9 807.4 L263.2 809.8 L264.9 814.9 L266.2 820.1 L267.9 822.6 L270.7 821.7 L274.5 818.3 L278.5 815.1 L281.8 814.7 L283.4 817.8 L283.5 823.3 L283.4 828.7 L284.3 831.8 L287.3 831.8 L291.9 829.8 L296.8 828 L300.1 828.6 L300.8 832.2 L299.5 837.6 L297.9 842.9 L298 846.2 L300.9 847.2 L306 846.7 L311.3 846.5 L314.4 848.1 L314.2 851.8 L311.4 856.7 L308.5 861.5 L307.8 864.8 L310.4 866.6 L315.6 867.6 L320.8 869 L323.4 871.5 L322.3 875.1 L318.4 879.1 L314.4 882.9 L312.9 886 L315 888.5 L319.8 891 L324.5 893.8 Z" fill="#9AA3A6"/>
+    <g fill="none" stroke="#5B6468" stroke-width="2" stroke-linecap="round">
+      <path d="M335.1 909.2 L313.8 908.2"/>
+      <path d="M328.2 936.5 L308.7 929.6"/>
+      <path d="M315 960.5 L298.7 948.4"/>
+      <path d="M296.5 979.1 L284.9 963"/>
+      <path d="M274.2 990.9 L268.2 972.3"/>
+      <path d="M250 995 L250 975.5"/>
+      <path d="M225.8 990.9 L231.8 972.3"/>
+      <path d="M203.5 979.1 L215.1 963"/>
+      <path d="M185 960.5 L201.3 948.4"/>
+      <path d="M171.8 936.5 L191.3 929.6"/>
+      <path d="M164.9 909.2 L186.2 908.2"/>
+      <path d="M164.9 880.8 L186.2 885.8"/>
+      <path d="M171.8 853.5 L191.3 864.4"/>
+      <path d="M185 829.5 L201.3 845.6"/>
+      <path d="M203.5 810.9 L215.1 831"/>
+      <path d="M225.8 799.1 L231.8 821.7"/>
+      <path d="M250 795 L250 818.5"/>
+      <path d="M335.1 880.8 L313.8 885.8"/>
+    </g>
+    <path d="M250 795 V846 M250 950 V995" stroke="#454E53" stroke-width="2.5"/>
+    <g fill="#3A4247">
+      <path d="M248 874 C240 869 232 859 231 849 C231 842 236 841 240 845 C244 852 247 863 249 874 Z"/>
+      <path d="M252 874 C257 868 261 860 262 853 C262 848 259 848 257 851 C255 856 253 864 251 874 Z"/>
+      <path d="M249 882 H251 V904 H249 Z"/>
+      <path d="M247 916 C240 924 233 935 231 945 C230 951 235 952 238 947 C242 939 246 927 249 918 Z"/>
+      <path d="M253 916 C260 924 267 935 269 945 C270 951 265 952 262 947 C258 939 254 927 251 918 Z"/>
+    </g>
+
+    <path d="M264 846 C262 832 276 823 291 824 C306 825 318 834 317 847 C316 860 303 868 289 867 C274 866 265 858 264 846 Z" fill="#E6EAE8"/>
+    <path d="M276 846 C276 838 284 833 292 834 C301 835 306 841 305 848 C304 855 297 859 290 858 C282 857 276 853 276 846 Z" fill="#4F585C"/>
+
+    <path d="M264 846 C262 832 276 823 291 824 C306 825 318 834 317 847 C316 860 303 868 289 867 C274 866 265 858 264 846 Z M276 846 C276 838 284 833 292 834 C301 835 306 841 305 848 C304 855 297 859 290 858 C282 857 276 853 276 846 Z" fill="#F4C76D" fill-opacity="0.8" fill-rule="evenodd" stroke="#FFE2A1" stroke-width="2"/>
+    <path d="M276 846 C276 838 284 833 292 834 C301 835 306 841 305 848 C304 855 297 859 290 858 C282 857 276 853 276 846 Z" fill="#39BD9B" fill-opacity="0.55" stroke="#65D4B6" stroke-width="1.5"/>
+    <g fill="none" stroke="#FFFFFF" stroke-width="1.8" stroke-linecap="round">
+      <path d="M263 848 L318 843 M262.5 843 L263.5 853 M317.5 838 L318.5 848"/>
+      <path d="M288 822 L291 869 M283 822.3 L293 821.7 M286 869.3 L296 868.7"/>
+    </g>
+    <path d="M318 838 L330 822" fill="none" stroke="#FFE2A1" stroke-width="1.5"/>
+    <text x="326" y="816" font-size="19" font-weight="700" fill="#FFE2A1">32 × 24 mm</text>
+
+    <g font-size="17" fill="#526169">
+      <rect x="61" y="1028" width="12" height="12" rx="2" fill="#E8B24D"/>
+      <text x="82" y="1041">Enhancing tumor</text>
+      <rect x="232" y="1028" width="12" height="12" rx="2" fill="#39A88C"/>
+      <text x="253" y="1041">Non-enhancing tumor</text>
+    </g>
+
+    <rect x="493" y="754" width="419" height="287" rx="5" fill="#FFFFFF" stroke="#C9D8D5" stroke-width="1.5"/>
+    <path d="M511 774 V791" stroke="#087F78" stroke-width="4" stroke-linecap="round"/>
+    <text x="526" y="790" font-size="23" font-weight="700" fill="#202C32">MRI BRAIN</text>
+    <text x="888" y="789" text-anchor="end" font-size="16" font-weight="700" fill="#71817F">DRAFT</text>
+    <path d="M516 806 H889" stroke="#E0E7E5" stroke-width="1"/>
+    <text x="516" y="828" font-size="15" font-weight="700" fill="#667873">FINDINGS</text>
+    <text x="516" y="860" font-size="23" fill="#202C32">Left frontal enhancing lesion</text>
+    <rect x="511" y="876" width="384" height="78" rx="3" fill="#F2F7F5"/>
+    <g font-size="21" fill="#405650">
+      <text x="523" y="903">Longest diameter</text>
+      <text x="523" y="940">Perpendicular</text>
+    </g>
+    <g text-anchor="end" font-size="27" font-weight="700">
+      <text x="882" y="904" fill="#956115">32 mm</text>
+      <text x="882" y="941" fill="#087F78">24 mm</text>
+    </g>
+    <text x="516" y="972" font-size="15" font-weight="700" fill="#667873">IMPRESSION</text>
+    <text x="516" y="1000" font-size="21" fill="#202C32">Measured left frontal lesion.</text>
+    <text x="516" y="1026" font-size="16" fill="#667873">Radiologist review required</text>
+
+    <text x="48" y="1070" font-size="16" fill="#73827F">Illustrative anatomy and values. Concept only; not for clinical use.</text>
+  </g>
+</svg>

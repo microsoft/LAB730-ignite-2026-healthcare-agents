@@ -11,7 +11,8 @@ If you can't install tools locally (corporate restrictions or you just want a cl
 
 1. **Fork the workshop repo.**
 
-   Open [microsoft/siim-workshop-2026](https://github.com/microsoft/siim-workshop-2026) in your browser, click **Fork** (top right), and fork into your own account.
+   <!-- PLACEHOLDER (Ignite 2026): confirm the public repo name and URL. -->
+   Open [microsoft/ignite-workshop-2026](https://github.com/microsoft/ignite-workshop-2026) in your browser, click **Fork** (top right), and fork into your own account.
 
 2. **Create a Codespace on your fork.**
 
@@ -34,12 +35,12 @@ If you can't install tools locally (corporate restrictions or you just want a cl
 
    The Copilot extension prompts for sign-in on first use. Use the same GitHub account that has Copilot access.
 
-5. **Get the MI2 credentials from the proctors** and paste them into the `.env` file when you reach Chapter 2 Step 1. Same path as the local instructions: `mcp/medimageinsight-server/.env`.
+5. **Get the MedImageParse credentials from the proctors** and paste them into the `.env` file when you reach Chapter 2 Setup. Same path as the local instructions: `mcp/medimageparse-server/.env`.
 
 ## Differences from local
 
-- **File paths** are `/workspaces/siim-workshop-2026/...` not `/home/you/...`. Anywhere the workshop says "workspace root" applies the same way.
-- **Image samples in the chat input** — you reference images by repo-relative path (`samples/00026132_011.png`), the same as local.
+- **File paths** are `/workspaces/ignite-workshop-2026/...` not `/home/you/...`. Anywhere the workshop says "workspace root" applies the same way.
+- **Image samples in the chat input** — you reference images by repo-relative path (`samples/SYN0417_003.png`), the same as local.
 - **Persistence** — Codespaces auto-stop after 30 min idle but retain state. Your code and `.env` survive restarts.
 - **Cost** — a single workshop session is well under 1 hour of Codespace time. After the workshop you can delete the codespace to free your quota.
 
