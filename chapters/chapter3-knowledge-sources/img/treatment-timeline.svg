@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="560" viewBox="0 0 1600 560" role="img" aria-labelledby="title description">
+  <title id="title">Chapter 3: the same image, read in the context of the treatment timeline</title>
+  <desc id="description">A timeline for the synthetic patient SYN0417 from May to October 2026: diagnosis MRI on May 12, surgery on May 19, chemoradiation from June 15 to July 24, the prior MRI on August 21 measuring 25 by 20 millimeters, and the current MRI on September 18, eight weeks after radiation. A shaded band marks roughly twelve weeks after radiation, when growth on MRI may be treatment effect rather than tumor progression. Below, a report written without the chart states only the current size, while a report written with the chart compares against the prior and frames the increase as treatment-related change versus progression. Values are illustrative.</desc>
+
+  <rect width="1600" height="560" fill="#FFFFFF"/>
+  <g font-family="Aptos, Segoe UI, Arial, sans-serif" letter-spacing="0">
+    <rect x="80" y="40" width="28" height="5" fill="#087F78"/>
+    <text x="120" y="49" font-size="18" font-weight="700" fill="#526169">CHAPTER 3 / THE SAME IMAGE, IN CONTEXT</text>
+
+    <rect x="783" y="118" width="703" height="182" fill="#FDF3DE"/>
+    <path d="M783 118 V300 M1486 118 V300" stroke="#E8C98A" stroke-width="1.5" stroke-dasharray="6 5"/>
+    <text x="797" y="145" font-size="17" font-weight="700" fill="#956115">Up to ~12 weeks after radiation, growth may be treatment effect</text>
+
+    <path d="M80 250 H1520" stroke="#8EA5A2" stroke-width="2.5"/>
+    <g stroke="#8EA5A2" stroke-width="2">
+      <path d="M80 244 V256 M339 244 V256 M591 244 V256 M850 244 V256 M1110 244 V256 M1361 244 V256"/>
+    </g>
+    <g font-size="15" font-weight="700" fill="#71817F">
+      <text x="86" y="284">MAY</text>
+      <text x="345" y="284">JUN</text>
+      <text x="597" y="284">JUL</text>
+      <text x="856" y="284">AUG</text>
+      <text x="1116" y="284">SEP</text>
+      <text x="1367" y="284">OCT</text>
+    </g>
+
+    <rect x="457" y="233" width="326" height="34" rx="4" fill="#C5E8DC" stroke="#087F78" stroke-width="1.5"/>
+    <text x="620" y="256" text-anchor="middle" font-size="17" font-weight="700" fill="#245F51">Chemoradiation</text>
+
+    <circle cx="172" cy="250" r="9" fill="#FFFFFF" stroke="#526169" stroke-width="3"/>
+    <text x="172" y="218" text-anchor="middle" font-size="17" font-weight="700" fill="#202C32">Diagnosis MRI</text>
+    <text x="172" y="196" text-anchor="middle" font-size="16" fill="#526169">May 12</text>
+
+    <path d="M231 241 L240 250 L231 259 L222 250 Z" fill="#526169"/>
+    <text x="231" y="318" text-anchor="middle" font-size="17" font-weight="700" fill="#202C32">Surgery</text>
+    <text x="231" y="339" text-anchor="middle" font-size="16" fill="#526169">May 19</text>
+
+    <circle cx="1017" cy="250" r="9" fill="#FFFFFF" stroke="#087F78" stroke-width="3"/>
+    <text x="1017" y="218" text-anchor="middle" font-size="17" font-weight="700" fill="#202C32">Prior MRI · _002</text>
+    <text x="1017" y="196" text-anchor="middle" font-size="16" fill="#526169">Aug 21 · 25 × 20 mm</text>
+
+    <circle cx="1252" cy="250" r="12" fill="#F4C76D" stroke="#BD7C14" stroke-width="3"/>
+    <text x="1252" y="218" text-anchor="middle" font-size="17" font-weight="700" fill="#202C32">Current MRI · _003</text>
+    <text x="1252" y="196" text-anchor="middle" font-size="16" fill="#526169">Sep 18 · 8 weeks after RT</text>
+
+    <rect x="80" y="370" width="680" height="120" rx="6" fill="#F4F6F6" stroke="#D5DDDD" stroke-width="1.5"/>
+    <text x="104" y="404" font-size="15" font-weight="700" fill="#71817F">WITHOUT THE CHART (CHAPTER 2)</text>
+    <text x="104" y="440" font-size="21" fill="#202C32">Enhancing lesion, left frontal lobe,</text>
+    <text x="104" y="468" font-size="21" fill="#202C32">measures 32 × 24 mm.</text>
+
+    <rect x="840" y="370" width="680" height="120" rx="6" fill="#EAF5F0" stroke="#9ACFBE" stroke-width="1.5"/>
+    <text x="864" y="404" font-size="15" font-weight="700" fill="#245F51">WITH THE CHART (CHAPTER 3)</text>
+    <text x="864" y="440" font-size="21" fill="#202C32">Increased: now 32 × 24 mm, previously 25 × 20 mm.</text>
+    <text x="864" y="468" font-size="21" fill="#202C32">Treatment-related change versus progression.</text>
+
+    <path d="M770 430 H830 M821 423 L830 430 L821 437" fill="none" stroke="#087F78" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+
+    <text x="1520" y="530" text-anchor="end" font-size="15" fill="#73827F">Synthetic patient SYN0417. Illustrative values; not for clinical use.</text>
+  </g>
+</svg>

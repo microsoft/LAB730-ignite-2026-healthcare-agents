@@ -35,12 +35,12 @@ uv python install 3.11
 
 All workshop commands run via `uv run …`, so nothing touches system Python.
 
-## `.env` not loaded / `MI2_MODEL_API_KEY` missing
+## `.env` not loaded / `MIP_MODEL_API_KEY` missing
 
-The `.env` file belongs at `mcp/medimageinsight-server/.env` in your workspace root. You create it in Chapter 2, Step 1 by copying the example and filling in the values the proctors hand out:
+The `.env` file belongs at `mcp/medimageparse-server/.env` in your workspace root. You create it in Chapter 2 Setup by copying the example and filling in the values the proctors hand out:
 
 ```bash
-cp mcp/medimageinsight-server/.env.example mcp/medimageinsight-server/.env
+cp mcp/medimageparse-server/.env.example mcp/medimageparse-server/.env
 # then open the file and paste in your key and endpoint
 ```
 
@@ -56,7 +56,7 @@ The `description:` field is what the agent uses to decide whether to invoke the 
 
 ## Agent skips skills and improvises instead
 
-A different problem from the one above: the skill *is* registered (it shows up under `/`), but the agent answers from its own reasoning instead of invoking it. A common symptom is the Radiology Assistant writing a report straight from its own image read for a prompt like *"Please write a radiology report for chest xray image in samples/00026132_011.png"* without ever calling `write-report-adapter`, `write-report-zeroshot`, or `write-report-simple`.
+A different problem from the one above: the skill *is* registered (it shows up under `/`), but the agent answers from its own reasoning instead of invoking it. A common symptom is the Radiology Assistant writing a report straight from its own image read for a prompt like *"Please write a radiology report for samples/SYN0417_003.png"* without ever calling `write-report-measured`, `write-report-segmentation`, or `write-report-simple`.
 
 This is a model-judgment problem, not a registration problem. Try these fixes in order, from cheapest to most involved.
 
@@ -66,12 +66,12 @@ Rule out the registration causes first. Type `/` in chat and confirm the skill a
 
 ### 2. Make the skill descriptions less ambiguous
 
-When several skills could plausibly handle the same request, the agent has to disambiguate — and a weaker model often resolves the tie by doing the work itself. The three report skills all say "Invoke whenever drafting a CXR report," which gives the model no way to choose.
+When several skills could plausibly handle the same request, the agent has to disambiguate — and a weaker model often resolves the tie by doing the work itself. If the report skills all read like "Invoke whenever drafting a brain MRI report," the model has no way to choose.
 
 Tighten each `description:` so it states *when* that specific skill applies:
 
-- `write-report-adapter` — "…when the MedImageInsight adapter tool is available."
-- `write-report-zeroshot` — "…when MI2 zero-shot is available but the adapter is not."
+- `write-report-measured` — "…when both the `segment_lesions` and `measure_lesions` tools are available."
+- `write-report-segmentation` — "…when `segment_lesions` is available but `measure_lesions` is not."
 - `write-report-simple` — "…fallback when no vision model is available."
 
 Clear, non-overlapping descriptions make the routing decision obvious.
@@ -85,12 +85,12 @@ State that improvising the report is a failure, and give an explicit priority/fa
 ```markdown
 <rules>
 - **Always draft reports through a report-writing skill — never improvise the prose yourself.**
-  Any request to read a chest X-ray or write a report MUST go through one of the report
+  Any request to read a brain MRI or write a report MUST go through one of the report
   skills. Writing a report from your own image read without invoking a skill is a failure.
   Select the skill using this priority order, falling back only if the higher option is
   unavailable or its tool call fails:
-  1. `write-report-adapter` — preferred when the MI2 adapter tool is available.
-  2. `write-report-zeroshot` — use if the adapter is unavailable but MI2 zero-shot is.
+  1. `write-report-measured` — preferred when both MedImageParse tools (`segment_lesions`, `measure_lesions`) are available.
+  2. `write-report-segmentation` — use if `segment_lesions` is available but `measure_lesions` is not.
   3. `write-report-simple` — final fallback when no vision model tool is available.
 </rules>
 ```
@@ -130,7 +130,7 @@ The agent file must be at `.github/agents/radiology-assistant.agent.md` at works
 
 ## MCP tool doesn't appear in chat
 
-Open the VS Code Output panel (`View → Output`), then switch the dropdown on the right to **MCP Servers → medimageinsight**. The server logs there on launch; Python tracebacks here indicate a syntax error or missing import.
+Open the VS Code Output panel (`View → Output`), then switch the dropdown on the right to **MCP Servers → medimageparse**. The server logs there on launch; Python tracebacks here indicate a syntax error or missing import.
 
 If the panel shows the server started cleanly but the tool still doesn't appear in the chat tool picker, check that the function in `server.py` has the `@mcp.tool(...)` decorator.
 
@@ -150,19 +150,21 @@ The most recent `<date>` folder is the current session. Each server gets its own
 
 `Address already in use` — a previous MCP server process didn't shut down cleanly. Run `MCP: Reload Servers` (`Cmd/Ctrl+Shift+P`) or restart VS Code.
 
-`KeyError: 'MI2_MODEL_ENDPOINT'` (or any similar env-var error) — `.env` hasn't been created or isn't in the right place. See the `.env not loaded` section above.
+`KeyError: 'MIP_MODEL_ENDPOINT'` (or any similar env-var error) — `.env` hasn't been created or isn't in the right place. See the `.env not loaded` section above.
 
-HTTP 401 or 403 from the MI2 endpoint — wrong or expired API key. Get a fresh key from the proctors and paste it into `mcp/medimageinsight-server/.env`, then reload the server.
+HTTP 401 or 403 from the MedImageParse endpoint — wrong or expired API key. Get a fresh key from the proctors and paste it into `mcp/medimageparse-server/.env`, then reload the server.
+
+`NotImplementedError: TODO(mip): ...` — 🚧 placeholder: the MedImageParse or measurement code for Ignite 2026 hasn't landed yet. The tool is wired correctly; it just has nothing behind it.
 
 ### Direct-Python fallback
 
-If MCP won't cooperate during the workshop, you can still test the underlying logic by calling the Python directly. The MCP server is a thin wrapper around `zero_shot.classify(...)` and `adapter.classify(...)` — both scripts run standalone:
+If MCP won't cooperate during the workshop, you can still test the underlying logic by calling the Python directly. The MCP server is a thin wrapper around `segmentation.segment(...)` and `measurement.measure(...)` — both scripts run standalone:
 
 ```bash
-uv run python mcp/medimageinsight-server/zero_shot.py samples/00026132_011.png
-uv run python mcp/medimageinsight-server/adapter.py samples/00026132_011.png
+uv run python mcp/medimageparse-server/segmentation.py samples/SYN0417_003.png
+uv run python mcp/medimageparse-server/measurement.py outputs/masks/SYN0417_003__enhancing-tumor.png
 ```
 
-Add `--help` to either for options (custom labels for zero-shot, `--head svm` for adapter).
+Add `--help` to either for options (custom `--prompts` for segmentation).
 
 If these scripts work but the MCP tool still doesn't appear in the picker, the problem is in server registration, not the foundation model code — go back to the `@mcp.tool(...)` decorator and the `mcp.json` registration.

@@ -1,1 +1,1 @@
-"""Workshop utilities — shared code for the SIIM 2026 radiology lab."""
+"""Workshop utilities — shared code for the Microsoft Ignite 2026 radiology lab."""

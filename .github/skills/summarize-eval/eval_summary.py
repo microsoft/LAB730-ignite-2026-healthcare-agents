@@ -1,8 +1,9 @@
-"""Aggregate cxr-metric scores by confidence bucket.
+"""Aggregate per-case eval scores by confidence bucket.
 
 Joins per-case metric scores with per-case confidence (from output.jsonl) and
-produces a wide-format CSV: one row per confidence bucket, columns are the
-six metrics. Always emits an `all` row first. Prints Markdown tables to stdout.
+produces a wide-format CSV: one row per confidence bucket, one column per
+metric found in the scores file. Always emits an `all` row first. Prints
+Markdown tables to stdout.
 
 Usage:
     # Single result-dir:
@@ -28,22 +29,19 @@ from pathlib import Path
 
 import pandas as pd
 
-METRIC_COLS = [
-    "bleu_score",
-    "bertscore",
-    "semb_score",
-    "radgraph_combined",
-    "RadCliQ-v0",
-    "RadCliQ-v1",
-]
-CXR_DISPLAY = {
+ID_COL = "study_id"
+
+# Friendlier headers for known per-case metrics. Any other numeric column in the
+# scores file is shown under its own name.
+# TODO(eval): align with the final brain MRI metric suite (Ignite 2026).
+METRIC_DISPLAY = {
     "bleu_score": "BLEU",
     "bertscore": "BERTScore",
-    "semb_score": "SEMB",
-    "radgraph_combined": "RadGraph",
-    "RadCliQ-v0": "RadCliQ-v0 \u2193",
-    "RadCliQ-v1": "RadCliQ-v1 \u2193",
+    "laterality_correct": "laterality",
+    "diameter_abs_error_mm": "diameter-err-mm",
 }
+# Per-case metrics where lower is better; shown with a trailing arrow.
+LOWER_IS_BETTER = {"diameter_abs_error_mm"}
 
 CLS_RENAME = {
     "accuracy": "accuracy",
@@ -56,10 +54,11 @@ CLS_RENAME = {
 CLS_DISPLAY_ORDER = ["accuracy", "macro-F1", "micro-F1", "sensitivity", "specificity", "bal-acc"]
 
 DELTA_CLS_METRICS = ["macro-F1", "sensitivity", "specificity", "accuracy"]
-DELTA_CXR_METRICS = [
-    "BLEU", "BERTScore", "SEMB", "RadGraph",
-    "RadCliQ-v0 \u2193", "RadCliQ-v1 \u2193",
-]
+
+
+def _display_name(metric: str) -> str:
+    name = METRIC_DISPLAY.get(metric, metric)
+    return f"{name} \u2193" if metric in LOWER_IS_BETTER else name
 
 
 def _to_markdown(df: pd.DataFrame) -> str:
@@ -76,7 +75,7 @@ def _to_markdown(df: pd.DataFrame) -> str:
     return "\n".join(lines)
 
 
-def _aggregate_cxr(result_dir: Path, section: str) -> pd.DataFrame:
+def _aggregate_scores(result_dir: Path, section: str) -> pd.DataFrame:
     scores_path = result_dir / f"section_{section}_scores.csv"
     output_path = result_dir / "output.jsonl"
     if not scores_path.exists():
@@ -84,35 +83,42 @@ def _aggregate_cxr(result_dir: Path, section: str) -> pd.DataFrame:
     if not output_path.exists():
         raise SystemExit(f"missing output.jsonl: {output_path}")
 
-    scores = pd.read_csv(scores_path, dtype={"study_id": str})
+    scores = pd.read_csv(scores_path, dtype={ID_COL: str})
+    records = [
+        json.loads(line)
+        for line in output_path.read_text(encoding="utf-8").splitlines()
+        if line.strip()
+    ]
     confs = pd.DataFrame(
         [
             {
-                "study_id": str(json.loads(line)["id"]),
-                "confidence": (json.loads(line).get("confidence") or "none").lower(),
+                ID_COL: str(rec["id"]),
+                "confidence": (rec.get("confidence") or "none").lower(),
             }
-            for line in output_path.read_text().splitlines()
-            if line.strip()
+            for rec in records
         ]
     )
-    df = scores.merge(confs, on="study_id", how="left")
+    metrics = [
+        c
+        for c in scores.select_dtypes(include=["number", "bool"]).columns
+        if c not in (ID_COL, "confidence")
+    ]
+    df = scores.drop(columns=["confidence"], errors="ignore").merge(confs, on=ID_COL, how="left")
     df["confidence"] = df["confidence"].fillna("none")
 
-    present = [c for c in METRIC_COLS if c in df.columns]
-    rows = [{"confidence": "all", "n": len(df), **{c: df[c].mean() for c in present}}]
+    rows = [{"confidence": "all", "n": len(df), **{c: df[c].mean() for c in metrics}}]
     for bucket in ["high", "medium", "low", "none"]:
         sub = df[df["confidence"] == bucket]
         if len(sub) == 0:
             continue
-        rows.append({"confidence": bucket, "n": len(sub), **{c: sub[c].mean() for c in present}})
+        rows.append({"confidence": bucket, "n": len(sub), **{c: sub[c].mean() for c in metrics}})
 
     out = pd.DataFrame(rows)
     out.to_csv(result_dir / f"aggregated_by_confidence_{section}.csv", index=False)
 
-    display = out.rename(columns={c: CXR_DISPLAY[c] for c in present})[
-        ["confidence", "n"] + [CXR_DISPLAY[c] for c in present]
+    return out.rename(columns={c: _display_name(c) for c in metrics})[
+        ["confidence", "n"] + [_display_name(c) for c in metrics]
     ]
-    return display
 
 
 def _load_cls(result_dir: Path) -> pd.DataFrame | None:
@@ -131,8 +137,8 @@ def _fmt_delta(v: float) -> str:
 
 
 def _delta_table(
-    base_cxr: pd.DataFrame,
-    cand_cxr: pd.DataFrame,
+    base_scores: pd.DataFrame,
+    cand_scores: pd.DataFrame,
     base_cls: pd.DataFrame | None,
     cand_cls: pd.DataFrame | None,
 ) -> str:
@@ -151,15 +157,16 @@ def _delta_table(
                     "\u0394": _fmt_delta(c[m] - b[m]),
                 })
 
-    b, c = all_row(base_cxr), all_row(cand_cxr)
-    for m in DELTA_CXR_METRICS:
-        if m in b.index and m in c.index:
-            rows.append({
-                "metric": m,
-                "baseline": f"{b[m]:.3f}",
-                "candidate": f"{c[m]:.3f}",
-                "\u0394": _fmt_delta(c[m] - b[m]),
-            })
+    b, c = all_row(base_scores), all_row(cand_scores)
+    for m in base_scores.columns:
+        if m in ("confidence", "n") or m not in c.index:
+            continue
+        rows.append({
+            "metric": m,
+            "baseline": f"{b[m]:.3f}",
+            "candidate": f"{c[m]:.3f}",
+            "\u0394": _fmt_delta(c[m] - b[m]),
+        })
 
     cols = ["metric", "baseline", "candidate", "\u0394"]
     header = "| " + " | ".join(cols) + " |"
@@ -172,13 +179,13 @@ def _delta_table(
 
 
 def _print_dir(result_dir: Path, section: str) -> tuple[pd.DataFrame, pd.DataFrame | None]:
-    cxr = _aggregate_cxr(result_dir, section)
-    print(_to_markdown(cxr))
+    scores = _aggregate_scores(result_dir, section)
+    print(_to_markdown(scores))
     cls = _load_cls(result_dir)
     if cls is not None:
         print()
         print(_to_markdown(cls))
-    return cxr, cls
+    return scores, cls
 
 
 def main() -> None:
@@ -199,13 +206,13 @@ def main() -> None:
         _print_dir(args.result_dir, args.section)
     else:
         print(f"### baseline: {args.baseline.name}")
-        base_cxr, base_cls = _print_dir(args.baseline, args.section)
+        base_scores, base_cls = _print_dir(args.baseline, args.section)
         print()
         print(f"### candidate: {args.candidate.name}")
-        cand_cxr, cand_cls = _print_dir(args.candidate, args.section)
+        cand_scores, cand_cls = _print_dir(args.candidate, args.section)
         print()
         print("### delta (candidate \u2212 baseline, all row)")
-        print(_delta_table(base_cxr, cand_cxr, base_cls, cand_cls))
+        print(_delta_table(base_scores, cand_scores, base_cls, cand_cls))
 
 
 if __name__ == "__main__":

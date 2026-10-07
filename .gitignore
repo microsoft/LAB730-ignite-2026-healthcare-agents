@@ -5,6 +5,9 @@ __pycache__/
 internal-code/error.log
 internal-code/result-logs/
 
+# segmentation masks written by the medimageparse MCP server
+outputs/
+
 .eng/
 .eng
 external/

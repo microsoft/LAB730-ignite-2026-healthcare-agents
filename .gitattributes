@@ -1,0 +1,4 @@
+# Imaging data must never go through line-ending conversion.
+*.nii binary
+*.nii.gz filter=lfs diff=lfs merge=lfs -text
+*.dcm binary
