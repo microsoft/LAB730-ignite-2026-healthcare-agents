@@ -150,6 +150,8 @@ class MIPClient:
         if not prompts or any(not prompt.strip() or "&" in prompt for prompt in prompts):
             raise ValueError("Provide nonempty prompts without '&' delimiters")
         deployment = self.deployment_name if deployment_name is None else deployment_name
+        if not deployment:
+            raise ValueError("A deployment name is required")
         source = nib.load(image_path)
         prepared, interior = self._prepare(source)
         image_bytes = gzip.compress(prepared.to_bytes())

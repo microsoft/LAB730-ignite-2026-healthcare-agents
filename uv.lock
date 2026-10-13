@@ -1053,6 +1053,7 @@ dependencies = [
     { name = "requests" },
     { name = "rouge-score" },
     { name = "scikit-learn" },
+    { name = "scipy" },
     { name = "simpleitk" },
     { name = "tenacity" },
 ]
@@ -1078,6 +1079,7 @@ requires-dist = [
     { name = "requests", specifier = ">=2.31" },
     { name = "rouge-score", specifier = ">=0.1.2" },
     { name = "scikit-learn", specifier = ">=1.8.0" },
+    { name = "scipy", specifier = ">=1.17.1" },
     { name = "simpleitk", specifier = ">=2.5.6" },
     { name = "tenacity", specifier = ">=8.2" },
 ]
