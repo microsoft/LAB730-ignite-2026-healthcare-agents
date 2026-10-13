@@ -11,7 +11,7 @@ This file contains the answer-key text for the `SKILL.md` TODOs and the agent ru
 Goes in the frontmatter `description:` field. The agent uses it to decide when to invoke the skill — keep it specific.
 
 ```yaml
-description: Write a structured brain MRI report (Indication, Technique, Findings, Impression) using canonical neuroradiology phrasings. Invoke whenever drafting or revising a brain MRI report.
+description: Write a concise brain MRI report (Exam, Indication, Comparison, Technique, Findings, Impression). Invoke whenever drafting or revising a brain MRI report.
 ```
 
 ## argument-hint
@@ -21,7 +21,7 @@ Declares the optional inputs other agents or later chapters can pass in. Put it 
 ```yaml
 argument-hint: |
   - findings: optional list of findings the caller already identified (e.g. lesions reported by a segmentation tool)
-  - measurements: optional per-lesion measurements from a measurement tool (e.g. longest and perpendicular diameters in mm, laterality) — reported verbatim, never estimated
+  - measurements: optional per-lesion tool measurements with units and patient laterality, copied as supplied, never estimated
   - confidence: optional explicit hint about how certain the caller is (low / medium / high)
 ```
 
@@ -30,7 +30,7 @@ argument-hint: |
 Replaces the `<!-- TODO: one-liner -->` comment. This sentence describes the skill for human readers, not for agent routing.
 
 ```markdown
-Formats a brain MRI report (Indication, Technique, Findings, Impression) using canonical neuroradiology phrasing. Does not run image models, measure lesions, or look up priors.
+Formats a brain MRI report (Exam, Indication, Comparison, Technique, Findings, Impression) using canonical neuroradiology phrasing. Does not run image models, measure lesions, or look up priors.
 ```
 
 ## inputs
@@ -38,7 +38,7 @@ Formats a brain MRI report (Indication, Technique, Findings, Impression) using c
 Replaces the `<!-- TODO: inputs -->` comment. Tells the agent how to use caller-provided values and what to fall back on when none are given.
 
 ```markdown
-If the caller provides `findings`, `measurements`, or `confidence`, use them to ground the prose and the emitted confidence value. Prefer explicit `confidence` > tool-provided `findings` and `measurements` > your own read of the image. `measurements` are authoritative — copy the numbers and laterality verbatim. When nothing is provided, derive findings from the image and describe lesion size qualitatively; never invent numeric measurements.
+If the caller provides `findings`, `measurements`, or `confidence`, use them to ground the prose and the emitted confidence value. Prefer explicit `confidence` > tool-provided `findings` and `measurements` > your own read of the image or series. `measurements` are authoritative — copy the numbers, units, and laterality verbatim. When nothing is provided, derive findings from the image or series and describe lesion size qualitatively; never invent numeric measurements.
 ```
 
 ## how-to-use
@@ -62,9 +62,9 @@ Replaces the `<!-- TODO: style-rules -->` comment. The first bullet distinguishe
   - Tool-confirmed or unequivocal: state directly. `Enhancing mass in the left frontal lobe.`
   - Moderate: use `possible` or `differential includes`.
   - Low but non-zero: use `cannot exclude`.
-  - Absent: omit, or state the negative if clinically relevant.
-- State negatives explicitly. Group them: `No hemorrhage, hydrocephalus, or midline shift.`
-- **Numbers come from tools only.** Give sizes in millimeters only when supplied in `measurements`, copied verbatim. Otherwise describe size qualitatively (`small`, `moderate`, `large`). Never estimate millimeters from the image.
+  - Absent: state relevant negatives and the required routine survey findings when assessable.
+- State relevant negatives briefly, only when supported. Diffusion, white matter signal, blood products, and flow voids require appropriate sequences or supplied findings; a post-contrast series alone does not establish their absence.
+- **Numbers come from tools only.** Copy current and prior sizes as supplied in `measurements`, with their units and dimensions (for example, `{a} x {b} x {c} cm`). Do not round, convert units, add dimensions, or estimate numbers from images. Without measurements, use `small`, `moderate`, or `large`; the same rule applies to midline shift.
 - **Laterality is the patient's.** Images use radiological convention (patient's right on image left). Prefer tool-supplied laterality when given.
 - Never mention tools, models, masks, or scores inside the report.
 - No padding, filler, or clinical disclaimers.

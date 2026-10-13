@@ -136,8 +136,8 @@ Find the `<rules>` block. Add the "use available skills" line as the first bulle
 → [Suggested wording](suggested-changes.md#agent-rule)
 
 Run the same prompt from Step 1 on the same image. The output should now:
-- Use the four all-caps section headers in order
-- Have bulleted Findings / numbered Impression
+- Use EXAM, INDICATION, COMPARISON, TECHNIQUE, FINDINGS, and IMPRESSION in order, with a blank line between sections and text on the first four header lines
+- Have one prose paragraph for FINDINGS and numbered IMPRESSION statements, one per line
 - Open with `<confidence>...</confidence>` on its own line, then `<report>...</report>`
 - Describe lesion size qualitatively ("large", "moderate") instead of quoting invented millimeters
 - Borrow phrasings you can find in `references/phrase-bank.md`

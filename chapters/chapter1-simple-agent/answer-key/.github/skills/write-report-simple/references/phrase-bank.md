@@ -1,91 +1,70 @@
-# Phrase Bank — example brain MRI wordings
+# Brain MRI Phrase Bank
 
-Example phrasings in common neuroradiology usage; each finding has positive / possible / negative examples — borrow patterns.
+Adapt these positive / possible / negative patterns to the evidence; do not paste a normal finding by default. Use comparison language only with supplied prior evidence. Diffusion, FLAIR, blood-product, and flow-void statements require supporting sequences or supplied findings.
 
 <!-- PLACEHOLDER (Ignite 2026): pending neuroradiologist review. -->
 
-## No acute findings
+## Enhancing lesion / metastasis
 
-**Examples:** No focal parenchymal signal abnormality / no mass effect or midline shift / the ventricles and sulci are normal in size and configuration / no extra-axial collection / gray-white matter differentiation is preserved.
+**Positive:** A rim-enhancing lesion is present in the {side} {lobe} / the known metastasis is redemonstrated with peripheral enhancement.
 
-## Enhancing lesion / mass
+**Possible:** A small enhancing focus may represent metastatic disease.
 
-**Positive:** Heterogeneously enhancing intra-axial mass in the left frontal lobe / irregular peripheral enhancement surrounding a central non-enhancing component / nodular enhancement along the posterior wall of the resection cavity.
+**Negative:** No enhancing intracranial lesion is identified.
 
-**Possible:** Subtle focus of enhancement along the cavity margin; residual tumor cannot be excluded / ill-defined enhancement may represent treatment-related change versus tumor.
+## Size and change from prior
 
-**Negative:** No abnormal enhancement / no enhancing mass.
+Copy tool measurements as supplied, including units and dimensions, for example `{a} x {b} x {c} cm`. Do not convert units or add dimensions. Without them, use small, moderate-sized, or large.
 
-## Lesion size
+**Positive:** The lesion measures {current size with units}, compared with {prior size with units} on the prior study / the lesion is larger than before.
 
-**With tool-supplied measurements:** The enhancing lesion measures {longest} × {perpendicular} mm (longest × perpendicular, axial) / previously {prior longest} × {prior perpendicular} mm.
+**Possible:** Apparent slight enlargement; comparison is limited by differing technique.
 
-**Without measurements (qualitative only):** Large enhancing mass / moderate-sized lesion / small focus of enhancement.
+**Negative:** No appreciable change in lesion size.
 
-## Peritumoral edema / FLAIR hyperintensity
+## Vasogenic edema
 
-**Positive:** Surrounding vasogenic edema / extensive FLAIR hyperintensity in the left frontal white matter / FLAIR hyperintensity extends into the genu of the corpus callosum.
+**Positive:** The lesion has surrounding vasogenic edema extending into adjacent white matter.
 
-**Possible:** Mild FLAIR hyperintensity adjacent to the cavity may reflect post-treatment change versus infiltrative tumor.
+**Possible:** Subtle perilesional signal change may reflect mild edema.
 
-**Negative:** No significant surrounding edema.
+**Negative:** No appreciable perilesional edema.
 
-## Mass effect / midline shift / herniation
+## Mass effect / midline shift
 
-**Positive:** Local mass effect with effacement of the adjacent sulci / partial effacement of the frontal horn of the left lateral ventricle / rightward midline shift / subfalcine herniation.
+**Positive:** Local mass effect partially effaces the {horn} horn of the {side} lateral ventricle / midline structures are displaced toward the {side}, measuring {tool-supplied shift with units}.
 
-**Possible:** Mild sulcal effacement; minimal mass effect cannot be excluded.
+**Possible:** There may be slight narrowing of the adjacent sulci.
 
-**Negative:** No midline shift / no herniation.
+**Negative:** No appreciable mass effect or displacement of the midline.
 
-## Necrosis / cystic change
+## Blood products / post-treatment change
 
-**Positive:** Central non-enhancing necrotic component / cystic component following fluid signal.
+**Positive:** Susceptibility within the treated lesion is compatible with chronic blood products / the resection cavity has thin peripheral enhancement.
 
-**Possible:** Central area of lower signal may represent necrosis.
+**Possible:** Enhancement at the treatment site may reflect residual tumor or treatment effect.
 
-## Hemorrhage / blood products
+**Negative:** No hemorrhagic signal is evident.
 
-**Positive:** Intrinsic T1 hyperintensity consistent with blood products / small amount of blood products along the resection cavity.
+## New lesions
 
-**Possible:** Focus of T1 hyperintensity may represent blood products versus proteinaceous content.
+**Positive:** An enhancing focus has appeared in the {side} {lobe} since the prior study.
 
-**Negative:** No hemorrhage identified on the provided image.
+**Possible:** A faint focus not confidently seen previously may represent an additional lesion.
 
-## Ventricles / hydrocephalus
+**Negative:** No additional enhancing lesions have developed.
 
-**Positive:** Enlargement of the lateral ventricles out of proportion to the sulci, concerning for hydrocephalus / entrapment of the temporal horn.
+## White matter disease
 
-**Negative:** The ventricles are normal in size / no hydrocephalus.
+**Positive:** Scattered periventricular and subcortical FLAIR foci favor chronic small vessel ischemic change.
 
-## Acute infarct / stroke lesion
+**Possible:** Sparse white matter signal changes are nonspecific, possibly microvascular.
 
-**Positive:** Signal abnormality in the left middle cerebral artery territory consistent with acute infarct.
+**Negative:** No abnormal white matter FLAIR signal is identified.
 
-**Possible:** Subtle cortical signal abnormality in the right insula; early infarct cannot be excluded; correlate with diffusion-weighted imaging.
+## Routine normal statements
 
-**Negative:** No evidence of acute infarct on the provided image.
-
-## White matter lesions
-
-**Positive:** Multiple ovoid periventricular FLAIR hyperintense lesions oriented perpendicular to the lateral ventricles / scattered punctate subcortical white matter FLAIR hyperintensities, nonspecific, most commonly related to chronic small vessel ischemic change.
-
-**Possible:** Few nonspecific white matter FLAIR hyperintensities; differential includes chronic microvascular change versus demyelination.
-
-**Negative:** No white matter signal abnormality.
-
-## Extra-axial lesion / collection
-
-**Positive:** Dural-based enhancing extra-axial mass along the left frontal convexity / thin subdural collection along the right convexity.
-
-**Possible:** Subtle dural thickening; a small extra-axial collection cannot be excluded.
-
-**Negative:** No extra-axial collection.
-
-## Post-surgical / post-treatment changes
-
-**Examples:** Postsurgical changes of left frontal craniotomy and tumor resection / resection cavity containing fluid signal / expected postoperative dural thickening and enhancement / treatment-related change (pseudoprogression) cannot be distinguished from tumor progression on this study.
-
-## Limitations
-
-**Examples:** Evaluation is limited to the provided axial image / motion degrades image quality / only a post-contrast T1-weighted image is provided; FLAIR signal cannot be assessed.
+- Ventricular size and sulcal prominence are within the expected range for age.
+- The extra-axial spaces contain no fluid collection.
+- No diffusion restriction to indicate recent infarction.
+- The major arterial flow voids remain preserved.
