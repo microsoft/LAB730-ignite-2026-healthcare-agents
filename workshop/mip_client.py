@@ -51,30 +51,31 @@ class MIPClient:
         endpoint: str,
         api_key: str,
         deployment_name: str | None = None,
-        preprocessing: str = "lesion",
+        *,
+        orientation: str = "RAS",
+        upper_percentile: float = 99.5,
+        pad_to: int | None = None,
+        timeout: float = 300,
     ):
-        if not endpoint or not api_key:
-            raise ValueError("endpoint and api_key must be provided")
-        if preprocessing not in ("lesion", "anatomy"):
-            raise ValueError("preprocessing must be 'lesion' or 'anatomy'")
         self.endpoint = endpoint
         self.api_key = api_key
         self.deployment_name = deployment_name
-        self.preprocessing = preprocessing
+        self.orientation = orientation
+        self.upper_percentile = upper_percentile
+        self.pad_to = pad_to
+        self.timeout = timeout
 
     @classmethod
     def from_env(
-        cls, deployment_name: str | None = None, preprocessing: str = "lesion"
+        cls, deployment_name: str | None = None, **options
     ) -> "MIPClient":
         load_dotenv(os.environ.get("MIP_ENV_FILE") or None, override=False)
-        endpoint = os.environ.get("MIP_MODEL_ENDPOINT", "")
-        api_key = os.environ.get("MIP_MODEL_API_KEY", "")
-        if not endpoint or not api_key:
-            raise RuntimeError(
-                "MIP_MODEL_ENDPOINT and MIP_MODEL_API_KEY must be set "
-                "(via .env file or environment)."
-            )
-        return cls(endpoint, api_key, deployment_name, preprocessing)
+        return cls(
+            os.environ["MIP_MODEL_ENDPOINT"],
+            os.environ["MIP_MODEL_API_KEY"],
+            deployment_name,
+            **options,
+        )
 
     @_retry
     def _post(self, payload: dict, deployment: str) -> list:
@@ -85,7 +86,7 @@ class MIPClient:
         }
         try:
             resp = requests.post(
-                self.endpoint, json=payload, headers=headers, timeout=300
+                self.endpoint, json=payload, headers=headers, timeout=self.timeout
             )
             resp.raise_for_status()
         except requests.exceptions.HTTPError as exc:
@@ -97,50 +98,18 @@ class MIPClient:
             raise type(exc)("MIP request failed") from None
         return resp.json()
 
-    def segment(
-        self,
-        nifti_path: str | Path,
-        prompts: list[str],
-        *,
-        deployment_name: str | None = None,
-        preprocessing: str | None = None,
-    ) -> nib.Nifti1Image:
-        """Return source-grid labels: 0 is background; label i matches prompts[i-1]."""
-        deployment = (
-            self.deployment_name if deployment_name is None else deployment_name
-        )
-        if not deployment or not deployment.strip():
-            raise RuntimeError("deployment_name must be set on the client or call")
-        deployment = deployment.strip()
-        preprocessing = self.preprocessing if preprocessing is None else preprocessing
-        if preprocessing not in ("lesion", "anatomy"):
-            raise ValueError("preprocessing must be 'lesion' or 'anatomy'")
-        if not 1 <= len(prompts) <= 255 or any(
-            not prompt.strip() or "&" in prompt for prompt in prompts
-        ):
-            raise ValueError("Provide 1-255 nonempty prompts without '&' delimiters")
-
-        source = nib.load(nifti_path)
-        if len(source.shape) != 3:
-            raise ValueError("Input must be a 3D NIfTI volume")
+    def _prepare(self, source: nib.Nifti1Image):
         source_orientation = nib.orientations.io_orientation(source.affine)
-        target_orientation = nib.orientations.axcodes2ornt(
-            ("P", "L", "S") if preprocessing == "anatomy" else ("R", "A", "S")
-        )
+        target_orientation = nib.orientations.axcodes2ornt(self.orientation)
         transform = nib.orientations.ornt_transform(source_orientation, target_orientation)
         oriented = source.as_reoriented(transform)
         values = np.asarray(oriented.dataobj, dtype=np.float32)
-        if not np.isfinite(values).all() or values.max() <= 0:
-            raise ValueError("Input intensities must be finite with some positive voxels")
-        upper = (
-            float(values.max())
-            if preprocessing == "anatomy"
-            else np.percentile(values[values > 0], 99.5)
-        )
+        positive = values[values > 0]
+        upper = np.percentile(positive, self.upper_percentile) if positive.size else 1
         scaled = (np.clip(values, 0, upper) / upper * 255).astype(np.uint8)
         padding = [(0, 0)] * 3
-        if preprocessing == "anatomy":
-            side = max(256, *scaled.shape[:2])
+        if self.pad_to is not None:
+            side = max(self.pad_to, *scaled.shape[:2])
             padding = [
                 ((side - size) // 2, (side - size + 1) // 2)
                 for size in scaled.shape[:2]
@@ -148,7 +117,42 @@ class MIPClient:
         prepared = np.pad(scaled, padding)
         affine = oriented.affine.copy()
         affine[:3, 3] -= affine[:3, :3] @ np.array([pair[0] for pair in padding])
-        image_bytes = gzip.compress(nib.Nifti1Image(prepared, affine).to_bytes())
+        interior = tuple(
+            slice(pair[0], pair[0] + length)
+            for pair, length in zip(padding, oriented.shape)
+        )
+        return nib.Nifti1Image(prepared, affine), interior
+
+    @staticmethod
+    def _restore(prediction, source, prepared, interior) -> nib.Nifti1Image:
+        labels = np.asanyarray(prediction.dataobj)
+        if labels.shape != (prepared.shape[2], *prepared.shape[:2]):
+            raise ValueError(f"Unexpected endpoint mask shape: {labels.shape}")
+        # Endpoint affines are stale; invert the preparation geometry instead.
+        cropped = labels.astype(np.uint8).transpose(1, 2, 0)[interior]
+        inverse = nib.orientations.ornt_transform(
+            nib.orientations.io_orientation(prepared.affine),
+            nib.orientations.io_orientation(source.affine),
+        )
+        restored = nib.orientations.apply_orientation(cropped, inverse)
+        header = source.header.copy()
+        header.set_data_dtype(np.uint8)
+        return nib.Nifti1Image(restored, source.affine, header)
+
+    def segment(
+        self,
+        image_path: str | Path,
+        prompts: list[str],
+        *,
+        deployment_name: str | None = None,
+    ) -> nib.Nifti1Image:
+        """Return source-grid labels: 0 is background; label i matches prompts[i-1]."""
+        if not prompts or any(not prompt.strip() or "&" in prompt for prompt in prompts):
+            raise ValueError("Provide nonempty prompts without '&' delimiters")
+        deployment = self.deployment_name if deployment_name is None else deployment_name
+        source = nib.load(image_path)
+        prepared, interior = self._prepare(source)
+        image_bytes = gzip.compress(prepared.to_bytes())
         payload = {
             "input_data": {
                 "columns": ["image", "text"],
@@ -159,26 +163,4 @@ class MIPClient:
         response = self._post(payload, deployment)
         encoded = json.loads(response[0]["nifti_file"])["data"]
         prediction = nib.Nifti1Image.from_bytes(gzip.decompress(base64.b64decode(encoded)))
-        labels = np.asanyarray(prediction.dataobj)
-        if labels.shape != (prepared.shape[2], *prepared.shape[:2]):
-            raise ValueError(f"Unexpected endpoint mask shape: {labels.shape}")
-        if (
-            not np.isfinite(labels).all()
-            or not np.equal(labels, np.rint(labels)).all()
-            or labels.min() < 0
-            or labels.max() > len(prompts)
-        ):
-            raise ValueError("Endpoint mask must contain categorical IDs in the prompt range")
-        # Endpoint affines are stale; invert the preparation geometry instead.
-        interior = tuple(
-            slice(pair[0], pair[0] + length)
-            for pair, length in zip(padding, oriented.shape)
-        )
-        cropped = labels.astype(np.uint8).transpose(1, 2, 0)[interior]
-        inverse = nib.orientations.ornt_transform(target_orientation, source_orientation)
-        restored = nib.orientations.apply_orientation(cropped, inverse)
-        if restored.shape != source.shape:
-            raise ValueError("Prediction could not be restored to the source grid")
-        header = source.header.copy()
-        header.set_data_dtype(np.uint8)
-        return nib.Nifti1Image(restored, source.affine, header)
+        return self._restore(prediction, source, prepared, interior)
