@@ -1,0 +1,11 @@
+[
+  {
+    "moving": "mri-brain-lesions/case-054/2022-11-29/series-0010.nii.gz",
+    "moving_sha256": "45c72eba421f0f50f08f4b4929466f2b0e1375ee50c2d1183ab3612b6762f09d",
+    "reference": "mri-brain-lesions/case-054/2022-11-29/series-0012.nii.gz",
+    "reference_sha256": "3228b40766fa23561726e271bc3d6c31764dd0bd5fe0b298abc05eb07250ec96",
+    "transform": "mri-brain-lesions/case-054/2022-11-29/series-0010_to_series-0012.tfm",
+    "transform_type": "rigid",
+    "convention": "ITK transform maps reference physical points to moving physical points for resampling moving-grid labels onto the reference grid."
+  }
+]
