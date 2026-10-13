@@ -1,0 +1,18 @@
+{
+  "servers": {
+    "medimageparse": {
+      "command": "uv",
+      "args": [
+        "run",
+        "--directory",
+        "${workspaceFolder}/mcp/medimageparse-server",
+        "mcp",
+        "run",
+        "server.py"
+      ],
+      "env": {
+        "MIP_ENV_FILE": "${workspaceFolder}/mcp/medimageparse-server/.env"
+      }
+    }
+  }
+}
