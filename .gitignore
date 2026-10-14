@@ -3,8 +3,6 @@
 __pycache__/
 *.pyc
 *.egg-info/
-internal-code/error.log
-internal-code/result-logs/
 
 # MCP server audit trail: masks, descriptors, review images, factsheets
 audit-log/
