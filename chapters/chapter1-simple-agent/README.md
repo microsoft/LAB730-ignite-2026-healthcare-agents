@@ -46,10 +46,8 @@ Open Copilot Chat. With the agent definition file in place you should be able to
 Send:
 
 ```
-Please write a radiology report for samples/SYN0417_003.png.
+Please write a radiology report for samples/mri-brain-lesions/case-056/2017-06-13/series-0018.nii.gz.
 ```
-
-> 🚧 **Placeholder — PNG export pending.** The canonical brain MRI case has been selected: a glioblastoma follow-up from MU-Glioma-Post (CC BY 4.0). Its source volumes are in [`samples/mu-glioma-post/`](../../samples/mu-glioma-post/README.md). The axial slice `samples/SYN0417_003.png` and its sidecar `samples/SYN0417_003.json` (sequence and pixel spacing) haven't been exported yet, and more cases for `samples/extra/` are still to be selected. See [samples/README.md](../../samples/README.md).
 
 > Remember, the agent **only accepts file paths**. Don't drag the image into chat or use the paperclip; if you do, it'll refuse.
 

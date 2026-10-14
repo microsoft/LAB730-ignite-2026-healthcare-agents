@@ -39,7 +39,7 @@ If you can't install tools locally (corporate restrictions or you just want a cl
 ## Differences from local
 
 - **File paths** are `/workspaces/{repo-name}/...` not `/home/you/...`. Anywhere the workshop says "workspace root" applies the same way.
-- **Image samples in the chat input** — you reference images by repo-relative path (`samples/SYN0417_003.png`), the same as local.
+- **Image samples in the chat input** — you reference images by repo-relative path (`samples/mri-brain-lesions/case-056/2017-06-13/series-0018.nii.gz`), the same as local.
 - **Persistence** — Codespaces auto-stop after 30 min idle but retain state. Your code and `.env` survive restarts.
 - **Cost** — a single workshop session is well under 1 hour of Codespace time. After the workshop you can delete the codespace to free your quota.
 

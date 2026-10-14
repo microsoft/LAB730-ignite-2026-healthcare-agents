@@ -2,13 +2,13 @@
 name: lookup-patient-history
 description: Load a synthetic patient EHR record (demographics, diagnosis, treatments, medications, expected post-treatment findings, prior imaging studies and reports, pending orders) for a given brain MRI image. Invoke as the first step of any context-aware reporting flow that needs patient history. No model calls.
 argument-hint: |
-  - image_path: required path to the current brain MRI image. The patient_id is inferred from the filename (convention `{patient_id}_{study_index}.png`).
+  - image_path: required path to the current brain MRI image. The patient_id is inferred from the filename (convention `{patient_id}_{study_index}` plus the image extension, such as `.nii.gz`).
   - patient_id: optional override if the image filename does not follow that convention.
 ---
 
 # lookup-patient-history
 
-Pure data skill. Reads the on-disk patient record at `/data/patients/{patient_id}.json` and returns it, with any referenced prior reports loaded inline. No model calls, no segmentation, no prose.
+Pure data skill. Reads the on-disk patient record at `data/patients/{patient_id}.json` (workspace root) and returns it, with any referenced prior reports loaded inline. No model calls, no segmentation, no prose.
 
 This skill is the "knowledge source" half of Chapter 3 — the report-writing skill consumes whatever this returns.
 
@@ -22,11 +22,11 @@ This skill is the "knowledge source" half of Chapter 3 — the report-writing sk
 
 1. **Resolve `patient_id`.**
    - If the caller supplied `patient_id`, use it.
-   - Otherwise infer from the image filename: the convention is `{patient_id}_{study_index}.png` (e.g. `SYN0417_003.png` → `SYN0417`). Strip the trailing `_NNN.png`.
-   - Note the current `study_id` too (e.g. `SYN0417_003`) — it identifies which pending order the current image belongs to.
+   - Otherwise infer from the image filename: the convention is `{patient_id}_{study_index}` plus the extension (e.g. `SYN0056_006.nii.gz` → `SYN0056`). Strip the extension and the trailing `_NNN`.
+   - Note the current `study_id` too (e.g. `SYN0056_006`) — it identifies which pending order the current image belongs to.
 
 2. **Load the record file.**
-   - Path: `/data/patients/{patient_id}.json` (workspace-root-relative).
+   - Path: `data/patients/{patient_id}.json` (workspace-root-relative).
    - If the file does not exist, return:
      ```
      PATIENT RECORD: Not on file for patient_id {patient_id}.
@@ -75,7 +75,7 @@ EXPECTED POST-TREATMENT FINDINGS (per record):
 - {each item from expected_post_treatment_findings}
 
 IMAGING HISTORY (oldest → newest):
-- {study_id} — {date}, {exam}. {summary}
+- {study_id} — {date}, {exam}. {summary} Image: {image_path, or "not retained"}
   (one line per imaging_studies entry; preserve order)
 
 PRIOR REPORTS:

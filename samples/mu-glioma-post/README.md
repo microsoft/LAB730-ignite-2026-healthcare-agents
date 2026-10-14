@@ -55,12 +55,7 @@ For the lab narrative, the case has exactly the right shape: new enhancement at 
 
 ## How the lab uses it
 
-| Dataset file | Lab role |
-|---|---|
-| `Timepoint_2` `brain_t1c` | Canonical current study, `SYN0417_003` (Chapters 1–3) |
-| `Timepoint_1` `brain_t1c` | Prior study, `SYN0417_002` (Chapter 3) |
+The current chapters don't use this case; they use the clinical volumes in [`../mri-brain-lesions/`](../mri-brain-lesions/).
 
 - **Representative slice:** axial index `z = 122`, 0-based along the superior axis. It has the largest enhancing area on Timepoint_2, and because both time points are co-registered, the same index shows the same level on Timepoint_1.
 - **Display:** with the native LPS array, `volume[:, :, 122].T` is already in radiological display convention (patient's right on the image left, anterior at the top).
-
-The chart for `SYN0417` in Chapter 3 is fictional. Only the images come from this case.
