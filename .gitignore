@@ -6,7 +6,8 @@ __pycache__/
 internal-code/error.log
 internal-code/result-logs/
 
-# segmentation masks written by the medimageparse MCP server
+# MCP server audit trail: masks, descriptors, review images, factsheets
+audit-log/
 outputs/
 
 # agent scratch space (code and images the Radiology Assistant creates)

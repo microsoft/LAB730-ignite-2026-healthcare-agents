@@ -15,6 +15,7 @@ from scipy.sparse.csgraph import connected_components
 from scipy.spatial import ConvexHull, cKDTree, distance
 from skimage.measure import label, marching_cubes, mesh_surface_area, regionprops
 
+import figures
 from segmentation import CATALOG
 
 
@@ -68,6 +69,10 @@ def _volume(identifier, scope, name, count, voxel_ml, **extra):
 
 def _stem(path):
     return path.name.removesuffix(".gz").removesuffix(".nii")
+
+
+def _beside_clean(clean_path, suffix):
+    return clean_path.with_name(f"{_stem(clean_path).removesuffix('.clean')}{suffix}")
 
 
 def _write_json(path, value):
@@ -462,16 +467,20 @@ def describe_lesions(clean_path: str, prior_clean_path: str | None = None) -> di
     totals, change, and limitations. Save JSON beside the masks; save prior
     descriptors too when supplied. Measurements use cleaned voxels only.
     IDs rank each scan independently. No diagnosis, anatomy, or side is inferred.
+    Also save <mask stem>.measurements.png per scan with lesions, showing each
+    lesion's measured slice; return those paths as images.
     """
     path = Path(clean_path).resolve()
     result = _describe_clean(path)
+    images = [figures.save_measurements(result, _beside_clean(path, ".measurements.png"))]
     if prior_clean_path is not None:
         prior_path = Path(prior_clean_path).resolve()
         prior = _describe_clean(prior_path)
         result["descriptors"].extend(_change_records(result, prior))
-        prior_output = prior_path.with_name(f"{_stem(prior_path).removesuffix('.clean')}.descriptors.json")
+        prior_output = _beside_clean(prior_path, ".descriptors.json")
         _write_json(prior_output, prior)
+        images.append(figures.save_measurements(prior, _beside_clean(prior_path, ".measurements.png")))
         result["inputs"].update(prior_image_path=prior["inputs"]["image_path"], prior_clean_path=str(prior_path), prior_descriptors_path=str(prior_output))
-    output = path.with_name(f"{_stem(path).removesuffix('.clean')}.descriptors.json")
+    output = _beside_clean(path, ".descriptors.json")
     _write_json(output, result)
-    return {"descriptors_path": str(output), **result}
+    return {"descriptors_path": str(output), "images": [image for image in images if image], **result}

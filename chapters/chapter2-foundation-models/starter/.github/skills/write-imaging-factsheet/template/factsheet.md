@@ -34,3 +34,8 @@ derivation: AI segmentation, not reviewed by a radiologist
 
 ## Limitations
 - [limitation.{{name}}] {{rule}}; {{observed_value and observed_unit when present}}.
+
+## Images
+![Film grid](film-grid.png)
+![Segmentation]({{mask-stem}}.film-grid.png)
+![Measurements]({{mask-stem}}.measurements.png)
