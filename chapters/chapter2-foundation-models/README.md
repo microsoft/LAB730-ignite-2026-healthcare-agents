@@ -148,7 +148,7 @@ Watch the trace: you should see one `mcp_medimageparse_segment_lesions` call, th
 
 > 🚧 **Placeholder.** Until `segmentation.segment` is implemented, the tool call returns a `NotImplementedError`. You can still verify the wiring: the agent should *attempt* the call with an absolute path and the prompts from `references/prompts.md`.
 
-> First-call latency: the MedImageParse endpoint runs on a GPU and may take 30–90s to wake up if it's been idle. Subsequent calls are fast.
+> Segmentation might take a few minutes if the endpoint call needs retries.
 
 > If the agent writes a report without calling MedImageParse first, `segment_lesions` may not be registered. Check the tool picker under **medimageparse**.
 
