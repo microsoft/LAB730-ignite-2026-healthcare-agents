@@ -70,6 +70,12 @@ class MIPClient:
         cls, deployment_name: str | None = None, **options
     ) -> "MIPClient":
         load_dotenv(os.environ.get("MIP_ENV_FILE") or None, override=False)
+        missing = [
+            name for name in ("MIP_MODEL_ENDPOINT", "MIP_MODEL_API_KEY")
+            if not os.environ.get(name)
+        ]
+        if missing:
+            raise RuntimeError(f"Missing environment variables: {', '.join(missing)}")
         return cls(
             os.environ["MIP_MODEL_ENDPOINT"],
             os.environ["MIP_MODEL_API_KEY"],

@@ -29,7 +29,7 @@ If you can't install tools locally (corporate restrictions or you just want a cl
    uv run workshop/check_env.py
    ```
 
-   Expect `Workshop env OK — Python 3.11`. The Codespace base image ships with `uv` pre-installed, so no install step needed.
+   Expect `Workshop env OK — Python 3.11; endpoint OK (mip3d-mri-brain-lesion)`. The Codespace base image ships with `uv` pre-installed, so no install step needed.
 
 4. **Sign into Copilot Chat.**
 

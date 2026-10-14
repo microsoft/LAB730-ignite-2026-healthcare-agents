@@ -51,7 +51,7 @@ The `workshop/` directory at repo root holds shared Python utilities for the wor
 ```bash
 uv --version              # 0.x.x
 uv sync                   # one-time, ~1–2 min on a good connection
-uv run workshop/check_env.py   # expected: "Workshop env OK — Python 3.11"
+uv run workshop/check_env.py   # expected: "Workshop env OK — Python 3.11; endpoint OK (mip3d-mri-brain-lesion)"
 ```
 
 If any command above fails, resolve it before arriving.
