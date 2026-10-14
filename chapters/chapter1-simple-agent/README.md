@@ -149,7 +149,13 @@ The output should now:
 
 If it still looks like Step 1, the agent didn't pick up the skill. Check: directory name = `write-report-simple` exactly, all three files exist, and the workflow step names `write-report-simple`. It also helps to start a new chat session.
 
-Now run `/write-report-simple` on a few different images. Read each report against your own impression. Where does it go right? Where does it go wrong? Notice that the skill made the agent *honest* about size — but it still can't tell you *how big* the lesion is. That's Chapter 2.
+Now try another image:
+
+```
+/write-report-simple Please write a radiology report for samples/mri-brain-lesions/case-062/2021-06-25/series-0007.nii.gz.
+```
+
+Read each report against your own impression. Where does it go right? Where does it go wrong? Notice that the skill made the agent *honest* about size — but it still can't tell you *how big* the lesion is. That's Chapter 2.
 
 > **Ways skills get invoked.** Here the agent's workflow names `write-report-simple`, so the agent calls it for every report. Without that step, an agent can still pick up a skill automatically when its `description` matches the request, or you can name it with `/<skillname>` (`/write-report-simple Please write a radiology report for …`). Explicit is useful when a skill's description is ambiguous or when several skills could plausibly handle the request. Typing `/` in the chat input lists the registered skills, which is a good way to check that yours was picked up.
 
@@ -157,7 +163,7 @@ Takeaway: a general-purpose LLM looking at pixels is not clinically reliable; a 
 
 ## (Optional) Step 4 — Extra credit
 
-**Add to the phrase bank.** Pick a finding the bank doesn't cover well (for example, a specific white matter lesion pattern or an extra-axial collection) and add 2–3 example phrasings (positive / possible / negative) under a new section in `references/phrase-bank.md`. Re-run on a relevant image and see whether the agent borrows your wording.
+**Add to the phrase bank.** Pick a finding the bank doesn't cover well (for example, a specific white matter lesion pattern or an extra-axial collection) and add 2–3 example phrasings (positive / possible / negative) under a new section in `references/phrase-bank.md`. Start a fresh chat, re-run `/write-report-simple Please write a radiology report for samples/mri-brain-lesions/case-056/2017-06-13/series-0018.nii.gz.`, and see whether the agent borrows your wording.
 
 ## What you should have at the end
 
