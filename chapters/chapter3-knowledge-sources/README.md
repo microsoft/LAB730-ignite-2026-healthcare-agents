@@ -63,7 +63,7 @@ That adds:
   lookup-patient-history/       reads the chart and prior reports
   write-report-with-ehr/        writes the context-aware report
 data/
-  patients/SYN0056.json         the chapter's patient (SYN0054 and SYN0062 for extra credit)
+  patients/SYN0056.json         the chapter's patient (SYN0062 for extra credit)
   reports/SYN0056_002.md        the prior report
   images/SYN0056_006.nii.gz     current MRI, 2018-04-14 (same scan as Chapter 2)
   images/SYN0056_002.nii.gz     prior MRI, 2017-06-13 (same scan as Chapter 2)
@@ -124,7 +124,7 @@ What you should see:
 Pick one:
 
 1. **Remove the surgery.** In your copy of `data/patients/SYN0056.json`, delete the craniotomy from `procedures` and study `_003` from `imaging_studies`. Rerun Step 3. Does the report now call the change growth? Should it?
-2. **Another patient.** Run `/write-report-with-ehr Please write a radiology report for data/images/SYN0054_002.nii.gz.` (melanoma on immunotherapy after radiosurgery, several lesions) or `/write-report-with-ehr Please write a radiology report for data/images/SYN0062_001.nii.gz.` (renal cell carcinoma, untreated metastases, on an anticoagulant). Their priors are summaries only, so the factsheet has no change lines and the report compares in words. Confirm the lookup keys off the file name, not a hardcoded ID.
+2. **Another patient.** Run `/write-report-with-ehr Please write a radiology report for data/images/SYN0062_001.nii.gz.` (renal cell carcinoma, untreated metastases, on an anticoagulant). Its priors are summaries only, so the factsheet has no change lines and the report compares in words. Confirm the lookup keys off the file name, not a hardcoded ID.
 3. **Two ways to measure.** The prior report measured the 2017 mass at 4.3 × 3.4 × 4.3 cm; `describe_lesions` measured the same scan at about 4.4 × 3.5 cm. Open the 2017 `.measurements.png` in `audit-log/` and consider why a radiologist's caliper reading and a geometric measurement on a mask can differ.
 4. **FHIR shape.** Refactor `lookup-patient-history` to consume a minimal FHIR bundle (`Patient`, `Condition`, `Procedure`, `MedicationStatement`, `ImagingStudy`, `DiagnosticReport`) instead of the flat JSON. The report skill shouldn't need to change; that's the point.
 5. **Look at the audit log.** Chapter 3 saved its files in new folders, `audit-log/data/images/SYN0056_006/` and `SYN0056_002/`, because the image paths differ from Chapter 2's even though the scans are the same. Open its factsheet next to Chapter 2's in `audit-log/samples/mri-brain-lesions/case-056/2018-04-14/series-0902/` and compare the numbers. Small differences come from the model's output, not the code.
