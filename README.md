@@ -15,10 +15,10 @@ Budget about **30 min setup** (do this before arriving) + **60 min content** acr
 ## Workshop layout
 
 - [`chapters/`](chapters/) — one folder per chapter. Each has a `README.md`, a `starter/` skeleton, and an `answer-key/` reference.
-- [`samples/`](samples/) — brain MRI you can hand to the agent: a glioblastoma follow-up case from MU-Glioma-Post (CC BY 4.0). The PNG slices the lab reads are still a 🚧 placeholder — see [samples/README.md](samples/README.md).
+- [`samples/`](samples/) — de-identified post-contrast brain MRI volumes (NIfTI) you can hand to the agent. See [samples/README.md](samples/README.md).
 - [`docs/`](docs/) — troubleshooting, Codespaces, and no-admin setup guides.
 
-> The data and patient records in this repo are synthetic or de-identified and are **not for clinical use**. The brain MRI comes from the [MU-Glioma-Post](https://doi.org/10.7937/7K9K-3C83) dataset on The Cancer Imaging Archive, used under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). See [samples/mu-glioma-post/README.md](samples/mu-glioma-post/README.md) for the required citation. The patient chart wrapped around it is fictional. MedImageParse is provided for research and model development exploration; it is not designed or intended to be deployed in clinical settings as-is.
+> The data and patient records in this repo are synthetic or de-identified and are **not for clinical use**. The patient charts in Chapter 3 are synthetic. MedImageParse is provided for research and model development exploration; it is not designed or intended to be deployed in clinical settings as-is.
 
 ## Prerequisites
 

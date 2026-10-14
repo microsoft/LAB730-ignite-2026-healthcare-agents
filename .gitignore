@@ -18,8 +18,5 @@ sandbox/*
 .eng
 external/
 
-# papermill outputs
-.papermill/
-
 # agent reasoning traces (large)
 **/trace.log

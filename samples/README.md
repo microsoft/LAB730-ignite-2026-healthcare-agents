@@ -17,7 +17,3 @@ Please write a radiology report for samples/mri-brain-lesions/case-056/2017-06-1
 | `case-062/2021-06-25/series-0007.nii.gz` | Chapter 3 extra credit, as `SYN0062_001` |
 
 Chapter 3 uses copies of these files named `{patient_id}_{study_index}.nii.gz`; see [its image list](../chapters/chapter3-knowledge-sources/data/images/README.md). Patient histories in Chapter 3 are synthetic.
-
-## Other data
-
-[`mu-glioma-post/`](mu-glioma-post/) holds a MU-Glioma-Post glioblastoma case with reference segmentations (CC BY 4.0). Its [data card](mu-glioma-post/README.md) has the citation. The current chapters don't use it.

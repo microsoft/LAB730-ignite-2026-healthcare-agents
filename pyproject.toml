@@ -3,22 +3,14 @@ name = "foundation-model-and-agents-workshop"
 version = "0.1.0"
 requires-python = ">=3.11"
 dependencies = [
-    "github-copilot-sdk>=0.3.0",
-    "ipykernel>=7.2.0",
-    "jupyter>=1.1.1",
     "matplotlib>=3.10.9",
     "mcp[cli]>=1.6",
     "nibabel>=5.4.2",
     "numpy>=2.4.4",
-    "optuna>=4.8.0",
-    "pandas>=3.0.2",
-    "pillow>=12.2.0",
     "python-dotenv>=1.0",
     "requests>=2.31",
     "scikit-image>=0.26.0",
-    "scikit-learn>=1.8.0",
     "scipy>=1.17.1",
-    "simpleitk>=2.5.6",
     "tenacity>=8.2",
 ]
 
@@ -31,8 +23,3 @@ packages = ["workshop"]
 
 [tool.uv.workspace]
 exclude = ["internal-code"]
-
-[dependency-groups]
-dev = [
-    "papermill>=2.7.0",
-]

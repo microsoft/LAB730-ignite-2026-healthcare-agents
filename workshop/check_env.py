@@ -11,8 +11,8 @@ from time import perf_counter
 from urllib.parse import urlsplit
 
 for package in (
-    "numpy", "pandas", "PIL", "sklearn", "dotenv", "requests", "matplotlib",
-    "ipykernel", "nibabel", "SimpleITK", "scipy", "skimage", "tenacity", "mcp",
+    "numpy", "dotenv", "requests", "matplotlib", "nibabel", "scipy",
+    "skimage", "tenacity", "mcp",
 ):
     try:
         import_module(package)
