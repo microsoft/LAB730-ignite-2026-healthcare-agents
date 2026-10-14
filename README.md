@@ -6,7 +6,7 @@ Budget about **30 min setup** (do this before arriving) + **60 min content** acr
 
 > 🚧 **Work in progress for Ignite 2026.** The lab structure, agents, skills, and MCP server scaffolding are in place, and the source MRI case has been selected. The MedImageParse calls, lesion measurement code, exported PNG slices, and eval results are placeholders — search the repo for `Placeholder` and `TODO(mip)` to find them.
 
-<p align="center"><img src="docs/brain-lesion-segmentation-workshop.svg" alt="Workshop overview: three chapters — agent and skill, MedImageParse segmentation via MCP, and patient context — take a brain MRI to a measured, radiologist-reviewed draft report." width="480"></p>
+![Workshop overview: three chapters — agent and skill, MedImageParse segmentation via MCP, and patient context — take a brain MRI to a measured, radiologist-reviewed draft report.](docs/brain-lesion-segmentation-workshop.svg)
 
 ## What you'll build
 

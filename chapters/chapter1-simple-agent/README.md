@@ -8,14 +8,15 @@
 
 ## Overview
 
-In this chapter you will build a minimal "radiology assistant" agent inside VS Code that uses a general-purpose LLM (no specialized foundation model yet) to (a) generate a structured report from a brain MRI image and (b) summarize the results of an evaluation run. The point is to feel how *cheap* and *easy* it is to compose an agent from skills — and to see, by the end, that a generic LLM is **not** clinically reliable on its own.
+In this chapter you will build a minimal "radiology assistant" agent inside VS Code that uses a general-purpose LLM (no specialized foundation model yet) to generate a structured report from a brain MRI image. The point is to feel how *cheap* and *easy* it is to compose an agent from skills — and to see, by the end, where a generic LLM **stops** being clinically reliable on its own.
 
 We start with a very simple agent, without any skills, and progress by adding a skill to start seeing better conformance.
 
-A "Radiology Assistant" agent built on a generic LLM will happily produce a brain MRI report, but it is not clinically reliable: section names drift run-to-run, hedging language is inconsistent, confidence is never stated — and, worst of all for brain lesions, it will quote lesion sizes in millimeters that it has no way to measure. In this chapter you build that bare agent, watch it drift, then close the gap by adding a single **skill** — a structured, reusable instruction packet that gives the agent a fixed report template, phrasing discipline, a "no invented numbers" rule, and calibrated confidence buckets. By the end you'll see the same agent produce a consistent report on the same image, and read an eval table that quantifies the improvement.
+A "Radiology Assistant" agent built on a generic LLM will happily produce a brain MRI report, but it is not clinically reliable: section names drift run-to-run, hedging language is inconsistent, confidence is never stated — and, worst of all for brain lesions, it may quote lesion sizes in millimeters that it has no way to measure. In this chapter you build that bare agent, watch it drift, then start closing some of the gaps by adding a single **skill** — a structured, reusable instruction packet that gives the agent a fixed report template, phrasing discipline, a "no invented numbers" rule, and calibrated confidence buckets. By the end you'll see the same agent produce a consistent report on the same image, and read an eval table that quantifies the improvement.
 
 **Steps:**
-- Setup — copy the starter agent file to your workspace. (~1 min)
+
+0. Setup — copy the starter agent file to your workspace. (~1 min)
 1. See the gap — run the bare agent and note where structure drifts and numbers appear from nowhere. (~5 min)
 2. Build the skill — fill in the `SKILL.md` TODOs. (~10 min)
 3. Activate it — add one rule to the agent file. (~2 min)
