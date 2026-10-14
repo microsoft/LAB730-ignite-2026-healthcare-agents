@@ -12,10 +12,12 @@ import nibabel as nib
 import numpy as np
 
 import figures
+import workshop
 from workshop.mip_client import MIPClient
 
+# The server runs in place or copied to the workspace root; both keep audit-log/ at the workspace root.
 AUDIT_DIR = Path(__file__).resolve().parents[2] / "audit-log"
-REPO_ROOT = Path(__file__).resolve().parents[5]
+REPO_ROOT = Path(workshop.__file__).resolve().parents[1]
 CATALOG = json.loads(
     Path(__file__).with_name("models.json").read_text(encoding="utf-8")
 )
