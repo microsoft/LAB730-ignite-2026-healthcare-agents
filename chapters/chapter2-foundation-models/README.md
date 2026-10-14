@@ -203,6 +203,27 @@ Then check the report:
 
 > MedImageParse output varies slightly between calls, so small volumes, mostly edema, can differ from run to run. The code is deterministic: the same mask always gives the same descriptors.
 
+## (Optional) Explore the audit log
+
+Open `audit-log/samples/mri-brain-lesions/case-056/2018-04-14/series-0902/`. Each step left files here (`<stem>` is the shared prefix that starts with `mip3d-mri-brain-lesion`):
+
+| File | Written by | What it holds |
+|---|---|---|
+| `film-grid.png` | `segment` | The scan alone, axial slices |
+| `<stem>.film-grid.png` | `segment` | The raw mask on the same slices |
+| `<stem>.nii.gz`, `<stem>.json` | `segment` | The mask, and the model and prompts that made it |
+| `<stem>.clean.*`, `<stem>.lesions.*` | `clean_segmentation` | Cleaned mask, lesion IDs, and cleanup settings |
+| `<stem>.descriptors.json` | `describe_lesions` | Every number with its ID, unit, and rule |
+| `<stem>.measurements.png` | `describe_lesions` | Each lesion on its measured slice |
+| `<stem>.factsheet.md` | the agent | The only file the language model wrote |
+
+Things to try:
+
+1. Open the two film grids side by side. In the overlay, red is enhancing tumor, blue is edema, and green is the necrotic core. Look for colored regions you would not call tumor.
+2. In `.descriptors.json`, find `L1.bidimensional` and match its `slice_index` to the `z` label on the film grid and the measurement image.
+3. Read the `limitation` entries: what the descriptors cannot tell you, such as side and anatomy.
+4. Pick one factsheet line and find the descriptor it cites. Every other file here was written by code, not by the language model.
+
 ## (Optional) Extra credit
 
 1. **Change the cleanup.** Ask the agent to rerun `clean_segmentation` on the 2018 mask with `min_edema_ml` set to 1.0, then `describe_lesions` without a prior. Compare the edema components. The parameters are saved in `.clean.json`, and the rerun replaces that scan's cleaned mask and descriptors.

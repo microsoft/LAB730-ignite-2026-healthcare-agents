@@ -92,6 +92,6 @@ Replaces the `<!-- TODO: output-format -->` comment. The tags are literal text â
 Add this as the first bullet in the `<rules>` block of `.github/agents/radiology-assistant.agent.md`.
 
 ```markdown
-- **Use available skills when present.** If a skill is registered for the task at hand (e.g. report generation, eval summarization), invoke it rather than improvising.
+- **Use available skills when present.** If a skill is registered for the task at hand (e.g. report generation), invoke it rather than improvising.
 - For brain MRI reports use skill write-report-simple
 ```

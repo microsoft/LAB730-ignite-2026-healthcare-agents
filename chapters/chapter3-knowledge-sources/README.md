@@ -127,6 +127,7 @@ Pick one:
 2. **Another patient.** Run the report skill on `data/images/SYN0054_002.nii.gz` (melanoma on immunotherapy after radiosurgery, several lesions) or `data/images/SYN0062_001.nii.gz` (renal cell carcinoma, untreated metastases, on an anticoagulant). Their priors are summaries only, so the factsheet has no change lines and the report compares in words. Confirm the lookup keys off the file name, not a hardcoded ID.
 3. **Two ways to measure.** The prior report measured the 2017 mass at 4.3 × 3.4 × 4.3 cm; `describe_lesions` measured the same scan at about 4.4 × 3.5 cm. Open the 2017 `.measurements.png` in `audit-log/` and consider why a radiologist's caliper reading and a geometric measurement on a mask can differ.
 4. **FHIR shape.** Refactor `lookup-patient-history` to consume a minimal FHIR bundle (`Patient`, `Condition`, `Procedure`, `MedicationStatement`, `ImagingStudy`, `DiagnosticReport`) instead of the flat JSON. The report skill shouldn't need to change; that's the point.
+5. **Look at the audit log.** Chapter 3 saved its files in new folders, `audit-log/data/images/SYN0056_006/` and `SYN0056_002/`, because the image paths differ from Chapter 2's even though the scans are the same. Open its factsheet next to Chapter 2's in `audit-log/samples/mri-brain-lesions/case-056/2018-04-14/series-0902/` and compare the numbers. Small differences come from the model's output, not the code.
 
 ## What you should have at the end
 

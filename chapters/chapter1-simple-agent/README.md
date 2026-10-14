@@ -8,19 +8,18 @@
 
 ## Overview
 
-In this chapter you will build a minimal "radiology assistant" agent inside VS Code that uses a general-purpose LLM (no specialized foundation model yet) to (a) generate a structured report from a brain MRI image and (b) summarize the results of an evaluation run. The point is to feel how *cheap* and *easy* it is to compose an agent from skills — and to see, by the end, that a generic LLM is **not** clinically reliable on its own.
+In this chapter you will build a minimal "radiology assistant" agent inside VS Code that uses a general-purpose LLM (no specialized foundation model yet) to generate a structured report from a brain MRI image. The point is to feel how *cheap* and *easy* it is to compose an agent from skills — and to see, by the end, that a generic LLM is **not** clinically reliable on its own.
 
 We start with a very simple agent, without any skills, and progress by adding a skill to start seeing better conformance.
 
-A "Radiology Assistant" agent built on a generic LLM will happily produce a brain MRI report, but it is not clinically reliable: section names drift run-to-run, hedging language is inconsistent, confidence is never stated — and, worst of all for brain lesions, it will quote lesion sizes in millimeters that it has no way to measure. In this chapter you build that bare agent, watch it drift, then close the gap by adding a single **skill** — a structured, reusable instruction packet that gives the agent a fixed report template, phrasing discipline, a "no invented numbers" rule, and calibrated confidence buckets. By the end you'll see the same agent produce a consistent report on the same image, and read an eval table that quantifies the improvement.
+A "Radiology Assistant" agent built on a generic LLM will happily produce a brain MRI report, but it is not clinically reliable: section names drift run-to-run, hedging language is inconsistent, confidence is never stated — and, worst of all for brain lesions, it will quote lesion sizes in millimeters that it has no way to measure. In this chapter you build that bare agent, watch it drift, then close the gap by adding a single **skill** — a structured, reusable instruction packet that gives the agent a fixed report template, phrasing discipline, a "no invented numbers" rule, and calibrated confidence buckets. By the end you'll see the same agent produce a consistent report on the same image.
 
 **Steps:**
 - Setup — copy the starter agent file to your workspace. (~1 min)
 1. See the gap — run the bare agent and note where structure drifts and numbers appear from nowhere. (~5 min)
 2. Build the skill — fill in the `SKILL.md` TODOs. (~10 min)
 3. Activate it — add one rule to the agent file. (~2 min)
-4. See the numbers — read an eval table via `summarize-eval`. (~3 min)
-5. (Optional) Phrase bank additions or your own mini-eval.
+4. (Optional) Phrase bank additions.
 
 ## Setup (~1 min)
 
@@ -117,7 +116,7 @@ When the agent has options, the skill picks one and names it. These rules close 
 
 ### Fill the `output-format` TODO
 
-Machine-readable output needs a verbatim template, not a description of one. The literal tags let downstream steps and evals extract the confidence value without fragile string matching.
+Machine-readable output needs a verbatim template, not a description of one. The literal tags let downstream steps extract the confidence value without fragile string matching.
 
 → [Suggested text](suggested-changes.md#output-format)
 
@@ -144,33 +143,11 @@ If it still looks like Step 1, the agent didn't pick up the skill. Check: direct
 
 Now try it on a few different images. Read each report against your own impression. Where does it go right? Where does it go wrong? Notice that the skill made the agent *honest* about size — but it still can't tell you *how big* the lesion is. That's Chapter 2.
 
-## Step 4 — See the numbers (~3 min)
+> **Two ways skills get invoked.** Here the radiology agent picked up `write-report-simple` automatically because its `description` matched what you asked it to do — that's auto-by-context. You can also name the skill explicitly with `/<skillname>` (`/write-report-simple Please write a radiology report for …`) — that's manual invocation. Explicit is useful when a skill's description is ambiguous or when several skills could plausibly handle the request. Typing `/` in the chat input lists the registered skills, which is a good way to check that yours was picked up.
 
-At this point you might be wondering: I've seen how this agent performs on a few individual images, what about testing it on a larger set? Evaluating the accuracy of radiology report generation is a complex task on its own, involving careful design of reliable metrics. Learning how to compute and how to understand these metrics is beyond the scope of this workshop, however we would like to give you a general idea how it's done.
+Takeaway: a general-purpose LLM looking at pixels is not clinically reliable; a small skill restores the structure, phrasing discipline, and stated confidence the workflow needs — and stops it from inventing measurements. It can't *add* the measurements, though.
 
-We run this step's agent (with and without the skill) on a stratified brain MRI evaluation set and score every report — lesion detection, laterality, and report quality — broken down by the agent's self-reported confidence. Results live at `eval-results/initial/` (no skill) and `eval-results/chapter1/` (with skill) at the workshop root.
-
-> 🚧 **Placeholder — eval results pending.** The brain MRI evaluation set, metric suite, and result directories are being produced for this workshop. Until they ship, the command below reports missing files. See [eval-results/README.md](../../eval-results/README.md) for the planned layout.
-
-`summarize-eval` ships in `.github/skills/` — it parses the eval result files into a metrics-by-confidence-bucket table. We ship it pre-built so this chapter stays focused on writing the report skill.
-
-**Open a fresh chat with no agent selected** (default "Agent", not Radiology Assistant). Ask:
-
-```
-/summarize-eval, compare these two evals:
-baseline: eval-results/initial
-candidate: eval-results/chapter1
-```
-
-> Note that this skill contains a Python script. The agent in your chat UI will ask for your permission to run the script to which you need to agree.
-
-You'll get a markdown table with metrics as columns and confidence buckets as rows for each, plus a delta table. Look for two things: do scores improve across the board, and do the agent's self-reported `high` confidence cases really score better than `medium` ones — is its confidence calibrated?
-
-> **Two ways skills get invoked.** In Step 3 the radiology agent picked up `write-report-simple` automatically because its `description` matched what you asked it to do — that's auto-by-context. Here you named the skill explicitly in your prompt with a /<skillname> syntax (`/summarize-eval compare ...`) — that's manual invocation. Both work; explicit is useful when a skill's description is ambiguous or when several skills could plausibly handle the request. Note how typing / in chat window shows a list of available skills - that is a good way to check if your skill has been registered properly.
-
-Takeaway: a general-purpose LLM looking at pixels is not clinically reliable; a small skill restores the structure, phrasing discipline, and calibrated confidence the workflow needs — and stops it from inventing measurements. It can't *add* the measurements, though.
-
-## (Optional) Step 5 — Extra credit
+## (Optional) Step 4 — Extra credit
 
 **Add to the phrase bank.** Pick a finding the bank doesn't cover well (for example, a specific white matter lesion pattern or an extra-axial collection) and add 2–3 example phrasings (positive / possible / negative) under a new section in `references/phrase-bank.md`. Re-run on a relevant image and see whether the agent borrows your wording.
 
@@ -180,7 +157,6 @@ Takeaway: a general-purpose LLM looking at pixels is not clinically reliable; a 
 - [ ] All TODOs in `SKILL.md` filled in: `description`, `argument-hint`, `one-liner`, `inputs`, `how-to-use`, `style-rules`, `output-format`
 - [ ] Updated `.github/agents/radiology-assistant.agent.md` with the "use available skills" rule
 - [ ] An "after" report from Step 3 you can put next to the "before" from Step 1
-- [ ] Ran `summarize-eval` against shipped results and read the comparison
 
 If you got stuck, the completed version of every file is in `chapters/chapter1-simple-agent/answer-key/`.
 
