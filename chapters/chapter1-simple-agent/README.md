@@ -152,7 +152,7 @@ At this point you might be wondering: I've seen how this agent performs on a few
 
 We run this step's agent (with and without the skill) on a stratified brain MRI evaluation set and score every report — lesion detection, laterality, and report quality — broken down by the agent's self-reported confidence. Results live at `eval-results/initial/` (no skill) and `eval-results/chapter1/` (with skill) at the workshop root.
 
-> 🚧 **Placeholder — eval results pending.** The brain MRI evaluation set, metric suite, and result directories are being produced for Ignite 2026. Until they ship, the command below reports missing files. See [eval-results/README.md](../../eval-results/README.md) for the planned layout.
+> 🚧 **Placeholder — eval results pending.** The brain MRI evaluation set, metric suite, and result directories are being produced for this workshop. Until they ship, the command below reports missing files. See [eval-results/README.md](../../eval-results/README.md) for the planned layout.
 
 `summarize-eval` ships in `.github/skills/` — it parses the eval result files into a metrics-by-confidence-bucket table. We ship it pre-built so this chapter stays focused on writing the report skill.
 

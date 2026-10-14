@@ -37,7 +37,7 @@ All workshop commands run via `uv run …`, so nothing touches system Python.
 
 ## `.env` not loaded / `MIP_MODEL_API_KEY` missing
 
-The `.env` file belongs at `mcp/medimageparse-server/.env` in your workspace root. You create it in Chapter 2 Setup by copying the example and filling in the values the proctors hand out:
+The `.env` file belongs at `mcp/medimageparse-server/.env` in your workspace root. You create it in Chapter 2 Setup by copying the example and filling in the values your instructor hands out:
 
 ```bash
 cp mcp/medimageparse-server/.env.example mcp/medimageparse-server/.env
@@ -152,9 +152,9 @@ The most recent `<date>` folder is the current session. Each server gets its own
 
 `KeyError: 'MIP_MODEL_ENDPOINT'` (or any similar env-var error) — `.env` hasn't been created or isn't in the right place. See the `.env not loaded` section above.
 
-HTTP 401 or 403 from the MedImageParse endpoint — wrong or expired API key. Get a fresh key from the proctors and paste it into `mcp/medimageparse-server/.env`, then reload the server.
+HTTP 401 or 403 from the MedImageParse endpoint — wrong or expired API key. Get a fresh key from your instructor and paste it into `mcp/medimageparse-server/.env`, then reload the server.
 
-`NotImplementedError: TODO(mip): ...` — 🚧 placeholder: the MedImageParse or measurement code for Ignite 2026 hasn't landed yet. The tool is wired correctly; it just has nothing behind it.
+`NotImplementedError: TODO(mip): ...` — 🚧 placeholder: the MedImageParse or measurement code hasn't landed yet. The tool is wired correctly; it just has nothing behind it.
 
 ### Direct-Python fallback
 

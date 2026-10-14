@@ -1,7 +1,7 @@
 {
   "patient_id": "SYN0417",
   "record_as_of": "2026-09-18",
-  "record_note": "Synthetic, fictional patient generated for the Microsoft Ignite 2026 lab. Not for clinical use.",
+  "record_note": "Synthetic, fictional patient generated for this workshop. Not for clinical use.",
 
   "demographics": {
     "age": 58,

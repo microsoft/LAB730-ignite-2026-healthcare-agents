@@ -1,5 +1,5 @@
 [project]
-name = "ignite-workshop-2026"
+name = "foundation-model-and-agents-workshop"
 version = "0.1.0"
 requires-python = ">=3.11"
 dependencies = [

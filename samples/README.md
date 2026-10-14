@@ -20,7 +20,7 @@ The source volumes and the dataset's reference segmentations live in [`mu-glioma
 | `mu-glioma-post/PatientID_0014/Timepoint_2/…_brain_t1c.nii.gz` | `SYN0417_003.png` (current study) |
 | `mu-glioma-post/PatientID_0014/Timepoint_1/…_brain_t1c.nii.gz` | `chapters/chapter3-knowledge-sources/data/images/SYN0417_002.png` (prior) |
 
-> 🚧 **Placeholder (Ignite 2026) — PNG slices pending.** The axial PNG slices and sidecar JSON files the lab reads haven't been exported from the volumes yet. The recommended slice is `z = 122` for both time points; see the data card. Additional cases for `extra/` are still to be selected.
+> 🚧 **Placeholder — PNG slices pending.** The axial PNG slices and sidecar JSON files the lab reads haven't been exported from the volumes yet. The recommended slice is `z = 122` for both time points; see the data card. Additional cases for `extra/` are still to be selected.
 
 ## Planned contents
 

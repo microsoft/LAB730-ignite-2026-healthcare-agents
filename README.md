@@ -1,10 +1,10 @@
-# How to Actually Use Foundation Models: From Segmentation to Agents
+# Build Healthcare Agents with Foundation and Reasoning Models
 
-**Microsoft Ignite 2026 hands-on lab.** This repository supports a hands-on lab on building **radiology AI agents** in VS Code with GitHub Copilot, grounded in **MedImageParse** — a foundation model that segments medical images from simple text prompts. The lab follows one brain MRI case from a bare LLM to a measured, context-aware report, and is organized into **three chapters**, each in its own folder under [`chapters/`](chapters/).
+**Hands-on workshop.** This repository supports a hands-on workshop on building **radiology AI agents** in VS Code with GitHub Copilot, grounded in **MedImageParse** — a foundation model that segments medical images from simple text prompts. The lab follows one brain MRI case from a bare LLM to a measured, context-aware report, and is organized into **three chapters**, each in its own folder under [`chapters/`](chapters/).
 
 Budget about **30 min setup** (do this before arriving) + **60 min content** across the three chapters.
 
-> 🚧 **Work in progress for Ignite 2026.** The lab structure, agents, skills, and MCP server scaffolding are in place, and the source MRI case has been selected. The MedImageParse calls, lesion measurement code, exported PNG slices, and eval results are placeholders — search the repo for `Placeholder` and `TODO(mip)` to find them.
+> 🚧 **Work in progress.** The lab structure, agents, skills, and MCP server scaffolding are in place, and the source MRI case has been selected. The MedImageParse calls, lesion measurement code, exported PNG slices, and eval results are placeholders — search the repo for `Placeholder` and `TODO(mip)` to find them.
 
 <p align="center"><img src="docs/brain-lesion-segmentation-workshop.svg" alt="Workshop overview: three chapters — agent and skill, MedImageParse segmentation via MCP, and patient context — take a brain MRI to a measured, radiologist-reviewed draft report." width="480"></p>
 
@@ -27,7 +27,7 @@ Budget about **30 min setup** (do this before arriving) + **60 min content** acr
 
 Install and verify the following **before** the workshop. Expect about 30 minutes of setup. Do this before arriving — Wi-Fi and time will be tight on the day.
 
-> 🚧 **Placeholder — lab environment.** Confirm whether Ignite attendees get a pre-provisioned lab VM or bring their own machine, and trim this section accordingly.
+> 🚧 **Placeholder — lab environment.** Confirm whether participants get a pre-provisioned lab VM or bring their own machine, and trim this section accordingly.
 
 - **VS Code** (latest stable): https://code.visualstudio.com/
 - **GitHub Copilot** and **GitHub Copilot Chat** extensions, signed in with an account that has Copilot access.

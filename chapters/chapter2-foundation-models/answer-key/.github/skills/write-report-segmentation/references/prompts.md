@@ -4,7 +4,7 @@ Pass these strings as the `prompts` argument to `segment_lesions`, **verbatim**.
 
 MedImageParse is prompted with short target names, not sentences. Avoid free-form prose (`"is there a tumor in this brain?"`) — it doesn't match how the model was trained.
 
-<!-- PLACEHOLDER (Ignite 2026): confirm the final prompt sets against the MedImageParse supported-target list and the shipped sample sequences. -->
+<!-- PLACEHOLDER: confirm the final prompt sets against the MedImageParse supported-target list and the shipped sample sequences. -->
 
 ## T1-Gd — post-contrast T1-weighted (default)
 

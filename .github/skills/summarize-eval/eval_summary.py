@@ -33,7 +33,7 @@ ID_COL = "study_id"
 
 # Friendlier headers for known per-case metrics. Any other numeric column in the
 # scores file is shown under its own name.
-# TODO(eval): align with the final brain MRI metric suite (Ignite 2026).
+# TODO(eval): align with the final brain MRI metric suite.
 METRIC_DISPLAY = {
     "bleu_score": "BLEU",
     "bertscore": "BERTScore",

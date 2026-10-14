@@ -2,7 +2,7 @@
 
 Adapt these positive / possible / negative patterns to the evidence; do not paste a normal finding by default. Use comparison language only with supplied prior evidence. Diffusion, FLAIR, blood-product, and flow-void statements require supporting sequences or supplied findings.
 
-<!-- PLACEHOLDER (Ignite 2026): pending neuroradiologist review. -->
+<!-- PLACEHOLDER: pending neuroradiologist review. -->
 
 ## Enhancing lesion / metastasis
 

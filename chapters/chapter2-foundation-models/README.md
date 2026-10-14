@@ -6,7 +6,7 @@
 
 **Prerequisites:** Chapter 1 complete, with `.github/agents/radiology-assistant.agent.md` and the `write-report-simple` + `summarize-eval` skills under `.github/skills/` at your workspace root.
 
-> 🚧 **Placeholder — MedImageParse integration in progress.** The MCP server in this chapter is wired end to end, but the MedImageParse call (`segmentation.segment`) and the measurement code (`measurement.measure`) are stubs that raise `NotImplementedError` until the Ignite 2026 implementation lands. Everything up to "the tool shows up and the agent calls it" works today; the tool results do not yet.
+> 🚧 **Placeholder — MedImageParse integration in progress.** The MCP server in this chapter is wired end to end, but the MedImageParse call (`segmentation.segment`) and the measurement code (`measurement.measure`) are stubs that raise `NotImplementedError` until the implementation lands. Everything up to "the tool shows up and the agent calls it" works today; the tool results do not yet.
 
 ## Overview
 
@@ -77,11 +77,11 @@ mcp/medimageparse-server/                  ← MCP server with TWO TODOs
   mcp.json                                 ← server registered, ready to go
 ```
 
-**Fill in your `.env`.** Open `mcp/medimageparse-server/.env` and paste in the endpoint and API key from the proctors:
+**Fill in your `.env`.** Open `mcp/medimageparse-server/.env` and paste in the endpoint and API key from your instructor:
 
 ```
-MIP_MODEL_ENDPOINT=<get from a proctor>
-MIP_MODEL_API_KEY=<get from a proctor>
+MIP_MODEL_ENDPOINT=<get from your instructor>
+MIP_MODEL_API_KEY=<get from your instructor>
 ```
 
 ## Part 1 — Segment

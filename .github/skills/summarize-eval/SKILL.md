@@ -5,7 +5,7 @@ description: Summarize a brain MRI report eval result directory (or compare two)
 
 # summarize-eval
 
-<!-- PLACEHOLDER (Ignite 2026): the brain MRI metric suite is not final. The script reports whatever per-case metrics the result dir contains; update the metric names in eval_summary.py and the Rules below once the suite is fixed. -->
+<!-- PLACEHOLDER: the brain MRI metric suite is not final. The script reports whatever per-case metrics the result dir contains; update the metric names in eval_summary.py and the Rules below once the suite is fixed. -->
 
 ## Single result-dir
 

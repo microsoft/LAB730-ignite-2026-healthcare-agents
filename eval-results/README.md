@@ -1,6 +1,6 @@
 # Eval results
 
-> 🚧 **Placeholder (Ignite 2026) — eval results pending.** The brain MRI evaluation set and metric suite are being built. Nothing in this folder is a real result yet.
+> 🚧 **Placeholder — eval results pending.** The brain MRI evaluation set and metric suite are being built. Nothing in this folder is a real result yet.
 
 The chapters compare agent versions with the pre-built `/summarize-eval` skill ([`.github/skills/summarize-eval/`](../.github/skills/summarize-eval/)). Each run lives in its own result directory:
 

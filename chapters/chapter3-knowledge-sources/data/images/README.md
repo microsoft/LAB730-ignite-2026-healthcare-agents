@@ -1,6 +1,6 @@
 # Chapter 3 images
 
-> 🚧 **Placeholder (Ignite 2026) — PNG export pending.** The source case has been selected: MU-Glioma-Post `PatientID_0014` (CC BY 4.0). Its volumes are in [`samples/mu-glioma-post/`](../../../../samples/mu-glioma-post/README.md). The PNG slices below haven't been exported yet.
+> 🚧 **Placeholder — PNG export pending.** The source case has been selected: MU-Glioma-Post `PatientID_0014` (CC BY 4.0). Its volumes are in [`samples/mu-glioma-post/`](../../../../samples/mu-glioma-post/README.md). The PNG slices below haven't been exported yet.
 
 Planned contents: one axial brain MRI slice per study, plus a sidecar JSON with the same name. See [samples/README.md](../../../../samples/README.md) for the sidecar format.
 
