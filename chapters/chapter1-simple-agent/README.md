@@ -18,7 +18,7 @@ A "Radiology Assistant" agent built on a generic LLM will happily produce a brai
 - Setup — copy the starter agent file to your workspace. (~1 min)
 1. See the gap — run the bare agent and note where structure drifts and numbers appear from nowhere. (~5 min)
 2. Build the skill — fill in the `SKILL.md` TODOs. (~10 min)
-3. Activate it — add one rule to the agent file. (~2 min)
+3. Activate it — point the agent's workflow at the skill. (~2 min)
 4. (Optional) Phrase bank additions.
 
 ## Setup (~1 min)
@@ -128,9 +128,9 @@ The skill files exist, but nothing happens yet. Open the workspace-root agent fi
 .github/agents/radiology-assistant.agent.md
 ```
 
-Find the `<rules>` block. Add the "use available skills" line as the first bullet:
+Find the `<workflow>` block. Replace steps 2 and 3 ("Analyze the image", "Draft the report") with one step that calls the skill:
 
-→ [Suggested wording](suggested-changes.md#agent-rule)
+→ [Suggested wording](suggested-changes.md#agent-workflow)
 
 Run the same prompt from Step 1 on the same image. The output should now:
 - Use EXAM, INDICATION, COMPARISON, TECHNIQUE, FINDINGS, and IMPRESSION in order, with a blank line between sections and text on the first four header lines
@@ -139,11 +139,11 @@ Run the same prompt from Step 1 on the same image. The output should now:
 - Describe lesion size qualitatively ("large", "moderate") instead of quoting invented millimeters
 - Borrow phrasings you can find in `references/phrase-bank.md`
 
-If it still looks like Step 1, the agent didn't pick up the skill. Check: directory name = `write-report-simple` exactly, all three files exist, and the rule line is in `<rules>`. It also helps to start a new chat session.
+If it still looks like Step 1, the agent didn't pick up the skill. Check: directory name = `write-report-simple` exactly, all three files exist, and the workflow step names `write-report-simple`. It also helps to start a new chat session.
 
 Now try it on a few different images. Read each report against your own impression. Where does it go right? Where does it go wrong? Notice that the skill made the agent *honest* about size — but it still can't tell you *how big* the lesion is. That's Chapter 2.
 
-> **Two ways skills get invoked.** Here the radiology agent picked up `write-report-simple` automatically because its `description` matched what you asked it to do — that's auto-by-context. You can also name the skill explicitly with `/<skillname>` (`/write-report-simple Please write a radiology report for …`) — that's manual invocation. Explicit is useful when a skill's description is ambiguous or when several skills could plausibly handle the request. Typing `/` in the chat input lists the registered skills, which is a good way to check that yours was picked up.
+> **Ways skills get invoked.** Here the agent's workflow names `write-report-simple`, so the agent calls it for every report. Without that step, an agent can still pick up a skill automatically when its `description` matches the request, or you can name it with `/<skillname>` (`/write-report-simple Please write a radiology report for …`). Explicit is useful when a skill's description is ambiguous or when several skills could plausibly handle the request. Typing `/` in the chat input lists the registered skills, which is a good way to check that yours was picked up.
 
 Takeaway: a general-purpose LLM looking at pixels is not clinically reliable; a small skill restores the structure, phrasing discipline, and stated confidence the workflow needs — and stops it from inventing measurements. It can't *add* the measurements, though.
 
@@ -155,7 +155,7 @@ Takeaway: a general-purpose LLM looking at pixels is not clinically reliable; a 
 
 - [ ] `.github/skills/write-report-simple/{SKILL.md, template/mri-brain-template.md, references/phrase-bank.md}`
 - [ ] All TODOs in `SKILL.md` filled in: `description`, `argument-hint`, `one-liner`, `inputs`, `how-to-use`, `style-rules`, `output-format`
-- [ ] Updated `.github/agents/radiology-assistant.agent.md` with the "use available skills" rule
+- [ ] Updated `.github/agents/radiology-assistant.agent.md` with a workflow step that calls `write-report-simple`
 - [ ] An "after" report from Step 3 you can put next to the "before" from Step 1
 
 If you got stuck, the completed version of every file is in `chapters/chapter1-simple-agent/answer-key/`.

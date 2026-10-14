@@ -102,10 +102,10 @@ Open `.github/agents/radiology-assistant.agent.md` and add `medimageparse/*` to 
 tools: [execute, read, agent, browser, edit, search, web, todo, medimageparse/*]
 ```
 
-In the same file, replace the Chapter 1 routing line (`For brain MRI reports use skill write-report-simple`) so the agent prefers the tool-backed skills:
+In the same file, replace the Chapter 1 workflow step 2 (`Write the report with the write-report-simple skill`) so the agent prefers the tool-backed skills:
 
 ```markdown
-- For brain MRI reports, use the most capable report skill whose tools are available: `write-report-measured` (`segment`, `clean_segmentation`, and `describe_lesions`), else `write-report-segmentation` (`segment` only), else `write-report-simple`.
+2. **Write the report with a report skill.** If the user names a skill, use it. Otherwise use the most capable report skill whose tools are available: `write-report-measured` (`segment`, `clean_segmentation`, and `describe_lesions`), else `write-report-segmentation` (`segment` only), else `write-report-simple`. Return its output unchanged.
 ```
 
 No further agent-file edit is needed in this chapter.
@@ -139,7 +139,7 @@ Now open the folder the reply ends with, `audit-log/samples/mri-brain-lesions/ca
 - `<mask stem>.film-grid.png`: the same slices with the mask overlaid. Compare it with the image. Look for small colored regions away from the main tumor; Part 2 drops the smallest of them before measuring.
 - `<mask stem>.nii.gz` and `.json`: the mask and the model, deployment, and prompts that produced it.
 
-> **Why this matters.** `write-report-simple` is unchanged from Chapter 1, and the agent file gained only a tool entry and a routing line. You added a vision capability by registering an MCP tool.
+> **Why this matters.** `write-report-simple` is unchanged from Chapter 1, and the agent file gained only a tool entry and an updated workflow step. You added a vision capability by registering an MCP tool.
 
 ## Part 2 — Measure
 
@@ -233,7 +233,7 @@ Things to try:
 ## What you should have at the end
 
 - [ ] `segment`, `clean_segmentation`, and `describe_lesions` wired in `server.py` and visible in the tool picker
-- [ ] `medimageparse/*` in the agent's `tools:` list, and the report-skill routing line updated
+- [ ] `medimageparse/*` in the agent's `tools:` list, and the workflow's report step updated
 - [ ] A Part 1 report whose tumor components each match a detected label, with qualitative size
 - [ ] A Part 2 report whose numbers match the factsheet, with the 2017 exam as the comparison
 - [ ] `audit-log/` folders for both scans, with film grids, masks, descriptors, the measurement image, and the factsheet

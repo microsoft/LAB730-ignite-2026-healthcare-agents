@@ -4,7 +4,7 @@ title: "Suggested Changes — Chapter 1 Skill TODOs"
 
 # Suggested Changes — Chapter 1
 
-This file contains the answer-key text for the `SKILL.md` TODOs and the agent rule, organized by anchor. For each TODO, paste the code block below or write your own variant. The anchors here match the `<!-- TODO: <anchor> -->` tags in `SKILL.md` and the links in the Chapter 1 README.
+This file contains the answer-key text for the `SKILL.md` TODOs and the agent's workflow step, organized by anchor. For each TODO, paste the code block below or write your own variant. The anchors here match the `<!-- TODO: <anchor> -->` tags in `SKILL.md` and the links in the Chapter 1 README.
 
 ## description
 
@@ -87,11 +87,10 @@ Replaces the `<!-- TODO: output-format -->` comment. The tags are literal text �
 - `{report}` — plain text, no markdown. Follow [`template/mri-brain-template.md`](template/mri-brain-template.md) for section headers and structure.
 ````
 
-## agent-rule
+## agent-workflow
 
-Add this as the first bullet in the `<rules>` block of `.github/agents/radiology-assistant.agent.md`.
+In the `<workflow>` block of `.github/agents/radiology-assistant.agent.md`, replace steps 2 and 3 with this step.
 
 ```markdown
-- **Use available skills when present.** If a skill is registered for the task at hand (e.g. report generation), invoke it rather than improvising.
-- For brain MRI reports use skill write-report-simple
+2. **Write the report with the `write-report-simple` skill.** Invoke it with the image path and any clinical context, and return its output unchanged.
 ```

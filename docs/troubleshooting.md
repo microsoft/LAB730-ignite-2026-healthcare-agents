@@ -76,39 +76,20 @@ Tighten each `description:` so it states *when* that specific skill applies:
 
 Clear, non-overlapping descriptions make the routing decision obvious.
 
-### 3. Make skill use mandatory and explicit in the agent
+### 3. Make skill use explicit in the agent's workflow
 
-Soft guidance like "use available skills when present" is easy for a model to skip. Promote it to a hard rule in `.github/agents/radiology-assistant.agent.md`, and remove generic workflow verbs ("analyze the image", "draft the report") that the agent can satisfy by free-writing.
-
-State that improvising the report is a failure, and give an explicit priority/fallback order:
-
-```markdown
-<rules>
-- **Always draft reports through a report-writing skill — never improvise the prose yourself.**
-  Any request to read a brain MRI or write a report MUST go through one of the report
-  skills. Writing a report from your own image read without invoking a skill is a failure.
-  Select the skill using this priority order, falling back only if the higher option is
-  unavailable or its tool call fails:
-  1. `write-report-measured` — preferred when `segment`, `clean_segmentation`, and `describe_lesions` are available.
-  2. `write-report-segmentation` — use if `segment` is available but the other two are not.
-  3. `write-report-simple` — final fallback when no vision model tool is available.
-</rules>
-```
-
-Then rewrite the workflow so the steps name the action — *select a skill → invoke it → return its output* — instead of generic verbs the model can satisfy without a tool call:
+A workflow with generic verbs ("analyze the image", "draft the report") lets the agent satisfy each step by free-writing. Make the workflow step name the skill: *select a skill → invoke it → return its output*. State the priority order in that step:
 
 ```markdown
 <workflow>
 1. **Identify the case.** Find the image path and any clinical context. If no path is given, ask for one.
-2. **Select the report skill** using the priority order in `<rules>`.
-3. **Invoke that skill** with the resolved image path. Do not write the report yourself.
-4. **Return the skill's output** (`<confidence>` and `<report>` blocks) unchanged.
+2. **Write the report with a report skill.** If the user names a skill, use it. Otherwise use the most capable report skill whose tools are available: `write-report-measured` (`segment`, `clean_segmentation`, and `describe_lesions`), else `write-report-segmentation` (`segment` only), else `write-report-simple`. Do not write the report yourself; return the skill's output (`<confidence>` and `<report>` blocks) unchanged.
 </workflow>
 ```
 
 ### 4. Upgrade the agent's model
 
-If the agent still skips skills after the changes above, the model itself is likely the bottleneck. Smaller models (e.g. `GPT-5 mini`) are noticeably worse at the multi-step "discover skills → pick the right one → invoke it" chain. Bump the `model:` field in the agent frontmatter to a larger model:
+If the agent still skips skills after the changes above, the model itself is likely the bottleneck. Light models are noticeably worse at the multi-step "discover skills → pick the right one → invoke it" chain. Change the `model:` field in the agent frontmatter to a larger model from the chat model picker, for example:
 
 ```markdown
 ---
@@ -118,7 +99,7 @@ model: ['GPT-5 (copilot)']
 ---
 ```
 
-This is probabaly the highest-leverage change for reliable skill adherence — apply it together with steps 2 and 3 rather than on its own.
+This is probably the highest-leverage change for reliable skill adherence — apply it together with steps 2 and 3 rather than on its own.
 
 ### 5. Restart the chat session
 
