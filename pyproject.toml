@@ -16,6 +16,7 @@ dependencies = [
     "python-dotenv>=1.0",
     "requests>=2.31",
     "rouge-score>=0.1.2",
+    "scikit-image>=0.26.0",
     "scikit-learn>=1.8.0",
     "scipy>=1.17.1",
     "simpleitk>=2.5.6",

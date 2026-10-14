@@ -13,7 +13,7 @@ import numpy as np
 
 from workshop.mip_client import MIPClient
 
-MASKS_DIR = Path(__file__).resolve().parents[2] / "outputs" / "masks"
+OUTPUTS_DIR = Path(__file__).resolve().parents[2] / "outputs"
 CATALOG = json.loads(
     Path(__file__).with_name("models.json").read_text(encoding="utf-8")
 )
@@ -39,8 +39,9 @@ def segment(image_path: str, model: str, prompts: list[str]) -> dict:
     image_path is an absolute image path. Send verbatim prompts from one view
     per call. The client handles preprocessing and restores the source grid.
     Returns mask_path and labels with label, prompt, detected, and volume_ml
-    (one decimal). Label i matches prompts[i-1]; 0 is background. Pass mask_path
-    and a label to measure for component volumes, extents, and centroids.
+    (one decimal). Label i matches prompts[i-1]; 0 is background. Saves the mask
+    and prompt sidecar in outputs/<image-stem>/. Pass the tumor-components
+    mask_path to clean_segmentation before describe_lesions.
     """
     entry = next((entry for entry in CATALOG if entry["model"] == model), None)
     if entry is None:
@@ -52,11 +53,12 @@ def segment(image_path: str, model: str, prompts: list[str]) -> dict:
     ).segment(image_path, prompts)
     image_stem = Path(image_path).name.removesuffix(".gz").removesuffix(".nii")
     prompt_hash = hashlib.sha256(json.dumps(prompts).encode("utf-8")).hexdigest()[:8]
-    stem = f"{image_stem}__{model}__{prompt_hash}"
-    MASKS_DIR.mkdir(parents=True, exist_ok=True)
-    mask_path = MASKS_DIR / f"{stem}.nii.gz"
+    stem = f"{model}-{prompt_hash}"
+    output_dir = OUTPUTS_DIR / image_stem
+    output_dir.mkdir(parents=True, exist_ok=True)
+    mask_path = output_dir / f"{stem}.nii.gz"
     nib.save(mask, mask_path)
-    (MASKS_DIR / f"{stem}.json").write_text(
+    (output_dir / f"{stem}.json").write_text(
         json.dumps(
             {
                 "image_path": image_path,

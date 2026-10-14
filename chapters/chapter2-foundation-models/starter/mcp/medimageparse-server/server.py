@@ -2,7 +2,7 @@
 # Licensed under the MIT License.
 """MedImageParse MCP server.
 
-Exposes a model catalog, 3D segmentation, and component measurements as tools.
+Exposes a model catalog, 3D segmentation, lesion cleaning, and descriptors.
 Deployment names and client preprocessing options come from models.json.
 
 Run with:
@@ -17,7 +17,7 @@ from __future__ import annotations
 
 import logging
 
-import measurement
+import lesions
 import segmentation
 from mcp.server.fastmcp import FastMCP
 
@@ -35,8 +35,12 @@ def list_models() -> list[dict]:
 # TODO (Chapter 2, Part 1): Register `segmentation.segment` as an MCP tool named `segment` here.
 
 
-# TODO (Chapter 2, Part 2): Add a `measure` wrapper that delegates to `measurement.measure`.
-# Same pattern as `segment` above. The measurement module is imported above.
+# TODO (Chapter 2, Part 2): Register `lesions.clean_segmentation` as `clean_segmentation`.
+# Follow the working wrapper above, using the function's signature and docstring.
+
+
+# TODO (Chapter 2, Part 2): Register `lesions.describe_lesions` as `describe_lesions`.
+# Follow the same wrapper pattern; the lesions module is imported above.
 
 
 if __name__ == "__main__":

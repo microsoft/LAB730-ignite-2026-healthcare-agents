@@ -4,11 +4,14 @@
     "deployment": "mip3d-mri-brain-lesion",
     "description": "Brain tumor components and overlapping whole-tumor/core views on post-contrast T1 MRI.",
     "views": {
-      "tumor-components": [
-        "post-contrast T1 MRI brain showing enhancing tumor",
-        "post-contrast T1 MRI brain showing peritumoral edema",
-        "post-contrast T1 MRI brain showing necrotic/non-enhancing tumor core"
-      ],
+      "tumor-components": {
+        "prompts": [
+          "post-contrast T1 MRI brain showing enhancing tumor",
+          "post-contrast T1 MRI brain showing peritumoral edema",
+          "post-contrast T1 MRI brain showing necrotic/non-enhancing tumor core"
+        ],
+        "roles": ["enhancing", "edema", "necrotic"]
+      },
       "whole-tumor": ["post-contrast T1 MRI brain showing whole tumor"],
       "tumor-core": ["post-contrast T1 MRI brain showing tumor core"]
     }
