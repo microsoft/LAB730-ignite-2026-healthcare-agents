@@ -1,0 +1,36 @@
+{
+  "patient_id": "SYN0417",
+  "study_id": "SYN0417_002",
+  "study_date": "2026-08-21",
+  "sequence": "T1-Gd",
+  "plane": "axial",
+  "pixel_spacing_mm": [
+    1.0,
+    1.0
+  ],
+  "slice_index": 122,
+  "orientation": "radiological (patient right on image left; anterior at top)",
+  "image_position_patient_mm": [
+    0.0,
+    -239.0,
+    122.0
+  ],
+  "display_window": {
+    "nonzero_volume_percentiles": [
+      0.5,
+      99.5
+    ],
+    "lower": 271.3581930541992,
+    "upper": 773.4390795898432,
+    "output_range": [
+      0,
+      255
+    ]
+  },
+  "source": "MU-Glioma-Post PatientID_0014 Timepoint_1, axial z=122 (CC BY 4.0, https://doi.org/10.7937/7K9K-3C83)",
+  "source_nifti": "samples/nifti/PatientID_0014/Timepoint_1/PatientID_0014_Timepoint_1_brain_t1c.nii.gz",
+  "source_sha256": "96ea3e50e72693cf28fe8f1b70355ca0ed3e112fa5fb14842f005de5533e6e1f",
+  "dicom_sop_instance_uid": "2.25.197978617883782921410797489431315270256",
+  "synthetic_patient_metadata": true,
+  "not_for_clinical_use": true
+}
