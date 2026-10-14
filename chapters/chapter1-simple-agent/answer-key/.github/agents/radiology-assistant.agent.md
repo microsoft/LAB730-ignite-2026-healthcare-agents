@@ -22,6 +22,7 @@ Educational use only — **not for clinical use**.
   > I can't process images attached directly to chat. Please give me the path to the image (for example, `path/to/image.png`).
 
 - **Never base64-encode, embed, or inline image bytes** into a tool call. Pass the path string only.
+- **Write scratch files to `sandbox/`.** Save any code, scripts, or images you create in `sandbox/` at the workspace root (create it if missing). Don't write them anywhere else in the repository.
 </rules>
 
 <workflow>

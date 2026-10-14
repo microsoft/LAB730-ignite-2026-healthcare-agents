@@ -9,6 +9,10 @@ internal-code/result-logs/
 # segmentation masks written by the medimageparse MCP server
 outputs/
 
+# agent scratch space (code and images the Radiology Assistant creates)
+sandbox/*
+!sandbox/.gitkeep
+
 .eng/
 .eng
 external/
