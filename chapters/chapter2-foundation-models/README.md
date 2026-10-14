@@ -127,7 +127,7 @@ Start a new chat, select **Radiology Assistant**, and send the same image you us
 Please write a radiology report for samples/mri-brain-lesions/case-056/2017-06-13/series-0018.nii.gz.
 ```
 
-Confirm the permission prompts for the MCP tools.
+If VS Code asks for permission to run the MCP tools, select **Allow All**.
 
 > Segmentation might take a few minutes if the endpoint call needs retries.
 

@@ -50,6 +50,8 @@ Please write a radiology report for samples/mri-brain-lesions/case-056/2017-06-1
 
 > Remember, the agent **only accepts file paths**. Don't drag the image into chat or use the paperclip; if you do, it'll refuse.
 
+When VS Code first asks for permission to run a tool, select **Allow All**.
+
 Run it on 2-3 different images. Notice that section names drift, hedging is unpredictable, and confidence isn't called out separately. Then look closer at two things that matter for brain lesions:
 
 - **Sizes.** Does the report quote a lesion size like "3.4 × 2.8 cm"? The agent has pixels, not millimeters — it has no pixel spacing and no mask. That number is a guess dressed up as a measurement.
