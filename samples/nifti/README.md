@@ -14,7 +14,8 @@ Brain MRI for the lab's canonical case: one glioblastoma patient, two post-treat
 
   > Clark, K., Vendt, B., Smith, K., et al. (2013). The Cancer Imaging Archive (TCIA): Maintaining and Operating a Public Information Repository. *Journal of Digital Imaging*, 26(6), 1045–1057. https://doi.org/10.1007/s10278-013-9622-7
 
-- **Changes:** none. The files below are byte-for-byte copies of the published files, with their original names.
+- **Changes to the NIfTI files:** none. The files below are byte-for-byte copies of the published files, with their original names. They have been organized under [`nifti/`](./), retaining the [`PatientID_0014/`](PatientID_0014/) time-point directories.
+- **Derived versions:** [`../dcm/`](../dcm/) contains DICOM MR series with intensities rounded to 16-bit integers and fictional Chapter 3 patient metadata; [`../png/`](../png/) contains display-windowed axial PNG slices. Neither export changes the source geometry. See [the sample guide](../README.md) for the conversion details and the known differences between the fictional chart and image anatomy.
 
 TCIA distributes this collection only through IBM Aspera. These files were downloaded from the public Hugging Face mirror [`sbandred/mu-glioma-post-raw`](https://huggingface.co/datasets/sbandred/mu-glioma-post-raw). Their byte sizes match TCIA's own package listing exactly. The SHA-256 hashes below match the mirror's LFS object IDs.
 
@@ -22,7 +23,7 @@ The images are skull-stripped, de-identified research data. Don't attempt to ide
 
 ## Files
 
-All volumes are NIfTI (`.nii.gz`), 240 × 240 × 155 voxels, 1.0 mm isotropic, co-registered to the SRI24 atlas. The arrays are stored in LPS orientation.
+All volumes are NIfTI (`.nii.gz`), 240 × 240 × 155 voxels, 1.0 mm isotropic, co-registered to the SRI24 atlas. The arrays are stored in LPS orientation. Paths in the table are relative to [`PatientID_0014/`](PatientID_0014/).
 
 | File | Bytes | SHA-256 |
 |---|---|---|

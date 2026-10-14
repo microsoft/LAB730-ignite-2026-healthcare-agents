@@ -6,7 +6,7 @@
 
 **Prerequisites:** Chapter 2 complete, with the `medimageparse` MCP server wired up and both `segment_lesions` and `measure_lesions` working.
 
-> 🚧 **Placeholder — PNG export and MedImageParse integration pending.** The patient images for this chapter come from MU-Glioma-Post `PatientID_0014`, but the PNG slices haven't been exported yet (see [data/images/README.md](data/images/README.md)). The Chapter 2 tools are still stubs. The chart, the prior report, and both skills are complete, but the chart and prior report still need to be brought in line with the real images.
+> 🚧 **Placeholder — MedImageParse integration and narrative alignment pending.** The patient PNGs are exported from MU-Glioma-Post `PatientID_0014` (see [data/images/README.md](data/images/README.md)). The Chapter 2 tools are still stubs. The chart and prior report remain fictional drafts that differ from the real image anatomy, measurements, and source treatment timeline; exporting the images has not rewritten those narratives.
 
 ## Overview
 
@@ -59,8 +59,6 @@ cp chapters/chapter3-knowledge-sources/data/patients/SYN0417.json data/patients/
 cp chapters/chapter3-knowledge-sources/data/reports/SYN0417_002.md data/reports/
 cp chapters/chapter3-knowledge-sources/data/images/SYN0417_*       data/images/
 ```
-
-> 🚧 **Placeholder.** Until the images land, the last `cp` finds nothing to copy.
 
 The two skills:
 
