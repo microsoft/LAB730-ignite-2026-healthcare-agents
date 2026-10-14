@@ -90,18 +90,10 @@ class MIPClient:
             "Content-Type": "application/json",
             "azureml-model-deployment": deployment,
         }
-        try:
-            resp = requests.post(
-                self.endpoint, json=payload, headers=headers, timeout=self.timeout
-            )
-            resp.raise_for_status()
-        except requests.exceptions.HTTPError as exc:
-            raise requests.exceptions.HTTPError(
-                f"MIP request failed with HTTP {exc.response.status_code}",
-                response=exc.response,
-            ) from None
-        except requests.exceptions.RequestException as exc:
-            raise type(exc)("MIP request failed") from None
+        resp = requests.post(
+            self.endpoint, json=payload, headers=headers, timeout=self.timeout
+        )
+        resp.raise_for_status()
         return resp.json()
 
     def _prepare(self, source: nib.Nifti1Image):
