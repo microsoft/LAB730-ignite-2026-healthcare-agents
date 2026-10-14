@@ -8,7 +8,7 @@ Deployment names and client preprocessing options come from models.json.
 Run with:
     uv run --directory <path-to-this-dir> mcp run server.py
 
-Env vars (set in .env alongside this file, or in .vscode/mcp.json):
+Env vars (from .env at the repository root, or the environment):
     MIP_MODEL_ENDPOINT    Full scoring URL for the MedImageParse endpoint.
     MIP_MODEL_API_KEY     API key for the endpoint.
 """

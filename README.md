@@ -42,7 +42,7 @@ Can't install locally? See [docs/no-admin.md](docs/no-admin.md) or run the whole
 
 ### MedImageParse credentials
 
-Chapter 2 calls a shared MedImageParse endpoint. Credentials (`MIP_MODEL_ENDPOINT` and `MIP_MODEL_API_KEY`) are distributed at the start of the session. You'll set them up in Chapter 2 Setup; the working path will be `mcp/medimageparse-server/.env` at workspace root.
+Chapter 2 calls a shared MedImageParse endpoint. Credentials (`MIP_MODEL_ENDPOINT` and `MIP_MODEL_API_KEY`) are distributed at the start of the session. Copy `.env.example` to `.env` at the repository root and fill them in; the quick check below and the Chapter 2 MCP server both read that file.
 
 ### Quick check
 

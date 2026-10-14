@@ -34,7 +34,7 @@ If you can't install tools locally (corporate restrictions or you just want a cl
 
    The Copilot extension prompts for sign-in on first use. Use the same GitHub account that has Copilot access.
 
-5. **Get the MedImageParse credentials from your instructor** and paste them into the `.env` file when you reach Chapter 2 Setup. Same path as the local instructions: `mcp/medimageparse-server/.env`.
+5. **Get the MedImageParse credentials from your instructor** and paste them into `.env` at the repository root (copy `.env.example`), same as the local instructions.
 
 ## Differences from local
 
