@@ -124,7 +124,7 @@ Open `.github/skills/write-report-segmentation/SKILL.md`:
 Start a new chat, select **Radiology Assistant**, and send the same image you used in Chapter 1:
 
 ```
-Please write a radiology report for samples/mri-brain-lesions/case-056/2017-06-13/series-0018.nii.gz.
+/write-report-segmentation Please write a radiology report for samples/mri-brain-lesions/case-056/2017-06-13/series-0018.nii.gz.
 ```
 
 If VS Code asks for permission to run the MCP tools, select **Allow All**.
@@ -184,7 +184,7 @@ Then open `.github/skills/write-report-measured/SKILL.md`. It invokes the factsh
 In a new chat with **Radiology Assistant**, ask for the follow-up scan and give the Part 1 scan as the prior:
 
 ```
-Please write a radiology report for samples/mri-brain-lesions/case-056/2018-04-14/series-0902.nii.gz, comparing with the prior samples/mri-brain-lesions/case-056/2017-06-13/series-0018.nii.gz.
+/write-report-measured Please write a radiology report for samples/mri-brain-lesions/case-056/2018-04-14/series-0902.nii.gz, comparing with the prior samples/mri-brain-lesions/case-056/2017-06-13/series-0018.nii.gz.
 ```
 
 Watch the trace: `write-report-measured`, then `write-imaging-factsheet` calling `segment` and `clean_segmentation` for each scan and `describe_lesions` once, then `write-report-simple`.
