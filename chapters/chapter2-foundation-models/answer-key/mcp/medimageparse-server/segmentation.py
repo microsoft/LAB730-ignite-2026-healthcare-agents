@@ -40,10 +40,10 @@ def segment(image_path: str, model: str, prompts: list[str]) -> dict:
 
     image_path is an absolute image path. Send verbatim prompts from one view
     per call. The client handles preprocessing and restores the source grid.
-    Returns mask_path, labels with label, prompt, detected, and volume_ml
-    (one decimal), and images. Label i matches prompts[i-1]; 0 is background.
-    Saves the mask, prompt sidecar, and two review images in
-    audit-log/<image path>/: film-grid.png (image only) and
+    Returns audit_dir, mask_path, labels with label, prompt, detected, and
+    volume_ml (one decimal), and images. Label i matches prompts[i-1]; 0 is
+    background. audit_dir is audit-log/<image path>/, which holds the mask,
+    prompt sidecar, and two review images: film-grid.png (image only) and
     <mask stem>.film-grid.png (mask overlay). Pass the tumor-components
     mask_path to clean_segmentation before describe_lesions.
     """
@@ -86,6 +86,7 @@ def segment(image_path: str, model: str, prompts: list[str]) -> dict:
     labels = np.asanyarray(mask.dataobj)
     voxel_ml = abs(float(np.linalg.det(mask.affine[:3, :3]))) / 1000
     return {
+        "audit_dir": str(output_dir),
         "mask_path": str(mask_path),
         "labels": [
             {
