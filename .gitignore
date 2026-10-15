@@ -11,10 +11,3 @@ outputs/
 # agent scratch space (code and images the Radiology Assistant creates)
 sandbox/*
 !sandbox/.gitkeep
-
-.eng/
-.eng
-external/
-
-# agent reasoning traces (large)
-**/trace.log

@@ -257,7 +257,7 @@ def _perpendicular_chord(binary, spacing, endpoints):
 
 
 def _long_axis(binary, spacing):
-    # Regionprops Feret diameter uses different boundaries than the agreed centre-plus-pixel rule.
+    # Regionprops Feret diameter uses different boundaries than the centre-plus-pixel rule used here.
     centres = np.argwhere(binary) * spacing
     if len(centres) == 1:
         direction = np.eye(2)[int(np.argmax(spacing))]

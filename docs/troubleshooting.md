@@ -14,10 +14,10 @@ Put that line in your shell's rc file (`~/.bashrc`, `~/.zshrc`, etc.) so it pers
 
 ## `uv sync` failure
 
-Usually a stale lock or a transient network error. Re-run `uv sync`. If the error persists, rebuild from scratch:
+Usually a transient network error. Re-run `uv sync`. If the error persists, rebuild the environment:
 
 ```bash
-rm -rf .venv uv.lock
+rm -rf .venv
 uv sync
 ```
 
@@ -72,7 +72,7 @@ Tighten each `description:` so it states *when* that specific skill applies:
 
 - `write-report-measured` — "…when the `segment`, `clean_segmentation`, and `describe_lesions` tools are available."
 - `write-report-segmentation` — "…when `segment` is available but `clean_segmentation` or `describe_lesions` is not."
-- `write-report-simple` — "…fallback when no vision model is available."
+- `write-report-simple` — "…fallback when the `medimageparse` tools are not available."
 
 Clear, non-overlapping descriptions make the routing decision obvious.
 
@@ -128,8 +128,6 @@ The most recent `<date>` folder is the current session. Each server gets its own
 ### Common error signatures
 
 `ModuleNotFoundError: No module named 'X'` — the workshop environment isn't active or `uv sync` didn't run. Re-run `uv sync` from the repo root.
-
-`Address already in use` — a previous MCP server process didn't shut down cleanly. Run `MCP: Reload Servers` (`Cmd/Ctrl+Shift+P`) or restart VS Code.
 
 `Missing environment variables: MIP_MODEL_ENDPOINT, ...` — `.env` hasn't been created or isn't at the repository root. See the `.env not loaded` section above.
 

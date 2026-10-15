@@ -15,7 +15,8 @@ We start with a very simple agent, without any skills, and progress by adding a 
 A "Radiology Assistant" agent built on a generic LLM will happily produce a brain MRI report, but it is not clinically reliable: section names drift run-to-run, hedging language is inconsistent, confidence is never stated — and, worst of all for brain lesions, it will quote lesion sizes in millimeters that it has no way to measure. In this chapter you build that bare agent, watch it drift, then close the gap by adding a single **skill** — a structured, reusable instruction packet that gives the agent a fixed report template, phrasing discipline, a "no invented numbers" rule, and calibrated confidence buckets. By the end you'll see the same agent produce a consistent report on the same image.
 
 **Steps:**
-- Setup — copy the starter agent file to your workspace. (~1 min)
+
+0. Setup — copy the starter agent file to your workspace. (~1 min)
 1. See the gap — run the bare agent and note where structure drifts and numbers appear from nowhere. (~5 min)
 2. Build the skill — fill in the `SKILL.md` TODOs. (~10 min)
 3. Activate it — point the agent's workflow at the skill. (~2 min)
@@ -78,49 +79,49 @@ That gives you three files:
 
 Open all three and skim. The skill **name** (frontmatter `name:` and the directory name) must match exactly.
 
-Open `SKILL.md`. Each TODO is tagged with an anchor name. For each one: read the teaching note below, look at the placeholder in the file, then paste from [suggested-changes.md](suggested-changes.md) or write your own.
+Open `SKILL.md`. Each TODO is tagged with an anchor name. For each one: read the teaching note below, look at the placeholder in the file, then paste from [suggested-changes.md](suggested-changes.md) or write your own:
 
-### Fill the `description` TODO
+- [ ] **Fill the `description` TODO.**
 
-The agent matches this string against the task at hand to decide whether to invoke the skill. Specific beats categorical — vague descriptions get ignored.
+  The agent matches this string against the task at hand to decide whether to invoke the skill. Specific beats categorical — vague descriptions get ignored.
 
-→ [Suggested text](suggested-changes.md#description)
+  → [Suggested text](suggested-changes.md#description)
 
-### Fill the `argument-hint` TODO
+- [ ] **Fill the `argument-hint` TODO.**
 
-`argument-hint` declares optional inputs other agents or later chapters may pass in. We won't pass any in Chapter 1, but declaring them now makes the skill an interface with a contract, not just a prompt. In Chapter 2 you'll call it with real outputs from a segmentation model (`findings`) and a measurement tool (`measurements`).
+  `argument-hint` declares optional inputs other agents or later chapters may pass in. We won't pass any in Chapter 1, but declaring them now makes the skill an interface with a contract, not just a prompt. In Chapter 2 you'll call it with real outputs from a segmentation model (`findings`) and a measurement tool (`measurements`).
 
-→ [Suggested text](suggested-changes.md#argument-hint)
+  → [Suggested text](suggested-changes.md#argument-hint)
 
-### Fill the `one-liner` TODO
+- [ ] **Fill the `one-liner` TODO.**
 
-This one-sentence description is for humans reading the file — a different audience from the frontmatter `description`, which is for the agent's routing logic.
+  This one-sentence description is for humans reading the file — a different audience from the frontmatter `description`, which is for the agent's routing logic.
 
-→ [Suggested text](suggested-changes.md#one-liner)
+  → [Suggested text](suggested-changes.md#one-liner)
 
-### Fill the `inputs` TODO
+- [ ] **Fill the `inputs` TODO.**
 
-Declaring a field in `argument-hint` isn't enough — the body must tell the agent how to use it. This section sets the priority order so the agent doesn't have to guess, and makes tool-supplied `measurements` authoritative.
+  Declaring a field in `argument-hint` isn't enough — the body must tell the agent how to use it. This section sets the priority order so the agent doesn't have to guess, and makes tool-supplied `measurements` authoritative.
 
-→ [Suggested text](suggested-changes.md#inputs)
+  → [Suggested text](suggested-changes.md#inputs)
 
-### Fill the `how-to-use` TODO
+- [ ] **Fill the `how-to-use` TODO.**
 
-The skill ships with supporting files. `template/mri-brain-template.md` and `references/phrase-bank.md` are already complete — the skill body just references them so the agent reads them on demand.
+  The skill ships with supporting files. `template/mri-brain-template.md` and `references/phrase-bank.md` are already complete — the skill body just references them so the agent reads them on demand.
 
-→ [Suggested text](suggested-changes.md#how-to-use)
+  → [Suggested text](suggested-changes.md#how-to-use)
 
-### Fill the `style-rules` TODO
+- [ ] **Fill the `style-rules` TODO.**
 
-When the agent has options, the skill picks one and names it. These rules close the gaps that cause run-to-run drift in hedging language and sentence structure — and add two rules specific to brain lesions: **numbers come from tools only**, and **laterality is the patient's**.
+  When the agent has options, the skill picks one and names it. These rules close the gaps that cause run-to-run drift in hedging language and sentence structure — and add two rules specific to brain lesions: **numbers come from tools only**, and **laterality is the patient's**.
 
-→ [Suggested text](suggested-changes.md#style-rules)
+  → [Suggested text](suggested-changes.md#style-rules)
 
-### Fill the `output-format` TODO
+- [ ] **Fill the `output-format` TODO.**
 
-Machine-readable output needs a verbatim template, not a description of one. The literal tags let downstream steps extract the confidence value without fragile string matching.
+  Machine-readable output needs a verbatim template, not a description of one. The literal tags let downstream steps extract the confidence value without fragile string matching.
 
-→ [Suggested text](suggested-changes.md#output-format)
+  → [Suggested text](suggested-changes.md#output-format)
 
 ## Step 3 — Activate it (~2 min)
 
