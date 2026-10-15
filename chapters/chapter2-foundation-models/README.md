@@ -27,7 +27,8 @@ Two design choices to notice:
 Every file the tools write goes to `audit-log/` at your workspace root, in one folder per image: masks, review images, descriptors, and the factsheet. Open it at any point to see what the agent saw.
 
 **Steps:**
-- Setup — copy the starter files. (~3 min)
+
+0. Setup — copy the starter files. (~3 min)
 
 **Part 1 — Segment**
 
