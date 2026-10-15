@@ -24,8 +24,6 @@ Budget about **30 min setup** (do this before arriving) + **60 min content** acr
 
 Install and verify the following **before** the workshop. Expect about 30 minutes of setup. Do this before arriving — Wi-Fi and time will be tight on the day.
 
-> 🚧 **Placeholder — lab environment.** Confirm whether participants get a pre-provisioned lab VM or bring their own machine, and trim this section accordingly.
-
 - **VS Code** (latest stable): https://code.visualstudio.com/
 - **GitHub Copilot** and **GitHub Copilot Chat** extensions, signed in with an account that has Copilot access.
 - **Git**, and a local clone of this repository opened as your VS Code workspace.
