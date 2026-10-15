@@ -1,10 +1,8 @@
-# How to Actually Use Foundation Models: From Segmentation to Agents
+# Build Healthcare Agents with Foundation and Reasoning Models
 
-**Microsoft Ignite 2026 hands-on lab.** This repository supports a hands-on lab on building **radiology AI agents** in VS Code with GitHub Copilot, grounded in **MedImageParse** — a foundation model that segments medical images from simple text prompts. The lab follows one brain MRI case from a bare LLM to a measured, context-aware report, and is organized into **three chapters**, each in its own folder under [`chapters/`](chapters/).
+**Hands-on workshop.** This repository supports a hands-on workshop on building **radiology AI agents** in VS Code with GitHub Copilot, grounded in **MedImageParse** — a foundation model that segments medical images from simple text prompts. The lab follows one brain MRI case from a bare LLM to a measured, context-aware report, and is organized into **three chapters**, each in its own folder under [`chapters/`](chapters/).
 
 Budget about **30 min setup** (do this before arriving) + **60 min content** across the three chapters.
-
-> 🚧 **Work in progress for Ignite 2026.** The lab structure, agents, skills, and MCP server scaffolding are in place, and the source MRI case has been selected. The MedImageParse calls, lesion measurement code, exported PNG slices, and eval results are placeholders — search the repo for `Placeholder` and `TODO(mip)` to find them.
 
 <p align="center"><img src="docs/brain-lesion-segmentation-workshop.svg" alt="Workshop overview: three chapters — agent and skill, MedImageParse segmentation via MCP, and patient context — take a brain MRI to a measured, radiologist-reviewed draft report." width="480"></p>
 
@@ -17,17 +15,16 @@ Budget about **30 min setup** (do this before arriving) + **60 min content** acr
 ## Workshop layout
 
 - [`chapters/`](chapters/) — one folder per chapter. Each has a `README.md`, a `starter/` skeleton, and an `answer-key/` reference.
-- [`samples/`](samples/) — brain MRI you can hand to the agent: a glioblastoma follow-up case from MU-Glioma-Post (CC BY 4.0). The PNG slices the lab reads are still a 🚧 placeholder — see [samples/README.md](samples/README.md).
-- [`eval-results/`](eval-results/) — reference scoring numbers for the chapter-to-chapter comparisons (🚧 placeholder — see [eval-results/README.md](eval-results/README.md)).
+- [`samples/`](samples/) — de-identified post-contrast brain MRI volumes (NIfTI) you can hand to the agent. See [samples/README.md](samples/README.md).
 - [`docs/`](docs/) — troubleshooting, Codespaces, and no-admin setup guides.
 
-> The data and patient records in this repo are synthetic or de-identified and are **not for clinical use**. The brain MRI comes from the [MU-Glioma-Post](https://doi.org/10.7937/7K9K-3C83) dataset on The Cancer Imaging Archive, used under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). See [samples/mu-glioma-post/README.md](samples/mu-glioma-post/README.md) for the required citation. The patient chart wrapped around it is fictional. MedImageParse is provided for research and model development exploration; it is not designed or intended to be deployed in clinical settings as-is.
+> The data and patient records in this repo are synthetic or de-identified and are **not for clinical use**. The patient charts in Chapter 3 are synthetic. MedImageParse is provided for research and model development exploration; it is not designed or intended to be deployed in clinical settings as-is.
 
 ## Prerequisites
 
 Install and verify the following **before** the workshop. Expect about 30 minutes of setup. Do this before arriving — Wi-Fi and time will be tight on the day.
 
-> 🚧 **Placeholder — lab environment.** Confirm whether Ignite attendees get a pre-provisioned lab VM or bring their own machine, and trim this section accordingly.
+> 🚧 **Placeholder — lab environment.** Confirm whether participants get a pre-provisioned lab VM or bring their own machine, and trim this section accordingly.
 
 - **VS Code** (latest stable): https://code.visualstudio.com/
 - **GitHub Copilot** and **GitHub Copilot Chat** extensions, signed in with an account that has Copilot access.
@@ -42,7 +39,7 @@ Can't install locally? See [docs/no-admin.md](docs/no-admin.md) or run the whole
 
 ### MedImageParse credentials
 
-Chapter 2 calls a shared MedImageParse endpoint. Credentials (`MIP_MODEL_ENDPOINT` and `MIP_MODEL_API_KEY`) are distributed at the start of the session. You'll set them up in Chapter 2 Setup; the working path will be `mcp/medimageparse-server/.env` at workspace root.
+Chapter 2 calls a shared MedImageParse endpoint. Credentials (`MIP_MODEL_ENDPOINT` and `MIP_MODEL_API_KEY`) are distributed at the start of the session. Copy `.env.example` to `.env` at the repository root and fill them in; the quick check below and the Chapter 2 MCP server both read that file.
 
 ### Quick check
 
@@ -51,7 +48,7 @@ The `workshop/` directory at repo root holds shared Python utilities for the wor
 ```bash
 uv --version              # 0.x.x
 uv sync                   # one-time, ~1–2 min on a good connection
-uv run workshop/check_env.py   # expected: "Workshop env OK — Python 3.11"
+uv run workshop/check_env.py   # expected: "Workshop env OK — Python 3.11; endpoint OK (mip3d-mri-brain-lesion)"
 ```
 
 If any command above fails, resolve it before arriving.

@@ -1,0 +1,101 @@
+{
+  "patient_id": "SYN0062",
+  "record_as_of": "2021-06-25",
+  "record_note": "Synthetic patient record built around a de-identified MRI report for this workshop. History, medications, and dates other than the MRI exam are fictional. Not for clinical use.",
+
+  "demographics": {
+    "age": 77,
+    "sex": "M"
+  },
+
+  "diagnosis": {
+    "primary": "Metastatic clear cell renal cell carcinoma with three left-hemisphere brain metastases (left parietal, anterior left temporal, posterior left temporal).",
+    "molecular": "No molecular testing on file.",
+    "established": "2019-06-10, nephrectomy pathology."
+  },
+
+  "presentation": {
+    "date": "2021-06-14",
+    "presenting_complaint": "Two weeks of headaches and difficulty finding words.",
+    "hpi_summary": "77M with metastatic renal cell carcinoma and atrial fibrillation on apixaban. Three brain metastases found in 2021-03; he declined radiosurgery and started cabozantinib. Now two weeks of headaches and word-finding difficulty; MRI ordered."
+  },
+
+  "active_problems": [
+    "Metastatic renal cell carcinoma with untreated brain metastases, on cabozantinib.",
+    "New headaches and word-finding difficulty.",
+    "Atrial fibrillation on anticoagulation."
+  ],
+
+  "past_medical_history": [
+    "Atrial fibrillation.",
+    "Hypertension.",
+    "Chronic kidney disease stage 3a after nephrectomy.",
+    "No prior cranial surgery or cranial irradiation."
+  ],
+
+  "allergies": {
+    "drug_allergies": [],
+    "notes": "NKDA. eGFR 48 mL/min/1.73 m² on 2021-06-14; macrocyclic gadolinium approved."
+  },
+
+  "medications": [
+    {"name": "apixaban", "dose": "5 mg PO twice daily", "indication": "atrial fibrillation; ongoing"},
+    {"name": "cabozantinib", "dose": "40 mg PO daily", "indication": "metastatic renal cell carcinoma; started 2021-03-22"},
+    {"name": "metoprolol succinate", "dose": "50 mg PO daily", "indication": "atrial fibrillation rate control"},
+    {"name": "amlodipine", "dose": "5 mg PO daily", "indication": "hypertension"}
+  ],
+
+  "procedures": [
+    {
+      "date": "2019-06-10",
+      "procedure": "Left radical nephrectomy",
+      "result": "Clear cell renal cell carcinoma.",
+      "complications": "None."
+    },
+    {
+      "date": "2019-11-05",
+      "procedure": "Right cataract surgery",
+      "result": "Uncomplicated.",
+      "complications": "None."
+    }
+  ],
+
+  "treatments": [
+    {
+      "start": "2021-03-22",
+      "end": null,
+      "treatment": "Cabozantinib",
+      "notes": "Radiosurgery for the brain metastases offered on 2021-03-09 and declined."
+    }
+  ],
+
+  "expected_post_treatment_findings": [
+    "Known untreated left parietal, anterior left temporal, and posterior left temporal metastases."
+  ],
+
+  "imaging_studies": [
+    {
+      "study_id": "SYN0062_000",
+      "date": "2021-03-02",
+      "modality": "MRI",
+      "exam": "MRI brain with and without contrast",
+      "indication": "Staging, metastatic renal cell carcinoma with new lung nodules.",
+      "image_path": null,
+      "image_note": "Image not retained in this excerpt; only the radiologist's summary is on file.",
+      "report_path": null,
+      "summary": "Three enhancing left-hemisphere metastases with mild vasogenic edema and small blood products: left parietal 2.2 × 2.0 × 2.1 cm, anterior left temporal 0.8 × 0.7 × 0.9 cm, posterior left temporal 1.5 × 0.9 × 1.0 cm. Posterior fossa clear."
+    }
+  ],
+
+  "pending_orders": [
+    {
+      "study_id": "SYN0062_001",
+      "date": "2021-06-25",
+      "exam": "MRI brain with and without contrast",
+      "indication": "Swelling/mass/lump, head (R22.0). Metastatic renal cell carcinoma with known brain metastases; new headaches and word-finding difficulty.",
+      "status": "Acquired; not yet reported."
+    }
+  ],
+
+  "last_record_entry_note": "Study _001 (2021-06-25) has been acquired but is not yet reported; nothing after 2021-06-25 is on file."
+}

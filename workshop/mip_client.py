@@ -1,25 +1,17 @@
 # Copyright (c) Microsoft Corporation.
 # Licensed under the MIT License.
-"""Thin client for a MedImageParse (MIP) online endpoint.
-
-PLACEHOLDER (Ignite 2026): the request plumbing (env loading, auth, retries)
-is in place; the MedImageParse-specific pieces — preprocessing, request
-payload, and mask decoding — are stubs marked ``TODO(mip)``.
-
-Endpoint contract (MedImageParse, 2D), per
-https://learn.microsoft.com/azure/ai-foundry/how-to/healthcare-ai/deploy-medimageparse
-
-- Request: ``{"input_data": {"columns": ["image", "text"], "index": [0],
-  "data": [[<base64 PNG, 1024x1024>, "prompt one & prompt two"]]}}``
-- Response: ``[{"image_features": "<JSON string: {data: base64 ndarray,
-  shape: [n_prompts, 1024, 1024], dtype}>", "text_features": [<category per prompt>]}]``
-"""
+"""Configurable MedImageParse 3D client returning source-grid uint8 masks."""
 
 from __future__ import annotations
 
+import base64
+import gzip
+import json
 import logging
 import os
+from pathlib import Path
 
+import nibabel as nib
 import numpy as np
 import requests
 from dotenv import load_dotenv
@@ -31,35 +23,7 @@ from tenacity import (
     wait_random_exponential,
 )
 
-# Load .env: explicit MIP_ENV_FILE wins, else default dotenv search from CWD.
-_env_file = os.environ.get("MIP_ENV_FILE")
-if _env_file:
-    load_dotenv(_env_file, override=False)
-else:
-    load_dotenv()
-
 logger = logging.getLogger(__name__)
-
-# MedImageParse expects square 1024x1024 inputs; masks come back on the same grid.
-INPUT_SIZE = 1024
-
-
-def preprocess_image(image_bytes: bytes) -> tuple[str, dict]:
-    """Pad to square with black pixels, resize to 1024x1024 RGB PNG, base64-encode.
-
-    Returns the base64 string plus the geometry needed to map masks back onto
-    the original image grid (original size, scale factor, padding offsets).
-    """
-    # TODO(mip): implement — see the "Generating Segmentation for a Variety of
-    # Imaging Modalities" sample notebook (https://aka.ms/healthcare-ai-examples-mip-examples).
-    raise NotImplementedError("TODO(mip): MedImageParse preprocessing is not implemented yet.")
-
-
-def decode_masks(image_features: str) -> np.ndarray:
-    """Decode a response's ``image_features`` JSON string into a uint8 array
-    of shape ``[n_prompts, 1024, 1024]``."""
-    # TODO(mip): json.loads -> base64-decode "data" -> np.frombuffer(dtype).reshape(shape).
-    raise NotImplementedError("TODO(mip): MedImageParse mask decoding is not implemented yet.")
 
 
 def _is_retryable(exc: Exception) -> bool:
@@ -81,34 +45,122 @@ _retry = retry(
 )
 
 
-@_retry
-def _post(payload: dict) -> list:
-    endpoint = os.environ.get("MIP_MODEL_ENDPOINT", "")
-    key = os.environ.get("MIP_MODEL_API_KEY", "")
-    if not endpoint or not key:
-        raise RuntimeError(
-            "MIP_MODEL_ENDPOINT and MIP_MODEL_API_KEY must be set "
-            "(via .env file or environment)."
+class MIPClient:
+    def __init__(
+        self,
+        endpoint: str,
+        api_key: str,
+        deployment_name: str | None = None,
+        *,
+        orientation: str = "RAS",
+        upper_percentile: float = 99.5,
+        pad_to: int | None = None,
+        timeout: float = 300,
+    ):
+        self.endpoint = endpoint
+        self.api_key = api_key
+        self.deployment_name = deployment_name
+        self.orientation = orientation
+        self.upper_percentile = upper_percentile
+        self.pad_to = pad_to
+        self.timeout = timeout
+
+    @classmethod
+    def from_env(
+        cls, deployment_name: str | None = None, **options
+    ) -> "MIPClient":
+        load_dotenv(os.environ.get("MIP_ENV_FILE") or None, override=False)
+        missing = [
+            name for name in ("MIP_MODEL_ENDPOINT", "MIP_MODEL_API_KEY")
+            if not os.environ.get(name)
+        ]
+        if missing:
+            raise RuntimeError(f"Missing environment variables: {', '.join(missing)}")
+        return cls(
+            os.environ["MIP_MODEL_ENDPOINT"],
+            os.environ["MIP_MODEL_API_KEY"],
+            deployment_name,
+            **options,
         )
-    headers = {
-        "Authorization": f"Bearer {key}",
-        "Content-Type": "application/json",
-    }
-    resp = requests.post(endpoint, json=payload, headers=headers, timeout=300)
-    resp.raise_for_status()
-    return resp.json()
 
+    @_retry
+    def _post(self, payload: dict, deployment: str) -> list:
+        headers = {
+            "Authorization": f"Bearer {self.api_key}",
+            "Content-Type": "application/json",
+            "azureml-model-deployment": deployment,
+        }
+        resp = requests.post(
+            self.endpoint, json=payload, headers=headers, timeout=self.timeout
+        )
+        resp.raise_for_status()
+        return resp.json()
 
-def segment(image_bytes: bytes, prompts: list[str]) -> tuple[np.ndarray, list[str], dict]:
-    """One MedImageParse call for all prompts.
+    def _prepare(self, source: nib.Nifti1Image):
+        source_orientation = nib.orientations.io_orientation(source.affine)
+        target_orientation = nib.orientations.axcodes2ornt(self.orientation)
+        transform = nib.orientations.ornt_transform(source_orientation, target_orientation)
+        oriented = source.as_reoriented(transform)
+        values = np.asarray(oriented.dataobj, dtype=np.float32)
+        positive = values[values > 0]
+        upper = np.percentile(positive, self.upper_percentile) if positive.size else 1
+        scaled = (np.clip(values, 0, upper) / upper * 255).astype(np.uint8)
+        padding = [(0, 0)] * 3
+        if self.pad_to is not None:
+            side = max(self.pad_to, *scaled.shape[:2])
+            padding = [
+                ((side - size) // 2, (side - size + 1) // 2)
+                for size in scaled.shape[:2]
+            ] + [(0, 0)]
+        prepared = np.pad(scaled, padding)
+        affine = oriented.affine.copy()
+        affine[:3, 3] -= affine[:3, :3] @ np.array([pair[0] for pair in padding])
+        interior = tuple(
+            slice(pair[0], pair[0] + length)
+            for pair, length in zip(padding, oriented.shape)
+        )
+        return nib.Nifti1Image(prepared, affine), interior
 
-    Returns ``(masks, categories, geometry)``: masks on the 1024x1024 model
-    grid (one per prompt), the model's category per prompt, and the
-    preprocessing geometry from ``preprocess_image`` for mapping masks back.
-    """
-    # TODO(mip): b64, geometry = preprocess_image(image_bytes)
-    #            payload = {"input_data": {"columns": ["image", "text"], "index": [0],
-    #                                      "data": [[b64, " & ".join(prompts)]]}}
-    #            result = _post(payload)[0]
-    #            return decode_masks(result["image_features"]), result["text_features"], geometry
-    raise NotImplementedError("TODO(mip): MedImageParse segmentation is not implemented yet.")
+    @staticmethod
+    def _restore(prediction, source, prepared, interior) -> nib.Nifti1Image:
+        labels = np.asanyarray(prediction.dataobj)
+        if labels.shape != (prepared.shape[2], *prepared.shape[:2]):
+            raise ValueError(f"Unexpected endpoint mask shape: {labels.shape}")
+        # Endpoint affines are stale; invert the preparation geometry instead.
+        cropped = labels.astype(np.uint8).transpose(1, 2, 0)[interior]
+        inverse = nib.orientations.ornt_transform(
+            nib.orientations.io_orientation(prepared.affine),
+            nib.orientations.io_orientation(source.affine),
+        )
+        restored = nib.orientations.apply_orientation(cropped, inverse)
+        header = source.header.copy()
+        header.set_data_dtype(np.uint8)
+        return nib.Nifti1Image(restored, source.affine, header)
+
+    def segment(
+        self,
+        image_path: str | Path,
+        prompts: list[str],
+        *,
+        deployment_name: str | None = None,
+    ) -> nib.Nifti1Image:
+        """Return source-grid labels: 0 is background; label i matches prompts[i-1]."""
+        if not prompts or any(not prompt.strip() or "&" in prompt for prompt in prompts):
+            raise ValueError("Provide nonempty prompts without '&' delimiters")
+        deployment = self.deployment_name if deployment_name is None else deployment_name
+        if not deployment:
+            raise ValueError("A deployment name is required")
+        source = nib.load(image_path)
+        prepared, interior = self._prepare(source)
+        image_bytes = gzip.compress(prepared.to_bytes())
+        payload = {
+            "input_data": {
+                "columns": ["image", "text"],
+                "index": [0],
+                "data": [[base64.b64encode(image_bytes).decode(), "&".join(prompts)]],
+            }
+        }
+        response = self._post(payload, deployment)
+        encoded = json.loads(response[0]["nifti_file"])["data"]
+        prediction = nib.Nifti1Image.from_bytes(gzip.decompress(base64.b64decode(encoded)))
+        return self._restore(prediction, source, prepared, interior)
