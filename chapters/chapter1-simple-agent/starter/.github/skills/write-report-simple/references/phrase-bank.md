@@ -2,8 +2,6 @@
 
 Adapt these positive / possible / negative patterns to the evidence; do not paste a normal finding by default. Use comparison language only with supplied prior evidence. Diffusion, FLAIR, blood-product, and flow-void statements require supporting sequences or supplied findings.
 
-<!-- PLACEHOLDER: pending neuroradiologist review. -->
-
 ## Enhancing lesion / metastasis
 
 **Positive:** A rim-enhancing lesion is present in the {side} {lobe} / the known metastasis is redemonstrated with peripheral enhancement.

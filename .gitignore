@@ -6,6 +6,7 @@ __pycache__/
 
 # MCP server audit trail: masks, descriptors, review images, factsheets
 audit-log/
+outputs/
 
 # agent scratch space (code and images the Radiology Assistant creates)
 sandbox/*

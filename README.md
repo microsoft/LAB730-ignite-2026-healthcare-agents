@@ -26,7 +26,7 @@ Install and verify the following **before** the workshop. Expect about 30 minute
 
 - **VS Code** (latest stable): https://code.visualstudio.com/
 - **GitHub Copilot** and **GitHub Copilot Chat** extensions, signed in with an account that has Copilot access.
-- **Git**, and a local clone of this repository opened as your VS Code workspace.
+- **Git** with **Git LFS** (https://git-lfs.com/), and a local clone of this repository opened as your VS Code workspace. The sample scans are stored with Git LFS: run `git lfs install` once before cloning, or `git lfs pull` in a clone that has small text files in place of the `.nii.gz` scans.
 - **uv** (https://docs.astral.sh/uv/) — Python package manager. Install user-scope (no admin required):
   - **macOS / Linux:** `curl -LsSf https://astral.sh/uv/install.sh | sh`
   - **Windows (PowerShell):** `powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | iex"`
