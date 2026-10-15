@@ -11,8 +11,7 @@ If you can't install tools locally (corporate restrictions or you just want a cl
 
 1. **Fork the workshop repo.**
 
-   <!-- PLACEHOLDER (Ignite 2026): confirm the public repo name and URL. -->
-   Open [microsoft/ignite-workshop-2026](https://github.com/microsoft/ignite-workshop-2026) in your browser, click **Fork** (top right), and fork into your own account.
+   Open this repository on GitHub, click **Fork** (top right), and fork into your own account.
 
 2. **Create a Codespace on your fork.**
 
@@ -29,18 +28,18 @@ If you can't install tools locally (corporate restrictions or you just want a cl
    uv run workshop/check_env.py
    ```
 
-   Expect `Workshop env OK — Python 3.11`. The Codespace base image ships with `uv` pre-installed, so no install step needed.
+   Expect `Workshop env OK — Python 3.11; endpoint OK (mip3d-mri-brain-lesion)`. The Codespace base image ships with `uv` pre-installed, so no install step needed.
 
 4. **Sign into Copilot Chat.**
 
    The Copilot extension prompts for sign-in on first use. Use the same GitHub account that has Copilot access.
 
-5. **Get the MedImageParse credentials from the proctors** and paste them into the `.env` file when you reach Chapter 2 Setup. Same path as the local instructions: `mcp/medimageparse-server/.env`.
+5. **Get the MedImageParse credentials from your instructor** and paste them into `.env` at the repository root (copy `.env.example`), same as the local instructions.
 
 ## Differences from local
 
-- **File paths** are `/workspaces/ignite-workshop-2026/...` not `/home/you/...`. Anywhere the workshop says "workspace root" applies the same way.
-- **Image samples in the chat input** — you reference images by repo-relative path (`samples/SYN0417_003.png`), the same as local.
+- **File paths** are `/workspaces/{repo-name}/...` not `/home/you/...`. Anywhere the workshop says "workspace root" applies the same way.
+- **Image samples in the chat input** — you reference images by repo-relative path (`samples/mri-brain-lesions/case-056/2017-06-13/series-0018.nii.gz`), the same as local.
 - **Persistence** — Codespaces auto-stop after 30 min idle but retain state. Your code and `.env` survive restarts.
 - **Cost** — a single workshop session is well under 1 hour of Codespace time. After the workshop you can delete the codespace to free your quota.
 

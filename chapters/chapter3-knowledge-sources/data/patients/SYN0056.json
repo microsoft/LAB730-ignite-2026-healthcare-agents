@@ -1,0 +1,168 @@
+{
+  "patient_id": "SYN0056",
+  "record_as_of": "2018-04-14",
+  "record_note": "Synthetic patient record built around de-identified MRI reports for this workshop. History, medications, and dates other than the MRI exams are fictional. Not for clinical use.",
+
+  "demographics": {
+    "age": 64,
+    "sex": "M"
+  },
+
+  "diagnosis": {
+    "primary": "Non-small cell lung cancer, adenocarcinoma, with a solitary right parietal brain metastasis.",
+    "molecular": "EGFR and ALK negative.",
+    "established": "2016-08-30, CT-guided lung biopsy."
+  },
+
+  "presentation": {
+    "date": "2018-04-09",
+    "presenting_complaint": "Two weeks of increasing confusion and left-sided neglect noticed by family; admitted with altered mental status.",
+    "hpi_summary": "64M with lung adenocarcinoma and a solitary right parietal brain metastasis. The metastasis kept enlarging after radiosurgery and was resected; pathology was mostly radiation necrosis with a small focus of viable tumor. Now admitted with two weeks of worsening confusion and left-sided neglect. Head CTs show vasogenic edema and midline shift; dexamethasone started on admission. MRI ordered to assess for recurrent tumor versus radiation necrosis."
+  },
+
+  "active_problems": [
+    "Metastatic lung adenocarcinoma with a right parietal brain metastasis, status post radiosurgery and resection.",
+    "Altered mental status and left-sided neglect.",
+    "Vasogenic edema with midline shift."
+  ],
+
+  "past_medical_history": [
+    "Hypertension.",
+    "Former smoker, 40 pack-years, quit 2016.",
+    "No whole-brain radiation; cranial radiation limited to radiosurgery of the right parietal metastasis."
+  ],
+
+  "allergies": {
+    "drug_allergies": [],
+    "notes": "NKDA. Tolerates gadolinium-based contrast."
+  },
+
+  "medications": [
+    {"name": "dexamethasone", "dose": "4 mg PO every 6 hours", "indication": "vasogenic edema; started 2018-04-09"},
+    {"name": "pantoprazole", "dose": "40 mg PO daily", "indication": "gastric protection while on dexamethasone"},
+    {"name": "pemetrexed", "dose": "500 mg/m² IV every 21 days", "indication": "maintenance chemotherapy; last dose 2018-03-26"},
+    {"name": "folic acid", "dose": "1 mg PO daily", "indication": "pemetrexed premedication"},
+    {"name": "amlodipine", "dose": "5 mg PO daily", "indication": "hypertension"}
+  ],
+
+  "procedures": [
+    {
+      "date": "2016-08-30",
+      "procedure": "CT-guided biopsy of a right upper lobe lung mass",
+      "result": "Adenocarcinoma of the lung.",
+      "complications": "None."
+    },
+    {
+      "date": "2017-08-17",
+      "procedure": "Right parietal craniotomy and resection of the enhancing lesion",
+      "result": "Gross total resection of the enhancing lesion. Pathology: predominantly radiation necrosis with a small focus of viable metastatic adenocarcinoma.",
+      "complications": "None."
+    }
+  ],
+
+  "treatments": [
+    {
+      "start": "2016-09-12",
+      "end": "2016-11-14",
+      "treatment": "Carboplatin and pemetrexed, 4 cycles",
+      "notes": "Partial response in the lung."
+    },
+    {
+      "start": "2016-10-11",
+      "end": "2016-10-13",
+      "treatment": "CyberKnife stereotactic radiosurgery to the right parietal metastasis, 27 Gy in 3 fractions",
+      "notes": "Completed without interruption."
+    },
+    {
+      "start": "2016-12-05",
+      "end": null,
+      "treatment": "Pemetrexed maintenance",
+      "notes": "Continued after resection."
+    }
+  ],
+
+  "expected_post_treatment_findings": [
+    "Postsurgical changes of right parietal craniotomy and resection (2017-08-17).",
+    "Treatment-related enhancement possible at the resection margin after radiosurgery (2016-10) and resection."
+  ],
+
+  "imaging_studies": [
+    {
+      "study_id": "SYN0056_000",
+      "date": "2016-08-22",
+      "modality": "MRI",
+      "exam": "MRI brain with and without contrast",
+      "indication": "Staging, newly diagnosed lung mass.",
+      "image_path": null,
+      "image_note": "Image not retained in this excerpt; only the radiologist's summary is on file.",
+      "report_path": null,
+      "summary": "Solitary enhancing right parietal mass, 2.6 × 2.4 × 2.5 cm, with mild vasogenic edema. No other lesion. No prior available."
+    },
+    {
+      "study_id": "SYN0056_001",
+      "date": "2017-02-14",
+      "modality": "MRI",
+      "exam": "MRI brain with and without contrast",
+      "indication": "Follow-up, 4 months after radiosurgery.",
+      "image_path": null,
+      "image_note": "Image not retained in this excerpt; only the radiologist's summary is on file.",
+      "report_path": null,
+      "summary": "Ring-enhancing right parietal mass, 3.5 × 3.7 × 3.6 cm, with moderate vasogenic edema. No new lesion."
+    },
+    {
+      "study_id": "SYN0056_002",
+      "date": "2017-06-13",
+      "modality": "MRI",
+      "exam": "MRI brain with and without contrast",
+      "indication": "Metastatic disease to the right parieto-occipital region, status post CyberKnife therapy.",
+      "image_path": "data/images/SYN0056_002.nii.gz",
+      "report_path": "data/reports/SYN0056_002.md",
+      "summary": "Enhancing right parietal mass increased slightly, 4.3 × 3.4 × 4.3 cm. See full report."
+    },
+    {
+      "study_id": "SYN0056_003",
+      "date": "2017-08-19",
+      "modality": "MRI",
+      "exam": "MRI brain with and without contrast",
+      "indication": "Post-operative baseline, within 48 hours of resection.",
+      "image_path": null,
+      "image_note": "Image not retained in this excerpt; only the radiologist's summary is on file.",
+      "report_path": null,
+      "summary": "Expected postsurgical changes of right parietal craniotomy and resection. Thin smooth enhancement along the cavity margin; no nodular enhancement. Small amount of blood products in the cavity. Residual vasogenic edema."
+    },
+    {
+      "study_id": "SYN0056_004",
+      "date": "2018-04-09",
+      "modality": "CT",
+      "exam": "CT head without contrast",
+      "indication": "Altered mental status.",
+      "image_path": null,
+      "image_note": "Image not retained in this excerpt; only the radiologist's summary is on file.",
+      "report_path": null,
+      "summary": "Right parietal postsurgical changes with a mass and surrounding vasogenic edema. 6 mm right-to-left midline shift. No acute hemorrhage."
+    },
+    {
+      "study_id": "SYN0056_005",
+      "date": "2018-04-12",
+      "modality": "CT",
+      "exam": "CT head without contrast",
+      "indication": "Follow-up of midline shift on dexamethasone.",
+      "image_path": null,
+      "image_note": "Image not retained in this excerpt; only the radiologist's summary is on file.",
+      "report_path": null,
+      "summary": "Midline shift unchanged at 6 mm. No new hemorrhage."
+    }
+  ],
+
+  "pending_orders": [
+    {
+      "study_id": "SYN0056_006",
+      "date": "2018-04-14",
+      "exam": "MRI brain with and without contrast",
+      "indication": "Altered mental status. History of intracranial metastases. Status post radiosurgery (2016-10) and resection (2017-08). Assess for recurrent tumor versus radiation necrosis.",
+      "status": "Acquired; not yet reported."
+    }
+  ],
+
+  "last_record_entry_note": "Study _006 (2018-04-14) has been acquired but is not yet reported; nothing after 2018-04-14 is on file."
+}

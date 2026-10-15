@@ -5,7 +5,7 @@
   <rect width="960" height="1080" fill="#FFFFFF"/>
   <g font-family="Aptos, Segoe UI, Arial, sans-serif" letter-spacing="0">
     <rect x="48" y="39" width="28" height="5" fill="#087F78"/>
-    <text x="89" y="48" font-size="17" font-weight="700" fill="#526169">MICROSOFT IGNITE 2026 / HANDS-ON LAB</text>
+    <text x="89" y="48" font-size="17" font-weight="700" fill="#526169">HANDS-ON WORKSHOP</text>
     <text x="48" y="111" font-size="53" font-weight="700" fill="#202C32">From MRI to a measured report</text>
     <text x="48" y="157" font-size="25" fill="#526169">A brain lesion reporting agent grounded in MedImageParse</text>
 

@@ -37,14 +37,14 @@ All workshop commands run via `uv run …`, so nothing touches system Python.
 
 ## `.env` not loaded / `MIP_MODEL_API_KEY` missing
 
-The `.env` file belongs at `mcp/medimageparse-server/.env` in your workspace root. You create it in Chapter 2 Setup by copying the example and filling in the values the proctors hand out:
+The `.env` file belongs at the repository root, next to `pyproject.toml`. Copy the example and fill in the values your instructor hands out:
 
 ```bash
-cp mcp/medimageparse-server/.env.example mcp/medimageparse-server/.env
+cp .env.example .env
 # then open the file and paste in your key and endpoint
 ```
 
-The MCP server reads `.env` on launch. If you edit the file after the server is already running, restart it: `Cmd/Ctrl+Shift+P` → **MCP: Reload Servers**.
+Run `uv run workshop/check_env.py` to check it. The MCP server reads `.env` on launch. If you edit the file after the server is already running, restart it: `Cmd/Ctrl+Shift+P` → **MCP: Reload Servers**.
 
 ## Skill not invoked
 
@@ -56,7 +56,7 @@ The `description:` field is what the agent uses to decide whether to invoke the 
 
 ## Agent skips skills and improvises instead
 
-A different problem from the one above: the skill *is* registered (it shows up under `/`), but the agent answers from its own reasoning instead of invoking it. A common symptom is the Radiology Assistant writing a report straight from its own image read for a prompt like *"Please write a radiology report for samples/SYN0417_003.png"* without ever calling `write-report-measured`, `write-report-segmentation`, or `write-report-simple`.
+A different problem from the one above: the skill *is* registered (it shows up under `/`), but the agent answers from its own reasoning instead of invoking it. A common symptom is the Radiology Assistant writing a report straight from its own image read for a prompt like *"Please write a radiology report for samples/mri-brain-lesions/case-056/2017-06-13/series-0018.nii.gz"* without ever calling `write-report-measured`, `write-report-segmentation`, or `write-report-simple`.
 
 This is a model-judgment problem, not a registration problem. Try these fixes in order, from cheapest to most involved.
 
@@ -70,45 +70,26 @@ When several skills could plausibly handle the same request, the agent has to di
 
 Tighten each `description:` so it states *when* that specific skill applies:
 
-- `write-report-measured` — "…when both the `segment_lesions` and `measure_lesions` tools are available."
-- `write-report-segmentation` — "…when `segment_lesions` is available but `measure_lesions` is not."
+- `write-report-measured` — "…when the `segment`, `clean_segmentation`, and `describe_lesions` tools are available."
+- `write-report-segmentation` — "…when `segment` is available but `clean_segmentation` or `describe_lesions` is not."
 - `write-report-simple` — "…fallback when no vision model is available."
 
 Clear, non-overlapping descriptions make the routing decision obvious.
 
-### 3. Make skill use mandatory and explicit in the agent
+### 3. Make skill use explicit in the agent's workflow
 
-Soft guidance like "use available skills when present" is easy for a model to skip. Promote it to a hard rule in `.github/agents/radiology-assistant.agent.md`, and remove generic workflow verbs ("analyze the image", "draft the report") that the agent can satisfy by free-writing.
-
-State that improvising the report is a failure, and give an explicit priority/fallback order:
-
-```markdown
-<rules>
-- **Always draft reports through a report-writing skill — never improvise the prose yourself.**
-  Any request to read a brain MRI or write a report MUST go through one of the report
-  skills. Writing a report from your own image read without invoking a skill is a failure.
-  Select the skill using this priority order, falling back only if the higher option is
-  unavailable or its tool call fails:
-  1. `write-report-measured` — preferred when both MedImageParse tools (`segment_lesions`, `measure_lesions`) are available.
-  2. `write-report-segmentation` — use if `segment_lesions` is available but `measure_lesions` is not.
-  3. `write-report-simple` — final fallback when no vision model tool is available.
-</rules>
-```
-
-Then rewrite the workflow so the steps name the action — *select a skill → invoke it → return its output* — instead of generic verbs the model can satisfy without a tool call:
+A workflow with generic verbs ("analyze the image", "draft the report") lets the agent satisfy each step by free-writing. Make the workflow step name the skill: *select a skill → invoke it → return its output*. State the priority order in that step:
 
 ```markdown
 <workflow>
 1. **Identify the case.** Find the image path and any clinical context. If no path is given, ask for one.
-2. **Select the report skill** using the priority order in `<rules>`.
-3. **Invoke that skill** with the resolved image path. Do not write the report yourself.
-4. **Return the skill's output** (`<confidence>` and `<report>` blocks) unchanged.
+2. **Write the report with a report skill.** If the user names a skill, use it. Otherwise use the most capable report skill whose tools are available: `write-report-measured` (`segment`, `clean_segmentation`, and `describe_lesions`), else `write-report-segmentation` (`segment` only), else `write-report-simple`. Do not write the report yourself; return the skill's output (`<confidence>` and `<report>` blocks) unchanged.
 </workflow>
 ```
 
 ### 4. Upgrade the agent's model
 
-If the agent still skips skills after the changes above, the model itself is likely the bottleneck. Smaller models (e.g. `GPT-5 mini`) are noticeably worse at the multi-step "discover skills → pick the right one → invoke it" chain. Bump the `model:` field in the agent frontmatter to a larger model:
+If the agent still skips skills after the changes above, the model itself is likely the bottleneck. Light models are noticeably worse at the multi-step "discover skills → pick the right one → invoke it" chain. Change the `model:` field in the agent frontmatter to a larger model from the chat model picker, for example:
 
 ```markdown
 ---
@@ -118,7 +99,7 @@ model: ['GPT-5 (copilot)']
 ---
 ```
 
-This is probabaly the highest-leverage change for reliable skill adherence — apply it together with steps 2 and 3 rather than on its own.
+This is probably the highest-leverage change for reliable skill adherence — apply it together with steps 2 and 3 rather than on its own.
 
 ### 5. Restart the chat session
 
@@ -150,21 +131,16 @@ The most recent `<date>` folder is the current session. Each server gets its own
 
 `Address already in use` — a previous MCP server process didn't shut down cleanly. Run `MCP: Reload Servers` (`Cmd/Ctrl+Shift+P`) or restart VS Code.
 
-`KeyError: 'MIP_MODEL_ENDPOINT'` (or any similar env-var error) — `.env` hasn't been created or isn't in the right place. See the `.env not loaded` section above.
+`Missing environment variables: MIP_MODEL_ENDPOINT, ...` — `.env` hasn't been created or isn't at the repository root. See the `.env not loaded` section above.
 
-HTTP 401 or 403 from the MedImageParse endpoint — wrong or expired API key. Get a fresh key from the proctors and paste it into `mcp/medimageparse-server/.env`, then reload the server.
+HTTP 401 or 403 from the MedImageParse endpoint — wrong or expired API key. Get a fresh key from your instructor and paste it into `.env` at the repository root, then reload the server.
 
-`NotImplementedError: TODO(mip): ...` — 🚧 placeholder: the MedImageParse or measurement code for Ignite 2026 hasn't landed yet. The tool is wired correctly; it just has nothing behind it.
+### Check the endpoint without MCP
 
-### Direct-Python fallback
-
-If MCP won't cooperate during the workshop, you can still test the underlying logic by calling the Python directly. The MCP server is a thin wrapper around `segmentation.segment(...)` and `measurement.measure(...)` — both scripts run standalone:
+If MCP won't cooperate, check the client and endpoint directly from the repository root:
 
 ```bash
-uv run python mcp/medimageparse-server/segmentation.py samples/SYN0417_003.png
-uv run python mcp/medimageparse-server/measurement.py outputs/masks/SYN0417_003__enhancing-tumor.png
+uv run workshop/check_env.py --verbose
 ```
 
-Add `--help` to either for options (custom `--prompts` for segmentation).
-
-If these scripts work but the MCP tool still doesn't appear in the picker, the problem is in server registration, not the foundation model code — go back to the `@mcp.tool(...)` decorator and the `mcp.json` registration.
+If this passes but the MCP tools still don't appear in the picker, the problem is in server registration, not the model call — go back to the `@mcp.tool(...)` decorator and the `mcp.json` registration.

@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1600" height="620" viewBox="0 0 1600 620" role="img" aria-labelledby="title description">
-  <title id="title">Chapter 2 pipeline: MedImageParse segmentation and lesion measurement through MCP</title>
-  <desc id="description">An axial brain MRI image path and text prompts go to the segment_lesions tool, which calls the MedImageParse foundation model and returns a lesion mask path. The mask path goes to the measure_lesions tool, plain Python geometry with no model, which returns the patient side and lesion diameters. Both tools live in the medimageparse MCP server. The findings and measurements go to the write-report-simple skill from Chapter 1, which writes a draft report. The write-report-measured skill orchestrates the calls. Values are illustrative.</desc>
+  <title id="title">Chapter 2 pipeline: MedImageParse 3D segmentation and lesion descriptors through MCP</title>
+  <desc id="description">A brain MRI volume path and text prompts go to the segment tool, which calls the MedImageParse 3D foundation model and returns a mask path. The mask path goes to clean_segmentation and describe_lesions, plain Python with no model, which return lesion volumes and diameters. All tools live in the medimageparse MCP server. The descriptors go through a factsheet to the write-report-simple skill from Chapter 1, which writes a draft report. The write-report-measured skill orchestrates the calls. Values are illustrative.</desc>
 
   <rect width="1600" height="620" fill="#FFFFFF"/>
   <g font-family="Aptos, Segoe UI, Arial, sans-serif" letter-spacing="0">
@@ -29,8 +29,8 @@
 
     <g text-anchor="middle" font-size="17" font-weight="700">
       <text x="140" y="205" fill="#202C32">Brain MRI</text>
-      <text x="470" y="205" fill="#087F78" font-family="Cascadia Mono, Consolas, monospace">segment_lesions</text>
-      <text x="800" y="205" fill="#087F78" font-family="Cascadia Mono, Consolas, monospace">measure_lesions</text>
+      <text x="470" y="205" fill="#087F78" font-family="Cascadia Mono, Consolas, monospace">segment</text>
+      <text x="800" y="205" fill="#087F78" font-family="Cascadia Mono, Consolas, monospace">describe_lesions</text>
       <text x="1130" y="205" fill="#202C32" font-family="Cascadia Mono, Consolas, monospace">write-report-simple</text>
       <text x="1460" y="205" fill="#202C32" font-family="Cascadia Mono, Consolas, monospace">&lt;report&gt;</text>
     </g>
@@ -68,23 +68,23 @@
       <text x="1370" y="252">FINDINGS</text>
     </g>
     <g font-size="17" fill="#202C32">
-      <text x="1370" y="278">Enhancing lesion,</text>
-      <text x="1370" y="301">left frontal lobe,</text>
+      <text x="1370" y="278">Enhancing mass,</text>
+      <text x="1370" y="301">core 55.1 mL,</text>
     </g>
-    <text x="1370" y="326" font-size="18" font-weight="700" fill="#956115">32 × 24 mm</text>
+    <text x="1370" y="326" font-size="18" font-weight="700" fill="#956115">6.2 × 4.6 cm</text>
 
     <g text-anchor="middle">
       <g font-size="20" font-weight="700" fill="#202C32">
-        <text x="140" y="378">Axial slice</text>
+        <text x="140" y="378">3D volume</text>
         <text x="470" y="378">MedImageParse</text>
         <text x="800" y="378">Python geometry</text>
         <text x="1130" y="378">Chapter 1 skill</text>
         <text x="1460" y="378">Draft report</text>
       </g>
       <g font-size="17" fill="#526169">
-        <text x="140" y="403">PNG + pixel spacing</text>
-        <text x="470" y="403">foundation model</text>
-        <text x="800" y="403">no model</text>
+        <text x="140" y="403">NIfTI + voxel spacing</text>
+        <text x="470" y="403">3D foundation model</text>
+        <text x="800" y="403">cleans, then measures</text>
         <text x="1130" y="403">LLM writes the words</text>
         <text x="1460" y="403">radiologist reviews</text>
       </g>
@@ -101,15 +101,15 @@
       <text x="305" y="288">prompts</text>
       <text x="635" y="266">mask</text>
       <text x="635" y="288">path</text>
-      <text x="976" y="266">side +</text>
-      <text x="976" y="288">diameters</text>
+      <text x="976" y="266">lesion</text>
+      <text x="976" y="288">sizes</text>
       <text x="1295" y="288" fill="#087F78">prose</text>
     </g>
 
     <path d="M470 462 V474 H1130 V462" fill="none" stroke="#8EA5A2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-    <text x="800" y="503" text-anchor="middle" font-size="19" fill="#526169"><tspan font-family="Cascadia Mono, Consolas, monospace" font-weight="700" fill="#202C32">write-report-measured</tspan> calls both tools, then hands off to the report skill</text>
+    <text x="800" y="503" text-anchor="middle" font-size="19" fill="#526169"><tspan font-family="Cascadia Mono, Consolas, monospace" font-weight="700" fill="#202C32">write-report-measured</tspan> runs the tools through a factsheet, then the report skill</text>
 
-    <text x="800" y="562" text-anchor="middle" font-size="24" font-weight="700" fill="#087F78">Models return pixels · code returns facts · the LLM writes words</text>
+    <text x="800" y="562" text-anchor="middle" font-size="24" font-weight="700" fill="#087F78">Models return masks · code returns facts · the LLM writes words</text>
     <text x="1570" y="604" text-anchor="end" font-size="15" fill="#73827F">Illustrative values. Not for clinical use.</text>
   </g>
 </svg>

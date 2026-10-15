@@ -9,10 +9,7 @@
         "mcp",
         "run",
         "server.py"
-      ],
-      "env": {
-        "MIP_ENV_FILE": "${workspaceFolder}/mcp/medimageparse-server/.env"
-      }
+      ]
     }
   }
 }

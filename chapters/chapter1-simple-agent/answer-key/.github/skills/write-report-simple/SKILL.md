@@ -1,69 +1,67 @@
 ---
 name: write-report-simple
-description: Write a structured brain MRI report (Indication, Technique, Findings, Impression) using canonical neuroradiology phrasings. Invoke whenever drafting or revising a brain MRI report.
+description: Write a concise brain MRI report (Exam, Indication, Comparison, Technique, Findings, Impression). Invoke whenever drafting or revising a brain MRI report.
 argument-hint: |
   - findings: optional list of findings the caller already identified (e.g. lesions reported by a segmentation tool)
-  - measurements: optional per-lesion measurements from a measurement tool (e.g. longest and perpendicular diameters in mm, laterality) — reported verbatim, never estimated
+  - measurements: optional per-lesion tool measurements with units and patient laterality, copied as supplied, never estimated
   - confidence: optional explicit hint about how certain the caller is (low / medium / high)
 ---
 
 # write-report-simple
 
-Formats a brain MRI report (Indication, Technique, Findings, Impression) using canonical neuroradiology phrasing. Does not run image models, measure lesions, or look up priors.
+Write the report without calling tools, measuring lesions, or looking up priors.
 
-If the caller provides `findings`, `measurements`, or `confidence`, use them to ground the prose and the emitted confidence value. Prefer explicit `confidence` > tool-provided `findings` and `measurements` > your own read of the image. `measurements` are authoritative — copy the numbers and laterality verbatim. When nothing is provided, derive findings from the image and describe lesion size qualitatively; never invent numeric measurements.
+Use explicit `confidence` > tool-provided `findings` and `measurements` > your image read. Copy authoritative measurements, units, and patient laterality verbatim. Without supplied findings, interpret the images or series; without tool measurements, use qualitative sizes.
 
 ## Budget
 
-- Tool calls: 0 — this skill writes the report; it does not call tools.
-- Output: ≤ 200 words for the full report.
+- Tool calls: 0.
+- Full report: at most 200 words.
 - Do not re-invoke skills already used in this turn.
-- Do not retry tool calls on success.
 
 ## How to use
 
-1. Use this section structure, in this order, with all-caps headers:
+Keep these six sections in order, separated by blank lines. Text follows the first four headers inline; FINDINGS is one prose paragraph; IMPRESSION is numbered, one statement per line.
 
-   ```
-   INDICATION:
-   TECHNIQUE:
-   FINDINGS:
-   IMPRESSION:
-   ```
+```text
+EXAM: MRI brain without and with contrast.
 
-   - **INDICATION** — one short sentence on clinical context. If none was provided, write: `Not provided.`
-   - **TECHNIQUE** — one sentence describing the image (plane, sequence, contrast). Default: `Axial MRI image of the brain.` Name the sequence when known, e.g. `Axial post-contrast T1-weighted image of the brain.`
-   - **FINDINGS** — impersonal declarative sentences. Cover any lesion (location, laterality, size, signal or enhancement), surrounding edema, mass effect and midline, ventricles, and extra-axial spaces even when normal. With a single image, state once: `Evaluation is limited to the provided axial image.`
-   - **IMPRESSION** — **numbered**, prioritized by clinical significance. One concise statement per number. Hedging language permitted.
-   - Plain text only — no markdown. The all-caps section labels are the only headers.
+INDICATION: Not provided.
 
-2. Borrow phrasings from [`references/phrase-bank.md`](references/phrase-bank.md).
-3. Apply the style rules below.
-4. Wrap output in `<confidence>` and `<report>` tags as shown in **Output format**.
+COMPARISON: None.
+
+TECHNIQUE: Axial post-contrast T1-weighted MRI of the brain.
+
+FINDINGS:
+{One prose paragraph: lesion findings first, then a brief routine survey.}
+
+IMPRESSION:
+1. {Most important finding.}
+2. {Next finding, if needed.}
+```
+
+- EXAM names the supplied examination, not an inferred protocol. INDICATION defaults to `Not provided.` COMPARISON defaults to `None.`; otherwise use the supplied prior date or description.
+- TECHNIQUE names the available series, plane, and contrast status; if unknown: `MRI of the brain; sequence details not provided.` Only for a single series, add a matching FINDINGS limitation: `Evaluation is limited to a single post-contrast series.`
+- FINDINGS: lesion location and patient laterality, enhancement, size, edema, then mass effect. Follow with ventricles and sulci, extra-axial spaces, midline, and other assessable findings, even when normal. State required areas that cannot be assessed.
+- Prioritize IMPRESSION by clinical significance. Adapt [references/phrase-bank.md](references/phrase-bank.md), then apply the rules and wrapper below.
 
 ## Style rules
 
-- **Findings** states observations; **Impression** states interpretations.
-- Match hedge strength to evidence:
-  - Tool-confirmed or unequivocal: state directly. `Enhancing mass in the left frontal lobe.`
-  - Moderate: use `possible` or `differential includes`.
-  - Low but non-zero: use `cannot exclude`.
-  - Absent: omit, or state the negative if clinically relevant.
-- State negatives explicitly. Group them: `No hemorrhage, hydrocephalus, or midline shift.`
-- **Numbers come from tools only.** Give sizes in millimeters only when supplied in `measurements`, copied verbatim (`measures {longest} × {perpendicular} mm (longest × perpendicular, axial)`). Otherwise describe size qualitatively (`small`, `moderate`, `large`). Never estimate millimeters from the image.
-- **Laterality is the patient's.** Images use radiological convention (patient's right on image left). Prefer tool-supplied laterality when given.
-- Never mention tools, models, masks, or scores inside the report.
-- No padding, filler, or clinical disclaimers.
-- Present tense.
+- FINDINGS states observations; IMPRESSION states interpretations. State supported findings directly, use `possible` for moderate uncertainty and `cannot exclude` for low but non-zero suspicion.
+- Comparison terms (`again seen`, `redemonstrated`, change, `no new lesions`) require supplied prior evidence.
+- State supported negatives briefly. Diffusion, white matter signal, blood products, and flow voids require appropriate sequences or supplied findings, not a post-contrast series alone.
+- **Numbers come from tools only.** Copy sizes and midline shift verbatim from `measurements`, with units and dimensions as supplied (e.g. `{a} x {b} x {c} cm`). Never round, convert, add dimensions, or estimate numbers from images. Otherwise describe size or shift qualitatively.
+- **Laterality is the patient's.** In radiological display, the patient's right is on image left. Prefer tool-supplied laterality.
+- Use present tense, no filler or clinical disclaimers, and no mention of tools, models, masks, or scores inside the report.
 
 ## Output format
 
-```
+```text
 <confidence>{confidence}</confidence>
 <report>
 {report}
 </report>
 ```
 
-- `{confidence}` — `low`, `medium`, or `high`. Use the caller-supplied value if given; otherwise derive from the evidence. Emit `low` when image quality limits the read, and note the limitation in Findings.
-- `{report}` — plain text, no markdown. Four sections in order: INDICATION, TECHNIQUE, FINDINGS, IMPRESSION (see step 1 above).
+- `{confidence}`: `low`, `medium`, or `high`. Prefer the caller's value; otherwise derive from evidence, using `low` for limited image quality. Note image-quality limitations in FINDINGS.
+- `{report}`: the six-section plain-text layout above, without markdown or code fences. Impression numbering is literal text.
