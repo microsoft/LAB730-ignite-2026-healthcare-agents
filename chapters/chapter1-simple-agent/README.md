@@ -78,49 +78,35 @@ That gives you three files:
 
 Open all three and skim. The skill **name** (frontmatter `name:` and the directory name) must match exactly.
 
-Open `SKILL.md`. Each TODO is tagged with an anchor name. For each one: read the teaching note below, look at the placeholder in the file, then paste from [suggested-changes.md](suggested-changes.md) or write your own.
+Open `SKILL.md`. Each TODO is tagged with an anchor name. For each one: read the teaching note below, look at the placeholder in the file, then paste from [suggested-changes.md](suggested-changes.md) or write your own:
 
-### Fill the `description` TODO
+- [ ] **Fill the `description` TODO.** The agent matches this string against the task at hand to decide whether to invoke the skill. Specific beats categorical — vague descriptions get ignored.
 
-The agent matches this string against the task at hand to decide whether to invoke the skill. Specific beats categorical — vague descriptions get ignored.
+  → [Suggested text](suggested-changes.md#description)
 
-→ [Suggested text](suggested-changes.md#description)
+- [ ] **Fill the `argument-hint` TODO.** `argument-hint` declares optional inputs other agents or later chapters may pass in. We won't pass any in Chapter 1, but declaring them now makes the skill an interface with a contract, not just a prompt. In Chapter 2 you'll call it with real outputs from a segmentation model (`findings`) and a measurement tool (`measurements`).
 
-### Fill the `argument-hint` TODO
+  → [Suggested text](suggested-changes.md#argument-hint)
 
-`argument-hint` declares optional inputs other agents or later chapters may pass in. We won't pass any in Chapter 1, but declaring them now makes the skill an interface with a contract, not just a prompt. In Chapter 2 you'll call it with real outputs from a segmentation model (`findings`) and a measurement tool (`measurements`).
+- [ ] **Fill the `one-liner` TODO.** This one-sentence description is for humans reading the file — a different audience from the frontmatter `description`, which is for the agent's routing logic.
 
-→ [Suggested text](suggested-changes.md#argument-hint)
+  → [Suggested text](suggested-changes.md#one-liner)
 
-### Fill the `one-liner` TODO
+- [ ] **Fill the `inputs` TODO.** Declaring a field in `argument-hint` isn't enough — the body must tell the agent how to use it. This section sets the priority order so the agent doesn't have to guess, and makes tool-supplied `measurements` authoritative.
 
-This one-sentence description is for humans reading the file — a different audience from the frontmatter `description`, which is for the agent's routing logic.
+  → [Suggested text](suggested-changes.md#inputs)
 
-→ [Suggested text](suggested-changes.md#one-liner)
+- [ ] **Fill the `how-to-use` TODO.** The skill ships with supporting files. `template/mri-brain-template.md` and `references/phrase-bank.md` are already complete — the skill body just references them so the agent reads them on demand.
 
-### Fill the `inputs` TODO
+  → [Suggested text](suggested-changes.md#how-to-use)
 
-Declaring a field in `argument-hint` isn't enough — the body must tell the agent how to use it. This section sets the priority order so the agent doesn't have to guess, and makes tool-supplied `measurements` authoritative.
+- [ ] **Fill the `style-rules` TODO.** When the agent has options, the skill picks one and names it. These rules close the gaps that cause run-to-run drift in hedging language and sentence structure — and add two rules specific to brain lesions: **numbers come from tools only**, and **laterality is the patient's**.
 
-→ [Suggested text](suggested-changes.md#inputs)
+  → [Suggested text](suggested-changes.md#style-rules)
 
-### Fill the `how-to-use` TODO
+- [ ] **Fill the `output-format` TODO.** Machine-readable output needs a verbatim template, not a description of one. The literal tags let downstream steps extract the confidence value without fragile string matching.
 
-The skill ships with supporting files. `template/mri-brain-template.md` and `references/phrase-bank.md` are already complete — the skill body just references them so the agent reads them on demand.
-
-→ [Suggested text](suggested-changes.md#how-to-use)
-
-### Fill the `style-rules` TODO
-
-When the agent has options, the skill picks one and names it. These rules close the gaps that cause run-to-run drift in hedging language and sentence structure — and add two rules specific to brain lesions: **numbers come from tools only**, and **laterality is the patient's**.
-
-→ [Suggested text](suggested-changes.md#style-rules)
-
-### Fill the `output-format` TODO
-
-Machine-readable output needs a verbatim template, not a description of one. The literal tags let downstream steps extract the confidence value without fragile string matching.
-
-→ [Suggested text](suggested-changes.md#output-format)
+  → [Suggested text](suggested-changes.md#output-format)
 
 ## Step 3 — Activate it (~2 min)
 
