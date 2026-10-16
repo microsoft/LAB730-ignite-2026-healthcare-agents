@@ -10,7 +10,7 @@
 
 In Chapter 1 the agent wrote tidier reports, but it still had to guess whether a lesion was there and could not measure it. In this chapter you connect **MedImageParse 3D**, a foundation model that segments whole MRI volumes from text prompts, through a small **MCP (Model Context Protocol) server**. Then you add tools that turn its mask into measurements, and a skill that collects those measurements into a factsheet.
 
-![Chapter 2 pipeline: a brain MRI volume goes to MedImageParse 3D through segment, the mask goes to clean_segmentation and describe_lesions, and the descriptors go through the factsheet to write-report-simple.](img/segmentation-pipeline.svg)
+![Chapter 2 pipeline: a brain MRI volume goes to MedImageParse 3D through segment, the mask goes to clean_segmentation and describe_lesions, and the descriptors go through the factsheet to write-report-simple. Each step saves its files in the image's audit-log folder.](img/segmentation-pipeline.svg)
 
 | | Part 1: Segment | Part 2: Measure |
 |---|---|---|
@@ -21,13 +21,14 @@ In Chapter 1 the agent wrote tidier reports, but it still had to guess whether a
 
 Two design choices to notice:
 
-- **Return paths, not voxels.** A mask holds millions of voxels. `segment` saves it to disk and returns its path; the next tool reads the file.
+- **Store compute-efficient segmentations.** A mask holds millions of voxels. `segment` saves it to disk and returns its path; the next tool reads the file.
 - **Models return masks; code returns facts; the LLM writes words.** Each layer does the part it is reliable at.
 
 Every file the tools write goes to `audit-log/` at your workspace root, in one folder per image: masks, review images, descriptors, and the factsheet. Open it at any point to see what the agent saw.
 
 **Steps:**
-- Setup — copy the starter files. (~3 min)
+
+0. Setup — copy the starter files. (~3 min)
 
 **Part 1 — Segment**
 
@@ -55,6 +56,9 @@ cp -r chapters/chapter2-foundation-models/starter/. .
 On Windows PowerShell: `Copy-Item -Recurse -Force chapters\chapter2-foundation-models\starter\* .`
 
 That adds the following at your workspace root. Your Chapter 1 agent and `write-report-simple` skill stay as they are:
+
+> 🚧 **New MCP path.** 
+> * MCPs now live in .mcp.json?
 
 ```
 .github/skills/
@@ -92,9 +96,9 @@ Three things matter here:
 - **Type hints.** MCP builds the tool's input schema from them. `image_path`, `model`, and `prompts` are required.
 - **Docstring as description.** The agent reads `segment`'s docstring to learn which prompts to send and what comes back.
 
-Save, then run `MCP: Reload Servers` from the command palette (`Ctrl/Cmd+Shift+P`). Open the chat tool picker (the configuration icon next to the model selector) and confirm that **`list_models`** and **`segment`** appear under **medimageparse**.
+Save, then run `MCP: List Servers` from the command palette (`Ctrl/Cmd+Shift+P`). In the window that opened, select the `medimageparse` server and press "start" icon.
 
-> If the tools don't appear, open **View → Output → MCP Servers → medimageparse** for a traceback.
+> Open **View → Output → Agent Host** for the startup log.
 
 Open `.github/agents/radiology-assistant.agent.md` and add `medimageparse/*` to the `tools:` list:
 

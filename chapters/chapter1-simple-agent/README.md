@@ -55,8 +55,13 @@ When VS Code first asks for permission to run a tool, select **Allow All**.
 
 Run it on 2-3 different images. Notice that section names drift, hedging is unpredictable, and confidence isn't called out separately. Then look closer at two things that matter for brain lesions:
 
-- **Sizes.** Does the report quote a lesion size like "3.4 × 2.8 cm"? The agent has pixels, not millimeters — it has no pixel spacing and no mask. That number is a guess dressed up as a measurement.
+> 🚧 **Check language.** 
+> * NIFTI contains voxel dimension params, so accurate measurements are possible
+> * If you run agent unconstrained it can run for a long time building the python code to do segmentations. What to do about that? Tell itn not to write code or install tools?
+
+
 - **Sides.** Brain MRI is displayed in radiological convention: the patient's *right* is on the image *left*. Check whether the agent put the lesion on the correct side.
+- **Inconsistency**. Run it a few times. Note how output changes. Note how every time generated code is a bit if not significantly different. Try asking it to measure the lesion.
 
 Keep one of the outputs visible — you'll compare against it after Step 3.
 
@@ -136,6 +141,9 @@ Find the `<workflow>` block. Replace steps 2 and 3 ("Analyze the image", "Draft 
 → [Suggested wording](suggested-changes.md#agent-workflow)
 
 Start a new chat and run the Step 1 prompt on the same image, this time naming the skill:
+> 🚧 **Check process.** 
+> Why modify agent if we call skill directly? What's the point of the agent?
+> without tool calls images are not available
 
 ```
 /write-report-simple Please write a radiology report for samples/mri-brain-lesions/case-056/2017-06-13/series-0018.nii.gz.

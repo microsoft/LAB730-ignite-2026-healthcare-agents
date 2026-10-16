@@ -14,6 +14,8 @@ Budget about **30 min setup** (do this before arriving) + **60 min content** acr
 
 ## Workshop layout
 
+> 🚧 **Placeholder — lab contents.** Confirm once everything is in place, especially data.
+
 - [`chapters/`](chapters/) — one folder per chapter. Each has a `README.md`, a `starter/` skeleton, and an `answer-key/` reference.
 - [`samples/`](samples/) — de-identified post-contrast brain MRI volumes (NIfTI) you can hand to the agent. See [samples/README.md](samples/README.md).
 - [`docs/`](docs/) — troubleshooting, Codespaces, and no-admin setup guides.
@@ -51,4 +53,4 @@ uv sync                   # one-time, ~1–2 min on a good connection
 uv run workshop/check_env.py   # expected: "Workshop env OK — Python 3.11; endpoint OK (mip3d-mri-brain-lesion)"
 ```
 
-If any command above fails, resolve it before arriving.
+If any command above fails, resolve it before arriving if you would like to follow along.
