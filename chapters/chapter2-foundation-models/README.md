@@ -145,6 +145,8 @@ Now open the folder the reply ends with, `audit-log/samples/mri-brain-lesions/ca
 
 > **Why this matters.** `write-report-simple` is unchanged from Chapter 1, and the agent file gained only a tool entry and an updated workflow step. You added a vision capability by registering an MCP tool.
 
+If the MCP server fails to run, ensure your workspace is added to VSCode's Trusted Workspaces (see [Troubleshooting](../../docs/troubleshooting.md#mcp-server-is-not-discovered))
+
 ## Part 2 — Measure
 
 A mask says which voxels are tumor. Turning that into "one lesion, 6.2 × 4.6 cm, tumor core up 112% since the prior" takes voxel spacing from the image header, 3D connected components, and geometry. Deterministic code does that the same way every time, and you can test it. An LLM looking at the image cannot.

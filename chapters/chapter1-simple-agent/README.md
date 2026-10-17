@@ -4,7 +4,7 @@
 
 > Stuck? See [docs/troubleshooting.md](../../docs/troubleshooting.md).
 
-**Prerequisites:** Workshop-level setup from the repo root [`README.md`](../../README.md) complete — VS Code with the GitHub Copilot Chat extension signed in, this repo cloned and open as your workspace, and `uv sync` run from the repo root.
+**Prerequisites:** Workshop-level setup from the repo root [`README.md`](../../README.md) complete — VS Code with the GitHub Copilot Chat extension signed in, this repo cloned and open as your workspace, and `uv sync` run from the repo root. When you open workspace in vscode, make sure to confirm that this is a **trusted workspace** when prompt appears.
 
 ## Overview
 
