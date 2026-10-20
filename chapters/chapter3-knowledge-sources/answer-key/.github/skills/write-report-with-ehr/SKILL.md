@@ -27,7 +27,7 @@ Combine the patient record with descriptor measurements, then write a comparison
 
 ## Sources
 
-- Measurements and change come from the factsheet only, copied verbatim with units. Do not compute, round, or convert numbers.
+- Measurements and change come from the factsheet only, copied verbatim with units. Do not compute, round, or convert numbers. Report on all available measurements, both volumetric and linear.
 - Values from summary-only studies, such as midline shift on a CT, are quoted with that study's date; the tools did not measure them.
 - Location and side come from the record or your own read of the image; the descriptors assign none.
 - Do not invent priors. A finding absent from every prior report and summary is new.

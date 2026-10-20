@@ -21,7 +21,7 @@ In Chapter 1 the agent wrote tidier reports, but it still had to guess whether a
 
 Two design choices to notice:
 
-- **Return paths, not voxels.** A mask holds millions of voxels. `segment` saves it to disk and returns its path; the next tool reads the file.
+- **Store compute-efficient segmentations.** A mask holds millions of voxels. `segment` saves it to disk and returns its path; the next tool reads the file.
 - **Models return masks; code returns facts; the LLM writes words.** Each layer does the part it is reliable at.
 
 Every file the tools write goes to `audit-log/` at your workspace root, in one folder per image: masks, review images, descriptors, and the factsheet. Open it at any point to see what the agent saw.
@@ -93,9 +93,9 @@ Three things matter here:
 - **Type hints.** MCP builds the tool's input schema from them. `image_path`, `model`, and `prompts` are required.
 - **Docstring as description.** The agent reads `segment`'s docstring to learn which prompts to send and what comes back.
 
-Save, then run `MCP: Reload Servers` from the command palette (`Ctrl/Cmd+Shift+P`). Open the chat tool picker (the configuration icon next to the model selector) and confirm that **`list_models`** and **`segment`** appear under **medimageparse**.
+Save, then run `MCP: List Servers` from the command palette (`Ctrl/Cmd+Shift+P`). In the list that opens, select the `medimageparse` server, then select its **Start** icon.
 
-> If the tools don't appear, open **View → Output → MCP Servers → medimageparse** for a traceback.
+> Open **View → Output → Agent Host** for the startup log.
 
 Open `.github/agents/radiology-assistant.agent.md` and add `medimageparse/*` to the `tools:` list:
 
@@ -141,6 +141,8 @@ Now open the folder the reply ends with, `audit-log/samples/mri-brain-lesions/ca
 - `<mask stem>.nii.gz` and `.json`: the mask and the model, deployment, and prompts that produced it.
 
 > **Why this matters.** `write-report-simple` is unchanged from Chapter 1, and the agent file gained only a tool entry and an updated workflow step. You added a vision capability by registering an MCP tool.
+
+If the MCP server fails to start, make sure the workspace is trusted in VS Code (see [Troubleshooting](../../docs/troubleshooting.md#mcp-server-is-not-discovered)).
 
 ## Part 2 — Measure
 

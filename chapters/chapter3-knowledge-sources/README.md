@@ -8,7 +8,7 @@
 
 ## Overview
 
-In Chapter 2 the agent measured the 2018 scan against the 2017 scan and reported that the tumor core more than doubled. The number is correct, and it is misleading: the lesion was resected between those two exams. A follow-up read depends on **patient context**: the diagnosis, the treatments and their dates, the surgery, and what the order asks. In this chapter you give the agent a synthetic patient record and a comparison-aware report skill, run the same scans through it, and compare the reports.
+In Chapter 2 the agent measured the 2018 scan against the 2017 scan and reported that the tumor core more than doubled. The number is correct, and it is misleading: the lesion was resected between those two exams. A radiologist reporting on such an exam would need to know additional **patient context**: the diagnosis, the treatments and their dates, the surgery, and what the order asks. In this chapter you give the agent a synthetic patient record and a comparison-aware report skill, run the same scans through it, and compare the reports.
 
 There's nothing to write in this chapter. Copy in two skills and a small data folder, run the agent, and observe. Same scans, same tools, a different report once the agent can read the chart.
 
@@ -18,11 +18,11 @@ There's nothing to write in this chapter. Copy in two skills and a small data fo
 3. Run the agent on the current study. (~3 min)
 4. Compare with your Chapter 2 report. (~2 min)
 
-> The patient records under `data/patients/` are **synthetic**, built around de-identified MRI reports, and **not for clinical use**.
+> The patient records under `data/patients/` are **synthetic**, built around de-identified MRI reports.
 
 ## Step 1 — Skim the patient record (~3 min)
 
-Open [data/patients/SYN0056.json](data/patients/SYN0056.json). The shape is intentionally simple (not FHIR): flat fields, easy to read. Patient `SYN0056` is the case you measured in Chapter 2.
+Open [data/patients/SYN0056.json](data/patients/SYN0056.json). The shape is intentionally simple (not something that a real-world export from an EHR would look like): flat fields, easy to read. Patient `SYN0056` is the case you measured in Chapter 2.
 
 Things to notice:
 
@@ -36,7 +36,7 @@ Things to notice:
 
 Then open [data/reports/SYN0056_002.md](data/reports/SYN0056_002.md), the prior report, which measured the mass at 4.3 × 3.4 × 4.3 cm.
 
-> **Why the history matters.** The only prior image is from before the resection, so any change measured against it crosses the surgery. Against the post-operative baseline, which showed no nodular enhancement, a large rim-enhancing mass is new. Radiosurgery can cause radiation necrosis that enhances and grows like tumor, and the resected lesion contained both. The pixels can't tell those apart; the chart tells the agent what question to answer.
+>**Why the history matters**. A larger mass on a follow-up scan does not necessarily mean that a tumor has continued to grow. Here, the earlier scan was taken before the lesion was surgically removed. The patient also received radiation treatment, and the removed tissue contained both radiation-related damage and viable tumor. Knowing this, the agent should describe the mass at the treated site and explain that recurrent tumor and delayed radiation injury are both possible, rather than simply call it progression. The history does not settle the diagnosis. It changes which conclusions are justified and what uncertainty the report needs to communicate.
 
 ![Timeline for SYN0056: radiosurgery in October 2016, the prior MRI on 2017-06-13, resection and a post-operative MRI in August 2017, head CTs on dexamethasone, and the current MRI on 2018-04-14. Comparing with the prior crosses the resection. Without the chart the report says the tumor core increased; with the chart it says the mass is new since the post-operative MRI and frames recurrence versus radiation necrosis.](img/treatment-timeline.svg)
 
@@ -117,7 +117,9 @@ What you should see:
 - ✅ Chapter 3's **IMPRESSION** answers the order's question; Chapter 2's lists findings.
 - ✅ Chapter 3 places the mass in the right parietal lobe with support from the chart; in Chapter 2, location was the agent's own read.
 - ✅ Chapter 3 mentions the steroids and the CT midline shift; Chapter 2 has no way to know about them.
-- ⚠️ The measurements are the same, apart from small run-to-run differences in the model's output. The improvement comes from context, not a smarter model or new tools. That's the lesson of the chapter.
+- ⚠️ The measurements are the same, apart from small run-to-run differences in the model's output. The improvement comes from context, not a smarter model or new tools. 
+
+> **Improving tool and measurement compliance.** By this point the agent has many skills and tools, and smaller models may start to break down: ignoring instructions, skipping tool calls, or calling tools incorrectly. If you see this behavior, try using the [improved-compliance answer key](answer-key-improved-compliance) to set up a new agent and update the skills it uses. Observe the changes and how editing instructions can help you achieve improvements without bringing in more expensive models.
 
 ## (Optional) Extra credit
 

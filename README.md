@@ -4,7 +4,7 @@
 
 Budget about **30 min setup** (do this before arriving) + **60 min content** across the three chapters.
 
-<p align="center"><img src="docs/brain-lesion-segmentation-workshop.svg" alt="Workshop overview: three chapters — agent and skill, MedImageParse segmentation via MCP, and patient context — take a brain MRI to a measured, radiologist-reviewed draft report." width="480"></p>
+![Workshop overview: three chapters — agent and skill, MedImageParse segmentation via MCP, and patient context — take a brain MRI to a measured, radiologist-reviewed draft report.](docs/brain-lesion-segmentation-workshop.svg)
 
 ## What you'll build
 
@@ -49,4 +49,4 @@ uv sync                   # one-time, ~1–2 min on a good connection
 uv run workshop/check_env.py   # expected: "Workshop env OK — Python 3.11; endpoint OK (mip3d-mri-brain-lesion)"
 ```
 
-If any command above fails, resolve it before arriving.
+If any command above fails, resolve it before arriving if you would like to follow along.

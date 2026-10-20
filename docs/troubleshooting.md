@@ -142,3 +142,29 @@ uv run workshop/check_env.py --verbose
 ```
 
 If this passes but the MCP tools still don't appear in the picker, the problem is in server registration, not the model call — go back to the `@mcp.tool(...)` decorator and the `mcp.json` registration.
+
+### MCP server is not discovered
+
+Trust the lab working directory in VS Code so its MCP server can load automatically and make its tools available in the chat session.
+
+1. Open the lab repository folder in VS Code.
+2. Open the Command Palette (`Ctrl+Shift+P` on Windows/Linux, `Cmd+Shift+P` on macOS) and run **Workspaces: Manage Workspace Trust**.
+3. Under **Trusted Folders & Workspaces**, select **Add Folder** and choose the lab repository root. Only trust folders whose contents you trust.
+4. Start a new Copilot Chat session. If prompted, approve the `medimageparse` MCP server, then confirm its tools appear in the chat tool picker.
+
+### MCP server runs locally but is unavailable in Copilot chat
+
+Copilot's runtime maintains a separate workspace-trust list. Register the repository through Copilot CLI rather than editing its managed configuration:
+
+1. Open a terminal in the repository and start Copilot:
+
+   ```powershell
+   Set-Location '\path\to\your-repository'
+   copilot
+   ```
+
+2. At the folder-trust prompt, select **Yes, and remember this folder for future sessions**. Only do this for repositories you trust.
+3. Exit the CLI with `/exit`.
+4. In VS Code, run **Developer: Reload Window**, then start a new Copilot chat.
+
+This is Copilot CLI's trust prompt, separate from VS Code's Workspace Trust dialog.
