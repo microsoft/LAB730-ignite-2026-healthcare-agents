@@ -32,14 +32,14 @@ def list_models() -> list[dict]:
     return segmentation.list_models()
 
 
-# TODO (Chapter 2, Part 1): Register `segmentation.segment` as an MCP tool named `segment` here.
+# TODO (Chapter 2): Register `segmentation.segment` as an MCP tool named `segment` here.
 
 
-# TODO (Chapter 2, Part 2): Register `lesions.clean_segmentation` as `clean_segmentation`.
+# TODO (Chapter 2): Register `lesions.clean_segmentation` as `clean_segmentation`.
 # Follow the working wrapper above, using the function's signature and docstring.
 
 
-# TODO (Chapter 2, Part 2): Register `lesions.describe_lesions` as `describe_lesions`.
+# TODO (Chapter 2): Register `lesions.describe_lesions` as `describe_lesions`.
 # Follow the same wrapper pattern; the lesions module is imported above.
 
 

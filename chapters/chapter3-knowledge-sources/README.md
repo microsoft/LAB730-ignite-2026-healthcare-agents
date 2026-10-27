@@ -8,7 +8,7 @@
 
 ## Overview
 
-In Chapter 2 the agent measured the 2018 scan against the 2017 scan and reported that the tumor core more than doubled. The number is correct, and it is misleading: the lesion was resected between those two exams. A radiologist reporting on such an exam would need to know additional **patient context**: the diagnosis, the treatments and their dates, the surgery, and what the order asks. In this chapter you give the agent a synthetic patient record and a comparison-aware report skill, run the same scans through it, and compare the reports.
+In Chapter 2's optional comparison, the agent measured the 2018 scan against the 2017 scan and reported that the tumor core more than doubled. The number is correct, and it is misleading: the lesion was resected between those two exams. A radiologist reporting on such an exam would need to know additional **patient context**: the diagnosis, the treatments and their dates, the surgery, and what the order asks. In this chapter you give the agent a synthetic patient record and a comparison-aware report skill, run the same scans through it, and compare the reports.
 
 There's nothing to write in this chapter. Copy in two skills and a small data folder, run the agent, and observe. Same scans, same tools, a different report once the agent can read the chart.
 
@@ -104,7 +104,7 @@ Check the report:
 
 ## Step 4 — Compare with your Chapter 2 report (~2 min)
 
-Put this report next to the one from Chapter 2, Step 7: the same two scans, measured by the same tools. If you no longer have it, run:
+Put this report next to the comparison report from Chapter 2's optional step: the same two scans, measured by the same tools. If you skipped that step or no longer have the report, run:
 
 ```
 /write-report-measured Please write a radiology report for data/images/SYN0056_006.nii.gz, comparing with the prior data/images/SYN0056_002.nii.gz.

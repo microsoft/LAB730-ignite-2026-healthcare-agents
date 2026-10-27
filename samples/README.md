@@ -6,7 +6,7 @@ The lab uses three de-identified, post-contrast T1-weighted brain MRI volumes in
 
 | Sample image | Workshop use | Chapter 3 copy |
 |---|---|---|
-| [case-056/2017-06-13/series-0018.nii.gz](mri-brain-lesions/case-056/2017-06-13/series-0018.nii.gz) | Chapter 1 reporting; Chapter 2 segmentation and prior for comparison. | [SYN0056_002.nii.gz](../chapters/chapter3-knowledge-sources/data/images/SYN0056_002.nii.gz) |
+| [case-056/2017-06-13/series-0018.nii.gz](mri-brain-lesions/case-056/2017-06-13/series-0018.nii.gz) | Chapter 1 reporting; prior in Chapter 2's optional comparison. | [SYN0056_002.nii.gz](../chapters/chapter3-knowledge-sources/data/images/SYN0056_002.nii.gz) |
 | [case-056/2018-04-14/series-0902.nii.gz](mri-brain-lesions/case-056/2018-04-14/series-0902.nii.gz) | Current study for Chapter 2 measured reporting and Chapter 3 context-aware reporting. | [SYN0056_006.nii.gz](../chapters/chapter3-knowledge-sources/data/images/SYN0056_006.nii.gz) |
 | [case-062/2021-06-25/series-0007.nii.gz](mri-brain-lesions/case-062/2021-06-25/series-0007.nii.gz) | Chapter 3 optional extra patient. | [SYN0062_001.nii.gz](../chapters/chapter3-knowledge-sources/data/images/SYN0062_001.nii.gz) |
 
@@ -23,6 +23,12 @@ Please write a radiology report for samples/mri-brain-lesions/case-056/2017-06-1
 ```
 
 For Chapter 2, after wiring the measurement tools:
+
+```text
+/write-report-measured Please write a radiology report for samples/mri-brain-lesions/case-056/2018-04-14/series-0902.nii.gz.
+```
+
+For Chapter 2's optional comparison with the prior scan:
 
 ```text
 /write-report-measured Please write a radiology report for samples/mri-brain-lesions/case-056/2018-04-14/series-0902.nii.gz, comparing with the prior samples/mri-brain-lesions/case-056/2017-06-13/series-0018.nii.gz.

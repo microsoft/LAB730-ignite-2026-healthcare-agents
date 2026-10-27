@@ -1,6 +1,6 @@
 # Chapter 2 — Using foundation models with agents
 
-**Time budget: ~40 minutes.**
+**Time budget: ~22 minutes.**
 
 > Stuck? See [docs/troubleshooting.md](../../docs/troubleshooting.md).
 
@@ -12,12 +12,21 @@ In Chapter 1 the agent wrote tidier reports, but it still had to guess whether a
 
 ![Chapter 2 pipeline: a brain MRI volume goes to MedImageParse 3D through segment, the mask goes to clean_segmentation and describe_lesions, and the descriptors go through the factsheet to write-report-simple. Each step saves its files in the image's audit-log folder.](img/segmentation-pipeline.svg)
 
-| | Part 1: Segment | Part 2: Measure |
+| | Segment | Measure |
 |---|---|---|
 | Tools | `list_models`, `segment` | `clean_segmentation`, `describe_lesions` |
 | What runs | MedImageParse 3D | Python on the mask and image geometry |
-| Output | Tumor-component mask and film grids | Lesion IDs, volumes, diameters, change from a prior, factsheet |
+| Output | Tumor-component mask and axial montages | Lesion IDs, volumes, diameters, change from a prior, factsheet |
 | Question | Which tumor components are present? | How many lesions, how big, and how have they changed? |
+
+Segmentation on its own tells the agent which tumor components the model found, but nothing about size: the mask is raw voxels, and it can include small spurious regions. The measurement tools clean the mask and turn it into numbers the report can use. In this chapter you wire both at once.
+
+> [!NOTE]
+> **Why measurements come from code.** Brain tumors are followed by size: the tumor-core volume, and on axial slices the **longest diameter** of the tumor core and the **longest diameter perpendicular to it**. Whether a tumor is growing comes down to comparing those numbers between scans, so they have to be real. Turning a mask into "one lesion, 6.2 × 4.6 cm" takes voxel spacing, 3D connected components, and geometry. Deterministic code does that the same way every time, and you can test it. An LLM looking at the image cannot.
+>
+> - **Millimeters aren't in the pixels.** Voxel spacing comes from the NIfTI header; `describe_lesions` reads it.
+> - **Masks need cleanup first.** `clean_segmentation` merges tumor-core pieces within 5 mm into one lesion and drops regions under 0.1 mL, then saves the cleaned mask and lesion IDs.
+> - **Descriptors are facts, not interpretation.** `describe_lesions` reports counts, volumes, diameters, and change from a prior. It assigns no side or anatomy, and it lists its limitations.
 
 Two design choices to notice:
 
@@ -29,21 +38,11 @@ Every file the tools write goes to `audit-log/` at your workspace root, in one f
 **Steps:**
 
 0. Setup — copy the starter files. (~3 min)
+1. Wire the `segment`, `clean_segmentation`, and `describe_lesions` tools. (~7 min)
+2. Skim the factsheet and measured-report skills. (~4 min)
+3. Try it, then explore the audit log. (~8 min)
 
-**Part 1 — Segment**
-
-1. Wire the `segment` tool. (~6 min)
-2. Skim the segmentation skill. (~2 min)
-3. Try it, then open the audit log. (~7 min)
-
-**Part 2 — Measure**
-
-4. Why measurements come from code. (~2 min)
-5. Wire `clean_segmentation` and `describe_lesions`. (~4 min)
-6. Skim the factsheet and measured-report skills. (~4 min)
-7. Try it with a prior scan. (~10 min)
-
-**(Optional) Extra credit.**
+**(Optional) Compare with a prior scan; extra credit.**
 
 ## Setup (~3 min)
 
@@ -59,14 +58,13 @@ That adds the following at your workspace root. Your Chapter 1 agent and `write-
 
 ```
 .github/skills/
-  write-report-segmentation/      Part 1 report skill (complete)
-  write-report-measured/          Part 2 report skill (complete)
-  write-imaging-factsheet/        Part 2 factsheet skill (complete)
+  write-report-measured/          report skill (complete)
+  write-imaging-factsheet/        factsheet skill (complete)
     template/factsheet.md
 mcp/medimageparse-server/
   server.py                       list_models works; three TODOs
   models.json                     model catalog: deployments and prompt views
-  segmentation.py                 calls MedImageParse 3D, saves masks and film grids (read-only)
+  segmentation.py                 calls MedImageParse 3D, saves masks and axial montages (read-only)
   lesions.py                      cleanup and descriptors (read-only)
   figures.py                      review images (read-only)
 .vscode/
@@ -75,92 +73,16 @@ mcp/medimageparse-server/
 
 The server reads `MIP_MODEL_ENDPOINT` and `MIP_MODEL_API_KEY` from the `.env` at the repository root, the same file `check_env.py` uses.
 
-## Part 1 — Segment
+## Step 1 — Wire the tools (~7 min)
 
-### Step 1 — Wire the `segment` tool (~6 min)
-
-Open `mcp/medimageparse-server/server.py`. The `list_models` wrapper already works: it delegates to a function in `segmentation.py` and reuses that function's docstring as the tool description. Replace the first TODO with the same pattern:
+Open `mcp/medimageparse-server/server.py`. The `list_models` wrapper already works: it delegates to a function in `segmentation.py` and reuses that function's docstring as the tool description. Replace the three TODOs with the same pattern:
 
 ```python
 @mcp.tool(description=segmentation.segment.__doc__)
 def segment(image_path: str, model: str, prompts: list[str]) -> dict:
     return segmentation.segment(image_path, model, prompts)
-```
 
-Three things matter here:
 
-- **Decorator.** `@mcp.tool(...)` registers the function with the server. Without it, the agent cannot see the tool.
-- **Type hints.** MCP builds the tool's input schema from them. `image_path`, `model`, and `prompts` are required.
-- **Docstring as description.** The agent reads `segment`'s docstring to learn which prompts to send and what comes back.
-
-Save, then run `MCP: List Servers` from the command palette (`Ctrl/Cmd+Shift+P`). In the list that opens, select the `medimageparse` server, then select its **Start** icon.
-
-> Open **View → Output → Agent Host** for the startup log.
-
-Open `.github/agents/radiology-assistant.agent.md` and add `medimageparse/*` to the `tools:` list:
-
-```yaml
-tools: [execute, read, agent, browser, edit, search, web, todo, medimageparse/*]
-```
-
-In the same file, replace the Chapter 1 workflow step 2 (`Write the report with the write-report-simple skill`) so the agent prefers the tool-backed skills:
-
-```markdown
-2. **Write the report with a report skill.** If the user names a skill, use it. Otherwise use the most capable report skill whose tools are available: `write-report-measured` (`segment`, `clean_segmentation`, and `describe_lesions`), else `write-report-segmentation` (`segment` only), else `write-report-simple`. Return its output unchanged.
-```
-
-No further agent-file edit is needed in this chapter.
-
-### Step 2 — Skim the segmentation skill (~2 min)
-
-Open `.github/skills/write-report-segmentation/SKILL.md`:
-
-- **Frontmatter `description`** tells the agent to use this skill when `segment` is available but the Part 2 tools are not.
-- **Steps 1–2** call `list_models` and `segment` with the catalog's three tumor-component prompts (enhancing tumor, edema, necrotic core), then turn each `detected` flag into a present or absent finding.
-- **Step 3** hands those findings to `write-report-simple` from Chapter 1, with no measurements: the raw mask is uncleaned, so the skill doesn't report its volumes.
-- **Step 4** returns the report and the `audit_dir` where the tool saved its files.
-
-### Step 3 — Try it (~7 min)
-
-Start a new chat, select **Radiology Assistant**, and send the same image you used in Chapter 1:
-
-```
-/write-report-segmentation Please write a radiology report for samples/mri-brain-lesions/case-056/2017-06-13/series-0018.nii.gz.
-```
-
-If VS Code asks for permission to run the MCP tools, select **Allow All**.
-
-> Segmentation might take a few minutes if the endpoint call needs retries.
-
-Watch the trace: `list_models`, one `segment` call, then `write-report-simple` and the report. Every tumor component the report mentions should match a prompt that came back `detected: true`, and the size should still be qualitative.
-
-Now open the folder the reply ends with, `audit-log/samples/mri-brain-lesions/case-056/2017-06-13/series-0018/`:
-
-- `film-grid.png`: the axial slices on their own, anterior up and the patient's right on screen left.
-- `<mask stem>.film-grid.png`: the same slices with the mask overlaid. Compare it with the image. Look for small colored regions away from the main tumor; Part 2 drops the smallest of them before measuring.
-- `<mask stem>.nii.gz` and `.json`: the mask and the model, deployment, and prompts that produced it.
-
-> **Why this matters.** `write-report-simple` is unchanged from Chapter 1, and the agent file gained only a tool entry and an updated workflow step. You added a vision capability by registering an MCP tool.
-
-If the MCP server fails to start, make sure the workspace is trusted in VS Code (see [Troubleshooting](../../docs/troubleshooting.md#mcp-server-is-not-discovered)).
-
-## Part 2 — Measure
-
-A mask says which voxels are tumor. Turning that into "one lesion, 6.2 × 4.6 cm, tumor core up 112% since the prior" takes voxel spacing from the image header, 3D connected components, and geometry. Deterministic code does that the same way every time, and you can test it. An LLM looking at the image cannot.
-
-### Step 4 — Why measurements come from code (~2 min)
-
-Brain tumors are followed by size: the tumor-core volume, and on axial slices the **longest diameter** of the tumor core and the **longest diameter perpendicular to it**. Whether a tumor is growing comes down to comparing those numbers between scans, so they have to be real.
-
-- **Millimeters aren't in the pixels.** Voxel spacing comes from the NIfTI header; `describe_lesions` reads it.
-- **Masks need cleanup first.** `clean_segmentation` merges tumor-core pieces within 5 mm into one lesion and drops regions under 0.1 mL, then saves the cleaned mask and lesion IDs.
-- **Descriptors are facts, not interpretation.** `describe_lesions` reports counts, volumes, diameters, and change from a prior. It assigns no side or anatomy, and it lists its limitations.
-
-### Step 5 — Wire `clean_segmentation` and `describe_lesions` (~4 min)
-
-Replace the remaining two TODOs in `server.py`:
-
-```python
 @mcp.tool(description=lesions.clean_segmentation.__doc__)
 def clean_segmentation(mask_path: str, merge_distance_mm: float = 5.0,
                        min_lesion_ml: float = 0.1, min_edema_ml: float = 0.1) -> dict:
@@ -172,60 +94,96 @@ def describe_lesions(clean_path: str, prior_clean_path: str | None = None) -> di
     return lesions.describe_lesions(clean_path, prior_clean_path)
 ```
 
-Parameters with defaults become optional inputs in the tool schema. The tools chain through file paths: `segment` returns `mask_path`, `clean_segmentation` returns `clean_path`, and `describe_lesions` reads it.
+Three things matter here:
 
-Reload the server and confirm all four tools appear under **medimageparse**.
+- **Decorator.** `@mcp.tool(...)` registers the function with the server. Without it, the agent cannot see the tool.
+- **Type hints.** MCP builds the tool's input schema from them. Parameters without defaults, such as `image_path`, `model`, and `prompts`, are required; parameters with defaults become optional inputs.
+- **Docstring as description.** The agent reads each docstring to learn what to send and what comes back.
 
-### Step 6 — Skim the factsheet and measured-report skills (~4 min)
+The tools chain through file paths: `segment` returns `mask_path`, `clean_segmentation` returns `clean_path`, and `describe_lesions` reads it.
+
+Save, then run `MCP: List Servers` from the command palette (`Ctrl/Cmd+Shift+P`). In the list that opens, select the `medimageparse` server, then select its **Start** icon.
+
+> Open **View → Output → Agent Host** for the startup log.
+
+If the MCP server fails to start, make sure the workspace is trusted in VS Code (see [Troubleshooting](../../docs/troubleshooting.md#mcp-server-is-not-discovered)).
+
+Open `.github/agents/radiology-assistant.agent.md` and add `medimageparse/*` to the `tools:` list:
+
+```yaml
+tools: [execute, read, agent, browser, edit, search, web, todo, medimageparse/*]
+```
+
+In the same file, replace the Chapter 1 workflow step 2 (`Write the report with the write-report-simple skill`) so the agent prefers the tool-backed skill:
+
+```markdown
+2. **Write the report with a report skill.** If the user names a skill, use it. Otherwise use `write-report-measured` when the `segment`, `clean_segmentation`, and `describe_lesions` tools are available, else `write-report-simple`. Return its output unchanged.
+```
+
+No further agent-file edit is needed in this chapter.
+
+## Step 2 — Skim the factsheet and measured-report skills (~4 min)
 
 Open `.github/skills/write-imaging-factsheet/SKILL.md` and its `template/factsheet.md`. The skill segments, cleans, and describes each scan, then fills the template. Every line cites a descriptor ID such as `[L1.bidimensional]`, and values are copied, never computed.
 
 Then open `.github/skills/write-report-measured/SKILL.md`. It invokes the factsheet skill, then passes the factsheet's numbers to `write-report-simple` as `measurements`, copied verbatim. Lesion IDs are ranked separately in each scan, so change is reported for totals, not matched lesions.
 
-### Step 7 — Try it with a prior scan (~10 min)
+## Step 3 — Try it, then explore the audit log (~8 min)
 
-In a new chat with **Radiology Assistant**, ask for the follow-up scan and give the Part 1 scan as the prior:
+In a new chat with **Radiology Assistant**, ask for a measured report on the 2018 scan:
+
+```
+/write-report-measured Please write a radiology report for samples/mri-brain-lesions/case-056/2018-04-14/series-0902.nii.gz.
+```
+
+Watch the trace: `write-report-measured`, then `write-imaging-factsheet` calling `segment`, `clean_segmentation`, and `describe_lesions`, then `write-report-simple`.
+
+If VS Code asks for permission to run the MCP tools, select **Allow All**.
+
+> Segmentation might take a few minutes if the endpoint call needs retries.
+
+Open the folder the reply ends with, `audit-log/samples/mri-brain-lesions/case-056/2018-04-14/series-0902/`. Each tool left files here (`<stem>` is the shared prefix that starts with `mip3d-mri-brain-lesion`):
+
+| File | Written by | What it holds |
+|---|---|---|
+| `axial-montage.png` | `segment` | The scan alone, axial slices, anterior up and the patient's right on screen left |
+| `<stem>.axial-montage.png` | `segment` | The raw mask on the same slices |
+| `<stem>.nii.gz`, `<stem>.json` | `segment` | The mask, and the model and prompts that made it |
+| `<stem>.clean.*`, `<stem>.lesions.*` | `clean_segmentation` | Cleaned mask, lesion IDs, and cleanup settings |
+| `<stem>.descriptors.json` | `describe_lesions` | Every number with its ID, unit, and rule |
+| `<stem>.measurements.png` | `describe_lesions` | Each lesion on its measured slice, with both diameters drawn |
+| `<stem>.factsheet.md` | the agent | The only file the language model wrote; open the preview (`Ctrl/Cmd+Shift+V`) to see it with the images |
+
+Check the report against these files:
+
+- Diameters and volumes match the factsheet lines exactly.
+- Any side or location is the agent's own reading. Check it against the overlay axial montage: the patient's right is on screen left.
+
+> MedImageParse output varies slightly between calls, so small volumes, mostly edema, can differ from run to run. The code is deterministic: the same mask always gives the same descriptors.
+
+Things to try:
+
+1. Open the two axial montages side by side. In the overlay, red is enhancing tumor, blue is edema, and green is the necrotic core. Look for colored regions you would not call tumor; `clean_segmentation` drops the smallest of them before measuring.
+2. In `.descriptors.json`, find `L1.bidimensional` and match its `slice_index` to the `z` label on the axial montage and the measurement image.
+3. Read the `limitation` entries: what the descriptors cannot tell you, such as side and anatomy.
+4. Pick one factsheet line and find the descriptor it cites. Every other file here was written by code, not by the language model.
+
+> **Why this matters.** `write-report-simple` is unchanged from Chapter 1, and the agent file gained only a tool entry and an updated workflow step. You added segmentation and measurement by registering MCP tools.
+
+## (Optional) Compare with a prior scan
+
+In a new chat, ask for the same report and give the scan from Chapter 1 as the prior:
 
 ```
 /write-report-measured Please write a radiology report for samples/mri-brain-lesions/case-056/2018-04-14/series-0902.nii.gz, comparing with the prior samples/mri-brain-lesions/case-056/2017-06-13/series-0018.nii.gz.
 ```
 
-Watch the trace: `write-report-measured`, then `write-imaging-factsheet` calling `segment` and `clean_segmentation` for each scan and `describe_lesions` once, then `write-report-simple`.
+The factsheet skill now segments and cleans both scans and calls `describe_lesions` once with the prior, so this run takes longer. Check the report:
 
-Open the 2018 folder, `audit-log/samples/mri-brain-lesions/case-056/2018-04-14/series-0902/`:
-
-- `<mask stem>.factsheet.md`: open the preview (`Ctrl/Cmd+Shift+V`) to see the facts with the film grids and measurement image.
-- `<mask stem>.measurements.png`: each lesion on its measured slice, with both diameters drawn.
-- `<mask stem>.descriptors.json`: the source of every factsheet line.
-
-Then check the report:
-
-- Diameters, volumes, and percent changes match the factsheet lines exactly.
+- Percent changes match the factsheet's change lines exactly.
 - COMPARISON names the 2017 exam.
-- Any side or location is the agent's own reading. Check it against the overlay film grid: the patient's right is on screen left.
 
-> MedImageParse output varies slightly between calls, so small volumes, mostly edema, can differ from run to run. The code is deterministic: the same mask always gives the same descriptors.
-
-## (Optional) Explore the audit log
-
-Open `audit-log/samples/mri-brain-lesions/case-056/2018-04-14/series-0902/`. Each step left files here (`<stem>` is the shared prefix that starts with `mip3d-mri-brain-lesion`):
-
-| File | Written by | What it holds |
-|---|---|---|
-| `film-grid.png` | `segment` | The scan alone, axial slices |
-| `<stem>.film-grid.png` | `segment` | The raw mask on the same slices |
-| `<stem>.nii.gz`, `<stem>.json` | `segment` | The mask, and the model and prompts that made it |
-| `<stem>.clean.*`, `<stem>.lesions.*` | `clean_segmentation` | Cleaned mask, lesion IDs, and cleanup settings |
-| `<stem>.descriptors.json` | `describe_lesions` | Every number with its ID, unit, and rule |
-| `<stem>.measurements.png` | `describe_lesions` | Each lesion on its measured slice |
-| `<stem>.factsheet.md` | the agent | The only file the language model wrote |
-
-Things to try:
-
-1. Open the two film grids side by side. In the overlay, red is enhancing tumor, blue is edema, and green is the necrotic core. Look for colored regions you would not call tumor.
-2. In `.descriptors.json`, find `L1.bidimensional` and match its `slice_index` to the `z` label on the film grid and the measurement image.
-3. Read the `limitation` entries: what the descriptors cannot tell you, such as side and anatomy.
-4. Pick one factsheet line and find the descriptor it cites. Every other file here was written by code, not by the language model.
+Keep this report: Chapter 3 compares it with a report written from the patient's chart.
 
 ## (Optional) Extra credit
 
@@ -237,9 +195,8 @@ Things to try:
 
 - [ ] `segment`, `clean_segmentation`, and `describe_lesions` wired in `server.py` and visible in the tool picker
 - [ ] `medimageparse/*` in the agent's `tools:` list, and the workflow's report step updated
-- [ ] A Part 1 report whose tumor components each match a detected label, with qualitative size
-- [ ] A Part 2 report whose numbers match the factsheet, with the 2017 exam as the comparison
-- [ ] `audit-log/` folders for both scans, with film grids, masks, descriptors, the measurement image, and the factsheet
+- [ ] A measured report on the 2018 scan whose numbers match the factsheet
+- [ ] An `audit-log/` folder for the 2018 scan, with axial montages, masks, descriptors, the measurement image, and the factsheet
 
 If you got stuck, the completed version of every file is in `chapters/chapter2-foundation-models/answer-key/`.
 

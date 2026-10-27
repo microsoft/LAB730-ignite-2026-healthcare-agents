@@ -2,7 +2,7 @@
 
 **Hands-on workshop.** This repository supports a hands-on workshop on building **radiology AI agents** in VS Code with GitHub Copilot, grounded in **MedImageParse** — a foundation model that segments medical images from simple text prompts. The lab follows one brain MRI case from a bare LLM to a measured, context-aware report, and is organized into **three chapters**, each in its own folder under [`chapters/`](chapters/).
 
-Budget about **30 min setup** (do this before arriving) + **60 min content** across the three chapters.
+Budget about **30 min setup** (do this before arriving) + **45 min content** across the three chapters.
 
 ![Workshop overview: three chapters — agent and skill, MedImageParse segmentation via MCP, and patient context — take a brain MRI to a measured, radiologist-reviewed draft report.](docs/brain-lesion-segmentation-workshop.svg)
 

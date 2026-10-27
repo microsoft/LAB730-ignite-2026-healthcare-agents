@@ -56,7 +56,7 @@ The `description:` field is what the agent uses to decide whether to invoke the 
 
 ## Agent skips skills and improvises instead
 
-A different problem from the one above: the skill *is* registered (it shows up under `/`), but the agent answers from its own reasoning instead of invoking it. A common symptom is the Radiology Assistant writing a report straight from its own image read for a prompt like *"Please write a radiology report for samples/mri-brain-lesions/case-056/2017-06-13/series-0018.nii.gz"* without ever calling `write-report-measured`, `write-report-segmentation`, or `write-report-simple`.
+A different problem from the one above: the skill *is* registered (it shows up under `/`), but the agent answers from its own reasoning instead of invoking it. A common symptom is the Radiology Assistant writing a report straight from its own image read for a prompt like *"Please write a radiology report for samples/mri-brain-lesions/case-056/2017-06-13/series-0018.nii.gz"* without ever calling `write-report-measured` or `write-report-simple`.
 
 This is a model-judgment problem, not a registration problem. Try these fixes in order, from cheapest to most involved.
 
@@ -71,7 +71,6 @@ When several skills could plausibly handle the same request, the agent has to di
 Tighten each `description:` so it states *when* that specific skill applies:
 
 - `write-report-measured` — "…when the `segment`, `clean_segmentation`, and `describe_lesions` tools are available."
-- `write-report-segmentation` — "…when `segment` is available but `clean_segmentation` or `describe_lesions` is not."
 - `write-report-simple` — "…fallback when the `medimageparse` tools are not available."
 
 Clear, non-overlapping descriptions make the routing decision obvious.
@@ -83,7 +82,7 @@ A workflow with generic verbs ("analyze the image", "draft the report") lets the
 ```markdown
 <workflow>
 1. **Identify the case.** Find the image path and any clinical context. If no path is given, ask for one.
-2. **Write the report with a report skill.** If the user names a skill, use it. Otherwise use the most capable report skill whose tools are available: `write-report-measured` (`segment`, `clean_segmentation`, and `describe_lesions`), else `write-report-segmentation` (`segment` only), else `write-report-simple`. Do not write the report yourself; return the skill's output (`<confidence>` and `<report>` blocks) unchanged.
+2. **Write the report with a report skill.** If the user names a skill, use it. Otherwise use `write-report-measured` when the `segment`, `clean_segmentation`, and `describe_lesions` tools are available, else `write-report-simple`. Do not write the report yourself; return the skill's output (`<confidence>` and `<report>` blocks) unchanged.
 </workflow>
 ```
 

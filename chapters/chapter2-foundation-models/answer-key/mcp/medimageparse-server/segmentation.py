@@ -45,8 +45,8 @@ def segment(image_path: str, model: str, prompts: list[str]) -> dict:
     Returns audit_dir, mask_path, labels with label, prompt, detected, and
     volume_ml (one decimal), and images. Label i matches prompts[i-1]; 0 is
     background. audit_dir is audit-log/<image path>/, which holds the mask,
-    prompt sidecar, and two review images: film-grid.png (image only) and
-    <mask stem>.film-grid.png (mask overlay). Pass the tumor-components
+    prompt sidecar, and two review images: axial-montage.png (image only) and
+    <mask stem>.axial-montage.png (mask overlay). Pass the tumor-components
     mask_path to clean_segmentation before describe_lesions.
     """
     entry = next((entry for entry in CATALOG if entry["model"] == model), None)
@@ -81,9 +81,9 @@ def segment(image_path: str, model: str, prompts: list[str]) -> dict:
         encoding="utf-8",
     )
     images = [
-        figures.save_film_grid(image, output_dir / "film-grid.png", image.name),
-        figures.save_film_grid(image, output_dir / f"{stem}.film-grid.png",
-                               f"{image.name}: {model}", mask_path, prompts),
+        figures.save_axial_montage(image, output_dir / "axial-montage.png", image.name),
+        figures.save_axial_montage(image, output_dir / f"{stem}.axial-montage.png",
+                                   f"{image.name}: {model}", mask_path, prompts),
     ]
     labels = np.asanyarray(mask.dataobj)
     voxel_ml = abs(float(np.linalg.det(mask.affine[:3, :3]))) / 1000

@@ -1,6 +1,6 @@
 # Copyright (c) Microsoft Corporation.
 # Licensed under the MIT License.
-"""Review images for people: axial film grids and lesion measurement slices.
+"""Review images for people: axial montages and lesion measurement slices.
 
 Radiological display: anterior up, patient right on screen left. Tile titles
 give the zero-based RAS-canonical slice index (z) used by the descriptors.
@@ -52,7 +52,7 @@ def _figure(count, columns, size, title, names):
     return figure, grid
 
 
-def save_film_grid(image_path, output_path, title, mask_path=None, names=()):
+def save_axial_montage(image_path, output_path, title, mask_path=None, names=()):
     """Save up to 30 evenly spaced axial slices; names[i] labels mask value i+1."""
     image, spacing = _canonical(image_path)
     labels = None if mask_path is None else _canonical(mask_path)[0]

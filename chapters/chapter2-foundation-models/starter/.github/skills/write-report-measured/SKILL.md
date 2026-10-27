@@ -1,6 +1,6 @@
 ---
 name: write-report-measured
-description: Write a brain MRI report with tool-computed lesion measurements and, when a prior image is supplied, change from that prior. Use for brain MRI reports when the medimageparse `segment`, `clean_segmentation`, and `describe_lesions` tools are available; preferred over write-report-segmentation.
+description: Write a brain MRI report with tool-computed lesion measurements and, when a prior image is supplied, change from that prior. Use for brain MRI reports when the medimageparse `segment`, `clean_segmentation`, and `describe_lesions` tools are available.
 argument-hint: image_path [prior_image_path]
 ---
 
@@ -19,4 +19,4 @@ Build a descriptor factsheet, then let `write-report-simple` write the report fr
 
 - Numbers come from the factsheet only. Do not compute, round, or convert them.
 - Lesion IDs are ranked separately for each scan. Do not match lesions across scans or attribute change to one lesion; change lines compare totals.
-- The descriptors assign no side or anatomy. Use your own read of the image, such as the overlay film grids (patient right on screen left), only for location wording.
+- The descriptors assign no side or anatomy. Use your own read of the image, such as the overlay axial montages (patient right on screen left), only for location wording.

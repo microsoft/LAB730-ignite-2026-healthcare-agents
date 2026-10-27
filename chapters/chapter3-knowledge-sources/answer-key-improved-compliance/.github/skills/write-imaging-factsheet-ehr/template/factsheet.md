@@ -36,6 +36,6 @@ derivation: AI segmentation, not reviewed by a radiologist
 - [limitation.{{name}}] {{rule}}; {{observed_value and observed_unit when present}}.
 
 ## Images
-![Film grid](film-grid.png)
-![Segmentation]({{mask-stem}}.film-grid.png)
+![Axial montage](axial-montage.png)
+![Segmentation]({{mask-stem}}.axial-montage.png)
 ![Measurements]({{mask-stem}}.measurements.png)

@@ -1,6 +1,6 @@
 # Chapter 1 — Simple agent with a skill
 
-**Time budget: ~20 minutes.**
+**Time budget: ~12 minutes.**
 
 > Stuck? See [docs/troubleshooting.md](../../docs/troubleshooting.md).
 
@@ -17,10 +17,12 @@ A "Radiology Assistant" agent built on a generic LLM will happily produce a brai
 **Steps:**
 
 0. Setup — copy the starter agent file to your workspace. (~1 min)
-1. See the gap — run the bare agent and note where structure drifts and numbers appear from nowhere. (~5 min)
-2. Build the skill — fill in the `SKILL.md` TODOs. (~10 min)
-3. Activate it — point the agent's workflow at the skill. (~2 min)
+1. See the gap — run the bare agent and note where structure drifts and numbers appear from nowhere. (~4 min)
+2. Add the skill — copy the complete skill and read how it's built. (~4 min)
+3. Activate it — copy in the agent whose workflow calls the skill, then rerun. (~3 min)
 4. (Optional) Phrase bank additions.
+
+> **Build it yourself (optional).** The steps copy the finished skill and agent from `answer-key/`. To write them yourself instead, start from the skill with TODOs in `starter/.github/skills/write-report-simple/`; [suggested-changes.md](suggested-changes.md) has text for each TODO and for the agent's workflow step.
 
 ## Setup (~1 min)
 
@@ -33,11 +35,9 @@ mkdir -p .github/agents
 cp chapters/chapter1-simple-agent/starter/.github/agents/radiology-assistant.agent.md .github/agents/radiology-assistant.agent.md
 ```
 
-Inspect the file and observe how it contains instructions constraining the agent, but doesn't have much specific radiological guidance.
+Inspect the file and observe how it contains instructions constraining the agent, but doesn't have much specific radiological guidance. In Step 3 you'll replace it with a version whose workflow calls a skill.
 
-From here on, edit `.github/agents/radiology-assistant.agent.md` at the workspace root, not the copy inside `starter/`. You'll add a rule to it in Step 3.
-
-## Step 1 — See the gap (~5 min)
+## Step 1 — See the gap (~4 min)
 
 Open Copilot Chat. With the agent definition file in place you should be able to select our new agent. In the agent picker, switch to **Radiology Assistant**.
 
@@ -53,86 +53,57 @@ Please write a radiology report for samples/mri-brain-lesions/case-056/2017-06-1
 
 When VS Code first asks for permission to run a tool, select **Allow All**.
 
-Run it on 2-3 different images. Note a few things:
+Note a few things:
 - **Output drift** Notice that section names drift, structure is unpredictable, measurements are not done
 - **Inconsistency**. Run it a few times. Note how output changes. Note how every time generated code is a bit if not significantly different. Try asking it to measure the lesion.
 
-Keep one of the outputs visible — you'll compare against it after Step 3.
+Keep the output visible — you'll compare against it after Step 3.
 
-## Step 2 — Build the skill (~10 min)
+> **Other images to try (optional).** Run the same prompt on `samples/mri-brain-lesions/case-056/2018-04-14/series-0902.nii.gz` or `samples/mri-brain-lesions/case-062/2021-06-25/series-0007.nii.gz`, or rerun the first image to see how much the output changes from run to run.
 
-Skills live at `.github/skills/<skill-name>/`. Copy the starter into place:
+## Step 2 — Add the skill (~4 min)
+
+Skills live at `.github/skills/<skill-name>/`. Copy the complete skill into place:
 
 ```bash
-cp -r chapters/chapter1-simple-agent/starter/.github/skills/write-report-simple .github/skills/
+mkdir -p .github/skills
+cp -r chapters/chapter1-simple-agent/answer-key/.github/skills/write-report-simple .github/skills/
 ```
 
-That gives you three files:
+That gives you two files:
 
 ```
 .github/skills/write-report-simple/
-  SKILL.md                       ← the skill body — has TODOs you'll fill in below
-  template/mri-brain-template.md ← report structure (already complete, take a look)
-  references/phrase-bank.md      ← example wordings (already complete, take a look)
+  SKILL.md                    ← the skill body
+  references/phrase-bank.md   ← example wordings the skill reads on demand
 ```
 
-Open all three and skim. The skill **name** (frontmatter `name:` and the directory name) must match exactly.
+The skill **name** (frontmatter `name:` and the directory name) must match exactly.
 
-Open `SKILL.md`. Each TODO is tagged with an anchor name. For each one: read the teaching note below, look at the placeholder in the file, then paste from [suggested-changes.md](suggested-changes.md) or write your own:
+Open `SKILL.md` and read it top to bottom. What each part does:
 
-- [ ] **Fill the `description` TODO.**
+- **`description`** (frontmatter). The agent matches this string against the task at hand to decide whether to invoke the skill. Specific beats categorical — vague descriptions get ignored.
+- **`argument-hint`** (frontmatter). Declares optional inputs other agents or later chapters may pass in. Chapter 1 passes none, but declaring them makes the skill an interface with a contract, not just a prompt. In Chapter 2 the skill receives real outputs from a segmentation model (`findings`) and a measurement tool (`measurements`).
+- **Opening lines.** What the skill does and doesn't do (no tools, no measuring, no priors), then the order of trust for inputs: explicit `confidence`, then tool-supplied `findings` and `measurements`, then the agent's own read of the image. Tool `measurements` are copied verbatim.
+- **Budget.** No tool calls and at most 200 words, so the skill stays a writing step and the report stays short.
+- **How to use.** The report layout and the rules for each section, plus a link to `references/phrase-bank.md`. The agent reads supporting files like the phrase bank only when it needs them.
+- **Style rules.** When the agent has options, the skill picks one and names it. These rules close the gaps that cause run-to-run drift in hedging language and sentence structure — and add two rules specific to brain lesions: **numbers come from tools only**, and **laterality is the patient's**.
+- **Output format.** Machine-readable output needs a verbatim template, not a description of one. The literal `<confidence>` and `<report>` tags let downstream steps extract the confidence value without fragile string matching.
 
-  The agent matches this string against the task at hand to decide whether to invoke the skill. Specific beats categorical — vague descriptions get ignored.
+## Step 3 — Activate it (~3 min)
 
-  → [Suggested text](suggested-changes.md#description)
+The skill exists, but your agent's workflow still drafts reports on its own. Compare your agent file with the completed one:
 
-- [ ] **Fill the `argument-hint` TODO.**
+- yours: `.github/agents/radiology-assistant.agent.md`
+- completed: `chapters/chapter1-simple-agent/answer-key/.github/agents/radiology-assistant.agent.md`
 
-  `argument-hint` declares optional inputs other agents or later chapters may pass in. We won't pass any in Chapter 1, but declaring them now makes the skill an interface with a contract, not just a prompt. In Chapter 2 you'll call it with real outputs from a segmentation model (`findings`) and a measurement tool (`measurements`).
+(In Explorer, right-click one file and choose **Select for Compare**, then right-click the other and choose **Compare with Selected**.)
 
-  → [Suggested text](suggested-changes.md#argument-hint)
+The only difference is the `<workflow>` block: steps 2 and 3 ("Analyze the image", "Draft the report") become one step that invokes `write-report-simple` and returns its output unchanged. Copy the completed agent over yours:
 
-- [ ] **Fill the `one-liner` TODO.**
-
-  This one-sentence description is for humans reading the file — a different audience from the frontmatter `description`, which is for the agent's routing logic.
-
-  → [Suggested text](suggested-changes.md#one-liner)
-
-- [ ] **Fill the `inputs` TODO.**
-
-  Declaring a field in `argument-hint` isn't enough — the body must tell the agent how to use it. This section sets the priority order so the agent doesn't have to guess, and makes tool-supplied `measurements` authoritative.
-
-  → [Suggested text](suggested-changes.md#inputs)
-
-- [ ] **Fill the `how-to-use` TODO.**
-
-  The skill ships with supporting files. `template/mri-brain-template.md` and `references/phrase-bank.md` are already complete — the skill body just references them so the agent reads them on demand.
-
-  → [Suggested text](suggested-changes.md#how-to-use)
-
-- [ ] **Fill the `style-rules` TODO.**
-
-  When the agent has options, the skill picks one and names it. These rules close the gaps that cause run-to-run drift in hedging language and sentence structure — and add two rules specific to brain lesions: **numbers come from tools only**, and **laterality is the patient's**.
-
-  → [Suggested text](suggested-changes.md#style-rules)
-
-- [ ] **Fill the `output-format` TODO.**
-
-  Machine-readable output needs a verbatim template, not a description of one. The literal tags let downstream steps extract the confidence value without fragile string matching.
-
-  → [Suggested text](suggested-changes.md#output-format)
-
-## Step 3 — Activate it (~2 min)
-
-The skill files exist, but nothing happens yet. Open the workspace-root agent file you copied during Setup:
-
+```bash
+cp chapters/chapter1-simple-agent/answer-key/.github/agents/radiology-assistant.agent.md .github/agents/radiology-assistant.agent.md
 ```
-.github/agents/radiology-assistant.agent.md
-```
-
-Find the `<workflow>` block. Replace steps 2 and 3 ("Analyze the image", "Draft the report") with one step that calls the skill:
-
-→ [Suggested wording](suggested-changes.md#agent-workflow)
 
 Start a new chat and run the Step 1 prompt on the same image, this time naming the skill:
 
@@ -147,15 +118,11 @@ The output should now:
 - Describe lesion size qualitatively ("large", "moderate") instead of quoting invented millimeters
 - Borrow phrasings you can find in `references/phrase-bank.md`
 
-If it still looks like Step 1, the agent didn't pick up the skill. Check: directory name = `write-report-simple` exactly, all three files exist, and the workflow step names `write-report-simple`. It also helps to start a new chat session.
+If it still looks like Step 1, the agent didn't pick up the skill. Check: directory name = `write-report-simple` exactly, both files exist, and the workflow step names `write-report-simple`. It also helps to start a new chat session.
 
-Now try another image:
+Read the report against your own impression. Where does it go right? Where does it go wrong? Notice that the skill made the agent *honest* about size — but it still can't tell you *how big* the lesion is. That's Chapter 2.
 
-```
-/write-report-simple Please write a radiology report for samples/mri-brain-lesions/case-062/2021-06-25/series-0007.nii.gz.
-```
-
-Read each report against your own impression. Where does it go right? Where does it go wrong? Notice that the skill made the agent *honest* about size — but it still can't tell you *how big* the lesion is. That's Chapter 2.
+> **Other images to try (optional).** Run `/write-report-simple` on the other images from Step 1 and compare each with its Step 1 report.
 
 > **Ways skills get invoked.** Here the agent's workflow names `write-report-simple`, so the agent calls it for every report. Without that step, an agent can still pick up a skill automatically when its `description` matches the request, or you can name it with `/<skillname>` (`/write-report-simple Please write a radiology report for …`). Explicit is useful when a skill's description is ambiguous or when several skills could plausibly handle the request. Typing `/` in the chat input lists the registered skills, which is a good way to check that yours was picked up.
 
@@ -167,12 +134,9 @@ Takeaway: a general-purpose LLM looking at pixels is not clinically reliable; a 
 
 ## What you should have at the end
 
-- [ ] `.github/skills/write-report-simple/{SKILL.md, template/mri-brain-template.md, references/phrase-bank.md}`
-- [ ] All TODOs in `SKILL.md` filled in: `description`, `argument-hint`, `one-liner`, `inputs`, `how-to-use`, `style-rules`, `output-format`
-- [ ] Updated `.github/agents/radiology-assistant.agent.md` with a workflow step that calls `write-report-simple`
+- [ ] `.github/skills/write-report-simple/{SKILL.md, references/phrase-bank.md}`
+- [ ] `.github/agents/radiology-assistant.agent.md` with a workflow step that calls `write-report-simple`
 - [ ] An "after" report from Step 3 you can put next to the "before" from Step 1
-
-If you got stuck, the completed version of every file is in `chapters/chapter1-simple-agent/answer-key/`.
 
 ## What's next
 

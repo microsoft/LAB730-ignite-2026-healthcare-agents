@@ -24,5 +24,5 @@ Educational use only — **not for clinical use**.
 
 <workflow>
 1. **Identify the case.** Identify the image path and any clinical context the user has provided (indication, patient identifiers, prior reports). Note what's missing.
-2. **Write the report with a report skill.** If the user names a skill, use it. Otherwise use the most capable report skill whose tools are available: `write-report-measured` (`segment`, `clean_segmentation`, and `describe_lesions`), else `write-report-segmentation` (`segment` only), else `write-report-simple`. Return its output unchanged.
+2. **Write the report with a report skill.** If the user names a skill, use it. Otherwise use `write-report-measured` when the `segment`, `clean_segmentation`, and `describe_lesions` tools are available, else `write-report-simple`. Return its output unchanged.
 </workflow>

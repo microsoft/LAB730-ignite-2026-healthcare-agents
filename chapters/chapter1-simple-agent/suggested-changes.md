@@ -4,7 +4,7 @@ title: "Suggested Changes — Chapter 1 Skill TODOs"
 
 # Suggested Changes — Chapter 1
 
-This file contains the answer-key text for the `SKILL.md` TODOs and the agent's workflow step, organized by anchor. For each TODO, paste the code block below or write your own variant. The anchors here match the `<!-- TODO: <anchor> -->` tags in `SKILL.md` and the links in the Chapter 1 README.
+This file has suggested text for the TODOs in the starter `SKILL.md` and for the agent's workflow step, organized by anchor. For each TODO, paste the code block below or write your own variant. The anchors here match the `<!-- TODO: <anchor> -->` tags in the starter `SKILL.md`.
 
 ## description
 
