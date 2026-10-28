@@ -1,6 +1,6 @@
 # Chapter 2 — Using foundation models with agents
 
-**Time budget: ~22 minutes.**
+**Time budget: ~20 minutes.**
 
 > Stuck? See [docs/troubleshooting.md](../../docs/troubleshooting.md).
 
@@ -19,7 +19,7 @@ In Chapter 1 the agent wrote tidier reports, but it still had to guess whether a
 | Output | Tumor-component mask and axial montages | Lesion IDs, volumes, diameters, change from a prior, factsheet |
 | Question | Which tumor components are present? | How many lesions, how big, and how have they changed? |
 
-Segmentation on its own tells the agent which tumor components the model found, but nothing about size: the mask is raw voxels, and it can include small spurious regions. The measurement tools clean the mask and turn it into numbers the report can use. In this chapter you wire both at once.
+Segmentation on its own tells the agent which tumor components the model found, but nothing about size: the mask is raw voxels, and it can include small spurious regions. The measurement tools clean the mask and turn it into numbers the report can use. In this chapter you add both at once.
 
 > [!NOTE]
 > **Why measurements come from code.** Brain tumors are followed by size: the tumor-core volume, and on axial slices the **longest diameter** of the tumor core and the **longest diameter perpendicular to it**. Whether a tumor is growing comes down to comparing those numbers between scans, so they have to be real. Turning a mask into "one lesion, 6.2 × 4.6 cm" takes voxel spacing, 3D connected components, and geometry. Deterministic code does that the same way every time, and you can test it. An LLM looking at the image cannot.
@@ -37,45 +37,47 @@ Every file the tools write goes to `audit-log/` at your workspace root, in one f
 
 **Steps:**
 
-0. Setup — copy the starter files. (~3 min)
-1. Wire the `segment`, `clean_segmentation`, and `describe_lesions` tools. (~7 min)
+0. Setup — copy the Chapter 2 files. (~3 min)
+1. See how the tools are wired — read the server and agent changes, then start the server. (~5 min)
 2. Skim the factsheet and measured-report skills. (~4 min)
 3. Try it, then explore the audit log. (~8 min)
 
-**(Optional) Compare with a prior scan; extra credit.**
+**(Optional) Compare with a prior scan.**
+
+> **Build it yourself (optional).** Setup copies the Chapter 2 files from `answer-key/`. To wire the tools yourself instead, copy `starter/` (`cp -r chapters/chapter2-foundation-models/starter/. .`), replace the three TODOs in `server.py` with the wrappers shown in Step 1, and make the two agent changes it describes.
 
 ## Setup (~3 min)
 
-Copy the starter files into your workspace root:
+Copy the Chapter 2 files into your workspace root:
 
 ```bash
-cp -r chapters/chapter2-foundation-models/starter/. .
+cp -r chapters/chapter2-foundation-models/answer-key/. .
 ```
 
-On Windows PowerShell: `Copy-Item -Recurse -Force chapters\chapter2-foundation-models\starter\* .`
-
-That adds the following at your workspace root. Your Chapter 1 agent and `write-report-simple` skill stay as they are:
+That adds the following at your workspace root and replaces your Chapter 1 agent. Your `write-report-simple` skill stays as it is:
 
 ```
+.github/agents/
+  radiology-assistant.agent.md    agent with the MCP tools and an updated workflow
 .github/skills/
-  write-report-measured/          report skill (complete)
-  write-imaging-factsheet/        factsheet skill (complete)
+  write-report-measured/          report skill
+  write-imaging-factsheet/        factsheet skill
     template/factsheet.md
 mcp/medimageparse-server/
-  server.py                       list_models works; three TODOs
+  server.py                       registers the MCP tools
   models.json                     model catalog: deployments and prompt views
-  segmentation.py                 calls MedImageParse 3D, saves masks and axial montages (read-only)
-  lesions.py                      cleanup and descriptors (read-only)
-  figures.py                      review images (read-only)
+  segmentation.py                 calls MedImageParse 3D, saves masks and axial montages
+  lesions.py                      cleanup and descriptors
+  figures.py                      review images
 .vscode/
   mcp.json                        registers the server
 ```
 
 The server reads `MIP_MODEL_ENDPOINT` and `MIP_MODEL_API_KEY` from the `.env` at the repository root, the same file `check_env.py` uses.
 
-## Step 1 — Wire the tools (~7 min)
+## Step 1 — See how the tools are wired (~5 min)
 
-Open `mcp/medimageparse-server/server.py`. The `list_models` wrapper already works: it delegates to a function in `segmentation.py` and reuses that function's docstring as the tool description. Replace the three TODOs with the same pattern:
+Open `mcp/medimageparse-server/server.py`. The `list_models` wrapper delegates to a function in `segmentation.py` and reuses that function's docstring as the tool description. Notice the three tools below it, which follow the same pattern:
 
 ```python
 @mcp.tool(description=segmentation.segment.__doc__)
@@ -102,25 +104,23 @@ Three things matter here:
 
 The tools chain through file paths: `segment` returns `mask_path`, `clean_segmentation` returns `clean_path`, and `describe_lesions` reads it.
 
-Save, then run `MCP: List Servers` from the command palette (`Ctrl/Cmd+Shift+P`). In the list that opens, select the `medimageparse` server, then select its **Start** icon.
-
-> Open **View → Output → Agent Host** for the startup log.
-
-If the MCP server fails to start, make sure the workspace is trusted in VS Code (see [Troubleshooting](../../docs/troubleshooting.md#mcp-server-is-not-discovered)).
-
-Open `.github/agents/radiology-assistant.agent.md` and add `medimageparse/*` to the `tools:` list:
+Then open `.github/agents/radiology-assistant.agent.md`. An agent can't use tools until its `tools:` list includes them. Notice the two sections that changed from your Chapter 1 agent. The `tools:` list adds `medimageparse/*`:
 
 ```yaml
 tools: [execute, read, agent, browser, edit, search, web, todo, medimageparse/*]
 ```
 
-In the same file, replace the Chapter 1 workflow step 2 (`Write the report with the write-report-simple skill`) so the agent prefers the tool-backed skill:
+And workflow step 2 now prefers the tool-backed skill:
 
 ```markdown
 2. **Write the report with a report skill.** If the user names a skill, use it. Otherwise use `write-report-measured` when the `segment`, `clean_segmentation`, and `describe_lesions` tools are available, else `write-report-simple`. Return its output unchanged.
 ```
 
-No further agent-file edit is needed in this chapter.
+Run `MCP: List Servers` from the command palette (`Ctrl/Cmd+Shift+P`). In the list that opens, select the `medimageparse` server, then select its **Start** icon.
+
+> Open **View → Output → Agent Host** for the startup log.
+
+If the MCP server fails to start, make sure the workspace is trusted in VS Code (see [Troubleshooting](../../docs/troubleshooting.md#mcp-server-is-not-discovered)).
 
 ## Step 2 — Skim the factsheet and measured-report skills (~4 min)
 
@@ -185,20 +185,12 @@ The factsheet skill now segments and cleans both scans and calls `describe_lesio
 
 Keep this report: Chapter 3 compares it with a report written from the patient's chart.
 
-## (Optional) Extra credit
-
-1. **Change the cleanup.** Ask the agent to rerun `clean_segmentation` on the 2018 mask with `min_edema_ml` set to 1.0, then `describe_lesions` without a prior. Compare the edema components. The parameters are saved in `.clean.json`, and the rerun replaces that scan's cleaned mask and descriptors.
-2. **Try another view.** Ask the agent to call `segment` with the `whole-tumor` view from `list_models` and compare its `volume_ml` with `total.volume.whole_tumor` in the descriptors.
-3. **Factsheet only.** Run `/write-imaging-factsheet` on the 2018 scan with the 2017 prior and read the factsheet without a report.
-
 ## What you should have at the end
 
 - [ ] `segment`, `clean_segmentation`, and `describe_lesions` wired in `server.py` and visible in the tool picker
 - [ ] `medimageparse/*` in the agent's `tools:` list, and the workflow's report step updated
 - [ ] A measured report on the 2018 scan whose numbers match the factsheet
 - [ ] An `audit-log/` folder for the 2018 scan, with axial montages, masks, descriptors, the measurement image, and the factsheet
-
-If you got stuck, the completed version of every file is in `chapters/chapter2-foundation-models/answer-key/`.
 
 ## What's next
 

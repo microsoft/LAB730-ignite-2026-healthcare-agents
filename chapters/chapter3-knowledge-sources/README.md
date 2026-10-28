@@ -49,13 +49,6 @@ cp -r chapters/chapter3-knowledge-sources/answer-key/. .
 cp -r chapters/chapter3-knowledge-sources/data .
 ```
 
-On Windows PowerShell:
-
-```powershell
-Copy-Item -Recurse -Force chapters\chapter3-knowledge-sources\answer-key\* .
-Copy-Item -Recurse -Force chapters\chapter3-knowledge-sources\data .
-```
-
 That adds:
 
 ```
@@ -63,7 +56,7 @@ That adds:
   lookup-patient-history/       reads the chart and prior reports
   write-report-with-ehr/        writes the context-aware report
 data/
-  patients/SYN0056.json         the chapter's patient (SYN0062 for extra credit)
+  patients/SYN0056.json         the chapter's patient (SYN0062 is optional)
   reports/SYN0056_002.md        the prior report
   images/SYN0056_006.nii.gz     current MRI, 2018-04-14 (same scan as Chapter 2)
   images/SYN0056_002.nii.gz     prior MRI, 2017-06-13 (same scan as Chapter 2)
@@ -121,15 +114,13 @@ What you should see:
 
 > **Improving tool and measurement compliance.** By this point the agent has many skills and tools, and smaller models may start to break down: ignoring instructions, skipping tool calls, or calling tools incorrectly. If you see this behavior, try using the [improved-compliance answer key](answer-key-improved-compliance) to set up a new agent and update the skills it uses. Observe the changes and how editing instructions can help you achieve improvements without bringing in more expensive models.
 
-## (Optional) Extra credit
+## Things you can try
 
-Pick one:
-
-1. **Remove the surgery.** In your copy of `data/patients/SYN0056.json`, delete the craniotomy from `procedures` and study `_003` from `imaging_studies`. Rerun Step 3. Does the report now call the change growth? Should it?
-2. **Another patient.** Run `/write-report-with-ehr Please write a radiology report for data/images/SYN0062_001.nii.gz.` (renal cell carcinoma, untreated metastases, on an anticoagulant). Its priors are summaries only, so the factsheet has no change lines and the report compares in words. Confirm the lookup keys off the file name, not a hardcoded ID.
-3. **Two ways to measure.** The prior report measured the 2017 mass at 4.3 × 3.4 × 4.3 cm; `describe_lesions` measured the same scan at about 4.4 × 3.5 cm. Open the 2017 `.measurements.png` in `audit-log/` and consider why a radiologist's caliper reading and a geometric measurement on a mask can differ.
-4. **FHIR shape.** Refactor `lookup-patient-history` to consume a minimal FHIR bundle (`Patient`, `Condition`, `Procedure`, `MedicationStatement`, `ImagingStudy`, `DiagnosticReport`) instead of the flat JSON. The report skill shouldn't need to change; that's the point.
-5. **Look at the audit log.** Chapter 3 saved its files in new folders, `audit-log/data/images/SYN0056_006/` and `SYN0056_002/`, because the image paths differ from Chapter 2's even though the scans are the same. Open its factsheet next to Chapter 2's in `audit-log/samples/mri-brain-lesions/case-056/2018-04-14/series-0902/` and compare the numbers. Small differences come from the model's output, not the code.
+- **Remove the surgery.** In your copy of `data/patients/SYN0056.json`, delete the craniotomy from `procedures` and study `_003` from `imaging_studies`. Rerun Step 3. Does the report now call the change growth? Should it?
+- **Another patient.** Run `/write-report-with-ehr Please write a radiology report for data/images/SYN0062_001.nii.gz.` (renal cell carcinoma, untreated metastases, on an anticoagulant). Its priors are summaries only, so the factsheet has no change lines and the report compares in words. Confirm the lookup keys off the file name, not a hardcoded ID.
+- **Two ways to measure.** The prior report measured the 2017 mass at 4.3 × 3.4 × 4.3 cm; `describe_lesions` measured the same scan at about 4.4 × 3.5 cm. Open the 2017 `.measurements.png` in `audit-log/` and consider why a radiologist's caliper reading and a geometric measurement on a mask can differ.
+- **FHIR shape.** Refactor `lookup-patient-history` to consume a minimal FHIR bundle (`Patient`, `Condition`, `Procedure`, `MedicationStatement`, `ImagingStudy`, `DiagnosticReport`) instead of the flat JSON. The report skill shouldn't need to change; that's the point.
+- **Look at the audit log.** Chapter 3 saved its files in new folders, `audit-log/data/images/SYN0056_006/` and `SYN0056_002/`, because the image paths differ from Chapter 2's even though the scans are the same. Open its factsheet next to Chapter 2's in `audit-log/samples/mri-brain-lesions/case-056/2018-04-14/series-0902/` and compare the numbers. Small differences come from the model's output, not the code.
 
 ## What you should have at the end
 
@@ -138,8 +129,6 @@ Pick one:
 - [ ] `data/patients/`, `data/reports/`, and `data/images/` at the workspace root
 - [ ] A Chapter 3 report on `_006` whose COMPARISON names `_002`, whose numbers match the factsheet, which accounts for the resection between the exams, and whose impression answers the order
 - [ ] A side-by-side comparison with your Chapter 2 report on the same scans
-
-If you got stuck, the completed version of every file is in `chapters/chapter3-knowledge-sources/answer-key/`.
 
 ## What's next
 

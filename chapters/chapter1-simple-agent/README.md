@@ -18,11 +18,11 @@ A "Radiology Assistant" agent built on a generic LLM will happily produce a brai
 
 0. Setup — copy the starter agent file to your workspace. (~1 min)
 1. See the gap — run the bare agent and note where structure drifts and numbers appear from nowhere. (~4 min)
-2. Add the skill — copy the complete skill and read how it's built. (~4 min)
+2. Add the skill — copy the Chapter 1 skill and read how it's built. (~4 min)
 3. Activate it — copy in the agent whose workflow calls the skill, then rerun. (~3 min)
 4. (Optional) Phrase bank additions.
 
-> **Build it yourself (optional).** The steps copy the finished skill and agent from `answer-key/`. To write them yourself instead, start from the skill with TODOs in `starter/.github/skills/write-report-simple/`; [suggested-changes.md](suggested-changes.md) has text for each TODO and for the agent's workflow step.
+> **Build it yourself (optional).** The steps copy the Chapter 1 skill and agent from `answer-key/`. To write them yourself instead, start from the skill with TODOs in `starter/.github/skills/write-report-simple/`; [suggested-changes.md](suggested-changes.md) has text for each TODO and for the agent's workflow step.
 
 ## Setup (~1 min)
 
@@ -63,7 +63,7 @@ Keep the output visible — you'll compare against it after Step 3.
 
 ## Step 2 — Add the skill (~4 min)
 
-Skills live at `.github/skills/<skill-name>/`. Copy the complete skill into place:
+Skills live at `.github/skills/<skill-name>/`. Copy the Chapter 1 skill into place:
 
 ```bash
 mkdir -p .github/skills
@@ -92,14 +92,14 @@ Open `SKILL.md` and read it top to bottom. What each part does:
 
 ## Step 3 — Activate it (~3 min)
 
-The skill exists, but your agent's workflow still drafts reports on its own. Compare your agent file with the completed one:
+The skill exists, but your agent's workflow still drafts reports on its own. Compare your agent file with the Chapter 1 agent in `answer-key/`:
 
 - yours: `.github/agents/radiology-assistant.agent.md`
-- completed: `chapters/chapter1-simple-agent/answer-key/.github/agents/radiology-assistant.agent.md`
+- answer key: `chapters/chapter1-simple-agent/answer-key/.github/agents/radiology-assistant.agent.md`
 
 (In Explorer, right-click one file and choose **Select for Compare**, then right-click the other and choose **Compare with Selected**.)
 
-The only difference is the `<workflow>` block: steps 2 and 3 ("Analyze the image", "Draft the report") become one step that invokes `write-report-simple` and returns its output unchanged. Copy the completed agent over yours:
+The only difference is the `<workflow>` block: steps 2 and 3 ("Analyze the image", "Draft the report") become one step that invokes `write-report-simple` and returns its output unchanged. Copy the answer-key agent over yours:
 
 ```bash
 cp chapters/chapter1-simple-agent/answer-key/.github/agents/radiology-assistant.agent.md .github/agents/radiology-assistant.agent.md

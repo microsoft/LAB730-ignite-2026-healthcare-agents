@@ -1,6 +1,6 @@
 # Sample images
 
-The lab uses three de-identified, post-contrast T1-weighted brain MRI volumes in NIfTI (`.nii.gz`) format under [mri-brain-lesions/](mri-brain-lesions/). The two case-056 scans are used in the main walkthrough; case-062 is for Chapter 3 extra credit.
+The lab uses three de-identified, post-contrast T1-weighted brain MRI volumes in NIfTI (`.nii.gz`) format under [mri-brain-lesions/](mri-brain-lesions/). The two case-056 scans are used in the main walkthrough; case-062 is for the optional exercises.
 
 ## Images used by the lab
 
@@ -22,7 +22,7 @@ For Chapter 1:
 Please write a radiology report for samples/mri-brain-lesions/case-056/2017-06-13/series-0018.nii.gz.
 ```
 
-For Chapter 2, after wiring the measurement tools:
+For Chapter 2, after adding the measurement tools:
 
 ```text
 /write-report-measured Please write a radiology report for samples/mri-brain-lesions/case-056/2018-04-14/series-0902.nii.gz.
