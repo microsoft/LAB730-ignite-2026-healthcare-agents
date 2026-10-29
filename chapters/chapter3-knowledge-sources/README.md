@@ -69,7 +69,7 @@ The two skills:
 
 No MCP changes: the report skill uses the four tools from Chapter 2.
 
-Reload the VS Code window (`Developer: Reload Window`) so the new skills register.
+Reload the VS Code window so the new skills register: open the command palette (`Ctrl/Cmd+Shift+P`) and run `Developer: Reload Window`.
 
 ## Step 3 — Run the agent (~3 min)
 

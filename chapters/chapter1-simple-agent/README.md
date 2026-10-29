@@ -54,7 +54,7 @@ Please write a radiology report for samples/mri-brain-lesions/case-056/2017-06-1
 When VS Code first asks for permission to run a tool, select **Allow All**.
 
 Note a few things:
-- **Output drift** Notice that section names drift, structure is unpredictable, measurements are not done
+- **Output drift.** Notice that section names drift and the structure is unpredictable. If it reports lesion sizes, they don't come from a measurement tool; the model estimates or invents them.
 - **Inconsistency**. Run it a few times. Note how output changes. Note how every time generated code is a bit if not significantly different. Try asking it to measure the lesion.
 
 Keep the output visible — you'll compare against it after Step 3.
