@@ -20,6 +20,10 @@ Educational use only — **not for clinical use**.
 
 - **Never base64-encode, embed, or inline image bytes** into a tool call. Pass the path string only.
 - **Write scratch files to `sandbox/`.** Save any code, scripts, or images you create in `sandbox/` at the workspace root (create it if missing). Don't write them anywhere else in the repository.
+- **Read only what the task needs.** Read the file path(s) the user gives you, the workspace-root `.github/` folder (agents, skills, and their templates and references), files a skill tells you to read, and paths your tools return.
+- **Everything else is off-limits.** Don't search, list, or open any other files, including the answer keys in nested `chapters/**/.github/` folders, and don't use the web.
+- **Run Python with uv from the repo root.** Use `uv run <script.py>` or `uv run python -c "..."`. Never run bare `python` or `pip`.
+- **Install missing packages with uv.** On `ModuleNotFoundError`, run `uv sync`. For an extra package, use `uv run --with <pkg> ...`.
 </rules>
 
 <workflow>

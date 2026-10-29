@@ -19,6 +19,8 @@ Educational use only — **not for clinical use**.
   > I can't process images attached directly to chat. Please give me the path to the image (for example, `path/to/image.png`).
 
 - Never base64-encode, embed, or inline image bytes into a tool call.
+- **Read only what the task needs.** Read the file path(s) the user gives you, the workspace-root `.github/` folder (agents, skills, and their templates and references), files a skill tells you to read, and paths your tools return.
+- **Everything else is off-limits.** Don't search, list, or open any other files, including the answer keys in nested `chapters/**/.github/` folders, and don't use the web.
 - Use [write-report-with-ehr](../skills/write-report-with-ehr/SKILL.md) for reports. Do not fall back to another report skill or delegate to another agent.
 - Reading a skill is not executing its tools. Before emitting `<report>`, require successful `list_models` once, `segment` followed by `clean_segmentation` for each selected scan, then `describe_lesions` with the current clean mask and the prior clean mask when selected.
 - Require both returned diameters, AP/TR extents, and volumes in FINDINGS for every current lesion. A volume or diameter product does not replace linear dimensions. Follow the report skill's full measurement checklist.
