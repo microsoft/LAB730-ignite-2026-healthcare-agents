@@ -4,6 +4,14 @@
 
 Budget about **30 min setup** (do this before arriving) + **45 min content** across the three chapters.
 
+> [!IMPORTANT]
+> **This lab depends on a custom model.** It calls a MedImageParse 3D model that we fine-tuned to segment brain tumors on post-contrast T1 MRI, using data from [UPENN-GBM](https://www.cancerimagingarchive.net/collection/upenn-gbm/). During the lab at Ignite 2026, we provided access to this model. The lab does not work without this custom model. To run the lab, you can:
+>
+> - **Fine-tune your own.** Follow the [MedImageParse 3D fine-tuning example](https://github.com/microsoft/healthcareai-examples/tree/main/azureml/medimageparse3d/finetuning) to fine-tune, evaluate, and deploy the model with Azure Machine Learning. Use UPENN-GBM as we did, or a different dataset.
+> - **Ask us for access.** Contact [hlsfrontierteam@microsoft.com](mailto:hlsfrontierteam@microsoft.com), and we can provide access to the model.
+>
+> Then copy `.env.example` to `.env` at the repository root and fill in the values it describes. If you deploy your own model, either name the deployment `mip3d-mri-brain-lesion`, or change `deployment` in both Chapter 2 `models.json` files (`starter/` and `answer-key/`) and run `uv run workshop/check_env.py --deployment <your-deployment>`.
+
 ![Workshop overview: three chapters — agent and skill, MedImageParse segmentation via MCP, and patient context — take a brain MRI to a measured, radiologist-reviewed draft report.](docs/brain-lesion-segmentation-workshop.svg)
 
 ## What you'll build
