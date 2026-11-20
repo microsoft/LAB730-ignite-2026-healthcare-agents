@@ -8,7 +8,7 @@
 
 ## Overview
 
-In this chapter you will build a minimal "radiology assistant" agent inside VS Code that uses a general-purpose LLM (no specialized foundation model yet) to generate a structured report from a brain MRI image. The point is to feel how *cheap* and *easy* it is to compose an agent from skills — and to see, by the end, that a generic LLM is **not** clinically reliable on its own.
+In this chapter you will build a minimal "radiology assistant" agent inside VS Code that uses a general-purpose LLM (no specialized foundation model yet) to generate a structured report from a brain MRI image. The point is to feel how *cheap* and *easy* it is to compose an agent from skills — and to see, by the end, that a generic LLM is **not** reliable on its own for our task.
 
 We start with a very simple agent, without any skills, and progress by adding a skill to start seeing better conformance.
 
@@ -17,7 +17,7 @@ A "Radiology Assistant" agent built on a generic LLM will happily produce a brai
 **Steps:**
 
 0. Setup — copy the starter agent file to your workspace. (~1 min)
-1. See the gap — run the bare agent and note where structure drifts and numbers appear from nowhere. (~4 min)
+1. See the gap — run the bare agent and see if structure drifts and numbers appear from nowhere. (~4 min)
 2. Add the skill — copy the Chapter 1 skill and read how it's built. (~4 min)
 3. Activate it — copy in the agent whose workflow calls the skill, then rerun. (~3 min)
 4. (Optional) Phrase bank additions.
@@ -56,6 +56,12 @@ When VS Code first asks for permission to run a tool, select **Allow All**.
 Note a few things:
 - **Output drift.** Notice that section names drift and the structure is unpredictable. If it reports lesion sizes, they don't come from a measurement tool; the model estimates or invents them.
 - **Inconsistency**. Run it a few times. Note how output changes. Note how every time generated code is a bit if not significantly different. Try asking it to measure the lesion.
+- **Cheating**. Observe the execution trace — often the agent reads other files in this repository and finds the actual report from later chapters. Try opening a new chat and sending a different prompt:
+
+  ```
+  Please write a radiology report for samples/mri-brain-lesions/case-056/2017-06-13/series-0018.nii.gz.
+  Only use the supplied image, do not use any other files in this repo to write your report.
+  ```
 
 Keep the output visible — you'll compare against it after Step 3.
 
